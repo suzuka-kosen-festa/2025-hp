@@ -1,3 +1,6 @@
+import Box from "@mui/material/Box";
+
+import * as React from "react";
 import {
   isRouteErrorResponse,
   Links,
@@ -7,21 +10,20 @@ import {
   ScrollRestoration,
 } from "react-router";
 
-import Box from '@mui/material/Box';
-import * as React from 'react';
-
-export const links = () => [
-  { rel: "preconnect", href: "https://fonts.googleapis.com" },
-  {
-    rel: "preconnect",
-    href: "https://fonts.gstatic.com",
-    crossOrigin: "anonymous",
-  },
-  {
-    rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
-  },
-];
+export function links() {
+  return [
+    { rel: "preconnect", href: "https://fonts.googleapis.com" },
+    {
+      rel: "preconnect",
+      href: "https://fonts.gstatic.com",
+      crossOrigin: "anonymous",
+    },
+    {
+      rel: "stylesheet",
+      href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
+    },
+  ];
+}
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -52,21 +54,22 @@ export function ErrorBoundary({ error }: any) {
 
   if (isRouteErrorResponse(error)) {
     message = error.status === 404 ? "404" : "Error";
-    details =
-      error.status === 404
+    details
+      = error.status === 404
         ? "The requested page could not be found."
         : error.statusText || details;
-  } else if ((import.meta as any).env?.DEV && error && error instanceof Error) {
+  }
+  else if ((import.meta as any).env?.DEV && error && error instanceof Error) {
     details = error.message;
     stack = error.stack;
   }
 
   return (
-    <Box component="main" sx={{ pt: 4, px: 2, maxWidth: '1200px', mx: 'auto' }}>
+    <Box component="main" sx={{ pt: 4, px: 2, maxWidth: "1200px", mx: "auto" }}>
       <h1>{message}</h1>
       <p>{details}</p>
       {stack && (
-        <Box component="pre" sx={{ width: '100%', p: 2, overflowX: 'auto' }}>
+        <Box component="pre" sx={{ width: "100%", p: 2, overflowX: "auto" }}>
           <code>{stack}</code>
         </Box>
       )}

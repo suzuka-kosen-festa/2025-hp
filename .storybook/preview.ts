@@ -1,14 +1,14 @@
-import type { Preview } from '@storybook/react-vite'
+import type { Preview } from "@storybook/react-vite";
 
-import { ThemeProvider, CssBaseline, createTheme } from '@mui/material';
-import { withThemeFromJSXProvider } from '@storybook/addon-themes';
+import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
+import { withThemeFromJSXProvider } from "@storybook/addon-themes";
 
 /* TODO: update import for your custom Material UI themes */
 // import { lightTheme, darkTheme } from '../path/to/themes';
 
 const lightTheme = createTheme({
   palette: {
-    mode: 'light',
+    mode: "light",
   },
 });
 
@@ -16,8 +16,8 @@ const preview: Preview = {
   parameters: {
     controls: {
       matchers: {
-       color: /(background|color)$/i,
-       date: /Date$/i,
+        color: /(background|color)$/i,
+        date: /Date$/i,
       },
     },
 
@@ -25,8 +25,8 @@ const preview: Preview = {
       // 'todo' - show a11y violations in the test UI only
       // 'error' - fail CI on a11y violations
       // 'off' - skip a11y checks entirely
-      test: 'todo'
-    }
+      test: "todo",
+    },
   },
 
   decorators: [withThemeFromJSXProvider({
@@ -37,8 +37,8 @@ const preview: Preview = {
       light: lightTheme,
       // dark: darkTheme,
     },
-    defaultTheme: 'light',
-  })]
+    defaultTheme: "light",
+  })],
 };
 
 export default preview;

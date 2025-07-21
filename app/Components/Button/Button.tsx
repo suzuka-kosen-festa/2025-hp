@@ -1,12 +1,12 @@
-import { Button as MUIButton } from "@mui/material";
 import type { ReactNode } from "react";
+import { Button as MUIButton } from "@mui/material";
 
-type ButtonComponentProps = {
-};
+interface ButtonComponentProps {
+}
 
-const Button = ({}: ButtonComponentProps): ReactNode => {
+function Button(_: ButtonComponentProps): ReactNode {
   return (
     <MUIButton>Hoge Fuga Piyo</MUIButton>
   );
-};
+}
 export default Button;

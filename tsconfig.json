@@ -1,5 +1,14 @@
 {
-  "files": [],
+  "compilerOptions": {
+    "types": [
+      "./worker-configuration.d.ts"
+    ],
+    "checkJs": true,
+    "strict": true,
+    "noEmit": true,
+    "verbatimModuleSyntax": true,
+    "skipLibCheck": true
+  },
   "references": [
     {
       "path": "./tsconfig.node.json"
@@ -8,14 +17,5 @@
       "path": "./tsconfig.cloudflare.json"
     }
   ],
-  "compilerOptions": {
-    "checkJs": true,
-    "verbatimModuleSyntax": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
-    "types": [
-      "./worker-configuration.d.ts"
-    ]
-  }
+  "files": []
 }
