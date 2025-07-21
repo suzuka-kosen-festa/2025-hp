@@ -1,0 +1,109 @@
+name: Preview
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+  id-token: write
+
+jobs:
+  preview-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: preview
+    outputs:
+      url: ${{ steps.page.outputs.deployment-url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shiron-dev/actions/setup-node@v1.4.2
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Run build
+        run: pnpm run build
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        id: page
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy ./build/client --project-name=snct-2025-hp
+      - name: Comment
+        uses: mshick/add-pr-comment@v2.8.2
+        with:
+          message-id: cloudflare-deploy
+          message: |
+            ### Preview
+
+            |  Name | Link |
+            |---------------------------------|------------------------|
+            |<span aria-hidden="true">🔨</span> Latest commit | ${{ github.sha }} |
+            |<span aria-hidden="true">😎</span> Deploy Preview Url | [${{ steps.page.outputs.deployment-url }}](${{ steps.page.outputs.deployment-url }}) |
+            ---
+  lighthouse:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    needs: preview-deploy
+    steps:
+      - uses: actions/checkout@v4
+      - name: Audit URLs using Lighthouse
+        uses: treosh/lighthouse-ci-action@v12
+        id: lighthouse_audit
+        with:
+          urls: |
+            ${{ needs.preview-deploy.outputs.url }}
+          uploadArtifacts: true
+          temporaryPublicStorage: true
+      - uses: actions/github-script@v7
+        id: github_script
+        with:
+          script: |
+            const script = (await import(`${process.env.GITHUB_WORKSPACE}/.github/scripts/lighthouse.js`)).default;
+            const manifest = ${{ steps.lighthouse_audit.outputs.manifest }};
+            return script(manifest);
+          result-encoding: string
+      - name: Comment
+        uses: mshick/add-pr-comment@v2.8.2
+        with:
+          message-id: lightouse-audit
+          message: |
+            ### Lightouse Audit
+
+            ${{ steps.github_script.outputs.result }}
+  preview-storybook-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: preview
+    outputs:
+      url: ${{ steps.page.outputs.deployment-url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shiron-dev/actions/setup-node@v1.4.2
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Run build:storybook
+        run: pnpm run build:storybook
+      - name: Run build
+        run: pnpm run build
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        id: page
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy ./storybook-static --project-name=snct-2025-hp-sb
+      - name: Comment
+        uses: mshick/add-pr-comment@v2.8.2
+        with:
+          message-id: cloudflare-sb-deploy
+          message: |
+            ### Storybook Preview
+
+            |  Name | Link |
+            |---------------------------------|------------------------|
+            |<span aria-hidden="true">🔨</span> Latest commit | ${{ github.sha }} |
+            |<span aria-hidden="true">😎</span> Deploy Preview Url | [${{ steps.page.outputs.deployment-url }}](${{ steps.page.outputs.deployment-url }}) |
+            ---

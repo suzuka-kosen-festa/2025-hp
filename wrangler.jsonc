@@ -5,11 +5,8 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "2025-hp",
-  "compatibility_date": "2025-04-04",
-  "main": "./workers/app.ts",
-  "vars": {
-    "VALUE_FROM_CLOUDFLARE": "Hello from Cloudflare"
-  },
+  "compatibility_date": "2025-07-19",
+  "pages_build_output_dir": "./build/client",
   "observability": {
     "enabled": true
   }
