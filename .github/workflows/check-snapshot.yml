@@ -34,7 +34,7 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            const getDir = (p: string) => p.split("/").slice(0, 3).join("/");
+            const getDir = (p) => p.split("/").slice(0, 3).join("/");
 
             const components = JSON.parse(process.env.CHANGED_COMPONENTS);
             const snapshots = JSON.parse(process.env.CHANGED_SNAPSHOTS);
