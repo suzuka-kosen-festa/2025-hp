@@ -1,8 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import type { ReactNode } from "react";
 import { css } from "@emotion/react";
-import { Button as MUIButton } from "@mui/material";
-import { Link } from "react-router";
 
 interface FooterComponentProps {
 }
