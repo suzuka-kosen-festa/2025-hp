@@ -44,7 +44,7 @@ jobs:
             const componentDirs = components.map(getDir);
             const snapshotDirs = snapshots.map(getDir);
 
-            return componentDirs.filter((dir) => !snapshotDirs.includes(dir));
+            return snapshotDirs.filter((dir) => !componentDirs.includes(dir));
         env:
           CHANGED_COMPONENTS: ${{ steps.changes.outputs.components_files }}
           CHANGED_SNAPSHOTS: ${{ steps.changes.outputs.snapshots_files }}
