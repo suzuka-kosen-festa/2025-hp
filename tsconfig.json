@@ -1,21 +1,40 @@
 {
   "compilerOptions": {
-    "types": [
-      "./worker-configuration.d.ts"
+    "target": "ES2022",
+    "jsx": "react-jsx",
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ES2022"
     ],
-    "checkJs": true,
+    "baseUrl": ".",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "paths": {
+      "~/*": [
+        "my-remix-app/app/*"
+      ]
+    },
+    "resolveJsonModule": true,
+    "types": [
+      "@cloudflare/workers-types/2023-07-01",
+      "@remix-run/cloudflare",
+      "vite/client"
+    ],
+    "allowJs": true,
     "strict": true,
     "noEmit": true,
-    "verbatimModuleSyntax": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
     "skipLibCheck": true
   },
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    },
-    {
-      "path": "./tsconfig.cloudflare.json"
-    }
-  ],
-  "files": []
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/.server/**/*.ts",
+    "**/.server/**/*.tsx",
+    "**/.client/**/*.ts",
+    "**/.client/**/*.tsx"
+  ]
 }

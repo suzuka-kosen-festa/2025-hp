@@ -1,48 +1,31 @@
-import { cloudflare } from "@cloudflare/vite-plugin";
-import { reactRouter } from "@react-router/dev/vite";
-import react from "@vitejs/plugin-react";
+import {
+  vitePlugin as remix,
+  cloudflareDevProxyVitePlugin as remixCloudflareDevProxy,
+} from "@remix-run/dev";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
+
+declare module "@remix-run/cloudflare" {
+  interface Future {
+    v3_singleFetch: true
+  }
+}
 
 // eslint-disable-next-line node/prefer-global/process
 const isStorybook = process.argv[1]?.includes("storybook");
 
 export default defineConfig({
   plugins: [
-    cloudflare({ viteEnvironment: { name: "ssr" } }),
-    react({
-      jsxImportSource: "@emotion/react",
-      babel: {
-        plugins: [
-          [
-            "@emotion/babel-plugin",
-            {
-              importMap: {
-                "@mui/system": {
-                  styled: {
-                    canonicalImport: ["@emotion/styled", "default"],
-                    styledBaseImport: ["@mui/system", "styled"],
-                  },
-                },
-                "@mui/material/styles": {
-                  styled: {
-                    canonicalImport: ["@emotion/styled", "default"],
-                    styledBaseImport: ["@mui/material/styles", "styled"],
-                  },
-                },
-                "@mui/material": {
-                  styled: {
-                    canonicalImport: ["@emotion/styled", "default"],
-                    styledBaseImport: ["@mui/material", "styled"],
-                  },
-                },
-              },
-            },
-          ],
-        ],
+    remixCloudflareDevProxy(),
+    !isStorybook && remix({
+      future: {
+        v3_fetcherPersist: true,
+        v3_relativeSplatPath: true,
+        v3_throwAbortReason: true,
+        v3_singleFetch: true,
+        v3_lazyRouteDiscovery: true,
       },
     }),
-    !isStorybook && reactRouter(),
     tsconfigPaths(),
   ],
 });
