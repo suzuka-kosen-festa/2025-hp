@@ -1,0 +1,48 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`bazaarCard snapshot 1`] = `
+<div>
+  <div
+    class="css-1jp7uvf-bazaarCard"
+  >
+    <div
+      class="css-m2erzf-imageContainer"
+    >
+      <img
+        alt="ロボコンプロジェクトのイメージ"
+        class="css-fbn16s-cardImage"
+        loading="lazy"
+        src="https://via.placeholder.com/320x200/4a90e2/ffffff?text=Sample+Image"
+      />
+    </div>
+    <div
+      class="css-15ps2if-cardContent"
+    >
+      <div
+        class="css-t4wfv3-titleFrame"
+      >
+        <h4
+          class="css-1ugwqtx-bazaarTitle"
+        >
+          ロボコンプロジェクト
+        </h4>
+        <span
+          class="css-1757ab3-separator"
+        >
+          -
+        </span>
+        <h4
+          class="css-1mrxk1a-teamTitle"
+        >
+          サンプルチーム
+        </h4>
+      </div>
+      <p
+        class="css-1pka0cz-description"
+      >
+        手作りの美味しいクレープをお楽しみください。フルーツやクリームがたっぷり！
+      </p>
+    </div>
+  </div>
+</div>
+`;
