@@ -1,0 +1,84 @@
+name: Main CI
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  all-status-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    needs:
+      - build-test
+      - build-storybook-test
+      - type-test
+      - lint-test
+      - vitest-test
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check all-status-check
+        run: |
+          diff \
+            <(yq ".jobs | del(.all-status-check) | keys.[]" .github/workflows/ci.yml) \
+            <(yq ".jobs.all-status-check.needs.[]" .github/workflows/ci.yml)
+
+  build-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shiron-dev/actions/setup-node@v1.1.0
+      - name: Run install
+        run: |
+          pnpm install --frozen-lockfile
+      - name: Run build
+        run: pnpm run build
+
+  build-storybook-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shiron-dev/actions/setup-node@v1.1.0
+      - name: Run install
+        run: |
+          pnpm install --frozen-lockfile
+      - name: Run build:storybook
+        run: pnpm run build:storybook
+
+  type-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shiron-dev/actions/setup-node@v1.1.0
+      - name: Run install
+        run: |
+          pnpm install --frozen-lockfile
+      - name: Run typecheck
+        run: pnpm run typecheck
+
+  lint-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shiron-dev/actions/setup-node@v1.1.0
+      - name: Run install
+        run: |
+          pnpm install --frozen-lockfile
+      - name: Run lint
+        run: pnpm run lint
+
+  vitest-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shiron-dev/actions/setup-node@v1.1.0
+      - name: Run install
+        run: |
+          pnpm install --frozen-lockfile
+      - name: Run test
+        run: pnpm run test
