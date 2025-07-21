@@ -3,7 +3,7 @@
 exports[`bazaarCard snapshot 1`] = `
 <div>
   <div
-    class="css-1jp7uvf-bazaarCard"
+    class="css-1ygl358-bazaarCard"
   >
     <div
       class="css-m2erzf-imageContainer"
@@ -12,7 +12,7 @@ exports[`bazaarCard snapshot 1`] = `
         alt="ロボコンプロジェクトのイメージ"
         class="css-fbn16s-cardImage"
         loading="lazy"
-        src="https://via.placeholder.com/320x200/4a90e2/ffffff?text=Sample+Image"
+        src="/public/images/not-found.png"
       />
     </div>
     <div
@@ -38,7 +38,7 @@ exports[`bazaarCard snapshot 1`] = `
         </h4>
       </div>
       <p
-        class="css-1pka0cz-description"
+        class="css-1enw2hu-description"
       >
         手作りの美味しいクレープをお楽しみください。フルーツやクリームがたっぷり！
       </p>
