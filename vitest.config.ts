@@ -1,21 +1,10 @@
-import emotion from "@emotion/babel-plugin";
-import {
-  vitePlugin as remix,
-  cloudflareDevProxyVitePlugin as remixCloudflareDevProxy,
-} from "@remix-run/dev";
 import react from "@vitejs/plugin-react";
-import { defineConfig } from "vite";
+import { defineConfig as defineViteConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
+import { defineConfig as defineVitestConfig, mergeConfig } from "vitest/config";
 
-declare module "@remix-run/cloudflare" {
-  interface Future {
-    v3_singleFetch: true
-  }
-}
-
-export default defineConfig({
+const viteConfig = defineViteConfig({
   plugins: [
-    remixCloudflareDevProxy(),
     tsconfigPaths(),
     react({
       babel: {
@@ -23,8 +12,13 @@ export default defineConfig({
       },
     }),
   ],
+});
+
+const vitestConfig = defineVitestConfig({
   test: {
-    environment: "jsdom",
     globals: true,
+    environment: "jsdom",
   },
 });
+
+export default mergeConfig(viteConfig, vitestConfig);
