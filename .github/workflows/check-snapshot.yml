@@ -64,3 +64,9 @@ jobs:
             ```txt
             ${{ steps.check-snapshot-changes.outputs.result }}
             ```
+
+      - name: Fail if snapshot changes detected
+        if: ${{ steps.check-snapshot-changes.outputs.result != '' }}
+        run: |
+          echo Snapshot changes detected in components without corresponding snapshot updates.
+          exit 1
