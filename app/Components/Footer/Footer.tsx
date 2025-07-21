@@ -1,6 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import type { ReactNode } from "react";
 import { css } from "@emotion/react";
+import { Link } from "@remix-run/react";
+import { ja } from "@/locales/ja";
 
 interface FooterComponentProps {
 }
@@ -36,16 +38,13 @@ function Footer(_: FooterComponentProps): ReactNode {
           <h4>Site Map</h4>
           <ul>
             <li>
-              <a href="/">Home</a>
-              {/* <Link to="/">Home</Link> */}
+              <Link to="/">{ja.footer.home}</Link>
             </li>
             <li>
-              <a href="/">Home</a>
-              {/* <Link to="/">Home</Link> */}
+              <Link to="/">{ja.footer.home}</Link>
             </li>
             <li>
-              <a href="/">Home</a>
-              {/* <Link to="/">Home</Link> */}
+              <Link to="/">{ja.footer.home}</Link>
             </li>
           </ul>
         </div>
@@ -53,18 +52,18 @@ function Footer(_: FooterComponentProps): ReactNode {
           <h4>Site Map</h4>
           <ul>
             <li>
-              <a href="/">Home</a>
+              <Link to="/">{ja.footer.home}</Link>
             </li>
             <li>
-              <a href="/">Home</a>
+              <Link to="/">{ja.footer.home}</Link>
             </li>
             <li>
-              <a href="/">Home</a>
+              <Link to="/">{ja.footer.home}</Link>
             </li>
           </ul>
         </div>
       </div>
-      <p>©2025 鈴鹿工業高等専門学校 高専祭実行委員会</p>
+      <p>{ja.footer.copyright}</p>
     </div>
   );
 }
