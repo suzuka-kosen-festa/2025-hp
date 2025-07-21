@@ -7,7 +7,7 @@ exports[`button snapshot 1`] = `
     tabindex="0"
     type="button"
   >
-    Hoge Fuga Piyo
+    hoge fuga piyo ダミー
   </button>
 </div>
 `;

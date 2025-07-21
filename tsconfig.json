@@ -11,8 +11,8 @@
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "paths": {
-      "~/*": [
-        "my-remix-app/app/*"
+      "@/*": [
+        "app/*"
       ]
     },
     "resolveJsonModule": true,
