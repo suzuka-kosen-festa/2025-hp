@@ -10,7 +10,7 @@
     "postinstall": "npm run cf-typegen",
     "preview": "pnpm run build && vite preview",
     "typecheck": "pnpm run build && tsc",
-    "dev:storybook": "storybook dev -p 6006",
+    "dev:storybook": "storybook dev -p 6006 --no-open",
     "build:storybook": "storybook build",
     "test": "vitest",
     "lint": "eslint .",
