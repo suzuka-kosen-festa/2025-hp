@@ -29,6 +29,8 @@ jobs:
             snapshots:
               - app/Components/**/__snapshots__/**
           list-files: json
+          predicate-quantifier: every
+
       - name: Check snapshot changes
         id: check-snapshot-changes
         uses: actions/github-script@v7
