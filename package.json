@@ -12,6 +12,9 @@
 		"typecheck": "npm run cf-typegen && react-router typegen && tsc -b"
 	},
 	"dependencies": {
+		"@emotion/react": "^11.14.0",
+		"@emotion/styled": "^11.14.1",
+		"@mui/material": "^7.2.0",
 		"isbot": "^5.1.27",
 		"react": "^19.1.0",
 		"react-dom": "^19.1.0",
@@ -20,11 +23,10 @@
 	"devDependencies": {
 		"@cloudflare/vite-plugin": "^1.0.12",
 		"@react-router/dev": "^7.7.0",
-		"@tailwindcss/vite": "^4.1.4",
 		"@types/node": "^20",
 		"@types/react": "^19.1.2",
 		"@types/react-dom": "^19.1.2",
-		"tailwindcss": "^4.1.4",
+		"@vitejs/plugin-react": "^4.7.0",
 		"typescript": "^5.8.3",
 		"vite": "^6.3.3",
 		"vite-tsconfig-paths": "^5.1.4",
