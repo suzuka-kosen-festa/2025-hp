@@ -2,7 +2,7 @@
 
 import { composeStories } from "@storybook/react";
 
-import { expect } from "vitest";
+import { expect, it } from "vitest";
 
 import * as stories from "./Button.stories";
 
