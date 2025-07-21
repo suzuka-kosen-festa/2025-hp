@@ -1,0 +1,61 @@
+name: Check Snapshot Changes
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions: {}
+
+jobs:
+  check-snapshots:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Check snapshot changes
+        uses: dorny/paths-filter@de90cc6fb38fc0963ad72b210f1f284cd68cea36 # v3.0.2
+        id: changes
+        with:
+          filters: |
+            components:
+              - app/Components/**
+              - "!app/Components/**/__snapshots__/**"
+            snapshots:
+              - app/Components/**/__snapshots__/**
+          list-files: json
+      - name: Check snapshot changes
+        id: check-snapshot-changes
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const getDir = (p: string) => p.split("/").slice(0, 3).join("/");
+
+            const components = JSON.parse(process.env.CHANGED_COMPONENTS);
+            const snapshots = JSON.parse(process.env.CHANGED_SNAPSHOTS);
+
+            const componentDirs = components.map(getDir);
+            const snapshotDirs = snapshots.map(getDir);
+
+            return componentDirs.filter((dir) => !snapshotDirs.includes(dir));
+        env:
+          CHANGED_COMPONENTS: ${{ steps.changes.outputs.components_files }}
+          CHANGED_SNAPSHOTS: ${{ steps.changes.outputs.snapshots_files }}
+
+      - name: Comment
+        uses: mshick/add-pr-comment@b8f338c590a895d50bcbfa6c5859251edc8952fc # v2.8.2
+        with:
+          message-id: check-snapshot-changes
+          message: |
+            ### Snapshot Changes Detected
+
+            The following components have changed but do not have corresponding snapshot changes:
+
+            ```txt
+            ${{ steps.check-snapshot-changes.outputs.result }}
+            ```
