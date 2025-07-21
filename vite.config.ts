@@ -4,6 +4,9 @@ import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 import react from '@vitejs/plugin-react';
 
+
+const isStorybook = process.argv[1]?.includes("storybook");
+
 export default defineConfig({
   plugins: [
     cloudflare({ viteEnvironment: { name: "ssr" } }),
@@ -39,7 +42,7 @@ export default defineConfig({
         ]
       }
     }),
-    reactRouter(),
+    !isStorybook && reactRouter(),
     tsconfigPaths(),
   ],
 });
