@@ -19,20 +19,20 @@ jobs:
       url: ${{ steps.page.outputs.deployment-url }}
     steps:
       - uses: actions/checkout@v4
-      - uses: shiron-dev/actions/setup-node@v1.4.2
+      - uses: shiron-dev/actions/setup-node@74679b904db8a309ed5bd1ac7c93d2d63f4a8e55 # v1.4.2
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
       - name: Run build
         run: pnpm run build
       - name: Deploy to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v3
+        uses: cloudflare/wrangler-action@da0e0dfe58b7a431659754fdf3f186c529afbe65 # v3
         id: page
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy ./build/client --project-name=snct-2025-hp
       - name: Comment
-        uses: mshick/add-pr-comment@v2.8.2
+        uses: mshick/add-pr-comment@b8f338c590a895d50bcbfa6c5859251edc8952fc # v2.8.2
         with:
           message-id: cloudflare-deploy
           message: |
@@ -50,7 +50,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Audit URLs using Lighthouse
-        uses: treosh/lighthouse-ci-action@v12
+        uses: treosh/lighthouse-ci-action@fcd65974f7c4c2bf0ee9d09b84d2489183c29726 # v12
         id: lighthouse_audit
         with:
           urls: |
@@ -66,7 +66,7 @@ jobs:
             return script(manifest);
           result-encoding: string
       - name: Comment
-        uses: mshick/add-pr-comment@v2.8.2
+        uses: mshick/add-pr-comment@b8f338c590a895d50bcbfa6c5859251edc8952fc # v2.8.2
         with:
           message-id: lightouse-audit
           message: |
@@ -81,7 +81,7 @@ jobs:
       url: ${{ steps.page.outputs.deployment-url }}
     steps:
       - uses: actions/checkout@v4
-      - uses: shiron-dev/actions/setup-node@v1.4.2
+      - uses: shiron-dev/actions/setup-node@74679b904db8a309ed5bd1ac7c93d2d63f4a8e55 # v1.4.2
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
       - name: Run build:storybook
@@ -89,14 +89,14 @@ jobs:
       - name: Run build
         run: pnpm run build
       - name: Deploy to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v3
+        uses: cloudflare/wrangler-action@da0e0dfe58b7a431659754fdf3f186c529afbe65 # v3
         id: page
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy ./storybook-static --project-name=snct-2025-hp-sb
       - name: Comment
-        uses: mshick/add-pr-comment@v2.8.2
+        uses: mshick/add-pr-comment@b8f338c590a895d50bcbfa6c5859251edc8952fc # v2.8.2
         with:
           message-id: cloudflare-sb-deploy
           message: |
