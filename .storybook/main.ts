@@ -1,4 +1,5 @@
 import type { StorybookConfig } from "@storybook/react-vite";
+import { resolve } from "node:path";
 
 const config: StorybookConfig = {
   stories: ["../app/**/*.stories.@(ts|tsx)"],
@@ -17,6 +18,12 @@ const config: StorybookConfig = {
     const { mergeConfig } = await import("vite");
 
     return mergeConfig(config, {
+      resolve: {
+        alias: {
+          // RemixのLinkコンポーネントをモック用のコンポーネントに置き換え
+          "@remix-run/react": resolve(__dirname, "../app/Components/Footer/Link.tsx"),
+        },
+      },
     });
   },
 };
