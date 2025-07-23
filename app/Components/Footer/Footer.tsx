@@ -35,7 +35,7 @@ function Footer(_: FooterComponentProps): ReactNode {
     <div css={footer}>
       <div css={siteMapFrame}>
         <div css={Frame}>
-          <h4>Site Map</h4>
+          <h4>{ja.footer.siteMap}</h4>
           <ul>
             <li>
               <Link to="/">{ja.footer.home}</Link>
@@ -49,7 +49,7 @@ function Footer(_: FooterComponentProps): ReactNode {
           </ul>
         </div>
         <div css={Frame}>
-          <h4>Site Map</h4>
+          <h4>{ja.footer.siteMap}</h4>
           <ul>
             <li>
               <Link to="/">{ja.footer.home}</Link>
