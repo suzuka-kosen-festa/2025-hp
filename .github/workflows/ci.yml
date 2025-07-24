@@ -93,9 +93,9 @@ jobs:
       - name: Run install
         run: |
           pnpm install --frozen-lockfile
-      - name: Build Storybook
-        run: pnpm run build:storybook
       - name: Run Chromatic
         uses: chromaui/action@v13.1.2
         with:
+          buildScriptName: build:storybook
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+
