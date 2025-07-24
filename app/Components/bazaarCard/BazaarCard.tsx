@@ -10,8 +10,7 @@ import * as React from "react";
 import { ja } from "../../locales/ja";
 
 function BazaarCard(props: BazaarComponentProps): ReactNode {
-  const { image, teamName, bazaarName, description: desc } = props;
-  const truncatedDescription = desc.length > 50 ? `${desc.slice(0, 50)}...` : desc;
+  const { image, teamName, bazaarName, description } = props;
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
     e.currentTarget.src = "/images/not-found.png";
   };
@@ -37,7 +36,7 @@ function BazaarCard(props: BazaarComponentProps): ReactNode {
             {ja.bazaarCard.name(bazaarName, teamName)}
           </Typography>
           <Typography variant="body2" sx={{ color: "text.secondary" }}>
-            {truncatedDescription}
+            {description}
           </Typography>
         </CardContent>
       </CardActionArea>
