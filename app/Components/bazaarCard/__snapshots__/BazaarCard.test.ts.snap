@@ -3,46 +3,38 @@
 exports[`bazaarCard snapshot 1`] = `
 <div>
   <div
-    class="css-1ygl358-bazaarCard"
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-1i3faf7-MuiPaper-root-MuiCard-root"
+    style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
   >
-    <div
-      class="css-m2erzf-imageContainer"
+    <button
+      class="MuiButtonBase-root MuiCardActionArea-root css-1w58g4t-MuiButtonBase-root-MuiCardActionArea-root"
+      tabindex="0"
+      type="button"
     >
       <img
-        alt="ロボコンプロジェクトのイメージ"
-        class="css-fbn16s-cardImage"
-        loading="lazy"
+        alt="バザー名のイメージ"
+        class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-1kuwa16-MuiCardMedia-root"
+        height="auto"
         src="/public/images/not-found.png"
       />
-    </div>
-    <div
-      class="css-15ps2if-cardContent"
-    >
       <div
-        class="css-t4wfv3-titleFrame"
+        class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
       >
-        <h4
-          class="css-1ugwqtx-bazaarTitle"
+        <div
+          class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-1f9xtph-MuiTypography-root"
         >
-          ロボコンプロジェクト
-        </h4>
-        <span
-          class="css-1757ab3-separator"
+          バザー名-チーム名
+        </div>
+        <p
+          class="MuiTypography-root MuiTypography-body2 css-1wle3ir-MuiTypography-root"
         >
-          -
-        </span>
-        <h4
-          class="css-1mrxk1a-teamTitle"
-        >
-          サンプルチーム
-        </h4>
+          説明文
+        </p>
       </div>
-      <p
-        class="css-1enw2hu-description"
-      >
-        手作りの美味しいクレープをお楽しみください。フルーツやクリームがたっぷり！
-      </p>
-    </div>
+      <span
+        class="MuiCardActionArea-focusHighlight css-1h5un5t-MuiCardActionArea-focusHighlight"
+      />
+    </button>
   </div>
 </div>
 `;

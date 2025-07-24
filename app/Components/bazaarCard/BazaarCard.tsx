@@ -1,182 +1,47 @@
 /** @jsxImportSource @emotion/react */
-
 import type { ReactNode } from "react";
-
-import { css } from "@emotion/react";
-
-interface BazaarComponentProps {
-
-  image: string
-
-  teamName: string
-
-  bazaarName: string
-
-  description: string
-
-}
-
-const bazaarCard = css({
-
-  display: "flex",
-
-  flexDirection: "column",
-
-  borderRadius: "12px",
-
-  boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
-
-  overflow: "hidden",
-
-  backgroundColor: "#ffffff",
-
-  transition: "transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out",
-
-  maxWidth: "320px",
-
-  height: "350px",
-
-});
-
-const imageContainer = css({
-
-  width: "100%",
-
-  height: "200px",
-
-  overflow: "hidden",
-
-  padding: "10px",
-
-});
-
-const cardImage = css({
-
-  width: "100%",
-
-  height: "100%",
-
-  objectFit: "cover",
-
-});
-
-const cardContent = css({
-
-  padding: "16px",
-
-});
-
-const titleFrame = css({
-
-  display: "flex",
-
-  alignItems: "center",
-
-  gap: "8px",
-
-  marginBottom: "12px",
-
-});
-
-const bazaarTitle = css({
-
-  fontWeight: "bold",
-
-  color: "#333",
-
-  margin: 0,
-
-});
-
-const teamTitle = css({
-
-  fontWeight: "bold",
-
-  color: "#666",
-
-  margin: 0,
-
-});
-
-const separator = css({
-
-  color: "#999",
-
-  fontSize: "16px",
-
-});
-
-const description = css({
-
-  fontSize: "14px",
-
-  color: "#555",
-
-  lineHeight: "1.5",
-
-  margin: 0,
-
-  wordBreak: "break-word",
-
-  height: "63px",
-
-  overflow: "hidden",
-
-  textOverflow: "ellipsis",
-
-});
+import type { BazaarComponentProps } from "../../locales/ja";
+import Card from "@mui/material/Card";
+import CardActionArea from "@mui/material/CardActionArea";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import * as React from "react";
+import { ja } from "../../locales/ja";
 
 function BazaarCard(props: BazaarComponentProps): ReactNode {
   const { image, teamName, bazaarName, description: desc } = props;
-
-  // 説明文の文字数制限（10文字以上50文字以下）
-
   const truncatedDescription = desc.length > 50 ? `${desc.slice(0, 50)}...` : desc;
-
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
     e.currentTarget.src = "/images/not-found.png";
   };
-
   return (
-
-    <div css={bazaarCard}>
-
-      <div css={imageContainer}>
-
-        <img
-
-          css={cardImage}
-
-          src={image}
-
-          alt={`${bazaarName}のイメージ`}
-
-          loading="lazy"
-
+    <Card sx={{ maxWidth: 345 }}>
+      <CardActionArea sx={{
+        height: "350px",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "stretch",
+        justifyContent: "flex-start",
+      }}
+      >
+        <CardMedia
+          component="img"
+          height="auto"
+          image={image}
+          alt={ja.bazaarCard.imageAlt(bazaarName)}
           onError={handleImageError}
-
         />
-
-      </div>
-
-      <div css={cardContent}>
-
-        <div css={titleFrame}>
-
-          <h4 css={bazaarTitle}>{bazaarName}</h4>
-
-          <span css={separator}>-</span>
-
-          <h4 css={teamTitle}>{teamName}</h4>
-
-        </div>
-
-        <p css={description}>{truncatedDescription}</p>
-
-      </div>
-
-    </div>
-
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            {ja.bazaarCard.name(bazaarName, teamName)}
+          </Typography>
+          <Typography variant="body2" sx={{ color: "text.secondary" }}>
+            {truncatedDescription}
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>
   );
 }
 
