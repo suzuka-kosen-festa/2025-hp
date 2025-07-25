@@ -1,0 +1,29 @@
+{
+  "core": {
+    "workingDir": ".reg",
+    "actualDir": "__screenshots__",
+    "thresholdRate": 0,
+    "threshold": 0,
+    "ximgdiff": {
+      "invocationType": "client"
+    },
+    "actualKey": "${process.env.REG_SUIT_ACTUAL_KEY}",
+    "expectedKey": "${process.env.REG_SUIT_EXPECTED_KEY}"
+  },
+  "plugins": {
+    "reg-keygen-git-hash-plugin": true,
+    "reg-notify-github-plugin": {
+      "prComment": true,
+      "prCommentBehavior": "default",
+      "clientId": "MzQwMjYxMjYwM9I3MjAy1c0o0DcxMDU2MDc30S8urSrNTtTNzi9OzdNNSy0uSQQA"
+    },
+    "reg-publish-s3-plugin": {
+      "bucketName": "snct-2025-hp-reg",
+      "customDomain": "pub-12598970287d4b79b1f4e74a918befd3.r2.dev",
+      "sdkOptions": {
+        "region": "auto",
+        "endpoint": "https://edc628145468437b85dc0e6d48bff3e3.r2.cloudflarestorage.com"
+      }
+    }
+  }
+}
