@@ -100,4 +100,3 @@ jobs:
         with:
           buildScriptName: build:storybook
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-
