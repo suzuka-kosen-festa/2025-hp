@@ -15,6 +15,7 @@ jobs:
       - type-test
       - lint-test
       - vitest-test
+      - vrt-test
     steps:
       - uses: actions/checkout@v4
       - name: Check all-status-check
@@ -82,3 +83,20 @@ jobs:
           pnpm install --frozen-lockfile
       - name: Run test
         run: pnpm run test
+
+  vrt-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: shiron-dev/actions/setup-node@3478cc44402c5c590ce6732554e621558ac6d6e5 # v1.5.0
+      - name: Run install
+        run: |
+          pnpm install --frozen-lockfile
+      - name: Run Chromatic
+        uses: chromaui/action@v13.1.2
+        with:
+          buildScriptName: build:storybook
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
