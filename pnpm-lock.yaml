@@ -127,7 +127,7 @@ importers:
         specifier: 1.54.1
         version: 1.54.1
       puppeteer:
-        specifier: ^24.15.0
+        specifier: 24.15.0
         version: 24.15.0(typescript@5.8.3)
       reg-keygen-git-hash-plugin:
         specifier: ^0.14.3
