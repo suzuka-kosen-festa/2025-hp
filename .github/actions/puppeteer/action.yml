@@ -1,0 +1,23 @@
+name: Cache Puppeteer
+description: Cache Puppeteer
+
+runs:
+  using: composite
+  steps:
+    - name: Get installed Puppeteer version
+      shell: bash
+      id: puppeteer-version
+      run: |
+        echo "PUPPETEER_VERSION=$(jq -r '.devDependencies.puppeteer' package.json)" >>"$GITHUB_OUTPUT"
+    - uses: actions/cache@v4.2.3
+      name: Setup puppeteer cache
+      id: puppeteer-cache
+      with:
+        path: /home/runner/.cache/puppeteer
+        key: ${{ runner.os }}-puppeteer-${{ steps.puppeteer-version.outputs.PUPPETEER_VERSION }}
+    - name: Install Puppeteer
+      if: ${{ steps.puppeteer-cache.outputs.cache-hit != 'true' }}
+      shell: bash
+      run: |
+        cd node_modules/puppeteer
+        pnpm postinstall

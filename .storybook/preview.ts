@@ -1,7 +1,8 @@
-import type { Preview } from "@storybook/react-vite";
+import type { Decorator, Preview } from "@storybook/react-vite";
 
 import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
 import { withThemeFromJSXProvider } from "@storybook/addon-themes";
+import { withScreenshot } from "storycap";
 
 /* TODO: update import for your custom Material UI themes */
 // import { lightTheme, darkTheme } from '../path/to/themes';
@@ -27,6 +28,17 @@ const preview: Preview = {
       // 'off' - skip a11y checks entirely
       test: "todo",
     },
+
+    screenshot: {
+      fullPage: true,
+      captureBeyondViewport: false,
+      delay: 100,
+      viewports: {
+        desktop: { width: 1920, height: 1080 },
+        tablet: { width: 768, height: 1024 },
+        mobile: { width: 360, height: 800, isMobile: true, hasTouch: true },
+      },
+    },
   },
 
   decorators: [withThemeFromJSXProvider({
@@ -38,7 +50,7 @@ const preview: Preview = {
       // dark: darkTheme,
     },
     defaultTheme: "light",
-  })],
+  }), withScreenshot as Decorator],
 };
 
 export default preview;
