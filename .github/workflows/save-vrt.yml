@@ -21,6 +21,9 @@ jobs:
       - name: Run run:storycap
         run: |
           pnpm run run:storycap
+      - name: Set branch name for reg-suit
+        run: |
+          git checkout -B "${GITHUB_HEAD_REF:-${GITHUB_REF_NAME:-main}}"
       - name: Save snapshot on main branch
         run: pnpm reg-suit run --no-report
         env:
