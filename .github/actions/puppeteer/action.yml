@@ -19,4 +19,5 @@ runs:
       if: ${{ steps.puppeteer-cache.outputs.cache-hit != 'true' }}
       shell: bash
       run: |
-        pnpm install -g puppeteer
+        cd node_modules/puppeteer
+        pnpm postinstall
