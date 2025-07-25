@@ -13,15 +13,10 @@ runs:
       name: Setup puppeteer cache
       id: puppeteer-cache
       with:
-        path: ${{ env.PUPPETEER_CACHE_DIRECTORY }}
+        path: /home/runner/.cache/puppeteer
         key: ${{ runner.os }}-puppeteer-${{ steps.puppeteer-version.outputs.PUPPETEER_VERSION }}
-        restore-keys: |
-          ${{ runner.os }}-puppeteer-
-      env:
-        PUPPETEER_CACHE_DIRECTORY: "/home/runner/.cache/puppeteer"
     - name: Install Puppeteer
+      if: ${{ steps.puppeteer-cache.outputs.cache-hit != 'true' }}
       shell: bash
       run: |
-        if ${{ steps.puppeteer-cache.outputs.cache-hit != 'true' }}; then
-          pnpm install -g puppeteer
-        fi
+        pnpm install -g puppeteer
