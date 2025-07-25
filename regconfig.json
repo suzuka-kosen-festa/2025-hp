@@ -6,7 +6,9 @@
     "threshold": 0,
     "ximgdiff": {
       "invocationType": "client"
-    }
+    },
+    "actualKey": "${process.env.REG_SUIT_ACTUAL_KEY}",
+    "expectedKey": "${process.env.REG_SUIT_EXPECTED_KEY}"
   },
   "plugins": {
     "reg-keygen-git-hash-plugin": true,

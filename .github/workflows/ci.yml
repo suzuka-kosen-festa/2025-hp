@@ -89,18 +89,18 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
       - uses: shiron-dev/actions/setup-node@3478cc44402c5c590ce6732554e621558ac6d6e5 # v1.5.0
       - name: Run install
         run: |
           pnpm install --frozen-lockfile
-      - name: Run run:storycap
+      - name: Run build:storybook
         run: |
-          pnpm run run:storycap
+          pnpm run:storycap
       - name: Run reg-suit
         run: |
           pnpm reg-suit run
         env:
+          REG_SUIT_ACTUAL_KEY: ${{ github.sha }}
+          REG_SUIT_EXPECTED_KEY: ${{ github.event.pull_request.base.sha }}
           AWS_ACCESS_KEY_ID: ${{ secrets.CLOUDFLARE_R2_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.CLOUDFLARE_R2_SECRET_ACCESS_KEY }}
