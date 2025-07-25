@@ -1,0 +1,26 @@
+name: Cache Puppeteer
+description: Cache Puppeteer
+
+runs:
+  using: composite
+  steps:
+    - name: Get installed Puppeteer version
+      shell: bash
+      id: puppeteer-version
+      run: echo "PUPPETEER_VERSION=$( cat package.json | grep "\"puppeteer\"" | head -n 1 | tr -d ' \":,' | tr -d 'puppeteer' )" >> $GITHUB_OUTPUT
+    - uses: actions/cache@v4.2.3
+      name: Setup puppeteer cache
+      id: puppeteer-cache
+      with:
+        path: ${{ env.PUPPETEER_CACHE_DIRECTORY }}
+        key: ${{ runner.os }}-puppeteer-${{ steps.puppeteer-version.outputs.PUPPETEER_VERSION }}
+        restore-keys: |
+          ${{ runner.os }}-puppeteer-
+      env:
+        PUPPETEER_CACHE_DIRECTORY: "/home/runner/.cache/puppeteer"
+    - name: Install Puppeteer
+      shell: bash
+      run: |
+        if ${{ steps.puppeteer-cache.outputs.cache-hit != 'true' }}; then
+          pnpm install puppeteer
+        fi

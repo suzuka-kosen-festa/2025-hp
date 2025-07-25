@@ -16,8 +16,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "start:storybook": "pnpx serve -l 6007 storybook-static",
-    "run:storycap": "pnpm run build:storybook && storycap http://localhost:6007 --serverCmd 'pnpm start:storybook' --waitOnScheme http-get",
-    "install:chrome": "node node_modules/puppeteer/install.js"
+    "run:storycap": "pnpm run build:storybook && storycap http://localhost:6007 --serverCmd 'pnpm start:storybook' --waitOnScheme http-get"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
