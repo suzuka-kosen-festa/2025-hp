@@ -92,10 +92,10 @@ jobs:
         with:
           fetch-depth: 0
       - uses: shiron-dev/actions/setup-node@3478cc44402c5c590ce6732554e621558ac6d6e5 # v1.5.0
-      - uses: ./.github/actions/puppeteer
       - name: Run install
         run: |
           pnpm install --frozen-lockfile
+      - uses: ./.github/actions/puppeteer
       - name: Run run:storycap
         run: |
           pnpm run run:storycap
