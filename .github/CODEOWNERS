@@ -1,3 +1,4 @@
 * @shiron-dev
 pnpm-lock.yaml
 package.json
+.github/workflows/
