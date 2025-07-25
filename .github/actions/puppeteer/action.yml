@@ -22,5 +22,5 @@ runs:
       shell: bash
       run: |
         if ${{ steps.puppeteer-cache.outputs.cache-hit != 'true' }}; then
-          pnpm install puppeteer
+          pnpm install -g puppeteer
         fi
