@@ -17,6 +17,9 @@ jobs:
       - name: Run install
         run: |
           pnpm install --frozen-lockfile
+      - name: Run install:chrome
+        run: |
+          pnpm run install:chrome
       - name: Run run:storycap
         run: |
           pnpm run run:storycap
