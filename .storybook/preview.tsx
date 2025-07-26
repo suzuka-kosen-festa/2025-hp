@@ -1,11 +1,15 @@
 import type { Decorator, Preview } from "@storybook/react-vite";
 
-import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
+import { createTheme, CssBaseline, GlobalStyles, ThemeProvider } from "@mui/material";
 import { withThemeFromJSXProvider } from "@storybook/addon-themes";
+import React from "react";
 import { withScreenshot } from "storycap";
 
 /* TODO: update import for your custom Material UI themes */
 // import { lightTheme, darkTheme } from '../path/to/themes';
+
+const NotoSansJPFont
+  = "@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');";
 
 const lightTheme = createTheme({
   palette: {
@@ -42,7 +46,18 @@ const preview: Preview = {
   },
 
   decorators: [withThemeFromJSXProvider({
-    GlobalStyles: CssBaseline,
+    GlobalStyles: (
+      <>
+        <GlobalStyles
+          styles={`
+        ${NotoSansJPFont}
+        body {
+          font-family: 'Noto Sans JP', 'sans-serif';
+        }
+      `}
+        />
+        <CssBaseline />
+      </>),
     Provider: ThemeProvider,
     themes: {
       // Provide your custom themes here
