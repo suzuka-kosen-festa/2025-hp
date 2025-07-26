@@ -6,8 +6,8 @@ import { expect, it } from "vitest";
 
 import * as stories from "./Footer.stories";
 
-const { Default } = composeStories(stories);
+const { Extensive } = composeStories(stories);
 it("footer snapshot", async () => {
-  await Default.run();
+  await Extensive.run();
   expect(document.body.firstChild).toMatchSnapshot();
 });

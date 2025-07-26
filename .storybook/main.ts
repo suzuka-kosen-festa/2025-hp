@@ -21,7 +21,7 @@ const config: StorybookConfig = {
       resolve: {
         alias: {
           // RemixのLinkコンポーネントをモック用のコンポーネントに置き換え
-          "@remix-run/react": resolve(__dirname, "../app/Components/Footer/Link.tsx"),
+          "@remix-run/react": resolve(__dirname, "../app/Components/Link/Link.tsx"),
         },
       },
     });
