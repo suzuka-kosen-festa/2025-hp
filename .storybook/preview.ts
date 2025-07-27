@@ -8,6 +8,9 @@ import { withScreenshot } from "storycap";
 // import { lightTheme, darkTheme } from '../path/to/themes';
 
 const lightTheme = createTheme({
+  typography: {
+    fontFamily: ["Noto Sans JP", "sans-serif"].join(","),
+  },
   palette: {
     mode: "light",
   },
