@@ -13,7 +13,7 @@ exports[`bazaarCard snapshot 1`] = `
         alt="バザー名のイメージ"
         class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-1kuwa16-MuiCardMedia-root"
         height="auto"
-        src="/public/images/not-found.png"
+        src="/images/not-found.png"
       />
       <div
         class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
