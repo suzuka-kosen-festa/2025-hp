@@ -18,7 +18,7 @@ export interface BazaarComponentProps {
 function BazaarCard(props: BazaarComponentProps): ReactNode {
   const { image, teamName, bazaarName, description } = props;
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
-    e.currentTarget.src = "/public/images/not-found.png";
+    e.currentTarget.src = "/images/not-found.png";
   };
   return (
     <Card sx={{ maxWidth: 345 }}>
