@@ -13,11 +13,6 @@ const meta: Meta<typeof Footer> = {
     siteMap: {
       description: "サイトマップのセクションとリンクの配列",
     },
-    showCopyright: {
-      control: "boolean",
-      description: "コピーライト表示の制御",
-      defaultValue: true,
-    },
   },
 };
 
@@ -76,7 +71,6 @@ const extensiveSiteMap: FooterComponentProps["siteMap"] = [
 export const Extensive: Story = {
   args: {
     siteMap: extensiveSiteMap,
-    showCopyright: true,
   },
   parameters: {
     docs: {

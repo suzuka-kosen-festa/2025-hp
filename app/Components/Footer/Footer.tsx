@@ -21,7 +21,6 @@ export interface SiteMapSection {
 
 export interface FooterComponentProps {
   siteMap: SiteMapSection[]
-  showCopyright?: boolean
 }
 
 // 個別のリンクコンポーネント
@@ -61,7 +60,7 @@ function FooterLink({ title, href }: SiteMapLink): ReactNode {
   );
 }
 
-function Footer({ siteMap, showCopyright = true }: FooterComponentProps): ReactNode {
+function Footer({ siteMap }: FooterComponentProps): ReactNode {
   return (
     <Box
       component="footer"
@@ -150,22 +149,20 @@ function Footer({ siteMap, showCopyright = true }: FooterComponentProps): ReactN
           ))}
         </Box>
       )}
-      {showCopyright && (
-        <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            width: "100%",
-            padding: "20px 0",
-            color: ja.fontColor,
-            fontSize: ja.footer.fontSize.copyright,
-            marginTop: "30px",
-          }}
-        >
-          {ja.footer.copyright}
-        </Box>
-      )}
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          width: "100%",
+          padding: "20px 0",
+          color: ja.fontColor,
+          fontSize: ja.footer.fontSize.copyright,
+          marginTop: "30px",
+        }}
+      >
+        {ja.footer.copyright}
+      </Box>
     </Box>
   );
 }
