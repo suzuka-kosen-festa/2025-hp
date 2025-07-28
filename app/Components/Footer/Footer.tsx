@@ -1,12 +1,12 @@
 import type { ReactNode } from "react";
-import { Link } from "@remix-run/react";
 import Box from "@mui/material/Box";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
-import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/material/styles";
+import Typography from "@mui/material/Typography";
+import { Link } from "@remix-run/react";
 import { ja } from "@/locales/ja";
 
 // サイトマップの型定義
@@ -27,7 +27,7 @@ export interface FooterComponentProps {
 // 個別のリンクコンポーネント
 function FooterLink({ title, href }: SiteMapLink): ReactNode {
   const theme = useTheme();
-  
+
   return (
     <ListItemButton sx={{
       paddingTop: "4px",
@@ -70,7 +70,7 @@ function FooterLink({ title, href }: SiteMapLink): ReactNode {
 
 function Footer({ siteMap }: FooterComponentProps): ReactNode {
   const theme = useTheme();
-  
+
   return (
     <Box
       component="footer"
@@ -102,7 +102,7 @@ function Footer({ siteMap }: FooterComponentProps): ReactNode {
             },
           }}
         >
-          {siteMap.map((section) => (
+          {siteMap.map(section => (
             <Box
               key={`${section.sectionTitle}`}
               sx={{
@@ -145,7 +145,7 @@ function Footer({ siteMap }: FooterComponentProps): ReactNode {
                   padding: "0",
                 }}
               >
-                {section.links.map((link) => (
+                {section.links.map(link => (
                   <ListItem
                     key={`${link.title}`}
                     disablePadding

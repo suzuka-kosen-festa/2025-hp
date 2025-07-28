@@ -3,7 +3,7 @@
 exports[`footer snapshot 1`] = `
 <div>
   <footer
-    class="MuiBox-root css-1mhf99u"
+    class="MuiBox-root css-mv8pme"
   >
     <div
       class="MuiBox-root css-tn7cqw"
@@ -12,7 +12,7 @@ exports[`footer snapshot 1`] = `
         class="MuiBox-root css-jhgn7j"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-a3surl-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-13kz1lc-MuiTypography-root"
         >
           ホーム
         </p>
@@ -28,7 +28,7 @@ exports[`footer snapshot 1`] = `
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-181zz29-MuiListItemText-root"
+                class="MuiListItemText-root css-1pmgz8f-MuiListItemText-root"
               >
                 <span
                   class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
@@ -37,8 +37,8 @@ exports[`footer snapshot 1`] = `
                 </span>
               </div>
               <a
-                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-ebd7e0-MuiTypography-root-MuiLink-root"
                 href="/"
+                style="font-size: 14px; line-height: 1.4; color: rgba(0, 0, 0, 0.87); text-decoration: none;"
               >
                 トップページ
               </a>
@@ -53,7 +53,7 @@ exports[`footer snapshot 1`] = `
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-181zz29-MuiListItemText-root"
+                class="MuiListItemText-root css-1pmgz8f-MuiListItemText-root"
               >
                 <span
                   class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
@@ -62,8 +62,8 @@ exports[`footer snapshot 1`] = `
                 </span>
               </div>
               <a
-                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-ebd7e0-MuiTypography-root-MuiLink-root"
                 href="/news"
+                style="font-size: 14px; line-height: 1.4; color: rgba(0, 0, 0, 0.87); text-decoration: none;"
               >
                 お知らせ
               </a>
@@ -78,7 +78,7 @@ exports[`footer snapshot 1`] = `
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-181zz29-MuiListItemText-root"
+                class="MuiListItemText-root css-1pmgz8f-MuiListItemText-root"
               >
                 <span
                   class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
@@ -87,8 +87,8 @@ exports[`footer snapshot 1`] = `
                 </span>
               </div>
               <a
-                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-ebd7e0-MuiTypography-root-MuiLink-root"
                 href="/events"
+                style="font-size: 14px; line-height: 1.4; color: rgba(0, 0, 0, 0.87); text-decoration: none;"
               >
                 イベント情報
               </a>
@@ -103,7 +103,7 @@ exports[`footer snapshot 1`] = `
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-181zz29-MuiListItemText-root"
+                class="MuiListItemText-root css-1pmgz8f-MuiListItemText-root"
               >
                 <span
                   class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
@@ -112,8 +112,8 @@ exports[`footer snapshot 1`] = `
                 </span>
               </div>
               <a
-                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-ebd7e0-MuiTypography-root-MuiLink-root"
                 href="/access"
+                style="font-size: 14px; line-height: 1.4; color: rgba(0, 0, 0, 0.87); text-decoration: none;"
               >
                 アクセス
               </a>
@@ -125,7 +125,7 @@ exports[`footer snapshot 1`] = `
         class="MuiBox-root css-jhgn7j"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-a3surl-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-13kz1lc-MuiTypography-root"
         >
           高専祭について
         </p>
@@ -141,7 +141,7 @@ exports[`footer snapshot 1`] = `
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-181zz29-MuiListItemText-root"
+                class="MuiListItemText-root css-1pmgz8f-MuiListItemText-root"
               >
                 <span
                   class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
@@ -150,8 +150,8 @@ exports[`footer snapshot 1`] = `
                 </span>
               </div>
               <a
-                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-ebd7e0-MuiTypography-root-MuiLink-root"
                 href="/about"
+                style="font-size: 14px; line-height: 1.4; color: rgba(0, 0, 0, 0.87); text-decoration: none;"
               >
                 高専祭とは
               </a>
@@ -166,7 +166,7 @@ exports[`footer snapshot 1`] = `
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-181zz29-MuiListItemText-root"
+                class="MuiListItemText-root css-1pmgz8f-MuiListItemText-root"
               >
                 <span
                   class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
@@ -175,8 +175,8 @@ exports[`footer snapshot 1`] = `
                 </span>
               </div>
               <a
-                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-ebd7e0-MuiTypography-root-MuiLink-root"
                 href="/committee"
+                style="font-size: 14px; line-height: 1.4; color: rgba(0, 0, 0, 0.87); text-decoration: none;"
               >
                 実行委員会
               </a>
@@ -191,7 +191,7 @@ exports[`footer snapshot 1`] = `
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-181zz29-MuiListItemText-root"
+                class="MuiListItemText-root css-1pmgz8f-MuiListItemText-root"
               >
                 <span
                   class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
@@ -200,8 +200,8 @@ exports[`footer snapshot 1`] = `
                 </span>
               </div>
               <a
-                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-ebd7e0-MuiTypography-root-MuiLink-root"
                 href="/history"
+                style="font-size: 14px; line-height: 1.4; color: rgba(0, 0, 0, 0.87); text-decoration: none;"
               >
                 歴史
               </a>
@@ -216,7 +216,7 @@ exports[`footer snapshot 1`] = `
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-181zz29-MuiListItemText-root"
+                class="MuiListItemText-root css-1pmgz8f-MuiListItemText-root"
               >
                 <span
                   class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
@@ -225,8 +225,8 @@ exports[`footer snapshot 1`] = `
                 </span>
               </div>
               <a
-                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-ebd7e0-MuiTypography-root-MuiLink-root"
                 href="/philosophy"
+                style="font-size: 14px; line-height: 1.4; color: rgba(0, 0, 0, 0.87); text-decoration: none;"
               >
                 理念・目標
               </a>
@@ -238,7 +238,7 @@ exports[`footer snapshot 1`] = `
         class="MuiBox-root css-jhgn7j"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-a3surl-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-13kz1lc-MuiTypography-root"
         >
           参加・出展
         </p>
@@ -254,7 +254,7 @@ exports[`footer snapshot 1`] = `
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-181zz29-MuiListItemText-root"
+                class="MuiListItemText-root css-1pmgz8f-MuiListItemText-root"
               >
                 <span
                   class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
@@ -263,8 +263,8 @@ exports[`footer snapshot 1`] = `
                 </span>
               </div>
               <a
-                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-ebd7e0-MuiTypography-root-MuiLink-root"
                 href="/participation"
+                style="font-size: 14px; line-height: 1.4; color: rgba(0, 0, 0, 0.87); text-decoration: none;"
               >
                 一般参加
               </a>
@@ -279,7 +279,7 @@ exports[`footer snapshot 1`] = `
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-181zz29-MuiListItemText-root"
+                class="MuiListItemText-root css-1pmgz8f-MuiListItemText-root"
               >
                 <span
                   class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
@@ -288,8 +288,8 @@ exports[`footer snapshot 1`] = `
                 </span>
               </div>
               <a
-                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-ebd7e0-MuiTypography-root-MuiLink-root"
                 href="/exhibition"
+                style="font-size: 14px; line-height: 1.4; color: rgba(0, 0, 0, 0.87); text-decoration: none;"
               >
                 出展申込
               </a>
@@ -304,7 +304,7 @@ exports[`footer snapshot 1`] = `
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-181zz29-MuiListItemText-root"
+                class="MuiListItemText-root css-1pmgz8f-MuiListItemText-root"
               >
                 <span
                   class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
@@ -313,8 +313,8 @@ exports[`footer snapshot 1`] = `
                 </span>
               </div>
               <a
-                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-ebd7e0-MuiTypography-root-MuiLink-root"
                 href="/schedule"
+                style="font-size: 14px; line-height: 1.4; color: rgba(0, 0, 0, 0.87); text-decoration: none;"
               >
                 スケジュール
               </a>
@@ -329,7 +329,7 @@ exports[`footer snapshot 1`] = `
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-181zz29-MuiListItemText-root"
+                class="MuiListItemText-root css-1pmgz8f-MuiListItemText-root"
               >
                 <span
                   class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
@@ -338,8 +338,8 @@ exports[`footer snapshot 1`] = `
                 </span>
               </div>
               <a
-                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-ebd7e0-MuiTypography-root-MuiLink-root"
                 href="/map"
+                style="font-size: 14px; line-height: 1.4; color: rgba(0, 0, 0, 0.87); text-decoration: none;"
               >
                 会場マップ
               </a>
@@ -354,7 +354,7 @@ exports[`footer snapshot 1`] = `
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-181zz29-MuiListItemText-root"
+                class="MuiListItemText-root css-1pmgz8f-MuiListItemText-root"
               >
                 <span
                   class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
@@ -363,8 +363,8 @@ exports[`footer snapshot 1`] = `
                 </span>
               </div>
               <a
-                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-ebd7e0-MuiTypography-root-MuiLink-root"
                 href="/notes"
+                style="font-size: 14px; line-height: 1.4; color: rgba(0, 0, 0, 0.87); text-decoration: none;"
               >
                 注意事項
               </a>
@@ -376,7 +376,7 @@ exports[`footer snapshot 1`] = `
         class="MuiBox-root css-jhgn7j"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-a3surl-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-13kz1lc-MuiTypography-root"
         >
           サポート
         </p>
@@ -392,7 +392,7 @@ exports[`footer snapshot 1`] = `
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-181zz29-MuiListItemText-root"
+                class="MuiListItemText-root css-1pmgz8f-MuiListItemText-root"
               >
                 <span
                   class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
@@ -401,8 +401,8 @@ exports[`footer snapshot 1`] = `
                 </span>
               </div>
               <a
-                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-ebd7e0-MuiTypography-root-MuiLink-root"
                 href="/faq"
+                style="font-size: 14px; line-height: 1.4; color: rgba(0, 0, 0, 0.87); text-decoration: none;"
               >
                 よくある質問
               </a>
@@ -417,7 +417,7 @@ exports[`footer snapshot 1`] = `
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-181zz29-MuiListItemText-root"
+                class="MuiListItemText-root css-1pmgz8f-MuiListItemText-root"
               >
                 <span
                   class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
@@ -426,8 +426,8 @@ exports[`footer snapshot 1`] = `
                 </span>
               </div>
               <a
-                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-ebd7e0-MuiTypography-root-MuiLink-root"
                 href="/contact"
+                style="font-size: 14px; line-height: 1.4; color: rgba(0, 0, 0, 0.87); text-decoration: none;"
               >
                 お問い合わせ
               </a>
@@ -442,7 +442,7 @@ exports[`footer snapshot 1`] = `
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-181zz29-MuiListItemText-root"
+                class="MuiListItemText-root css-1pmgz8f-MuiListItemText-root"
               >
                 <span
                   class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
@@ -451,8 +451,8 @@ exports[`footer snapshot 1`] = `
                 </span>
               </div>
               <a
-                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-ebd7e0-MuiTypography-root-MuiLink-root"
                 href="/privacy"
+                style="font-size: 14px; line-height: 1.4; color: rgba(0, 0, 0, 0.87); text-decoration: none;"
               >
                 プライバシーポリシー
               </a>
@@ -464,7 +464,7 @@ exports[`footer snapshot 1`] = `
         class="MuiBox-root css-jhgn7j"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-a3surl-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-13kz1lc-MuiTypography-root"
         >
           アーカイブ
         </p>
@@ -480,7 +480,7 @@ exports[`footer snapshot 1`] = `
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-181zz29-MuiListItemText-root"
+                class="MuiListItemText-root css-1pmgz8f-MuiListItemText-root"
               >
                 <span
                   class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
@@ -489,8 +489,8 @@ exports[`footer snapshot 1`] = `
                 </span>
               </div>
               <a
-                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-ebd7e0-MuiTypography-root-MuiLink-root"
                 href="/archive"
+                style="font-size: 14px; line-height: 1.4; color: rgba(0, 0, 0, 0.87); text-decoration: none;"
               >
                 過去の高専祭
               </a>
@@ -505,7 +505,7 @@ exports[`footer snapshot 1`] = `
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-181zz29-MuiListItemText-root"
+                class="MuiListItemText-root css-1pmgz8f-MuiListItemText-root"
               >
                 <span
                   class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
@@ -514,8 +514,8 @@ exports[`footer snapshot 1`] = `
                 </span>
               </div>
               <a
-                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-ebd7e0-MuiTypography-root-MuiLink-root"
                 href="/gallery"
+                style="font-size: 14px; line-height: 1.4; color: rgba(0, 0, 0, 0.87); text-decoration: none;"
               >
                 写真ギャラリー
               </a>
@@ -530,7 +530,7 @@ exports[`footer snapshot 1`] = `
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-181zz29-MuiListItemText-root"
+                class="MuiListItemText-root css-1pmgz8f-MuiListItemText-root"
               >
                 <span
                   class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
@@ -539,8 +539,8 @@ exports[`footer snapshot 1`] = `
                 </span>
               </div>
               <a
-                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-ebd7e0-MuiTypography-root-MuiLink-root"
                 href="/videos"
+                style="font-size: 14px; line-height: 1.4; color: rgba(0, 0, 0, 0.87); text-decoration: none;"
               >
                 動画アーカイブ
               </a>
@@ -550,7 +550,7 @@ exports[`footer snapshot 1`] = `
       </div>
     </div>
     <div
-      class="MuiBox-root css-4molq2"
+      class="MuiBox-root css-1qbvmar"
     >
       ©2025 鈴鹿工業高等専門学校 高専祭実行委員会
     </div>
