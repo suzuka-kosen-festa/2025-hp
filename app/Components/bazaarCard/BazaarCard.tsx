@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import type { ReactNode } from "react";
 import Card from "@mui/material/Card";
-import CardActionArea from "@mui/material/CardActionArea";
+import Box from "@mui/material/Box";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
@@ -18,18 +18,16 @@ export interface BazaarComponentProps {
 function BazaarCard(props: BazaarComponentProps): ReactNode {
   const { image, teamName, bazaarName, description } = props;
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
-    e.currentTarget.src = "/images/not-found.png";
+    e.currentTarget.src = "/public/images/not-found.png";
   };
   return (
     <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea sx={{
+      <Box sx={{
         height: "350px",
         display: "flex",
         flexDirection: "column",
         alignItems: "stretch",
         justifyContent: "flex-start",
-        pointerEvents: "none",
-        cursor: "default",
       }}
       >
         <CardMedia
@@ -47,7 +45,7 @@ function BazaarCard(props: BazaarComponentProps): ReactNode {
             {description}
           </Typography>
         </CardContent>
-      </CardActionArea>
+      </Box>
     </Card>
   );
 }
