@@ -1,13 +1,17 @@
 import type { Decorator, Preview } from "@storybook/react-vite";
 
-import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
+import { createTheme, CssBaseline } from "@mui/material";
 import { withThemeFromJSXProvider } from "@storybook/addon-themes";
 import { withScreenshot } from "storycap";
+import OrbitThemeProvider from "../app/Components/OrbitThemeProvider/OrbitThemeProvider";
 
 /* TODO: update import for your custom Material UI themes */
 // import { lightTheme, darkTheme } from '../path/to/themes';
 
 const lightTheme = createTheme({
+  typography: {
+    fontFamily: ["Noto Sans JP", "sans-serif"].join(","),
+  },
   palette: {
     mode: "light",
   },
@@ -43,7 +47,7 @@ const preview: Preview = {
 
   decorators: [withThemeFromJSXProvider({
     GlobalStyles: CssBaseline,
-    Provider: ThemeProvider,
+    Provider: OrbitThemeProvider,
     themes: {
       // Provide your custom themes here
       light: lightTheme,
