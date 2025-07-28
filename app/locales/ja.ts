@@ -1,10 +1,3 @@
-export interface BazaarComponentProps {
-  image: string
-  teamName: string
-  bazaarName: string
-  description: string
-}
-
 export const ja = {
   bazaarCard: {
     image: "イメージ",

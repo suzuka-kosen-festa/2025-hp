@@ -1,6 +1,5 @@
 /** @jsxImportSource @emotion/react */
 import type { ReactNode } from "react";
-import type { BazaarComponentProps } from "../../locales/ja";
 import Card from "@mui/material/Card";
 import CardActionArea from "@mui/material/CardActionArea";
 import CardContent from "@mui/material/CardContent";
@@ -8,6 +7,13 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
 import { ja } from "../../locales/ja";
+
+export interface BazaarComponentProps {
+  image: string
+  teamName: string
+  bazaarName: string
+  description: string
+}
 
 function BazaarCard(props: BazaarComponentProps): ReactNode {
   const { image, teamName, bazaarName, description } = props;
