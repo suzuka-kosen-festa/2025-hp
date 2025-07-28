@@ -28,6 +28,8 @@ function BazaarCard(props: BazaarComponentProps): ReactNode {
         flexDirection: "column",
         alignItems: "stretch",
         justifyContent: "flex-start",
+        pointerEvents: "none",
+        cursor: "default",
       }}
       >
         <CardMedia

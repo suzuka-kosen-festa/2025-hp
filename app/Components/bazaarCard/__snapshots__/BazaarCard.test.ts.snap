@@ -7,7 +7,7 @@ exports[`bazaarCard snapshot 1`] = `
     style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
   >
     <button
-      class="MuiButtonBase-root MuiCardActionArea-root css-1w58g4t-MuiButtonBase-root-MuiCardActionArea-root"
+      class="MuiButtonBase-root MuiCardActionArea-root css-127373d-MuiButtonBase-root-MuiCardActionArea-root"
       tabindex="0"
       type="button"
     >
