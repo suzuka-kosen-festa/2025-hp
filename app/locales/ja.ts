@@ -10,6 +10,4 @@ export const ja = {
     },
   },
   dummy: "hoge fuga piyo ダミー",
-  fontColor: "#000000",
-  accentColor: "#0F0F0F",
 };

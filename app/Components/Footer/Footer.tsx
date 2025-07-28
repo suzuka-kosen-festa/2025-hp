@@ -1,11 +1,12 @@
 import type { ReactNode } from "react";
+import { Link } from "@remix-run/react";
 import Box from "@mui/material/Box";
-import Link from "@mui/material/Link";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import Typography from "@mui/material/Typography";
+import { useTheme } from "@mui/material/styles";
 import { ja } from "@/locales/ja";
 
 // サイトマップの型定義
@@ -25,6 +26,8 @@ export interface FooterComponentProps {
 
 // 個別のリンクコンポーネント
 function FooterLink({ title, href }: SiteMapLink): ReactNode {
+  const theme = useTheme();
+  
   return (
     <ListItemButton sx={{
       paddingTop: "4px",
@@ -39,19 +42,24 @@ function FooterLink({ title, href }: SiteMapLink): ReactNode {
         sx={{
           minWidth: "auto",
           marginRight: "4px",
-          color: ja.fontColor,
+          color: theme.palette.text.primary,
         }}
       />
       <Link
-        href={href}
-        underline="hover"
-        color={ja.fontColor}
-        sx={{
-          "fontSize": ja.footer.fontSize.linkText,
-          "lineHeight": "1.4",
-          "&:hover": {
-            color: ja.accentColor,
-          },
+        to={href}
+        style={{
+          fontSize: ja.footer.fontSize.linkText,
+          lineHeight: "1.4",
+          color: theme.palette.text.primary,
+          textDecoration: "none",
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.textDecoration = "underline";
+          e.currentTarget.style.color = theme.palette.text.primary;
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.textDecoration = "none";
+          e.currentTarget.style.color = theme.palette.text.primary;
         }}
       >
         {title}
@@ -61,6 +69,8 @@ function FooterLink({ title, href }: SiteMapLink): ReactNode {
 }
 
 function Footer({ siteMap }: FooterComponentProps): ReactNode {
+  const theme = useTheme();
+  
   return (
     <Box
       component="footer"
@@ -71,8 +81,8 @@ function Footer({ siteMap }: FooterComponentProps): ReactNode {
         justifyContent: "center",
         width: "100%",
         padding: "40px 20px 20px",
-        backgroundColor: "#fafafa",
-        borderTop: `1px solid ${ja.accentColor}`,
+        backgroundColor: theme.palette.background.paper,
+        borderTop: `1px solid ${theme.palette.text.secondary}`,
       }}
     >
       {siteMap.length > 0 && (
@@ -92,9 +102,9 @@ function Footer({ siteMap }: FooterComponentProps): ReactNode {
             },
           }}
         >
-          {siteMap.map((section, index) => (
+          {siteMap.map((section) => (
             <Box
-              key={`${section.sectionTitle}-${index}`}
+              key={`${section.sectionTitle}`}
               sx={{
                 display: "flex",
                 minWidth: "160px",
@@ -111,12 +121,12 @@ function Footer({ siteMap }: FooterComponentProps): ReactNode {
               <Typography
                 sx={{
                   width: "100%",
-                  color: ja.fontColor,
+                  color: theme.palette.text.primary,
                   fontWeight: "bold",
                   fontSize: ja.footer.fontSize.sectionTitle,
                   marginBottom: "8px",
                   paddingBottom: "4px",
-                  borderBottom: `2px solid ${ja.accentColor}`,
+                  borderBottom: `2px solid ${theme.palette.text.secondary}`,
                 }}
               >
                 {section.sectionTitle}
@@ -135,9 +145,9 @@ function Footer({ siteMap }: FooterComponentProps): ReactNode {
                   padding: "0",
                 }}
               >
-                {section.links.map((link, linkIndex) => (
+                {section.links.map((link) => (
                   <ListItem
-                    key={`${link.title}-${linkIndex}`}
+                    key={`${link.title}`}
                     disablePadding
                     sx={{ width: "fit-content" }}
                   >
@@ -156,7 +166,7 @@ function Footer({ siteMap }: FooterComponentProps): ReactNode {
           justifyContent: "center",
           width: "100%",
           padding: "20px 0",
-          color: ja.fontColor,
+          color: theme.palette.text.primary,
           fontSize: ja.footer.fontSize.copyright,
           marginTop: "30px",
         }}
