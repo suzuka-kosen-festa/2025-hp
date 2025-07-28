@@ -35,7 +35,7 @@ type Story = StoryObj<T>;
 export const Default: Story = {
 
   args: {
-    image: "/public/images/not-found.png",
+    image: "/images/not-found.png",
     teamName: "チーム名",
     bazaarName: "バザー名",
     description: "説明文",
