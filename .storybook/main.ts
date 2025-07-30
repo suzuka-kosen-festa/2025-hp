@@ -20,8 +20,7 @@ const config: StorybookConfig = {
     return mergeConfig(config, {
       resolve: {
         alias: {
-          // RemixのLinkコンポーネントをモック用のコンポーネントに置き換え
-          "@remix-run/react": resolve(__dirname, "../app/Components/Link/Link.tsx"),
+          "@": resolve(__dirname, "../app"),
         },
       },
     });

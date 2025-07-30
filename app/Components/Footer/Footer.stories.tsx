@@ -1,10 +1,24 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { createRemixStub } from "@remix-run/testing";
+import FooterComponent from "./Footer";
 
-import Footer, { type FooterComponentProps } from "./Footer";
+const Footer = FooterComponent;
 
 const meta: Meta<typeof Footer> = {
   title: "Footer",
   component: Footer,
+  decorators: [
+    (story) => {
+      const remixStub = createRemixStub([
+        {
+          Component: () => story(),
+          path: "/*",
+        },
+      ]);
+
+      return remixStub({});
+    },
+  ],
   parameters: {
     layout: "fullscreen",
   },
@@ -21,7 +35,7 @@ export default meta;
 type Story = StoryObj<typeof Footer>;
 
 // 多くのセクションを持つサイトマップ
-const extensiveSiteMap: FooterComponentProps["siteMap"] = [
+const extensiveSiteMap = [
   {
     sectionTitle: "ホーム",
     links: [

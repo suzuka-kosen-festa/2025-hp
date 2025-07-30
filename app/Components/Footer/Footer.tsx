@@ -4,7 +4,6 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
-import { useTheme } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 import { Link } from "@remix-run/react";
 import { ja } from "@/locales/ja";
@@ -26,8 +25,6 @@ export interface FooterComponentProps {
 
 // 個別のリンクコンポーネント
 function FooterLink({ title, href }: SiteMapLink): ReactNode {
-  const theme = useTheme();
-
   return (
     <ListItemButton sx={{
       paddingTop: "4px",
@@ -35,6 +32,7 @@ function FooterLink({ title, href }: SiteMapLink): ReactNode {
       height: "fit-content",
       alignSelf: "flex-start",
       minHeight: "32px",
+      color: "primary.contrastText",
     }}
     >
       <ListItemText
@@ -42,24 +40,23 @@ function FooterLink({ title, href }: SiteMapLink): ReactNode {
         sx={{
           minWidth: "auto",
           marginRight: "4px",
-          color: theme.palette.text.primary,
+          color: "primary.contrastText",
         }}
       />
       <Link
         to={href}
         style={{
-          fontSize: ja.footer.fontSize.linkText,
           lineHeight: "1.4",
-          color: theme.palette.text.primary,
           textDecoration: "none",
+          color: "primary.contrastText",
         }}
         onMouseEnter={(e) => {
           e.currentTarget.style.textDecoration = "underline";
-          e.currentTarget.style.color = theme.palette.text.primary;
+          e.currentTarget.style.color = "primary.contrastText";
         }}
         onMouseLeave={(e) => {
           e.currentTarget.style.textDecoration = "none";
-          e.currentTarget.style.color = theme.palette.text.primary;
+          e.currentTarget.style.color = "primary.contrastText";
         }}
       >
         {title}
@@ -69,11 +66,10 @@ function FooterLink({ title, href }: SiteMapLink): ReactNode {
 }
 
 function Footer({ siteMap }: FooterComponentProps): ReactNode {
-  const theme = useTheme();
-
   return (
     <Box
       component="footer"
+      bgcolor="primary.main"
       sx={{
         display: "flex",
         flexDirection: "column",
@@ -81,8 +77,7 @@ function Footer({ siteMap }: FooterComponentProps): ReactNode {
         justifyContent: "center",
         width: "100%",
         padding: "40px 20px 20px",
-        backgroundColor: theme.palette.background.paper,
-        borderTop: `1px solid ${theme.palette.text.secondary}`,
+        borderTop: "1px solid primary.contrastText",
       }}
     >
       {siteMap.length > 0 && (
@@ -115,18 +110,18 @@ function Footer({ siteMap }: FooterComponentProps): ReactNode {
                 flexDirection: "column",
                 overflow: "visible",
                 padding: "0",
+                color: "primary.contrastText",
                 marginBottom: "20px",
               }}
             >
               <Typography
                 sx={{
                   width: "100%",
-                  color: theme.palette.text.primary,
                   fontWeight: "bold",
-                  fontSize: ja.footer.fontSize.sectionTitle,
                   marginBottom: "8px",
                   paddingBottom: "4px",
-                  borderBottom: `2px solid ${theme.palette.text.secondary}`,
+                  borderBottom: "2px solid",
+                  borderColor: "primary.contrastText",
                 }}
               >
                 {section.sectionTitle}
@@ -166,9 +161,8 @@ function Footer({ siteMap }: FooterComponentProps): ReactNode {
           justifyContent: "center",
           width: "100%",
           padding: "20px 0",
-          color: theme.palette.text.primary,
-          fontSize: ja.footer.fontSize.copyright,
           marginTop: "30px",
+          color: "primary.contrastText",
         }}
       >
         {ja.footer.copyright}
