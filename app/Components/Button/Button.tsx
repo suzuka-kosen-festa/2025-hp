@@ -7,9 +7,7 @@ interface ButtonComponentProps {
 
 function Button(_: ButtonComponentProps): ReactNode {
   return (
-    <MUIButton color="primary" variant="contained">
-      {ja.dummy}
-    </MUIButton>
+    <MUIButton>{ja.dummy}</MUIButton>
   );
 }
 export default Button;

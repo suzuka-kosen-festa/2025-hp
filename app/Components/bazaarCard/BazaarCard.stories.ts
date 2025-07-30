@@ -33,7 +33,6 @@ const meta: Meta<T> = {
 type Story = StoryObj<T>;
 
 export const Default: Story = {
-
   args: {
     image: "/images/not-found.png",
     teamName: "チーム名",

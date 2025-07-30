@@ -18,6 +18,10 @@ export interface BazaarComponentProps {
 function BazaarCard(props: BazaarComponentProps): ReactNode {
   const { image, teamName, bazaarName, description } = props;
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+    // 既にnot-found画像の場合は何もしない
+    if (e.currentTarget.src.endsWith("/images/not-found.png")) {
+      return;
+    }
     e.currentTarget.src = "/images/not-found.png";
   };
   return (
