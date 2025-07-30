@@ -1,4 +1,3 @@
-import { resolve } from "node:path";
 import react from "@vitejs/plugin-react";
 import { defineConfig as defineViteConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
