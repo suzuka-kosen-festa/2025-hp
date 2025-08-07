@@ -1,0 +1,169 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`sponsor snapshot 1`] = `
+<div>
+  <div
+    class="MuiBox-root css-ib9iq6"
+  >
+    <div
+      class="MuiBox-root css-1hfnxps"
+    >
+      <div
+        class="MuiBox-root css-c5e4hv"
+      >
+        <div
+          class="MuiBox-root css-3ib8bu"
+        >
+          <img
+            alt="株式会社アイウエオ"
+            src="/public/logo-dark.png"
+            style="max-width: 100%; max-height: 200px; object-fit: contain;"
+          />
+        </div>
+        <div
+          class="MuiBox-root css-3ib8bu"
+        >
+          <img
+            alt="株式会社カキクケコ"
+            src="/public/logo.svg"
+            style="max-width: 100%; max-height: 200px; object-fit: contain;"
+          />
+        </div>
+        <div
+          class="MuiBox-root css-3ib8bu"
+        >
+          <div
+            class="MuiTypography-root MuiTypography-h4 css-hrwypa-MuiTypography-root"
+          >
+            株式会社マミムメモ
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-3ib8bu"
+        >
+          <div
+            class="MuiTypography-root MuiTypography-h4 css-hrwypa-MuiTypography-root"
+          >
+            株式会社ワワヲ
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-3ib8bu"
+        >
+          <img
+            alt="株式会社ワワヲ"
+            src="/public/kosen-logo.png"
+            style="max-width: 100%; max-height: 200px; object-fit: contain;"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiBox-root css-1hfnxps"
+    >
+      <div
+        class="MuiBox-root css-1vs2jtx"
+      >
+        <div
+          class="MuiBox-root css-1kqf3s9"
+        >
+          <img
+            alt="株式会社サシスセソ"
+            src="/public/logo-dark.png"
+            style="max-width: 100%; max-height: 150px; object-fit: contain;"
+          />
+        </div>
+        <div
+          class="MuiBox-root css-1kqf3s9"
+        >
+          <div
+            class="MuiTypography-root MuiTypography-h5 css-1jj7qe8-MuiTypography-root"
+          >
+            株式会社ザシスセソ
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-1kqf3s9"
+        >
+          <img
+            alt="株式会社タチツテト"
+            src="/public/logo.svg"
+            style="max-width: 100%; max-height: 150px; object-fit: contain;"
+          />
+        </div>
+        <div
+          class="MuiBox-root css-1kqf3s9"
+        >
+          <div
+            class="MuiTypography-root MuiTypography-h5 css-1jj7qe8-MuiTypography-root"
+          >
+            株式会社ヤユヨ
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-1kqf3s9"
+        >
+          <img
+            alt="株式会社ワワヲ"
+            src="/public/kosen-logo.png"
+            style="max-width: 100%; max-height: 150px; object-fit: contain;"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiBox-root css-1hfnxps"
+    >
+      <div
+        class="MuiBox-root css-1vs2jtx"
+      >
+        <div
+          class="MuiBox-root css-1rzgnc4"
+        >
+          <img
+            alt="株式会社ナニヌネノ"
+            src="/public/logo-dark.png"
+            style="max-width: 100%; max-height: 100px; object-fit: contain;"
+          />
+        </div>
+        <div
+          class="MuiBox-root css-1rzgnc4"
+        >
+          <img
+            alt="株式会社ハヒフヘホ"
+            src="/public/logo.svg"
+            style="max-width: 100%; max-height: 100px; object-fit: contain;"
+          />
+        </div>
+        <div
+          class="MuiBox-root css-1rzgnc4"
+        >
+          <div
+            class="MuiTypography-root MuiTypography-h6 css-1majre3-MuiTypography-root"
+          >
+            株式会社ラリルレロ
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-1rzgnc4"
+        >
+          <div
+            class="MuiTypography-root MuiTypography-h6 css-1majre3-MuiTypography-root"
+          >
+            株式会社ワワヲ
+          </div>
+        </div>
+        <div
+          class="MuiBox-root css-1rzgnc4"
+        >
+          <img
+            alt="株式会社ワワヲ"
+            src="/public/kosen-logo.png"
+            style="max-width: 100%; max-height: 100px; object-fit: contain;"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

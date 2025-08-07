@@ -1,20 +1,99 @@
 import type { Meta, StoryObj } from "@storybook/react";
-
 import Sponsor from "./Sponsor";
 
-type T = typeof Sponsor;
-
-const meta: Meta = {
+const meta: Meta<typeof Sponsor> = {
   title: "Sponsor",
   component: Sponsor,
   parameters: {
-    layout: "centered",
+    layout: "fullscreen",
   },
   tags: ["autodocs"],
-} satisfies Meta<T>;
-
-type Story = StoryObj<T>;
-
-export const Default: Story = {};
+};
 
 export default meta;
+type Story = StoryObj<typeof Sponsor>;
+
+// デモデータ
+const demoSponsors = [
+  {
+    name: "株式会社アイウエオ",
+    image: "/public/logo-dark.png",
+    size: "large" as const,
+  },
+  {
+    name: "株式会社カキクケコ",
+    image: "/public/logo.svg",
+    size: "large" as const,
+  },
+  {
+    name: "株式会社サシスセソ",
+    image: "/public/logo-dark.png",
+    size: "medium" as const,
+  },
+  {
+    name: "株式会社タチツテト",
+    image: "/public/logo.svg",
+    size: "medium" as const,
+  },
+  {
+    name: "株式会社ナニヌネノ",
+    image: "/public/logo-dark.png",
+    size: "small" as const,
+  },
+  {
+    name: "株式会社ハヒフヘホ",
+    image: "/public/logo.svg",
+    size: "small" as const,
+  },
+  {
+    name: "株式会社マミムメモ",
+    image: "",
+    size: "large" as const,
+  },
+  {
+    name: "株式会社ヤユヨ",
+    image: "",
+    size: "medium" as const,
+  },
+  {
+    name: "株式会社ラリルレロ",
+    image: "",
+    size: "small" as const,
+  },
+  {
+    name: "株式会社ワワヲ",
+    image: "",
+    size: "large" as const,
+  },
+  {
+    name: "株式会社ザシスセソ",
+    image: "",
+    size: "medium" as const,
+  },
+  {
+    name: "株式会社ワワヲ",
+    image: "",
+    size: "small" as const,
+  },
+  {
+    name: "株式会社ワワヲ",
+    image: "/public/kosen-logo.png",
+    size: "large" as const,
+  },
+  {
+    name: "株式会社ワワヲ",
+    image: "/public/kosen-logo.png",
+    size: "medium" as const,
+  },
+  {
+    name: "株式会社ワワヲ",
+    image: "/public/kosen-logo.png",
+    size: "small" as const,
+  },
+];
+
+export const Default: Story = {
+  args: {
+    sponsors: demoSponsors,
+  },
+};
