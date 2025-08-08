@@ -82,7 +82,7 @@ const extensiveSiteMap = [
   },
 ];
 
-export const Extensive: Story = {
+export const Default: Story = {
   args: {
     siteMap: extensiveSiteMap,
   },
