@@ -34,7 +34,6 @@ export default meta;
 
 type Story = StoryObj<typeof Footer>;
 
-// 多くのセクションを持つサイトマップ
 const extensiveSiteMap = [
   {
     sectionTitle: "ホーム",
