@@ -6,8 +6,6 @@ interface ButtonComponentProps {
 }
 
 function Button(_: ButtonComponentProps): ReactNode {
-  return (
-    <MUIButton>{ja.dummy}</MUIButton>
-  );
+  return <MUIButton>{ja.dummy}</MUIButton>;
 }
 export default Button;
