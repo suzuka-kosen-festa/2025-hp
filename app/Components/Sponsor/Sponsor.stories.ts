@@ -17,32 +17,32 @@ type Story = StoryObj<typeof Sponsor>;
 const demoSponsors = [
   {
     name: "株式会社アイウエオ",
-    image: "/public/logo-dark.png",
+    image: "/logo-dark.png",
     size: "large" as const,
   },
   {
     name: "株式会社カキクケコ",
-    image: "/public/logo.svg",
+    image: "/logo.svg",
     size: "large" as const,
   },
   {
     name: "株式会社サシスセソ",
-    image: "/public/logo-dark.png",
+    image: "/logo-dark.png",
     size: "medium" as const,
   },
   {
     name: "株式会社タチツテト",
-    image: "/public/logo.svg",
+    image: "/logo.svg",
     size: "medium" as const,
   },
   {
     name: "株式会社ナニヌネノ",
-    image: "/public/logo-dark.png",
+    image: "/logo-dark.png",
     size: "small" as const,
   },
   {
     name: "株式会社ハヒフヘホ",
-    image: "/public/logo.svg",
+    image: "/logo.svg",
     size: "small" as const,
   },
   {
@@ -77,17 +77,17 @@ const demoSponsors = [
   },
   {
     name: "株式会社ワワヲ",
-    image: "/public/kosen-logo.png",
+    image: "/kosen-logo.png",
     size: "large" as const,
   },
   {
     name: "株式会社ワワヲ",
-    image: "/public/kosen-logo.png",
+    image: "/kosen-logo.png",
     size: "medium" as const,
   },
   {
     name: "株式会社ワワヲ",
-    image: "/public/kosen-logo.png",
+    image: "/kosen-logo.png",
     size: "small" as const,
   },
 ];

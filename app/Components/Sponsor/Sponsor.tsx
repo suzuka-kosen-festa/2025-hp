@@ -15,22 +15,24 @@ interface SponsorComponentProps {
 
 // 画像が有効かどうかをチェックする関数
 function isValidImage(imageUrl: string): boolean {
-  return Boolean(imageUrl && imageUrl.trim() !== "" && imageUrl !== "undefined" && imageUrl !== "null");
+  return (
+    imageUrl != null
+    && imageUrl.trim() !== ""
+    && imageUrl !== "undefined"
+    && imageUrl !== "null"
+  );
 }
 
 // サイズごとのvariantとfontSizeを一元管理
 const SPONSOR_STYLE = {
   large: {
     variant: "h4" as const,
-    fontSize: "1.5rem",
   },
   medium: {
     variant: "h5" as const,
-    fontSize: "1.25rem",
   },
   small: {
     variant: "h6" as const,
-    fontSize: "0.875rem",
   },
 };
 
