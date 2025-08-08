@@ -86,11 +86,4 @@ export const Default: Story = {
   args: {
     siteMap: extensiveSiteMap,
   },
-  parameters: {
-    docs: {
-      description: {
-        story: "多くのセクションとリンクを持つサイトマップの例。ページが増えても自動的にレイアウトが調整されます。",
-      },
-    },
-  },
 };
