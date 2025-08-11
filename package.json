@@ -22,7 +22,7 @@
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
-    "@mui/material": "^7.3.0",
+    "@mui/material": "^7.3.1",
     "@remix-run/cloudflare": "^2.17.0",
     "@remix-run/cloudflare-pages": "^2.17.0",
     "@remix-run/react": "^2.17.0",
@@ -32,8 +32,8 @@
   },
   "devDependencies": {
     "@chromatic-com/storybook": "4.1.0",
-    "@cloudflare/vite-plugin": "1.11.1",
-    "@cloudflare/workers-types": "4.20250806.0",
+    "@cloudflare/vite-plugin": "1.11.2",
+    "@cloudflare/workers-types": "4.20250807.0",
     "@eslint-react/eslint-plugin": "1.52.3",
     "@remix-run/dev": "2.17.0",
     "@shiron-dev/eslint-config": "2.1.1",
@@ -61,7 +61,7 @@
     "jiti": "2.5.1",
     "jsdom": "26.1.0",
     "playwright": "1.54.2",
-    "puppeteer": "24.15.0",
+    "puppeteer": "24.16.0",
     "reg-keygen-git-hash-plugin": "0.14.3",
     "reg-notify-github-plugin": "0.14.4",
     "reg-publish-s3-plugin": "0.14.4",
@@ -69,10 +69,10 @@
     "storybook": "8.6.14",
     "storycap": "5.0.1",
     "typescript": "5.9.2",
-    "vite": "7.0.6",
+    "vite": "7.1.0",
     "vite-tsconfig-paths": "5.1.4",
     "vitest": "3.2.4",
-    "wrangler": "4.28.0"
+    "wrangler": "4.28.1"
   },
   "volta": {
     "node": "24.5.0"
