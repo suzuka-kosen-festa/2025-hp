@@ -1,0 +1,61 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`sponsor snapshot 1`] = `
+<div>
+  <div
+    class="MuiBox-root css-ib9iq6"
+  >
+    <div
+      class="MuiBox-root css-1hfnxps"
+    >
+      <div
+        class="MuiBox-root css-441yeq"
+      >
+        <div
+          class="MuiBox-root css-3ib8bu"
+        >
+          <img
+            alt="テストスポンサー大"
+            src="public/logo-dark.png"
+            style="max-width: 100%; max-height: 200px; object-fit: contain;"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiBox-root css-1hfnxps"
+    >
+      <div
+        class="MuiBox-root css-wdiapt"
+      >
+        <div
+          class="MuiBox-root css-1vsv8c1"
+        >
+          <div
+            class="MuiTypography-root MuiTypography-h5 css-nto7bj-MuiTypography-root"
+          >
+            テストスポンサー中
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiBox-root css-1hfnxps"
+    >
+      <div
+        class="MuiBox-root css-wdiapt"
+      >
+        <div
+          class="MuiBox-root css-1rzgnc4"
+        >
+          <div
+            class="MuiTypography-root MuiTypography-h6 css-1e5h870-MuiTypography-root"
+          >
+            テストスポンサー小
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

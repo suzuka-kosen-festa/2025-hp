@@ -1,0 +1,217 @@
+import { Canvas, Meta, ArgTypes, Source } from '@storybook/blocks';
+
+import * as SponsorStories from "./Sponsor.stories";
+
+<Meta of={SponsorStories} />
+
+# Sponsorコンポーネント
+
+Sponsorコンポーネントは、高専祭のスポンサー企業を階層的にレイアウトして表示するためのコンポーネントです。
+スポンサーのサイズ（large、medium、small）に応じて異なるレイアウトと表示形式を提供します。
+
+## 特徴
+
+- **階層的表示**: スポンサーをサイズ別に分類して表示
+- **多言語対応ソート**: 日本語の文字（ひらがな、カタカナ、漢字、英数字、記号）を適切にソート
+- **画像とテキストの自動切り替え**: 有効な画像がある場合は画像を、ない場合はテキストを表示
+- **レスポンシブデザイン**: 各サイズに最適化されたレイアウト
+- **エラーハンドリング**: 画像読み込みエラー時の自動フォールバック
+
+## インターフェース
+
+### SponsorItem
+
+```typescript
+interface SponsorItem {
+  name: string;           // スポンサー名
+  image: string;          // 画像URL（空文字の場合はテキスト表示）
+  size: "large" | "medium" | "small"; // スポンサーのサイズ
+}
+```
+
+### SponsorComponentProps
+
+```typescript
+interface SponsorComponentProps {
+  sponsors: SponsorItem[]; // 表示するスポンサーの配列
+}
+```
+
+## 使用例
+
+### 基本的な使用方法
+
+<Canvas of={SponsorStories.Default} />
+
+### サイズ別表示
+
+各サイズの表示確認ができます。
+
+<Canvas of={SponsorStories.SizeVariations} />
+
+## 関数ロジックテスト
+
+### isValidImage関数のテスト
+
+画像URLの有効性判定ロジックをテストできます。有効なURL、空文字、null/undefined文字列、スペースのみのパターンを確認できます。
+
+<Canvas of={SponsorStories.ImageValidationTest} />
+
+### sortByJapaneseName関数のテスト
+
+日本語文字列のソート機能をテストできます。ひらがな、カタカナ、英数字、記号の混在でのソート順序を確認できます。
+
+期待されるソート順序：
+`2年システム < 3D Innovation < 10年システム < B&K株式会社 < あいうえお株式会社 < カキクケコ株式会社 < ナニヌネノ株式会社`
+
+<Canvas of={SponsorStories.JapaneseSortTest} />
+
+## 設定とレイアウト
+
+### サイズ別設定
+
+<table>
+  <thead>
+    <tr>
+      <th>サイズ</th>
+      <th>Typography</th>
+      <th>最大幅</th>
+      <th>最大高さ</th>
+      <th>レイアウト方向</th>
+      <th>余白</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Large</td>
+      <td>h4</td>
+      <td>70%</td>
+      <td>200px</td>
+      <td>縦方向</td>
+      <td>大</td>
+    </tr>
+    <tr>
+      <td>Medium</td>
+      <td>h5</td>
+      <td>40%</td>
+      <td>150px</td>
+      <td>横方向</td>
+      <td>中</td>
+    </tr>
+    <tr>
+      <td>Small</td>
+      <td>h6</td>
+      <td>30%</td>
+      <td>100px</td>
+      <td>横方向</td>
+      <td>小</td>
+    </tr>
+  </tbody>
+</table>
+
+### ソート機能
+
+`sortByJapaneseName`関数は`Intl.Collator`を使用して日本語に最適化されたソートを実行します：
+
+- **数値ソート**: 「10」は「2」より後に表示（`numeric: true`）
+- **文字種混在対応**: ひらがな、カタカナ、漢字、英数字、記号の混在文字列も適切にソート
+- **大文字優先**: 英語の大文字を小文字より先に表示（`caseFirst: "upper"`）
+- **アクセント記号考慮**: より正確な文字比較（`sensitivity: "accent"`）
+- **句読点考慮**: 句読点も含めた正確なソート（`ignorePunctuation: false`）
+
+<Source code={`
+function sortByJapaneseName(sponsors: SponsorItem[]): SponsorItem[] {
+  return [...sponsors].sort((a, b) => {
+    const options: Intl.CollatorOptions = {
+      numeric: true, // 数値を数値として扱う（"10" > "2"）
+      caseFirst: "upper", // 大文字を先に
+      sensitivity: "accent", // アクセント記号を区別
+      ignorePunctuation: false, // 句読点を考慮
+      usage: "sort", // ソート用途で最適化
+    };
+
+    const collator = new Intl.Collator("ja-JP", options);
+    return collator.compare(a.name, b.name);
+  });
+}
+`} language="typescript" />
+
+### 画像処理
+
+`isValidImage`関数により以下の処理を行います：
+
+1. **画像有効性チェック**: 
+   - 空文字（`""`）
+   - null、undefined 
+   - "null"、"undefined"文字列
+   - スペースのみの文字列（`"   "`）
+   
+   これらを無効として判定します
+
+2. **エラーハンドリング**: 画像読み込み失敗時は自動的にテキスト表示にフォールバック
+3. **レスポンシブ対応**: `object-fit: contain`で画像のアスペクト比を維持
+
+<Source code={`
+function isValidImage(imageUrl: string): boolean {
+  return (
+    imageUrl != null
+    && imageUrl.trim() !== ""
+    && imageUrl !== "undefined"
+    && imageUrl !== "null"
+  );
+}
+`} language="typescript" />
+
+## Props
+
+<ArgTypes of={SponsorStories.Default} />
+
+## ベストプラクティス
+
+### データ準備
+```typescript
+const sponsors: SponsorItem[] = [
+  {
+    name: "大手スポンサー株式会社",
+    image: "/images/sponsors/large-sponsor.png",
+    size: "large"
+  },
+  {
+    name: "中堅企業",
+    image: "", // 画像がない場合は空文字
+    size: "medium"
+  }
+];
+```
+
+### 画像URL の指定
+- 相対パス: `public/logo.png`
+- 絶対パス: `/images/sponsors/logo.png`
+- 外部URL: `https://example.com/logo.png`
+
+### アクセシビリティ
+- 画像には適切な`alt`属性が自動設定されます
+- テキスト表示時は適切なヘディングレベルが使用されます
+- セマンティックなHTML構造で実装されています
+
+## トラブルシューティング
+
+### 画像が表示されない場合
+1. **画像URLが正しいか確認**
+   - 相対パス: `public/logo.png`
+   - 絶対パス: `/images/logo.png`
+2. **画像ファイルが存在するか確認**
+3. **ネットワークタブでHTTPエラーを確認**
+4. **`isValidImage`関数のロジックを確認**
+   - `ImageValidationTest` Storyで動作確認
+
+### ソート順が期待通りでない場合
+- **`JapaneseSortTest` Storyで確認**：期待されるソート順序と実際の表示を比較
+- **日本語のソートは複雑**：特殊な文字が含まれる場合は個別に確認
+- **数字を含む文字列**：数値として正しく比較されます（例：「10」>「2」）
+- **`Intl.Collator`の設定**：ロケールが`ja-JP`になっているか確認
+
+### 関数ロジックのデバッグ
+1. **`ImageValidationTest`** を使用して`isValidImage`関数の動作を確認
+2. **`JapaneseSortTest`** を使用して`sortByJapaneseName`関数の動作を確認
+3. **ブラウザの開発者ツール**でコンソールログを確認
