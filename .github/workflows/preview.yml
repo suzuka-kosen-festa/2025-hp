@@ -18,7 +18,7 @@ jobs:
     outputs:
       url: ${{ steps.page.outputs.deployment-url }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: shiron-dev/actions/setup-node@3478cc44402c5c590ce6732554e621558ac6d6e5 # v1.5.0
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -48,7 +48,7 @@ jobs:
     timeout-minutes: 10
     needs: preview-deploy
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@fcd65974f7c4c2bf0ee9d09b84d2489183c29726 # v12
         id: lighthouse_audit
@@ -80,7 +80,7 @@ jobs:
     outputs:
       url: ${{ steps.page.outputs.deployment-url }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: shiron-dev/actions/setup-node@3478cc44402c5c590ce6732554e621558ac6d6e5 # v1.5.0
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
