@@ -160,17 +160,17 @@ importers:
         specifier: 24.17.0
         version: 24.17.0(typescript@5.9.2)
       reg-keygen-git-hash-plugin:
-        specifier: 0.14.3
-        version: 0.14.3
+        specifier: 0.14.5
+        version: 0.14.5
       reg-notify-github-plugin:
-        specifier: 0.14.4
-        version: 0.14.4
+        specifier: 0.14.5
+        version: 0.14.5
       reg-publish-s3-plugin:
         specifier: 0.14.4
         version: 0.14.4
       reg-suit:
-        specifier: 0.14.4
-        version: 0.14.4
+        specifier: 0.14.5
+        version: 0.14.5
       storybook:
         specifier: 8.6.14
         version: 8.6.14(prettier@3.6.2)
@@ -6109,23 +6109,23 @@ packages:
   reg-gh-app-interface@1.3.0:
     resolution: {integrity: sha512-p3AXRqXTuBUlud8V7WlyrKE408prM7/TAWXLhcer0492Grhj3K1SzI/v7qadd7gtxTochZsvScL46vIaZB2icg==}
 
-  reg-keygen-git-hash-plugin@0.14.3:
-    resolution: {integrity: sha512-qdFj4YKctQKyI1LpFYJelFzwOi7Z2mqXEUXdsPeHgk1eJ4ar44Lns8FD9feZFYFulDbl1V5c49hBZYRPItewIg==}
+  reg-keygen-git-hash-plugin@0.14.5:
+    resolution: {integrity: sha512-7XcF/JPoHmLlQ/Px80BCQdTyfbeDiNmI9/u5sSC6rqvuxbZ/d9IjCz83ELRc832mHtuG3uRQCGXR1/HrV7h31A==}
 
-  reg-notify-github-plugin@0.14.4:
-    resolution: {integrity: sha512-p3VZyyQuty6Kj+MzY+T/vZQP+QK0VjU2RwK8oR6iT/oKskrtxq3SGB1dxdsMYprttSG3y4hkxZenN07ZluvSPg==}
+  reg-notify-github-plugin@0.14.5:
+    resolution: {integrity: sha512-MCwnmafts75C7fhdwi9KA9jUnVogNMQ7WIp5q4XQHxJ611M240XfK6BP8VWDL3y1dDGPife2eQDSaTQC/lahNA==}
 
   reg-publish-s3-plugin@0.14.4:
     resolution: {integrity: sha512-2M//em2oVQ2LkawFfKTWCnowyk+5cMY3X/go1Dk5ZEZQjOyt1E1KOxFaITOyOVLCFwF7YfmYHlp/wWeZbfPh/w==}
 
-  reg-suit-core@0.14.4:
-    resolution: {integrity: sha512-1QTqsMfFbWrlM4N7aRM+GTc5ilbPCh4ffDUpJzDKGcovpapiVUOzpUAsmT1Q34TrFHcWtx+ZEFKWMHgtomSW0Q==}
+  reg-suit-core@0.14.5:
+    resolution: {integrity: sha512-7wIA+bcggLfcPqkMyWfKKYYfQClIQ2gKgyD/LujinyKUZesOyZ3sYd3UPlWB0SBxViNgDtQ5C50EkyCKUW2e3g==}
 
   reg-suit-util@0.14.3:
     resolution: {integrity: sha512-1Ddn2Nm2Ha7z07ubZeWuINjXRXr6uQWAdUpfbwt7cZyo8wlX2QBtjeet8WM0KVvrz9Ykj8suvUhhd3HLLyOYCQ==}
 
-  reg-suit@0.14.4:
-    resolution: {integrity: sha512-2SdAe7MX5whfEvqkf29Z0dSbIlorfJhPPZt9WEHNvM+CtdPYZJjQaswh2Xjt7uMTrUey0FCELmC7nLY6zUMK3Q==}
+  reg-suit@0.14.5:
+    resolution: {integrity: sha512-AWenzVuJ/MBUt8Ejaaom7SDN8PF71seIjIBBnYcdPcrs5CHEuCAERCCkv6EgEuU85vXS5gc0XzuJVMbj3ay0hQ==}
     hasBin: true
 
   regex-not@1.0.2:
@@ -14666,18 +14666,17 @@ snapshots:
 
   reg-gh-app-interface@1.3.0: {}
 
-  reg-keygen-git-hash-plugin@0.14.3:
+  reg-keygen-git-hash-plugin@0.14.5:
     dependencies:
       reg-suit-util: 0.14.3
       shell-escape: 0.2.0
 
-  reg-notify-github-plugin@0.14.4:
+  reg-notify-github-plugin@0.14.5:
     dependencies:
       open: 8.4.2
       reg-gh-app-interface: 1.3.0
       reg-suit-util: 0.14.3
       tiny-commit-walker: 1.2.1
-      undici: 6.21.3
 
   reg-publish-s3-plugin@0.14.4:
     dependencies:
@@ -14688,7 +14687,7 @@ snapshots:
     transitivePeerDependencies:
       - aws-crt
 
-  reg-suit-core@0.14.4:
+  reg-suit-core@0.14.5:
     dependencies:
       reg-cli: 0.18.10
       reg-suit-util: 0.14.3
@@ -14710,12 +14709,12 @@ snapshots:
       mime-types: 2.1.35
       mkdirp: 1.0.4
 
-  reg-suit@0.14.4:
+  reg-suit@0.14.5:
     dependencies:
       cp-file: 9.1.0
       ignore: 5.3.1
       inquirer: 8.2.6
-      reg-suit-core: 0.14.4
+      reg-suit-core: 0.14.5
       reg-suit-util: 0.14.3
       yargs: 17.0.1
 
