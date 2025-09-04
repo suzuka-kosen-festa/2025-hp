@@ -17,8 +17,7 @@
     },
     "resolveJsonModule": true,
     "types": [
-      "@cloudflare/workers-types/2023-07-01",
-      "@remix-run/cloudflare",
+
       "vite/client"
     ],
     "allowJs": true,

@@ -4,12 +4,10 @@
   "private": true,
   "sideEffects": false,
   "scripts": {
-    "build": "remix vite:build",
-    "cf-typegen": "wrangler types",
-    "dev": "remix vite:dev",
-    "postinstall": "npm run cf-typegen",
+    "build": "vite build",
+    "dev": "vite",
     "preview": "pnpm run build && vite preview",
-    "typecheck": "pnpm run cf-typegen && pnpm run build && tsc",
+    "typecheck": "tsc --noEmit",
     "dev:storybook": "storybook dev -p 6006 --no-open",
     "build:storybook": "pnpm run build && storybook build",
     "test": "vitest",
@@ -23,19 +21,16 @@
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@mui/material": "^7.3.1",
-    "@remix-run/cloudflare": "^2.17.0",
-    "@remix-run/cloudflare-pages": "^2.17.0",
-    "@remix-run/react": "^2.17.0",
     "isbot": "^5.1.30",
     "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react-dom": "^19.1.1",
+    "react-router": "^7.1.1"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "4.1.1",
     "@cloudflare/vite-plugin": "1.12.1",
-    "@cloudflare/workers-types": "4.20250831.0",
-    "@eslint-react/eslint-plugin": "1.52.9",
-    "@remix-run/dev": "2.17.0",
+    "@cloudflare/workers-types": "4.20250823.0",
+    "@eslint-react/eslint-plugin": "1.52.6",
     "@shiron-dev/eslint-config": "2.1.1",
     "@storybook/addon-a11y": "8.6.14",
     "@storybook/addon-docs": "8.6.14",
@@ -71,8 +66,7 @@
     "typescript": "5.9.2",
     "vite": "7.1.4",
     "vite-tsconfig-paths": "5.1.4",
-    "vitest": "3.2.4",
-    "wrangler": "4.32.0"
+    "vitest": "3.2.4"
   },
   "volta": {
     "node": "24.6.0"
