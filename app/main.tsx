@@ -7,5 +7,3 @@ if (!rootElement) {
 }
 
 mountApp(rootElement);
-
-
