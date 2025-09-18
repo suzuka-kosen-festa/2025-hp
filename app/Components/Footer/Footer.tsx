@@ -33,6 +33,7 @@ function FooterLink({ title, href }: SiteMapLink): ReactNode {
       height: "fit-content",
       alignSelf: "flex-start",
       minHeight: "32px",
+      width: "stretch",
     }}
     >
       <ListItemText
@@ -45,6 +46,7 @@ function FooterLink({ title, href }: SiteMapLink): ReactNode {
       <Link
         to={href}
         style={{
+          width: "100%",
           lineHeight: "1.4",
           textDecoration: "none",
           color: "white",
@@ -142,7 +144,7 @@ function Footer({ siteMap }: FooterComponentProps): ReactNode {
                     key={`${link.title}`}
                     disablePadding
                     sx={{
-                      width: "fit-content",
+                      width: "stretch",
                     }}
                   >
                     <FooterLink title={link.title} href={link.href} />
