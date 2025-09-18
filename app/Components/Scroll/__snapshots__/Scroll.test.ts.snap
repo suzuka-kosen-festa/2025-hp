@@ -1,0 +1,18 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`scroll snapshot 1`] = `
+<div>
+  <div
+    class="MuiBox-root css-12sb4ex"
+  >
+    <span
+      class="css-78wxae"
+    >
+      Scroll
+    </span>
+    <div
+      class="css-1ggck9o"
+    />
+  </div>
+</div>
+`;
