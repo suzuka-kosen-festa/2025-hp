@@ -9,6 +9,14 @@ const meta: Meta<T> = {
   parameters: {
     layout: "fullscreen",
   },
+  argTypes: {
+    date: {
+      control: "text",
+      table: {
+        type: { summary: "string" },
+      },
+    },
+  },
   tags: ["autodocs"],
 };
 
