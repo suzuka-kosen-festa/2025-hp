@@ -4,11 +4,11 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import XIcon from "@mui/icons-material/X";
 import { IconButton, Stack } from "@mui/material";
 
-type OfficialSnsProps = {
-  xUrl?: string;
-  instagramUrl?: string;
-  facebookUrl?: string;
-};
+interface OfficialSnsProps {
+  xUrl?: string
+  instagramUrl?: string
+  facebookUrl?: string
+}
 
 function OfficialSns({
   xUrl = "https://x.com/",
