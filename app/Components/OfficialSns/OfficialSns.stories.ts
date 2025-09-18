@@ -15,3 +15,11 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
+
+export const CustomLinks: Story = {
+  args: {
+    xUrl: "https://x.com/",
+    instagramUrl: "https://instagram.com/",
+    facebookUrl: "https://facebook.com/",
+  },
+};

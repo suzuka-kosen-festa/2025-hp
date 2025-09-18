@@ -4,12 +4,22 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import XIcon from "@mui/icons-material/X";
 import { IconButton, Stack } from "@mui/material";
 
-function OfficialSns(): ReactNode {
+type OfficialSnsProps = {
+  xUrl?: string;
+  instagramUrl?: string;
+  facebookUrl?: string;
+};
+
+function OfficialSns({
+  xUrl = "https://x.com/",
+  instagramUrl = "https://instagram.com/",
+  facebookUrl = "https://facebook.com/",
+}: OfficialSnsProps): ReactNode {
   return (
     <Stack direction="row" spacing={1}>
       <IconButton
         aria-label="X"
-        href="https://x.com/placeholder"
+        href={xUrl}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -17,7 +27,7 @@ function OfficialSns(): ReactNode {
       </IconButton>
       <IconButton
         aria-label="Instagram"
-        href="https://instagram.com/placeholder"
+        href={instagramUrl}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -25,7 +35,7 @@ function OfficialSns(): ReactNode {
       </IconButton>
       <IconButton
         aria-label="Facebook"
-        href="https://facebook.com/placeholder"
+        href={facebookUrl}
         target="_blank"
         rel="noopener noreferrer"
       >
