@@ -3,16 +3,16 @@
 exports[`footer snapshot 1`] = `
 <div>
   <footer
-    class="MuiBox-root css-1sc8nln"
+    class="MuiBox-root css-qnrwiy"
   >
     <div
       class="MuiBox-root css-tn7cqw"
     >
       <div
-        class="MuiBox-root css-30dmb0"
+        class="MuiBox-root css-15xp3v3"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-14smj9a-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-1328s51-MuiTypography-root"
         >
           ホーム
         </p>
@@ -23,12 +23,12 @@ exports[`footer snapshot 1`] = `
             class="MuiListItem-root MuiListItem-gutters css-a2xkym-MuiListItem-root"
           >
             <div
-              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-1x31gb3-MuiButtonBase-root-MuiListItemButton-root"
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-kbbrg0-MuiButtonBase-root-MuiListItemButton-root"
               role="button"
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-gfnhub-MuiListItemText-root"
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
               >
                 <span
                   class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
@@ -39,7 +39,7 @@ exports[`footer snapshot 1`] = `
               <a
                 data-discover="true"
                 href="/"
-                style="line-height: 1.4; text-decoration: none;"
+                style="line-height: 1.4; text-decoration: none; color: white;"
               >
                 トップページ
               </a>
@@ -49,12 +49,12 @@ exports[`footer snapshot 1`] = `
             class="MuiListItem-root MuiListItem-gutters css-a2xkym-MuiListItem-root"
           >
             <div
-              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-1x31gb3-MuiButtonBase-root-MuiListItemButton-root"
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-kbbrg0-MuiButtonBase-root-MuiListItemButton-root"
               role="button"
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-gfnhub-MuiListItemText-root"
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
               >
                 <span
                   class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
@@ -65,7 +65,7 @@ exports[`footer snapshot 1`] = `
               <a
                 data-discover="true"
                 href="/news"
-                style="line-height: 1.4; text-decoration: none;"
+                style="line-height: 1.4; text-decoration: none; color: white;"
               >
                 お知らせ
               </a>
@@ -75,12 +75,12 @@ exports[`footer snapshot 1`] = `
             class="MuiListItem-root MuiListItem-gutters css-a2xkym-MuiListItem-root"
           >
             <div
-              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-1x31gb3-MuiButtonBase-root-MuiListItemButton-root"
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-kbbrg0-MuiButtonBase-root-MuiListItemButton-root"
               role="button"
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-gfnhub-MuiListItemText-root"
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
               >
                 <span
                   class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
@@ -91,7 +91,7 @@ exports[`footer snapshot 1`] = `
               <a
                 data-discover="true"
                 href="/events"
-                style="line-height: 1.4; text-decoration: none;"
+                style="line-height: 1.4; text-decoration: none; color: white;"
               >
                 イベント情報
               </a>
@@ -101,12 +101,12 @@ exports[`footer snapshot 1`] = `
             class="MuiListItem-root MuiListItem-gutters css-a2xkym-MuiListItem-root"
           >
             <div
-              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-1x31gb3-MuiButtonBase-root-MuiListItemButton-root"
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-kbbrg0-MuiButtonBase-root-MuiListItemButton-root"
               role="button"
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-gfnhub-MuiListItemText-root"
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
               >
                 <span
                   class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
@@ -117,7 +117,7 @@ exports[`footer snapshot 1`] = `
               <a
                 data-discover="true"
                 href="/access"
-                style="line-height: 1.4; text-decoration: none;"
+                style="line-height: 1.4; text-decoration: none; color: white;"
               >
                 アクセス
               </a>
@@ -126,10 +126,10 @@ exports[`footer snapshot 1`] = `
         </ul>
       </div>
       <div
-        class="MuiBox-root css-30dmb0"
+        class="MuiBox-root css-15xp3v3"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-14smj9a-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-1328s51-MuiTypography-root"
         >
           高専祭について
         </p>
@@ -140,12 +140,12 @@ exports[`footer snapshot 1`] = `
             class="MuiListItem-root MuiListItem-gutters css-a2xkym-MuiListItem-root"
           >
             <div
-              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-1x31gb3-MuiButtonBase-root-MuiListItemButton-root"
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-kbbrg0-MuiButtonBase-root-MuiListItemButton-root"
               role="button"
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-gfnhub-MuiListItemText-root"
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
               >
                 <span
                   class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
@@ -156,7 +156,7 @@ exports[`footer snapshot 1`] = `
               <a
                 data-discover="true"
                 href="/about"
-                style="line-height: 1.4; text-decoration: none;"
+                style="line-height: 1.4; text-decoration: none; color: white;"
               >
                 高専祭とは
               </a>
@@ -166,12 +166,12 @@ exports[`footer snapshot 1`] = `
             class="MuiListItem-root MuiListItem-gutters css-a2xkym-MuiListItem-root"
           >
             <div
-              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-1x31gb3-MuiButtonBase-root-MuiListItemButton-root"
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-kbbrg0-MuiButtonBase-root-MuiListItemButton-root"
               role="button"
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-gfnhub-MuiListItemText-root"
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
               >
                 <span
                   class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
@@ -182,7 +182,7 @@ exports[`footer snapshot 1`] = `
               <a
                 data-discover="true"
                 href="/committee"
-                style="line-height: 1.4; text-decoration: none;"
+                style="line-height: 1.4; text-decoration: none; color: white;"
               >
                 実行委員会
               </a>
@@ -192,12 +192,12 @@ exports[`footer snapshot 1`] = `
             class="MuiListItem-root MuiListItem-gutters css-a2xkym-MuiListItem-root"
           >
             <div
-              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-1x31gb3-MuiButtonBase-root-MuiListItemButton-root"
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-kbbrg0-MuiButtonBase-root-MuiListItemButton-root"
               role="button"
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-gfnhub-MuiListItemText-root"
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
               >
                 <span
                   class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
@@ -208,7 +208,7 @@ exports[`footer snapshot 1`] = `
               <a
                 data-discover="true"
                 href="/history"
-                style="line-height: 1.4; text-decoration: none;"
+                style="line-height: 1.4; text-decoration: none; color: white;"
               >
                 歴史
               </a>
@@ -218,12 +218,12 @@ exports[`footer snapshot 1`] = `
             class="MuiListItem-root MuiListItem-gutters css-a2xkym-MuiListItem-root"
           >
             <div
-              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-1x31gb3-MuiButtonBase-root-MuiListItemButton-root"
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-kbbrg0-MuiButtonBase-root-MuiListItemButton-root"
               role="button"
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-gfnhub-MuiListItemText-root"
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
               >
                 <span
                   class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
@@ -234,7 +234,7 @@ exports[`footer snapshot 1`] = `
               <a
                 data-discover="true"
                 href="/philosophy"
-                style="line-height: 1.4; text-decoration: none;"
+                style="line-height: 1.4; text-decoration: none; color: white;"
               >
                 理念・目標
               </a>
@@ -243,10 +243,10 @@ exports[`footer snapshot 1`] = `
         </ul>
       </div>
       <div
-        class="MuiBox-root css-30dmb0"
+        class="MuiBox-root css-15xp3v3"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-14smj9a-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-1328s51-MuiTypography-root"
         >
           参加・出展
         </p>
@@ -257,12 +257,12 @@ exports[`footer snapshot 1`] = `
             class="MuiListItem-root MuiListItem-gutters css-a2xkym-MuiListItem-root"
           >
             <div
-              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-1x31gb3-MuiButtonBase-root-MuiListItemButton-root"
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-kbbrg0-MuiButtonBase-root-MuiListItemButton-root"
               role="button"
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-gfnhub-MuiListItemText-root"
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
               >
                 <span
                   class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
@@ -273,7 +273,7 @@ exports[`footer snapshot 1`] = `
               <a
                 data-discover="true"
                 href="/participation"
-                style="line-height: 1.4; text-decoration: none;"
+                style="line-height: 1.4; text-decoration: none; color: white;"
               >
                 一般参加
               </a>
@@ -283,12 +283,12 @@ exports[`footer snapshot 1`] = `
             class="MuiListItem-root MuiListItem-gutters css-a2xkym-MuiListItem-root"
           >
             <div
-              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-1x31gb3-MuiButtonBase-root-MuiListItemButton-root"
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-kbbrg0-MuiButtonBase-root-MuiListItemButton-root"
               role="button"
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-gfnhub-MuiListItemText-root"
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
               >
                 <span
                   class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
@@ -299,7 +299,7 @@ exports[`footer snapshot 1`] = `
               <a
                 data-discover="true"
                 href="/exhibition"
-                style="line-height: 1.4; text-decoration: none;"
+                style="line-height: 1.4; text-decoration: none; color: white;"
               >
                 出展申込
               </a>
@@ -309,12 +309,12 @@ exports[`footer snapshot 1`] = `
             class="MuiListItem-root MuiListItem-gutters css-a2xkym-MuiListItem-root"
           >
             <div
-              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-1x31gb3-MuiButtonBase-root-MuiListItemButton-root"
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-kbbrg0-MuiButtonBase-root-MuiListItemButton-root"
               role="button"
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-gfnhub-MuiListItemText-root"
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
               >
                 <span
                   class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
@@ -325,7 +325,7 @@ exports[`footer snapshot 1`] = `
               <a
                 data-discover="true"
                 href="/schedule"
-                style="line-height: 1.4; text-decoration: none;"
+                style="line-height: 1.4; text-decoration: none; color: white;"
               >
                 スケジュール
               </a>
@@ -335,12 +335,12 @@ exports[`footer snapshot 1`] = `
             class="MuiListItem-root MuiListItem-gutters css-a2xkym-MuiListItem-root"
           >
             <div
-              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-1x31gb3-MuiButtonBase-root-MuiListItemButton-root"
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-kbbrg0-MuiButtonBase-root-MuiListItemButton-root"
               role="button"
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-gfnhub-MuiListItemText-root"
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
               >
                 <span
                   class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
@@ -351,7 +351,7 @@ exports[`footer snapshot 1`] = `
               <a
                 data-discover="true"
                 href="/map"
-                style="line-height: 1.4; text-decoration: none;"
+                style="line-height: 1.4; text-decoration: none; color: white;"
               >
                 会場マップ
               </a>
@@ -361,12 +361,12 @@ exports[`footer snapshot 1`] = `
             class="MuiListItem-root MuiListItem-gutters css-a2xkym-MuiListItem-root"
           >
             <div
-              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-1x31gb3-MuiButtonBase-root-MuiListItemButton-root"
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-kbbrg0-MuiButtonBase-root-MuiListItemButton-root"
               role="button"
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-gfnhub-MuiListItemText-root"
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
               >
                 <span
                   class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
@@ -377,7 +377,7 @@ exports[`footer snapshot 1`] = `
               <a
                 data-discover="true"
                 href="/notes"
-                style="line-height: 1.4; text-decoration: none;"
+                style="line-height: 1.4; text-decoration: none; color: white;"
               >
                 注意事項
               </a>
@@ -386,10 +386,10 @@ exports[`footer snapshot 1`] = `
         </ul>
       </div>
       <div
-        class="MuiBox-root css-30dmb0"
+        class="MuiBox-root css-15xp3v3"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-14smj9a-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-1328s51-MuiTypography-root"
         >
           サポート
         </p>
@@ -400,12 +400,12 @@ exports[`footer snapshot 1`] = `
             class="MuiListItem-root MuiListItem-gutters css-a2xkym-MuiListItem-root"
           >
             <div
-              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-1x31gb3-MuiButtonBase-root-MuiListItemButton-root"
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-kbbrg0-MuiButtonBase-root-MuiListItemButton-root"
               role="button"
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-gfnhub-MuiListItemText-root"
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
               >
                 <span
                   class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
@@ -416,7 +416,7 @@ exports[`footer snapshot 1`] = `
               <a
                 data-discover="true"
                 href="/faq"
-                style="line-height: 1.4; text-decoration: none;"
+                style="line-height: 1.4; text-decoration: none; color: white;"
               >
                 よくある質問
               </a>
@@ -426,12 +426,12 @@ exports[`footer snapshot 1`] = `
             class="MuiListItem-root MuiListItem-gutters css-a2xkym-MuiListItem-root"
           >
             <div
-              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-1x31gb3-MuiButtonBase-root-MuiListItemButton-root"
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-kbbrg0-MuiButtonBase-root-MuiListItemButton-root"
               role="button"
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-gfnhub-MuiListItemText-root"
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
               >
                 <span
                   class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
@@ -442,7 +442,7 @@ exports[`footer snapshot 1`] = `
               <a
                 data-discover="true"
                 href="/contact"
-                style="line-height: 1.4; text-decoration: none;"
+                style="line-height: 1.4; text-decoration: none; color: white;"
               >
                 お問い合わせ
               </a>
@@ -452,12 +452,12 @@ exports[`footer snapshot 1`] = `
             class="MuiListItem-root MuiListItem-gutters css-a2xkym-MuiListItem-root"
           >
             <div
-              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-1x31gb3-MuiButtonBase-root-MuiListItemButton-root"
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-kbbrg0-MuiButtonBase-root-MuiListItemButton-root"
               role="button"
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-gfnhub-MuiListItemText-root"
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
               >
                 <span
                   class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
@@ -468,7 +468,7 @@ exports[`footer snapshot 1`] = `
               <a
                 data-discover="true"
                 href="/privacy"
-                style="line-height: 1.4; text-decoration: none;"
+                style="line-height: 1.4; text-decoration: none; color: white;"
               >
                 プライバシーポリシー
               </a>
@@ -477,10 +477,10 @@ exports[`footer snapshot 1`] = `
         </ul>
       </div>
       <div
-        class="MuiBox-root css-30dmb0"
+        class="MuiBox-root css-15xp3v3"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-14smj9a-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-1328s51-MuiTypography-root"
         >
           アーカイブ
         </p>
@@ -491,12 +491,12 @@ exports[`footer snapshot 1`] = `
             class="MuiListItem-root MuiListItem-gutters css-a2xkym-MuiListItem-root"
           >
             <div
-              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-1x31gb3-MuiButtonBase-root-MuiListItemButton-root"
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-kbbrg0-MuiButtonBase-root-MuiListItemButton-root"
               role="button"
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-gfnhub-MuiListItemText-root"
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
               >
                 <span
                   class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
@@ -507,7 +507,7 @@ exports[`footer snapshot 1`] = `
               <a
                 data-discover="true"
                 href="/archive"
-                style="line-height: 1.4; text-decoration: none;"
+                style="line-height: 1.4; text-decoration: none; color: white;"
               >
                 過去の高専祭
               </a>
@@ -517,12 +517,12 @@ exports[`footer snapshot 1`] = `
             class="MuiListItem-root MuiListItem-gutters css-a2xkym-MuiListItem-root"
           >
             <div
-              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-1x31gb3-MuiButtonBase-root-MuiListItemButton-root"
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-kbbrg0-MuiButtonBase-root-MuiListItemButton-root"
               role="button"
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-gfnhub-MuiListItemText-root"
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
               >
                 <span
                   class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
@@ -533,7 +533,7 @@ exports[`footer snapshot 1`] = `
               <a
                 data-discover="true"
                 href="/gallery"
-                style="line-height: 1.4; text-decoration: none;"
+                style="line-height: 1.4; text-decoration: none; color: white;"
               >
                 写真ギャラリー
               </a>
@@ -543,12 +543,12 @@ exports[`footer snapshot 1`] = `
             class="MuiListItem-root MuiListItem-gutters css-a2xkym-MuiListItem-root"
           >
             <div
-              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-1x31gb3-MuiButtonBase-root-MuiListItemButton-root"
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-kbbrg0-MuiButtonBase-root-MuiListItemButton-root"
               role="button"
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root css-gfnhub-MuiListItemText-root"
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
               >
                 <span
                   class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
@@ -559,7 +559,7 @@ exports[`footer snapshot 1`] = `
               <a
                 data-discover="true"
                 href="/videos"
-                style="line-height: 1.4; text-decoration: none;"
+                style="line-height: 1.4; text-decoration: none; color: white;"
               >
                 動画アーカイブ
               </a>
@@ -569,7 +569,7 @@ exports[`footer snapshot 1`] = `
       </div>
     </div>
     <div
-      class="MuiBox-root css-123s6x4"
+      class="MuiBox-root css-1tadryu"
     >
       ©2025 鈴鹿工業高等専門学校 高専祭実行委員会
     </div>
