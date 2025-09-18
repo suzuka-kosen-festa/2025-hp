@@ -1,0 +1,29 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SnsShare snapshot 1`] = `
+<div>
+  <div>
+    <a
+      href="https://twitter.com/intent/tweet?url=https://kosenfes-2025.trap.show&text=高専祭2025 #高専祭2025"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      X
+    </a>
+    <a
+      href="https://www.facebook.com/sharer/sharer.php?u=https://kosenfes-2025.trap.show"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Facebook
+    </a>
+    <a
+      href="https://line.me/R/msg/text/?高専祭2025 #高専祭2025%0Ahttps://kosenfes-2025.trap.show"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      LINE
+    </a>
+  </div>
+</div>
+`;
