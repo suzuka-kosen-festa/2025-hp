@@ -7,7 +7,12 @@ type T = typeof GoogleMap;
 const meta: Meta = {
   title: "Components/GoogleMap",
   component: GoogleMap,
-  parameters: { layout: "centered", storycap: { disable: true } },
+  parameters: {  
+    screenshot: {  
+      skip: true,  
+    },  
+  },  
+
   tags: ["autodocs"],
   argTypes: {
     address: {
