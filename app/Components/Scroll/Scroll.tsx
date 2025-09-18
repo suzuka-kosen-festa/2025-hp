@@ -13,7 +13,7 @@ const scrolldown = keyframes`
 const Scrolltext = styled("span")(({ theme }) => ({
   position: "absolute",
   bottom: "10px",
-  left: "-25px",
+  left: "-40px",
   color: theme.palette.text.primary,
   fontSize: "1.2rem",
   letterSpacing: "0.1em",
