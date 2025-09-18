@@ -1,0 +1,56 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render the event summary correctly 1`] = `
+<div>
+  <div
+    class="MuiBox-root css-1k84u04"
+  >
+    <h1
+      class="MuiTypography-root MuiTypography-h2 css-127kv7s-MuiTypography-root"
+    >
+      Orbit
+    </h1>
+    <p
+      class="MuiTypography-root MuiTypography-body1 css-1ygij95-MuiTypography-root"
+    >
+      テーマの説明ウンタラカンタラ
+    </p>
+    <div
+      class="MuiBox-root css-1yjvs5a"
+    >
+      <div
+        class="MuiBox-root css-jvpn1k"
+      >
+        <h2
+          class="MuiTypography-root MuiTypography-h5 css-16xl4zq-MuiTypography-root"
+        >
+          開催日時
+        </h2>
+      </div>
+      <h4
+        class="MuiTypography-root MuiTypography-h4 css-1qv4sbo-MuiTypography-root"
+      >
+        2024年11月2日(土)～11月3日(日)
+      </h4>
+    </div>
+    <div
+      class="MuiBox-root css-0"
+    >
+      <div
+        class="MuiBox-root css-jvpn1k"
+      >
+        <h2
+          class="MuiTypography-root MuiTypography-h5 css-16xl4zq-MuiTypography-root"
+        >
+          開催場所
+        </h2>
+      </div>
+      <h4
+        class="MuiTypography-root MuiTypography-h4 css-1qv4sbo-MuiTypography-root"
+      >
+        鈴鹿工業高等専門学校
+      </h4>
+    </div>
+  </div>
+</div>
+`;
