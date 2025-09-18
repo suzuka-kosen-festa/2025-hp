@@ -12,7 +12,7 @@ exports[`footer snapshot 1`] = `
         class="MuiBox-root css-15xp3v3"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-1328s51-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-kxr4hf-MuiTypography-root"
         >
           ホーム
         </p>
@@ -129,7 +129,7 @@ exports[`footer snapshot 1`] = `
         class="MuiBox-root css-15xp3v3"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-1328s51-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-kxr4hf-MuiTypography-root"
         >
           高専祭について
         </p>
@@ -246,7 +246,7 @@ exports[`footer snapshot 1`] = `
         class="MuiBox-root css-15xp3v3"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-1328s51-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-kxr4hf-MuiTypography-root"
         >
           参加・出展
         </p>
@@ -389,7 +389,7 @@ exports[`footer snapshot 1`] = `
         class="MuiBox-root css-15xp3v3"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-1328s51-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-kxr4hf-MuiTypography-root"
         >
           サポート
         </p>
@@ -480,7 +480,7 @@ exports[`footer snapshot 1`] = `
         class="MuiBox-root css-15xp3v3"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-1328s51-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-kxr4hf-MuiTypography-root"
         >
           アーカイブ
         </p>

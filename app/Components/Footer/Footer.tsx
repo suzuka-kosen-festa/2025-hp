@@ -119,7 +119,6 @@ function Footer({ siteMap }: FooterComponentProps): ReactNode {
                   marginBottom: "8px",
                   paddingBottom: "4px",
                   borderBottom: "2px solid",
-                  borderColor: "grey-50",
                 }}
               >
                 {section.sectionTitle}
