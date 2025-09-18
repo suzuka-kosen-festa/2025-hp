@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { Box, Divider, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 interface EventSummaryProps {
   mainTitle: string
@@ -35,18 +35,20 @@ function EventSummary({
       </Typography>
 
       <Box sx={{ mb: 4 }}>
-        <Typography variant="h5" component="h2" sx={{ mb: 1 }}>
-          {dateLabel}
-        </Typography>
-        <Divider sx={{ borderColor: "orange", borderWidth: 1, mb: 2 }} />
+        <Box sx={{ display: "inline-block", borderBottom: "1px solid orange", pb: 0.5, mb: 2 }}>
+          <Typography variant="h5" component="h2">
+            {dateLabel}
+          </Typography>
+        </Box>
         <Typography variant="h4" sx={{ textAlign: "center" }}>{date}</Typography>
       </Box>
 
       <Box>
-        <Typography variant="h5" component="h2" sx={{ mb: 1 }}>
-          {locationLabel}
-        </Typography>
-        <Divider sx={{ borderColor: "orange", borderWidth: 1, mb: 2 }} />
+        <Box sx={{ display: "inline-block", borderBottom: "1px solid orange", pb: 0.5, mb: 2 }}>
+          <Typography variant="h5" component="h2">
+            {locationLabel}
+          </Typography>
+        </Box>
         <Typography variant="h4" sx={{ textAlign: "center" }}>{location}</Typography>
       </Box>
     </Box>
