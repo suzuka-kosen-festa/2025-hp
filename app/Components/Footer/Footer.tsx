@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import Box from "@mui/material/Box";
+import { grey } from "@mui/material/colors";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
@@ -32,7 +33,6 @@ function FooterLink({ title, href }: SiteMapLink): ReactNode {
       height: "fit-content",
       alignSelf: "flex-start",
       minHeight: "32px",
-      color: "primary.contrastText",
     }}
     >
       <ListItemText
@@ -40,7 +40,6 @@ function FooterLink({ title, href }: SiteMapLink): ReactNode {
         sx={{
           minWidth: "auto",
           marginRight: "4px",
-          color: "primary.contrastText",
         }}
       />
       <Link
@@ -48,15 +47,15 @@ function FooterLink({ title, href }: SiteMapLink): ReactNode {
         style={{
           lineHeight: "1.4",
           textDecoration: "none",
-          color: "primary.contrastText",
+          color: "white",
         }}
         onMouseEnter={(e) => {
           e.currentTarget.style.textDecoration = "underline";
-          e.currentTarget.style.color = "primary.contrastText";
+          e.currentTarget.style.color = grey[400];
         }}
         onMouseLeave={(e) => {
           e.currentTarget.style.textDecoration = "none";
-          e.currentTarget.style.color = "primary.contrastText";
+          e.currentTarget.style.color = "white";
         }}
       >
         {title}
@@ -69,7 +68,7 @@ function Footer({ siteMap }: FooterComponentProps): ReactNode {
   return (
     <Box
       component="footer"
-      bgcolor="primary.main"
+      bgcolor="black"
       sx={{
         display: "flex",
         flexDirection: "column",
@@ -77,7 +76,6 @@ function Footer({ siteMap }: FooterComponentProps): ReactNode {
         justifyContent: "center",
         width: "100%",
         padding: "40px 20px 20px",
-        borderTop: "1px solid primary.contrastText",
       }}
     >
       {siteMap.length > 0 && (
@@ -110,7 +108,7 @@ function Footer({ siteMap }: FooterComponentProps): ReactNode {
                 flexDirection: "column",
                 overflow: "visible",
                 padding: "0",
-                color: "primary.contrastText",
+                color: "white",
                 marginBottom: "20px",
               }}
             >
@@ -121,7 +119,7 @@ function Footer({ siteMap }: FooterComponentProps): ReactNode {
                   marginBottom: "8px",
                   paddingBottom: "4px",
                   borderBottom: "2px solid",
-                  borderColor: "primary.contrastText",
+                  borderColor: "grey-50",
                 }}
               >
                 {section.sectionTitle}
@@ -144,7 +142,9 @@ function Footer({ siteMap }: FooterComponentProps): ReactNode {
                   <ListItem
                     key={`${link.title}`}
                     disablePadding
-                    sx={{ width: "fit-content" }}
+                    sx={{
+                      width: "fit-content",
+                    }}
                   >
                     <FooterLink title={link.title} href={link.href} />
                   </ListItem>
@@ -162,7 +162,7 @@ function Footer({ siteMap }: FooterComponentProps): ReactNode {
           width: "100%",
           padding: "20px 0",
           marginTop: "30px",
-          color: "primary.contrastText",
+          color: "white",
         }}
       >
         {ja.footer.copyright}
