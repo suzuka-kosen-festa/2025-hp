@@ -34,7 +34,7 @@ jobs:
     environment: production
     steps:
       - uses: actions/checkout@v5
-      - uses: shiron-dev/actions/setup-node@v1.1.0
+      - uses: shiron-dev/actions/setup-node@3478cc44402c5c590ce6732554e621558ac6d6e5 # v1.5.0
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
       - name: Run build
