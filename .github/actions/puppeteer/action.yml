@@ -9,7 +9,7 @@ runs:
       id: puppeteer-version
       run: |
         echo "PUPPETEER_VERSION=$(jq -r '.devDependencies.puppeteer' package.json)" >>"$GITHUB_OUTPUT"
-    - uses: actions/cache@v4.2.3
+    - uses: actions/cache@v4.2.4
       name: Setup puppeteer cache
       id: puppeteer-cache
       with:
