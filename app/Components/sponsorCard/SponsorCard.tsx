@@ -1,30 +1,31 @@
 /** @jsxImportSource @emotion/react */
 import type { ReactNode } from "react";
-import * as React from "react";
+import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import { useTheme } from "@mui/material/styles";
+import Typography from "@mui/material/Typography";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import * as React from "react";
 import { ja } from "../../locales/ja";
 
 export interface SponsorCardComponentProps {
-  image: string;
-  sponsorName: string;
-  description: string;
-  phone?: string;         // 例: "059-389-7860"
+  image: string
+  sponsorName: string
+  description: string
+  phone?: string // 例: "059-389-7860"
 }
 
 function SponsorCard(props: SponsorCardComponentProps): ReactNode {
   const { image, sponsorName, description, phone } = props;
   const theme = useTheme();
   const isLgUp = useMediaQuery(theme.breakpoints.up("lg"));
-  
+
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
-    if (e.currentTarget.src.endsWith("/images/not-found.png")) return;
+    if (e.currentTarget.src.endsWith("/images/not-found.png"))
+      return;
     e.currentTarget.src = "/images/not-found.png";
   };
 
