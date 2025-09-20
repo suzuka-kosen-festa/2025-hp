@@ -6791,6 +6791,7 @@ snapshots:
     optionalDependencies:
       workerd: 1.20250816.0
 
+
   '@cloudflare/vite-plugin@1.13.2(vite@7.1.5(@types/node@24.5.1)(jiti@2.5.1)(yaml@2.8.0))(workerd@1.20250816.0)(wrangler@4.32.0(@cloudflare/workers-types@4.20250913.0))':
     dependencies:
       '@cloudflare/unenv-preset': 2.7.3(unenv@2.0.0-rc.21)(workerd@1.20250816.0)
