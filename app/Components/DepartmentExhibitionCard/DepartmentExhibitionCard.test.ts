@@ -5,8 +5,7 @@ import * as stories from "./DepartmentExhibitionCard.stories";
 
 const { Default } = composeStories(stories);
 
-
-it("DepartmentExhibitionCard snapshot", async () => {
+it("departmentExhibitionCard snapshot", async () => {
   await Default.run();
   expect(document.body.firstChild).toMatchSnapshot();
 });

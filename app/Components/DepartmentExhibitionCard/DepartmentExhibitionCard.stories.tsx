@@ -26,7 +26,6 @@ const meta: Meta<T> = {
   },
 } satisfies Meta<T>;
 
-
 type Story = StoryObj<T>;
 
 export const Default: Story = {
