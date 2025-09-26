@@ -56,7 +56,7 @@
     "eslint-plugin-react-refresh": "0.4.21",
     "jiti": "2.6.0",
     "jsdom": "27.0.0",
-    "playwright": "1.55.0",
+    "playwright": "1.55.1",
     "puppeteer": "24.22.0",
     "reg-keygen-git-hash-plugin": "0.14.5",
     "reg-notify-github-plugin": "0.14.5",
