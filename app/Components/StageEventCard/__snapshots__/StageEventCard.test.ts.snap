@@ -1,47 +1,5 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`StageEventCard > should render a snapshot 1`] = `
-<div>
-  <div
-    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-1o9gf9u-MuiPaper-root-MuiCard-root"
-    style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
-  >
-    <div
-      class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
-    >
-      <div
-        class="MuiTypography-root MuiTypography-h5 css-16xl4zq-MuiTypography-root"
-      >
-        ステージイベント
-      </div>
-      <div
-        class="MuiBox-root css-15c9lgq"
-      >
-        <p
-          class="MuiTypography-root MuiTypography-body1 css-25ew61-MuiTypography-root"
-        >
-          2025年11月2日(土) 10:00 - 11:00
-        </p>
-        <div
-          class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-filledPrimary css-2mz69a-MuiChip-root"
-        >
-          <span
-            class="MuiChip-label MuiChip-labelSmall css-eccknh-MuiChip-label"
-          >
-            メインステージ
-          </span>
-        </div>
-      </div>
-      <p
-        class="MuiTypography-root MuiTypography-body2 css-7ctihp-MuiTypography-root"
-      >
-        ステージイベントについての情報。
-      </p>
-    </div>
-  </div>
-</div>
-`;
-
 exports[`should render a snapshot 1`] = `
 <div>
   <div
