@@ -25,7 +25,7 @@
     "isbot": "^5.1.31",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "react-router": "^7.9.2"
+    "react-router": "^7.9.3"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "4.1.1",
