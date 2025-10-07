@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/suzuka-kosen-festa/2025-hp/compare/v1.0.0...v1.0.1) (2025-10-07)
+
+
+### Bug Fixes
+
+* **public:** Update the poster meta data ([#273](https://github.com/suzuka-kosen-festa/2025-hp/issues/273)) ([44b75e5](https://github.com/suzuka-kosen-festa/2025-hp/commit/44b75e5795bc1dbb418bb0d94f0ec21f47a90a0d))
+
 ## 1.0.0 (2025-10-07)
 
 
