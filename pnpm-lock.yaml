@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      2025-hp:
-        specifier: 'link:'
-        version: 'link:'
       '@emotion/react':
         specifier: ^11.14.0
         version: 11.14.0(@types/react@19.2.0)(react@19.2.0)
