@@ -3,6 +3,7 @@ import { resolve } from "node:path";
 
 const config: StorybookConfig = {
   stories: ["../app/**/*.stories.@(ts|tsx)"],
+  staticDirs: ["../public"],
   addons: [
     "@storybook/addon-onboarding",
     "@storybook/addon-links",
