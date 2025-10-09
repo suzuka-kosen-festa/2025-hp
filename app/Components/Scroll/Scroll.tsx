@@ -10,11 +10,11 @@ const scrolldown = keyframes`
   }
 `;
 
-const Scrolltext = styled("span")(({ theme }) => ({
+const Scrolltext = styled("span")(({
   position: "absolute",
   bottom: "10px",
   left: "-40px",
-  color: theme.palette.text.primary,
+  color: "white",
   fontSize: "1.2rem",
   letterSpacing: "0.1em",
   textTransform: "uppercase",
@@ -33,7 +33,7 @@ const ScrollDown = styled("div")({
     left: "-3px",
     width: "6px",
     height: "20px",
-    background: "black",
+    background: "white",
     borderRadius: "4px",
   },
   "&::after": {
@@ -43,8 +43,8 @@ const ScrollDown = styled("div")({
     left: "-6px",
     width: "12px",
     height: "12px",
-    borderBottom: "2px solid black",
-    borderRight: "2px solid black",
+    borderBottom: "2px solid white",
+    borderRight: "2px solid white",
     transform: "rotate(45deg)",
   },
 });
