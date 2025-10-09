@@ -3,10 +3,10 @@
 exports[`footer snapshot 1`] = `
 <div>
   <footer
-    class="MuiBox-root css-qnrwiy"
+    class="MuiBox-root css-ssgk3v"
   >
     <div
-      class="MuiBox-root css-tn7cqw"
+      class="MuiBox-root css-1v80e7e"
     >
       <div
         class="MuiBox-root css-15xp3v3"
@@ -569,7 +569,7 @@ exports[`footer snapshot 1`] = `
       </div>
     </div>
     <div
-      class="MuiBox-root css-1tadryu"
+      class="MuiBox-root css-k258rc"
     >
       ©2025 鈴鹿工業高等専門学校 高専祭実行委員会
     </div>

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { createRemixStub } from "@remix-run/testing";
+import { MemoryRouter } from "react-router";
 import FooterComponent from "./Footer";
 
 const Footer = FooterComponent;
@@ -9,14 +9,11 @@ const meta: Meta<typeof Footer> = {
   component: Footer,
   decorators: [
     (story) => {
-      const remixStub = createRemixStub([
-        {
-          Component: () => story(),
-          path: "/*",
-        },
-      ]);
-
-      return remixStub({});
+      return (
+        <MemoryRouter initialEntries={["/"]}>
+          {story()}
+        </MemoryRouter>
+      );
     },
   ],
   parameters: {

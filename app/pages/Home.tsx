@@ -2,11 +2,13 @@ import type { FC } from "react";
 import { Box, Container, keyframes, styled, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import EventSummary from "@/Components/EventSummary";
+import Footer from "@/Components/Footer";
 import GoogleMap from "@/Components/GoogleMap";
 import Logo from "@/Components/Logo";
 import OfficialSns from "@/Components/OfficialSns";
 import Scroll from "@/Components/Scroll";
 import { SnsShare } from "@/Components/SnsShare";
+import { sitemapData } from "@/data/sitemap";
 
 // 宇宙的なアニメーション
 const float = keyframes`
@@ -244,6 +246,7 @@ const Home: FC = () => {
           <SnsShare />
         </Box>
       </Container>
+      <Footer siteMap={sitemapData} />
     </SpaceBackground>
   );
 };
