@@ -1,0 +1,578 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`footer snapshot 1`] = `
+<div>
+  <footer
+    class="MuiBox-root css-qnrwiy"
+  >
+    <div
+      class="MuiBox-root css-tn7cqw"
+    >
+      <div
+        class="MuiBox-root css-15xp3v3"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body1 css-kxr4hf-MuiTypography-root"
+        >
+          ホーム
+        </p>
+        <ul
+          class="MuiList-root MuiList-padding css-oyuda3-MuiList-root"
+        >
+          <li
+            class="MuiListItem-root MuiListItem-gutters css-1idlbdq-MuiListItem-root"
+          >
+            <div
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-6ia2ol-MuiButtonBase-root-MuiListItemButton-root"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
+                >
+                  ・
+                </span>
+              </div>
+              <a
+                data-discover="true"
+                href="/"
+                style="width: 100%; line-height: 1.4; text-decoration: none; color: white;"
+              >
+                トップページ
+              </a>
+            </div>
+          </li>
+          <li
+            class="MuiListItem-root MuiListItem-gutters css-1idlbdq-MuiListItem-root"
+          >
+            <div
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-6ia2ol-MuiButtonBase-root-MuiListItemButton-root"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
+                >
+                  ・
+                </span>
+              </div>
+              <a
+                data-discover="true"
+                href="/news"
+                style="width: 100%; line-height: 1.4; text-decoration: none; color: white;"
+              >
+                お知らせ
+              </a>
+            </div>
+          </li>
+          <li
+            class="MuiListItem-root MuiListItem-gutters css-1idlbdq-MuiListItem-root"
+          >
+            <div
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-6ia2ol-MuiButtonBase-root-MuiListItemButton-root"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
+                >
+                  ・
+                </span>
+              </div>
+              <a
+                data-discover="true"
+                href="/events"
+                style="width: 100%; line-height: 1.4; text-decoration: none; color: white;"
+              >
+                イベント情報
+              </a>
+            </div>
+          </li>
+          <li
+            class="MuiListItem-root MuiListItem-gutters css-1idlbdq-MuiListItem-root"
+          >
+            <div
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-6ia2ol-MuiButtonBase-root-MuiListItemButton-root"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
+                >
+                  ・
+                </span>
+              </div>
+              <a
+                data-discover="true"
+                href="/access"
+                style="width: 100%; line-height: 1.4; text-decoration: none; color: white;"
+              >
+                アクセス
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="MuiBox-root css-15xp3v3"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body1 css-kxr4hf-MuiTypography-root"
+        >
+          高専祭について
+        </p>
+        <ul
+          class="MuiList-root MuiList-padding css-oyuda3-MuiList-root"
+        >
+          <li
+            class="MuiListItem-root MuiListItem-gutters css-1idlbdq-MuiListItem-root"
+          >
+            <div
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-6ia2ol-MuiButtonBase-root-MuiListItemButton-root"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
+                >
+                  ・
+                </span>
+              </div>
+              <a
+                data-discover="true"
+                href="/about"
+                style="width: 100%; line-height: 1.4; text-decoration: none; color: white;"
+              >
+                高専祭とは
+              </a>
+            </div>
+          </li>
+          <li
+            class="MuiListItem-root MuiListItem-gutters css-1idlbdq-MuiListItem-root"
+          >
+            <div
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-6ia2ol-MuiButtonBase-root-MuiListItemButton-root"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
+                >
+                  ・
+                </span>
+              </div>
+              <a
+                data-discover="true"
+                href="/committee"
+                style="width: 100%; line-height: 1.4; text-decoration: none; color: white;"
+              >
+                実行委員会
+              </a>
+            </div>
+          </li>
+          <li
+            class="MuiListItem-root MuiListItem-gutters css-1idlbdq-MuiListItem-root"
+          >
+            <div
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-6ia2ol-MuiButtonBase-root-MuiListItemButton-root"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
+                >
+                  ・
+                </span>
+              </div>
+              <a
+                data-discover="true"
+                href="/history"
+                style="width: 100%; line-height: 1.4; text-decoration: none; color: white;"
+              >
+                歴史
+              </a>
+            </div>
+          </li>
+          <li
+            class="MuiListItem-root MuiListItem-gutters css-1idlbdq-MuiListItem-root"
+          >
+            <div
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-6ia2ol-MuiButtonBase-root-MuiListItemButton-root"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
+                >
+                  ・
+                </span>
+              </div>
+              <a
+                data-discover="true"
+                href="/philosophy"
+                style="width: 100%; line-height: 1.4; text-decoration: none; color: white;"
+              >
+                理念・目標
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="MuiBox-root css-15xp3v3"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body1 css-kxr4hf-MuiTypography-root"
+        >
+          参加・出展
+        </p>
+        <ul
+          class="MuiList-root MuiList-padding css-oyuda3-MuiList-root"
+        >
+          <li
+            class="MuiListItem-root MuiListItem-gutters css-1idlbdq-MuiListItem-root"
+          >
+            <div
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-6ia2ol-MuiButtonBase-root-MuiListItemButton-root"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
+                >
+                  ・
+                </span>
+              </div>
+              <a
+                data-discover="true"
+                href="/participation"
+                style="width: 100%; line-height: 1.4; text-decoration: none; color: white;"
+              >
+                一般参加
+              </a>
+            </div>
+          </li>
+          <li
+            class="MuiListItem-root MuiListItem-gutters css-1idlbdq-MuiListItem-root"
+          >
+            <div
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-6ia2ol-MuiButtonBase-root-MuiListItemButton-root"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
+                >
+                  ・
+                </span>
+              </div>
+              <a
+                data-discover="true"
+                href="/exhibition"
+                style="width: 100%; line-height: 1.4; text-decoration: none; color: white;"
+              >
+                出展申込
+              </a>
+            </div>
+          </li>
+          <li
+            class="MuiListItem-root MuiListItem-gutters css-1idlbdq-MuiListItem-root"
+          >
+            <div
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-6ia2ol-MuiButtonBase-root-MuiListItemButton-root"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
+                >
+                  ・
+                </span>
+              </div>
+              <a
+                data-discover="true"
+                href="/schedule"
+                style="width: 100%; line-height: 1.4; text-decoration: none; color: white;"
+              >
+                スケジュール
+              </a>
+            </div>
+          </li>
+          <li
+            class="MuiListItem-root MuiListItem-gutters css-1idlbdq-MuiListItem-root"
+          >
+            <div
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-6ia2ol-MuiButtonBase-root-MuiListItemButton-root"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
+                >
+                  ・
+                </span>
+              </div>
+              <a
+                data-discover="true"
+                href="/map"
+                style="width: 100%; line-height: 1.4; text-decoration: none; color: white;"
+              >
+                会場マップ
+              </a>
+            </div>
+          </li>
+          <li
+            class="MuiListItem-root MuiListItem-gutters css-1idlbdq-MuiListItem-root"
+          >
+            <div
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-6ia2ol-MuiButtonBase-root-MuiListItemButton-root"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
+                >
+                  ・
+                </span>
+              </div>
+              <a
+                data-discover="true"
+                href="/notes"
+                style="width: 100%; line-height: 1.4; text-decoration: none; color: white;"
+              >
+                注意事項
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="MuiBox-root css-15xp3v3"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body1 css-kxr4hf-MuiTypography-root"
+        >
+          サポート
+        </p>
+        <ul
+          class="MuiList-root MuiList-padding css-oyuda3-MuiList-root"
+        >
+          <li
+            class="MuiListItem-root MuiListItem-gutters css-1idlbdq-MuiListItem-root"
+          >
+            <div
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-6ia2ol-MuiButtonBase-root-MuiListItemButton-root"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
+                >
+                  ・
+                </span>
+              </div>
+              <a
+                data-discover="true"
+                href="/faq"
+                style="width: 100%; line-height: 1.4; text-decoration: none; color: white;"
+              >
+                よくある質問
+              </a>
+            </div>
+          </li>
+          <li
+            class="MuiListItem-root MuiListItem-gutters css-1idlbdq-MuiListItem-root"
+          >
+            <div
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-6ia2ol-MuiButtonBase-root-MuiListItemButton-root"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
+                >
+                  ・
+                </span>
+              </div>
+              <a
+                data-discover="true"
+                href="/contact"
+                style="width: 100%; line-height: 1.4; text-decoration: none; color: white;"
+              >
+                お問い合わせ
+              </a>
+            </div>
+          </li>
+          <li
+            class="MuiListItem-root MuiListItem-gutters css-1idlbdq-MuiListItem-root"
+          >
+            <div
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-6ia2ol-MuiButtonBase-root-MuiListItemButton-root"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
+                >
+                  ・
+                </span>
+              </div>
+              <a
+                data-discover="true"
+                href="/privacy"
+                style="width: 100%; line-height: 1.4; text-decoration: none; color: white;"
+              >
+                プライバシーポリシー
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="MuiBox-root css-15xp3v3"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body1 css-kxr4hf-MuiTypography-root"
+        >
+          アーカイブ
+        </p>
+        <ul
+          class="MuiList-root MuiList-padding css-oyuda3-MuiList-root"
+        >
+          <li
+            class="MuiListItem-root MuiListItem-gutters css-1idlbdq-MuiListItem-root"
+          >
+            <div
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-6ia2ol-MuiButtonBase-root-MuiListItemButton-root"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
+                >
+                  ・
+                </span>
+              </div>
+              <a
+                data-discover="true"
+                href="/archive"
+                style="width: 100%; line-height: 1.4; text-decoration: none; color: white;"
+              >
+                過去の高専祭
+              </a>
+            </div>
+          </li>
+          <li
+            class="MuiListItem-root MuiListItem-gutters css-1idlbdq-MuiListItem-root"
+          >
+            <div
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-6ia2ol-MuiButtonBase-root-MuiListItemButton-root"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
+                >
+                  ・
+                </span>
+              </div>
+              <a
+                data-discover="true"
+                href="/gallery"
+                style="width: 100%; line-height: 1.4; text-decoration: none; color: white;"
+              >
+                写真ギャラリー
+              </a>
+            </div>
+          </li>
+          <li
+            class="MuiListItem-root MuiListItem-gutters css-1idlbdq-MuiListItem-root"
+          >
+            <div
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-6ia2ol-MuiButtonBase-root-MuiListItemButton-root"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
+                >
+                  ・
+                </span>
+              </div>
+              <a
+                data-discover="true"
+                href="/videos"
+                style="width: 100%; line-height: 1.4; text-decoration: none; color: white;"
+              >
+                動画アーカイブ
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="MuiBox-root css-1tadryu"
+    >
+      ©2025 鈴鹿工業高等専門学校 高専祭実行委員会
+    </div>
+  </footer>
+</div>
+`;

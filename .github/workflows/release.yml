@@ -17,11 +17,11 @@ jobs:
     outputs:
       release-created: ${{ steps.release.outputs.release_created }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
       - name: Release please
-        uses: googleapis/release-please-action@v4
+        uses: googleapis/release-please-action@c2a5a2bd6a758a0937f1ddb1e8950609867ed15c # v4
         id: release
         with:
           release-type: simple
@@ -33,14 +33,14 @@ jobs:
     if: ${{ needs.release-please.outputs.release-created }}
     environment: production
     steps:
-      - uses: actions/checkout@v4
-      - uses: shiron-dev/actions/setup-node@v1.1.0
+      - uses: actions/checkout@v5
+      - uses: shiron-dev/actions/setup-node@3478cc44402c5c590ce6732554e621558ac6d6e5 # v1.5.0
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
       - name: Run build
         run: pnpm run build
       - name: Deploy to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v3
+        uses: cloudflare/wrangler-action@da0e0dfe58b7a431659754fdf3f186c529afbe65 # v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
