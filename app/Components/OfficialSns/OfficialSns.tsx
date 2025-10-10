@@ -22,6 +22,7 @@ function OfficialSns({
         href={xUrl}
         target="_blank"
         rel="noopener noreferrer"
+        sx={{ color: "white" }}
       >
         <XIcon />
       </IconButton>
@@ -30,6 +31,7 @@ function OfficialSns({
         href={instagramUrl}
         target="_blank"
         rel="noopener noreferrer"
+        sx={{ color: "white" }}
       >
         <InstagramIcon />
       </IconButton>
@@ -38,6 +40,7 @@ function OfficialSns({
         href={facebookUrl}
         target="_blank"
         rel="noopener noreferrer"
+        sx={{ color: "white" }}
       >
         <FacebookIcon />
       </IconButton>

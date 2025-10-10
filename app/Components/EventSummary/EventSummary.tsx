@@ -2,8 +2,8 @@ import type { ReactNode } from "react";
 import { Box, Typography } from "@mui/material";
 
 interface EventSummaryProps {
-  mainTitle: string
-  description: string
+  mainTitle?: string
+  description?: string
   dateLabel: string
   date: string
   locationLabel: string
@@ -21,7 +21,8 @@ function EventSummary({
   return (
     <Box
       sx={{
-        backgroundColor: "black",
+        backgroundColor: "none",
+        backdropFilter: "blur(5px)",
         color: "white",
         p: 4,
         fontFamily: "sans-serif",

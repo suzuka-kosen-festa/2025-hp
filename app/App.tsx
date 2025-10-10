@@ -9,6 +9,18 @@ const router = createBrowserRouter([
       Component: (await import("./pages/Home"))?.default,
     }),
   },
+  {
+    path: "/events",
+    lazy: async () => ({
+      Component: (await import("./pages/events"))?.default,
+    }),
+  },
+  {
+    path: "/bazaar",
+    lazy: async () => ({
+      Component: (await import("./pages/bazaar"))?.default,
+    }),
+  },
 ]);
 
 export function mountApp(rootElement: HTMLElement) {
