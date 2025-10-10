@@ -415,6 +415,7 @@ interface DurableObjectNamespace<T extends Rpc.DurableObjectBranded | undefined 
     newUniqueId(options?: DurableObjectNamespaceNewUniqueIdOptions): DurableObjectId;
     idFromName(name: string): DurableObjectId;
     idFromString(id: string): DurableObjectId;
+    getByName(name: string, options?: DurableObjectNamespaceGetDurableObjectOptions): DurableObjectStub;
     get(id: DurableObjectId, options?: DurableObjectNamespaceGetDurableObjectOptions): DurableObjectStub<T>;
     jurisdiction(jurisdiction: DurableObjectJurisdiction): DurableObjectNamespace<T>;
 }
@@ -5355,6 +5356,12 @@ type GatewayOptions = {
     requestTimeoutMs?: number;
     retries?: GatewayRetries;
 };
+type UniversalGatewayOptions = Exclude<GatewayOptions, 'id'> & {
+    /**
+     ** @deprecated
+     */
+    id?: string;
+};
 type AiGatewayPatchLog = {
     score?: number | null;
     feedback?: -1 | 1 | null;
@@ -5410,7 +5417,7 @@ type AIGatewayHeaders = {
     [key: string]: string | number | boolean | object;
 };
 type AIGatewayUniversalRequest = {
-    provider: AIGatewayProviders | string;  
+    provider: AIGatewayProviders | string; // eslint-disable-line
     endpoint: string;
     headers: Partial<AIGatewayHeaders>;
     query: unknown;
@@ -5423,10 +5430,10 @@ declare abstract class AiGateway {
     patchLog(logId: string, data: AiGatewayPatchLog): Promise<void>;
     getLog(logId: string): Promise<AiGatewayLog>;
     run(data: AIGatewayUniversalRequest | AIGatewayUniversalRequest[], options?: {
-        gateway?: GatewayOptions;
+        gateway?: UniversalGatewayOptions;
         extraHeaders?: object;
     }): Promise<Response>;
-    getUrl(provider?: AIGatewayProviders | string): Promise<string>;  
+    getUrl(provider?: AIGatewayProviders | string): Promise<string>; // eslint-disable-line
 }
 interface AutoRAGInternalError extends Error {
 }
@@ -5457,6 +5464,7 @@ type AutoRagSearchRequest = {
 };
 type AutoRagAiSearchRequest = AutoRagSearchRequest & {
     stream?: boolean;
+    system_prompt?: string;
 };
 type AutoRagAiSearchRequestStreaming = Omit<AutoRagAiSearchRequest, 'stream'> & {
     stream: true;
