@@ -1,0 +1,72 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render a snapshot 1`] = `
+<div>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-f1oqvv-MuiPaper-root-MuiCard-root"
+    style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
+  >
+    <div
+      class="MuiCardContent-root css-1vfyqek-MuiCardContent-root"
+    >
+      <div
+        class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-1f9xtph-MuiTypography-root"
+      >
+        ステージイベント
+      </div>
+      <div
+        class="MuiBox-root css-1giuvzv"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-bdtf6l-MuiSvgIcon-root"
+          data-testid="AccessTimeIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2M12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8"
+          />
+          <path
+            d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"
+          />
+        </svg>
+        <p
+          class="MuiTypography-root MuiTypography-body2 css-7ctihp-MuiTypography-root"
+        >
+          2025年11月2日(土) 10:00 - 11:00
+        </p>
+      </div>
+      <div
+        class="MuiBox-root css-l69qyb"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-4xd1ef-MuiSvgIcon-root"
+          data-testid="PlaceIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7m0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5"
+          />
+        </svg>
+        <div
+          class="MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-outlinedPrimary css-19gasz3-MuiChip-root"
+        >
+          <span
+            class="MuiChip-label MuiChip-labelSmall css-19m61dl-MuiChip-label"
+          >
+            メインステージ
+          </span>
+        </div>
+      </div>
+      <p
+        class="MuiTypography-root MuiTypography-body2 css-1wle3ir-MuiTypography-root"
+      >
+        ステージイベントについての情報。
+      </p>
+    </div>
+  </div>
+</div>
+`;
