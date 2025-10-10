@@ -1,0 +1,48 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`sponsor card snapshot 1`] = `
+<div>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation4 MuiCard-root css-1rpa8bx-MuiPaper-root-MuiCard-root"
+    style="--Paper-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);"
+  >
+    <div
+      class="MuiStack-root css-zs2mjy-MuiStack-root"
+    >
+      <div
+        class="MuiBox-root css-19o3cmm"
+      >
+        <img
+          alt="テストスポンサーのイメージ"
+          class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-1kuwa16-MuiCardMedia-root"
+          src="https://placehold.jp/800x400.png"
+        />
+      </div>
+      <div
+        class="MuiCardContent-root css-4p6oay-MuiCardContent-root"
+      >
+        <h2
+          class="MuiTypography-root MuiTypography-h6 css-fvf604-MuiTypography-root"
+        >
+          テストスポンサー
+        </h2>
+        <p
+          class="MuiTypography-root MuiTypography-body1 css-1rwwn4c-MuiTypography-root"
+        >
+          スポンサーの説明がここに入ります。スポンサーの説明がここに入ります。スポンサーの説明がここに入ります。スポンサーの説明がここに入ります。
+        </p>
+        <div
+          class="MuiBox-root css-1mpg011"
+        >
+          <a
+            class="MuiTypography-root MuiTypography-body1 css-411ob9-MuiTypography-root"
+            href="tel:xxxxxxxxxxx"
+          >
+            xxx-xxxx-xxxx
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
