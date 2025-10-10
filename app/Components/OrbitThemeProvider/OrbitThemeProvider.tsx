@@ -1,15 +1,12 @@
 import type { ReactNode } from "react";
-import { createTheme, ThemeProvider } from "@mui/material";
+import { type Theme, ThemeProvider } from "@mui/material";
 
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: "#1976d2",
-    },
-  },
-});
+type Props = {
+  theme: Theme;
+  children: ReactNode;
+};
 
-function OrbitThemeProvider({ ...props }): ReactNode {
-  return <ThemeProvider theme={theme} {...props} />;
+function OrbitThemeProvider({ theme, children }: Props): ReactNode {
+  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 }
 export default OrbitThemeProvider;
