@@ -1,6 +1,7 @@
 import type { FC } from "react";
 import { Box, Container, keyframes, styled, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
+import EventCard from "@/Components/eventCard/EventCard";
 import EventSummary from "@/Components/EventSummary";
 import Footer from "@/Components/Footer";
 import GoogleMap from "@/Components/GoogleMap";
@@ -31,7 +32,7 @@ const orbit = keyframes`
 `;
 
 // スタイル付きコンポーネント
-const SpaceBackground = styled(Box)({
+export const SpaceBackground = styled(Box)({
   background: `
     radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%),
     linear-gradient(135deg, #667eea 0%, #764ba2 100%)
@@ -41,7 +42,7 @@ const SpaceBackground = styled(Box)({
   overflow: "hidden",
 });
 
-const Stars = styled(Box)({
+export const Stars = styled(Box)({
   position: "absolute",
   top: 0,
   left: 0,
@@ -84,7 +85,7 @@ const HeroSection = styled(Box)({
 
 const ContentSection = styled(Box)({
   background: "none",
-  backdropFilter: "blur(5px)",
+  backdropFilter: "blur(7px)",
   borderRadius: "20px",
   margin: "2rem 0",
   overflow: "hidden",
@@ -157,27 +158,28 @@ const Home: FC = () => {
           <Logo length={600} withStars />
         </FloatingLogo>
 
-        <Typography
-          variant="h2"
-          component="h1"
-          sx={{
-            color: "white",
-            textAlign: "center",
-            mb: 2,
-            fontWeight: "bold",
-            textShadow: "0 0 20px rgba(255, 255, 255, 0.5)",
-            background: "linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1)",
-            backgroundClip: "text",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-            pt: 0,
-            pb: 8,
-            px: 5,
-            fontFamily: "Noto Serif",
-          }}
-        >
-          <i>60th Suzuka Kosen Festa 2025</i>
-        </Typography>
+        <Box sx={{ mb: 2, pt: 0, pb: 8, px: 5 }}>
+          <Typography
+            variant="h2"
+            component="h1"
+            sx={{
+              color: "white",
+              textAlign: "center",
+              fontWeight: "bold",
+              textShadow: "0 0 20px rgba(255, 255, 255, 0.5)",
+              background: "linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1)",
+              backgroundClip: "text",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              pr: 1,
+              fontFamily: "Noto Serif",
+              zIndex: 1000,
+              backdropFilter: "blur(10px)",
+            }}
+          >
+            <i>60th Suzuka Kosen Festa 2025</i>
+          </Typography>
+        </Box>
         {/*
         <Typography
           variant="h4"
@@ -282,7 +284,7 @@ const Home: FC = () => {
         </ContentSection>
 
         <ContentSection>
-          <Box>
+          <Box sx={{ p: 4, textAlign: "center" }}>
             <SectionTitle
               variant="h4"
               mb={3}
@@ -290,6 +292,57 @@ const Home: FC = () => {
             >
               バザー・学科展示
             </SectionTitle>
+          </Box>
+          <Box sx={{ display: "flex", gap: 3, alignItems: "center", mb: 4 }}>
+            <EventCard
+              eventName="バザー"
+              description="部活やクラスが行うバザー"
+              linkName="バザーについて"
+              href="/bazaar#bazaar"
+              color="#FFFFFF"
+            />
+            <EventCard
+              eventName="学科展示"
+              description="各学科の展示内容"
+              linkName="学科展示について"
+              href="/bazaar#exhibitions"
+              color="#FFFFFF"
+            />
+          </Box>
+        </ContentSection>
+
+        <ContentSection sx={{ mt: 6 }}>
+          <Box sx={{ p: 4, textAlign: "center" }}>
+            <SectionTitle
+              variant="h4"
+              mb={3}
+              // component="h2"
+            >
+              当日のイベント
+            </SectionTitle>
+          </Box>
+          <Box sx={{ display: "flex", gap: 3, alignItems: "center", mb: 4 }}>
+            <EventCard
+              eventName="ステージイベント"
+              description="屋外のメインステージで開催されるイベント"
+              linkName="ステージイベントについて"
+              href="/events#stage"
+              color="#FD3D21"
+            />
+            <EventCard
+              eventName="ライブステージ"
+              description="屋内のライブステージで開催されるイベント"
+              linkName="ライブステージについて"
+              href="/events#live"
+              color="#0B3D91"
+            />
+            <EventCard
+              eventName="謎解き"
+              description="高専内で開催される謎解きイベント"
+              linkName="謎解きについて"
+              href="/events#mystery"
+              color="#FFA500"
+            />
           </Box>
         </ContentSection>
 
