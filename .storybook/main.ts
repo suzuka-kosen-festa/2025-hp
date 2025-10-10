@@ -1,7 +1,9 @@
 import type { StorybookConfig } from "@storybook/react-vite";
+import { resolve } from "node:path";
 
 const config: StorybookConfig = {
-  stories: ["../app/**/*.stories.@(ts|tsx)"],
+  stories: ["../app/**/*.stories.@(ts|tsx)", "../app/**/*.mdx"],
+  staticDirs: ["../public"],
   addons: [
     "@storybook/addon-onboarding",
     "@storybook/addon-links",
@@ -17,6 +19,11 @@ const config: StorybookConfig = {
     const { mergeConfig } = await import("vite");
 
     return mergeConfig(config, {
+      resolve: {
+        alias: {
+          "@": resolve(__dirname, "../app"),
+        },
+      },
     });
   },
 };
