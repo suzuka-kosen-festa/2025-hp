@@ -9,8 +9,10 @@ import OfficialSns from "@/Components/OfficialSns";
 import Scroll from "@/Components/Scroll";
 import { SnsShare } from "@/Components/SnsShare";
 import Sponsor from "@/Components/Sponsor/Sponsor";
+import SponsorCard from "@/Components/sponsorCard";
 import { sitemapData } from "@/data/sitemap";
 import { sponsorsData } from "@/data/sponsors";
+import { sponsorCardsData } from "@/data/sponsorCards";
 
 // 宇宙的なアニメーション
 const float = keyframes`
@@ -96,6 +98,18 @@ const ContentSectionSponsor = styled(Box)({
   overflow: "hidden",
   width: "100%",
   justifyContent: "center",
+});
+
+const SectionTitle = styled(Typography)({
+    color: "white",
+    textAlign: "center",
+    fontWeight: "bold",
+    textShadow: "0 0 20px rgba(255, 255, 255, 0.5)",
+    background: "white",
+    backgroundClip: "text",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+    mb: 3,
 });
 
 const Home: FC = () => {
@@ -228,23 +242,13 @@ const Home: FC = () => {
 
         <ContentSection>
           <Box sx={{ p: 4, textAlign: "center" }}>
-            <Typography
+            <SectionTitle
               variant="h4"
-              component="h2"
-              sx={{
-                color: "white",
-                textAlign: "center",
-                fontWeight: "bold",
-                textShadow: "0 0 20px rgba(255, 255, 255, 0.5)",
-                background: "white",
-                backgroundClip: "text",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                mb: 3,
-              }}
+              mb={3}
+              //component="h2"
             >
               アクセス
-            </Typography>
+            </SectionTitle>
             <Box sx={{ border: "2px solid #0B3D91", borderRadius: "10px", overflow: "hidden", p: 3 }}>
               <GoogleMap
                 address="鈴鹿工業高等専門学校"
@@ -277,25 +281,36 @@ const Home: FC = () => {
           </Box>
         </ContentSection>
 
-        <Typography
+        <ContentSection>
+          <Box>
+            <SectionTitle
+              variant="h4"
+              mb={3}
+              //component="h2"
+            >
+              バザー・学科展示
+            </SectionTitle>
+          </Box>
+        </ContentSection>
+
+        <SectionTitle
           variant="h4"
-          component="h2"
-          sx={{
-            color: "white",
-            textAlign: "center",
-            mt: 10,
-            mb: 3,
-            fontWeight: "bold",
-            textShadow: "0 0 20px rgba(255, 255, 255, 0.5)",
-            background: "white",
-            backgroundClip: "text",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-          }}
+          mb={3}
+          //component="h2"
         >
           協賛企業
-        </Typography>
+        </SectionTitle>
         <ContentSectionSponsor>
+          {sponsorCardsData.map((sponsorCard, index) => (
+            <Box sx={{ p: 2, backdropFilter: "blur(10px)" }}>
+              <SponsorCard
+                image={sponsorCard.image}
+                sponsorName={sponsorCard.sponsorName}
+                description={sponsorCard.description}
+                phone={sponsorCard.phone}
+              />
+            </Box>
+          ))}
           <Box sx={{ p: 4, backdropFilter: "blur(10px)" }}>
             <Sponsor sponsors={sponsorsData} />
           </Box>
