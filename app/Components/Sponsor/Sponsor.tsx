@@ -130,6 +130,7 @@ function SponsorCard({ name, image, size }: SponsorItem): ReactNode {
               sx={{
                 fontWeight: "bold",
                 lineHeight: 1.2,
+                color: "black",
               }}
             >
               {name}

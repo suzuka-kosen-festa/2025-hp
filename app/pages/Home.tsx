@@ -8,7 +8,9 @@ import Logo from "@/Components/Logo";
 import OfficialSns from "@/Components/OfficialSns";
 import Scroll from "@/Components/Scroll";
 import { SnsShare } from "@/Components/SnsShare";
+import Sponsor from "@/Components/Sponsor/Sponsor";
 import { sitemapData } from "@/data/sitemap";
+import { sponsorsData } from "@/data/sponsors";
 
 // 宇宙的なアニメーション
 const float = keyframes`
@@ -79,11 +81,21 @@ const HeroSection = styled(Box)({
 });
 
 const ContentSection = styled(Box)({
-  background: "rgba(0, 0, 0, 0.8)",
-  backdropFilter: "blur(10px)",
+  background: "none",
+  backdropFilter: "blur(5px)",
   borderRadius: "20px",
   margin: "2rem 0",
   overflow: "hidden",
+});
+
+const ContentSectionSponsor = styled(Box)({
+  background: "rgba(255, 255, 255, 0.7)",
+  backdropFilter: "blur(5px)",
+  borderRadius: "20px",
+  margin: "2rem 0",
+  overflow: "hidden",
+  width: "100%",
+  justifyContent: "center",
 });
 
 const Home: FC = () => {
@@ -127,7 +139,7 @@ const Home: FC = () => {
         <OrbitingElement sx={{ top: "20%", left: "20%" }} />
         <OrbitingElement sx={{ top: "60%", right: "15%", animationDelay: "-10s" }} />
 
-        <FloatingLogo sx={{ mb: 4 }}>
+        <FloatingLogo sx={{}}>
           <Logo length={600} withStars />
         </FloatingLogo>
 
@@ -144,7 +156,9 @@ const Home: FC = () => {
             backgroundClip: "text",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
-            p: 5,
+            pt: 0,
+            pb: 8,
+            px: 5,
             fontFamily: "Noto Serif",
           }}
         >
@@ -203,8 +217,8 @@ const Home: FC = () => {
       <Container maxWidth="lg" data-content-section>
         <ContentSection>
           <EventSummary
-            mainTitle="高専祭2025"
-            description="テーマ「Orbit」のもと、学生たちが創り上げる2日間の文化祭。研究発表、模擬店、ステージイベントなど、多彩なプログラムをお楽しみください。"
+            // mainTitle="高専祭2025"
+            // description="テーマ「Orbit」のもと、学生たちが創り上げる2日間の文化祭。研究発表、模擬店、ステージイベントなど、多彩なプログラムをお楽しみください。"
             dateLabel="開催日程"
             date="2025年11月1日（土）・11月2日（日）"
             locationLabel="開催場所"
@@ -213,31 +227,85 @@ const Home: FC = () => {
         </ContentSection>
 
         <ContentSection>
-          <Box sx={{ p: 4 }}>
+          <Box sx={{ p: 4, textAlign: "center" }}>
             <Typography
               variant="h4"
               component="h2"
               sx={{
                 color: "white",
                 textAlign: "center",
-                mb: 3,
                 fontWeight: "bold",
+                textShadow: "0 0 20px rgba(255, 255, 255, 0.5)",
+                background: "white",
+                backgroundClip: "text",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                mb: 3,
               }}
             >
               アクセス
             </Typography>
-            <GoogleMap
-              address="鈴鹿工業高等専門学校"
-              height={400}
-            />
+            <Box sx={{ border: "2px solid #0B3D91", borderRadius: "10px", overflow: "hidden", p: 3 }}>
+              <GoogleMap
+                address="鈴鹿工業高等専門学校"
+                height={400}
+              />
+            </Box>
+            <Typography
+              variant="h6"
+              sx={{
+                color: "white",
+                mt: 3,
+                mb: 2,
+              }}
+            >
+              バス停:東旭が丘3丁目から徒歩5分
+              <br />
+              駅:白子駅から徒歩25分
+            </Typography>
+            <Box sx={{ width: "100%" }}>
+              <Box sx={{ borderBottom: "1px solid orange", width: "fit-content", mb: 3 }}>
+                <Typography variant="h5" sx={{ color: "white", p: 1, pb: 0 }}>ご来場にあたっての注意事項</Typography>
+              </Box>
+              <Box>
+                <Typography variant="h6" sx={{ color: "white", p: 1 }}>
+                  駐車スペースに限りがございますので、公共交通機関でのご来場にご協力ください
+                </Typography>
+              </Box>
+            </Box>
+            {/* アクセスの部分をもっと住所とか出す、経路埋め込むとか、バス停から何分か書くとか */}
           </Box>
         </ContentSection>
+
+        <Typography
+          variant="h4"
+          component="h2"
+          sx={{
+            color: "white",
+            textAlign: "center",
+            mt: 10,
+            mb: 3,
+            fontWeight: "bold",
+            textShadow: "0 0 20px rgba(255, 255, 255, 0.5)",
+            background: "white",
+            backgroundClip: "text",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+          }}
+        >
+          協賛企業
+        </Typography>
+        <ContentSectionSponsor>
+          <Box sx={{ p: 4, backdropFilter: "blur(10px)" }}>
+            <Sponsor sponsors={sponsorsData} />
+          </Box>
+        </ContentSectionSponsor>
 
         <Box sx={{ py: 4, textAlign: "center" }}>
           <Typography
             variant="body1"
             sx={{
-              color: "rgba(255, 255, 255, 0.7)",
+              color: "white",
               mb: 2,
             }}
           >
