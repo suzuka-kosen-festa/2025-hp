@@ -11,8 +11,8 @@ import { SnsShare } from "@/Components/SnsShare";
 import Sponsor from "@/Components/Sponsor/Sponsor";
 import SponsorCard from "@/Components/sponsorCard";
 import { sitemapData } from "@/data/sitemap";
-import { sponsorsData } from "@/data/sponsors";
 import { sponsorCardsData } from "@/data/sponsorCards";
+import { sponsorsData } from "@/data/sponsors";
 
 // 宇宙的なアニメーション
 const float = keyframes`
@@ -101,15 +101,15 @@ const ContentSectionSponsor = styled(Box)({
 });
 
 const SectionTitle = styled(Typography)({
-    color: "white",
-    textAlign: "center",
-    fontWeight: "bold",
-    textShadow: "0 0 20px rgba(255, 255, 255, 0.5)",
-    background: "white",
-    backgroundClip: "text",
-    WebkitBackgroundClip: "text",
-    WebkitTextFillColor: "transparent",
-    mb: 3,
+  color: "white",
+  textAlign: "center",
+  fontWeight: "bold",
+  textShadow: "0 0 20px rgba(255, 255, 255, 0.5)",
+  background: "white",
+  backgroundClip: "text",
+  WebkitBackgroundClip: "text",
+  WebkitTextFillColor: "transparent",
+  mb: 3,
 });
 
 const Home: FC = () => {
@@ -245,7 +245,7 @@ const Home: FC = () => {
             <SectionTitle
               variant="h4"
               mb={3}
-              //component="h2"
+              // component="h2"
             >
               アクセス
             </SectionTitle>
@@ -286,7 +286,7 @@ const Home: FC = () => {
             <SectionTitle
               variant="h4"
               mb={3}
-              //component="h2"
+              // component="h2"
             >
               バザー・学科展示
             </SectionTitle>
@@ -296,13 +296,13 @@ const Home: FC = () => {
         <SectionTitle
           variant="h4"
           mb={3}
-          //component="h2"
+          // component="h2"
         >
           協賛企業
         </SectionTitle>
         <ContentSectionSponsor>
-          {sponsorCardsData.map((sponsorCard, index) => (
-            <Box sx={{ p: 2, backdropFilter: "blur(10px)" }}>
+          {sponsorCardsData.map(sponsorCard => (
+            <Box key={sponsorCard.sponsorName} sx={{ p: 2, backdropFilter: "blur(10px)" }}>
               <SponsorCard
                 image={sponsorCard.image}
                 sponsorName={sponsorCard.sponsorName}
