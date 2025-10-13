@@ -27,12 +27,12 @@
     "isbot": "^5.1.31",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "react-router": "^7.9.3"
+    "react-router": "^7.9.4"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "4.1.1",
-    "@cloudflare/vite-plugin": "1.13.10",
-    "@cloudflare/workers-types": "4.20251004.0",
+    "@cloudflare/vite-plugin": "1.13.12",
+    "@cloudflare/workers-types": "4.20251008.0",
     "@eslint-react/eslint-plugin": "1.53.1",
     "@shiron-dev/eslint-config": "2.1.1",
     "@storybook/addon-a11y": "8.6.14",
