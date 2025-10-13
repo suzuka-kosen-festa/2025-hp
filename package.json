@@ -64,7 +64,7 @@
     "jiti": "2.6.1",
     "jsdom": "27.0.0",
     "playwright": "1.56.0",
-    "puppeteer": "24.23.0",
+    "puppeteer": "24.24.0",
     "reg-keygen-git-hash-plugin": "0.14.5",
     "reg-notify-github-plugin": "0.14.5",
     "reg-publish-s3-plugin": "0.14.4",
