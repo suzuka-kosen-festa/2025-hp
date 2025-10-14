@@ -1,12 +1,11 @@
 import type { FC } from "react";
 import { Box, Container, keyframes, styled, Typography } from "@mui/material";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import sponsorsData from "@/../contents/sponsor.json";
 import EventCard from "@/Components/eventCard/EventCard";
 import EventSummary from "@/Components/EventSummary";
 import Footer from "@/Components/Footer";
 import GoogleMap from "@/Components/GoogleMap";
-import Logo from "@/Components/Logo";
 import OfficialSns from "@/Components/OfficialSns";
 import Scroll from "@/Components/Scroll";
 import { SnsShare } from "@/Components/SnsShare";
@@ -14,12 +13,6 @@ import Sponsor from "@/Components/Sponsor/Sponsor";
 import SponsorCard from "@/Components/sponsorCard";
 import { sitemapData } from "@/data/sitemap";
 import { sponsorCardsData } from "@/data/sponsorCards";
-
-// 宇宙的なアニメーション
-const float = keyframes`
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
-`;
 
 const twinkle = keyframes`
   0%, 100% { opacity: 0.3; }
@@ -42,29 +35,69 @@ export const SpaceBackground = styled(Box)({
   overflow: "hidden",
 });
 
-export const Stars = styled(Box)({
-  position: "absolute",
-  top: 0,
-  left: 0,
-  width: "100%",
-  height: "100%",
-  background: `
-    radial-gradient(2px 2px at 20px 30px, #eee, transparent),
-    radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.8), transparent),
-    radial-gradient(1px 1px at 90px 40px, #fff, transparent),
-    radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.6), transparent),
-    radial-gradient(2px 2px at 160px 30px, #ddd, transparent)
-  `,
-  backgroundRepeat: "repeat",
-  backgroundSize: "200px 100px",
-  animation: `${twinkle} 3s ease-in-out infinite alternate`,
-});
+const STAR_COUNT = 800;
+
+export const Stars: FC = () => {
+  const stars = useMemo(() => {
+    return Array.from({ length: STAR_COUNT }).map((_, index) => {
+      // 3〜6px を中心に出現（3px:50%, 4px:30%, 5px:15%, 6px:5%）
+      const r = Math.random();
+      const size = r < 0.5 ? 4 : r < 0.8 ? 5 : r < 0.95 ? 6 : 8;
+      const duration = 2 + Math.random() * 4; // 2s - 6s で点滅
+      const delay = -Math.random() * 6; // 開始をバラけさせる（負の遅延で途中から再生）
+      const opacity = 0.4 + Math.random() * 0.6; // 0.4 - 1.0
+      return {
+        id: index,
+        top: `${Math.random() * 100}%`,
+        left: `${Math.random() * 100}%`,
+        size,
+        duration,
+        delay,
+        opacity,
+      };
+    });
+  }, []);
+
+  return (
+    <Box
+      aria-hidden="true"
+      sx={{ position: "absolute", inset: 0, width: "100%", height: "100%" }}
+    >
+      {stars.map(star => (
+        <Box
+          key={star.id}
+          sx={{
+            position: "absolute",
+            top: star.top,
+            left: star.left,
+            width: `${star.size}px`,
+            height: `${star.size}px`,
+            borderRadius: "50%",
+            backgroundColor: "rgba(255,255,255,0.95)",
+            opacity: star.opacity,
+            boxShadow:
+              star.size >= 6
+                ? "0 0 10px rgba(255,255,255,0.95), 0 0 18px rgba(255,255,255,0.7)"
+                : star.size === 5
+                  ? "0 0 8px rgba(255,255,255,0.9), 0 0 14px rgba(255,255,255,0.6)"
+                  : star.size === 4
+                    ? "0 0 6px rgba(255,255,255,0.8)"
+                    : "0 0 5px rgba(255,255,255,0.7)",
+            animation: `${twinkle} ${star.duration}s ease-in-out infinite alternate`,
+            animationDelay: `${star.delay}s`,
+            willChange: "opacity",
+          }}
+        />
+      ))}
+    </Box>
+  );
+};
 
 const FloatingLogo = styled(Box)({
-  animation: `${float} 6s ease-in-out infinite`,
+  // animation: `${float} 6s ease-in-out infinite`,
 });
 
-const OrbitingElement = styled(Box)({
+const _OrbitingElement = styled(Box)({
   position: "absolute",
   width: "20px",
   height: "20px",
@@ -83,13 +116,14 @@ const HeroSection = styled(Box)({
   padding: "2rem",
 });
 
-const ContentSection = styled(Box)({
-  background: "none",
+const ContentSection = styled(Box)<{ color?: string }>(({ color = "#e9e9e9" }) => ({
+  background: `${color}33`,
+  border: `1px solid ${color}`,
   backdropFilter: "blur(7px)",
   borderRadius: "20px",
   margin: "2rem 0",
   overflow: "hidden",
-});
+}));
 
 const ContentSectionSponsor = styled(Box)({
   background: "rgba(255, 255, 255, 0.7)",
@@ -105,7 +139,6 @@ const SectionTitle = styled(Typography)({
   color: "white",
   textAlign: "center",
   fontWeight: "bold",
-  textShadow: "0 0 20px rgba(255, 255, 255, 0.5)",
   background: "white",
   backgroundClip: "text",
   WebkitBackgroundClip: "text",
@@ -114,34 +147,26 @@ const SectionTitle = styled(Typography)({
 });
 
 const Home: FC = () => {
-  const [isInHeroSection, setIsInHeroSection] = useState(true);
+  const [isScrollVisible, setIsScrollVisible] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
       const heroSection = document.querySelector("[data-hero-section]");
-      const contentSection = document.querySelector("[data-content-section]");
-
-      if (heroSection && contentSection) {
-        const heroRect = heroSection.getBoundingClientRect();
-        const contentRect = contentSection.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-
-        // Heroセクション以外のコンテンツ（EventDetailsSection）が画面に現れているかチェック
-        // コンテンツセクションの上端が画面の下端より上にある場合、コンテンツが見え始めている
-        const isContentVisible = contentRect.top < windowHeight;
-
-        // Heroセクションが完全に画面から消えていないかもチェック
-        const isHeroStillVisible = heroRect.bottom > 0;
-
-        // Heroセクションが見えていて、かつコンテンツセクションが見えていない場合のみ表示
-        setIsInHeroSection(isHeroStillVisible && !isContentVisible);
+      if (!heroSection) {
+        return;
       }
+
+      const heroRect = heroSection.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      // Heroの下端がビューポート高さの90%より上(= 0.9Hより小さい)に来たらフェードアウト
+      const shouldShow = heroRect.bottom > windowHeight * 0.9;
+      setIsScrollVisible(shouldShow);
     };
 
-    // 初期状態でも実行
+    // 初期計算
     handleScroll();
-
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -151,30 +176,32 @@ const Home: FC = () => {
 
       {/* Hero Section */}
       <HeroSection data-hero-section>
+        {/*
         <OrbitingElement sx={{ top: "20%", left: "20%" }} />
         <OrbitingElement sx={{ top: "60%", right: "15%", animationDelay: "-10s" }} />
-
-        <FloatingLogo sx={{}}>
-          <Logo length={600} withStars />
+        */}
+        <FloatingLogo sx={{ width: "50%", justifyContent: "center", bgcolor: "#0E131BCC", alignItems: "center", textAlign: "center", my: 12, boxShadow: "100px 100px 100px 100px #0E131B", backdropFilter: "blur(3px)", borderRadius: "20px" }}>
+          <img src="/public/images/logo.svg" alt="Logo" style={{ width: "100%" }} />
         </FloatingLogo>
 
-        <Box sx={{ mb: 2, pt: 0, pb: 8, px: 5 }}>
+        <Box sx={{ mb: 2, pt: 0, pb: 8, px: 5, zIndex: 100 }}>
           <Typography
             variant="h2"
             component="h1"
             sx={{
-              color: "white",
+              color: "#6b75ffff",
               textAlign: "center",
               fontWeight: "bold",
-              textShadow: "0 0 20px rgba(255, 255, 255, 0.5)",
-              background: "linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1)",
+              fontFamily: "Noto Serif",
+              pr: 1,
+              // background: "linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1)",
+              /*
               backgroundClip: "text",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
-              pr: 1,
-              fontFamily: "Noto Serif",
               zIndex: 1000,
               backdropFilter: "blur(10px)",
+              */
             }}
           >
             <i>60th Suzuka Kosen Festa 2025</i>
@@ -207,9 +234,7 @@ const Home: FC = () => {
             mb: 4,
           }}
         >
-          宇宙の軌道のように、新たな可能性を描く2日間。
-          <br />
-          鈴鹿高専で繰り広げられる学生たちの創造力の祭典へようこそ。
+          60周年の軌跡と、新たな可能性を描く2日間。
         </Typography>
 
         <Box sx={{ display: "flex", gap: 3, alignItems: "center", mb: 4 }}>
@@ -217,23 +242,28 @@ const Home: FC = () => {
         </Box>
       </HeroSection>
 
-      {/* Fixed Scroll indicator - only visible when hero section is visible */}
-      {isInHeroSection && (
-        <Box
-          sx={{
-            position: "fixed",
-            bottom: "40px",
-            right: "40px",
-            zIndex: 1000,
-          }}
-        >
-          <Scroll />
-        </Box>
-      )}
+      {/* Fixed Scroll indicator - フェードイン/アウト */}
+      <Box
+        sx={{
+          position: "fixed",
+          bottom: "40px",
+          right: "40px",
+          zIndex: 1000,
+          opacity: isScrollVisible ? 1 : 0,
+          transition: "opacity 300ms ease",
+          pointerEvents: isScrollVisible ? "auto" : "none",
+        }}
+        aria-hidden={!isScrollVisible}
+      >
+        <Scroll />
+      </Box>
 
       {/* Event Details Section */}
       <Container maxWidth="lg" data-content-section>
         <ContentSection>
+          <SectionTitle variant="h4" mt={4} mb={2}>
+            開催概要
+          </SectionTitle>
           <EventSummary
             // mainTitle="高専祭2025"
             // description="テーマ「Orbit」のもと、学生たちが創り上げる2日間の文化祭。研究発表、模擬店、ステージイベントなど、多彩なプログラムをお楽しみください。"
@@ -253,7 +283,7 @@ const Home: FC = () => {
             >
               アクセス
             </SectionTitle>
-            <Box sx={{ border: "2px solid #0B3D91", borderRadius: "10px", overflow: "hidden", p: 3, mb: 5 }}>
+            <Box sx={{ overflow: "hidden", p: 3, mb: 5 }}>
               <Typography
                 variant="h6"
                 sx={{
@@ -349,7 +379,7 @@ const Home: FC = () => {
               description="屋内のライブステージで開催されるイベント"
               linkName="ライブステージについて"
               href="/events#live"
-              color="#0B3D91"
+              color="#3498db"
             />
             <EventCard
               eventName="謎解き"
@@ -369,19 +399,37 @@ const Home: FC = () => {
           協賛企業
         </SectionTitle>
         <ContentSectionSponsor>
-          {sponsorCardsData.map(sponsorCard => (
-            <Box key={sponsorCard.sponsorName} sx={{ p: 2, backdropFilter: "blur(10px)" }}>
-              <SponsorCard
-                image={sponsorCard.image}
-                sponsorName={sponsorCard.sponsorName}
-                description={sponsorCard.description}
-                phone={sponsorCard.phone}
-              />
-            </Box>
-          ))}
-          <Box sx={{ p: 4, backdropFilter: "blur(10px)" }}>
-            <Sponsor sponsors={sponsorsData as Array<{ name: string, image: string, size: "large" | "medium" | "small" }>} />
-          </Box>
+          {sponsorCardsData.length === 0 && sponsorsData.filter(sponsor => sponsor.name && sponsor.name.trim() !== "").length === 0
+            ? (
+                <Box sx={{ p: 4, textAlign: "center" }}>
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      color: "rgba(0, 0, 0, 1)",
+                      fontWeight: "normal",
+                    }}
+                  >
+                    掲載準備中です。準備が出来次第掲載させていただきます。
+                  </Typography>
+                </Box>
+              )
+            : (
+                <>
+                  {sponsorCardsData.map(sponsorCard => (
+                    <Box key={sponsorCard.sponsorName} sx={{ p: 2, backdropFilter: "blur(10px)" }}>
+                      <SponsorCard
+                        image={sponsorCard.image}
+                        sponsorName={sponsorCard.sponsorName}
+                        description={sponsorCard.description}
+                        phone={sponsorCard.phone}
+                      />
+                    </Box>
+                  ))}
+                  <Box sx={{ p: 4, backdropFilter: "blur(10px)" }}>
+                    <Sponsor sponsors={sponsorsData as Array<{ name: string, image: string, size: "large" | "medium" | "small" }>} />
+                  </Box>
+                </>
+              )}
         </ContentSectionSponsor>
 
         <Box sx={{ py: 4, textAlign: "center" }}>

@@ -9,6 +9,15 @@ import Footer from "@/Components/Footer";
 import { sitemapData } from "@/data/sitemap";
 import { SpaceBackground, Stars } from "./Home";
 
+// 学科別テーマカラーの定義
+const departmentColors: Record<string, string> = {
+  機械工学科: "#E783AC",
+  電気電子工学科: "#AE904A",
+  電子情報工学科: "#89D0DD",
+  生物応用科学科: "#6E9D45",
+  材料工学科: "#002670",
+};
+
 // 宇宙的なアニメーション
 const float = keyframes`
   0%, 100% { transform: translateY(0px); }
@@ -69,13 +78,15 @@ export const SatelliteBody = styled(Box)<{ width: number }>(({ width }) => ({
 
 // ソーラーパネル（羽）
 const SolarPanel = styled(Box)<{ $panelPosition?: "top" | "bottom" }>(({ $panelPosition = "top" }) => ({
-  "background": "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #2d2d2d 100%)",
+  // "background": "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #2d2d2d 100%)",
+  "background": "rgba(255, 255, 255, 0.5)",
+  "backdropFilter": "blur(10px)",
   "borderRadius": "20px 20px 20px 20px",
   "margin": $panelPosition === "top" ? "0 0 1rem 0" : "1rem 0 0 0",
   "padding": "2rem",
   "position": "relative",
   "overflow": "hidden",
-  "border": "3px solid #4a90e2",
+  "border": "3px solid white",
   "boxShadow": "0 0 20px rgba(74, 144, 226, 0.3)",
   "&::before": {
     content: "\"\"",
@@ -123,9 +134,9 @@ const SectionTypeChip = styled(Chip)({
   "fontSize": "1.2rem",
   "padding": "0.5rem 1rem",
   "height": "auto",
-  "background": "linear-gradient(135deg, #4a90e2 0%, #357abd 100%)",
+  "background": "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #2d2d2d 100%)",
   "color": "white",
-  "border": "2px solid #6bb6ff",
+  "border": "2px solid #1a1a1a",
   "boxShadow": "0 0 15px rgba(74, 144, 226, 0.4)",
   "& .MuiChip-label": {
     padding: "0.5rem 1rem",
@@ -261,42 +272,49 @@ const Bazar: FC = () => {
           </SectionHeader>
 
           <Box sx={{ position: "relative", zIndex: 1 }}>
-            {Object.entries(exhibitionsByDepartment).map(([department, exhibitions]) => (
-              <Box key={department} sx={{ mb: 4 }}>
-                <Typography
-                  variant="h4"
-                  sx={{
-                    color: "#4a90e2",
-                    mb: 2,
-                    fontWeight: "bold",
-                    borderBottom: "2px solid #4a90e2",
-                    pb: 1,
-                    textShadow: "0 0 10px rgba(74, 144, 226, 0.3)",
-                  }}
-                >
-                  {department}
-                </Typography>
+            {Object.entries(exhibitionsByDepartment).map(([department, exhibitions]) => {
+              const themeColor = departmentColors[department] || "#4a90e2"; // デフォルトカラー
+              return (
+                <Box key={department} sx={{ mb: 4 }}>
+                  <Typography
+                    variant="h4"
+                    sx={{
+                      color: themeColor,
+                      width: "100%",
+                      mb: 2,
+                      textAlign: "center",
+                      background: "white",
+                      borderRadius: "10px",
+                      fontWeight: "bold",
+                      border: `2px solid ${themeColor}`,
+                      py: 3,
+                      textShadow: `0 0 10px ${themeColor}50`,
+                    }}
+                  >
+                    {department}
+                  </Typography>
 
-                <Box sx={{ display: "flex", flexWrap: "wrap", gap: 3, mb: 3 }}>
-                  {exhibitions.map(exhibition => (
-                    <Box
-                      key={exhibition.id}
-                      sx={{
-                        flex: "1 1 300px",
-                        minWidth: "300px",
-                        maxWidth: { xs: "100%", md: "calc(50% - 12px)", lg: "calc(33.333% - 16px)" },
-                      }}
-                    >
-                      <DepartmentExhibitionCard
-                        department={exhibition.department}
-                        title={exhibition.title}
-                        description={exhibition.description}
-                      />
-                    </Box>
-                  ))}
+                  <Box sx={{ display: "flex", flexWrap: "wrap", gap: 3, mb: 3 }}>
+                    {exhibitions.map(exhibition => (
+                      <Box
+                        key={exhibition.id}
+                        sx={{
+                          flex: "1 1 300px",
+                          minWidth: "300px",
+                          maxWidth: { xs: "100%", md: "calc(50% - 12px)", lg: "calc(33.333% - 16px)" },
+                        }}
+                      >
+                        <DepartmentExhibitionCard
+                          department={exhibition.department}
+                          title={exhibition.title}
+                          description={exhibition.description}
+                        />
+                      </Box>
+                    ))}
+                  </Box>
                 </Box>
-              </Box>
-            ))}
+              );
+            })}
           </Box>
         </SolarPanel>
       </Container>

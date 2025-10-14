@@ -22,7 +22,7 @@ function EventSummary({
     <Box
       sx={{
         backgroundColor: "none",
-        backdropFilter: "blur(5px)",
+        // backdropFilter: "blur(5px)",
         color: "white",
         p: 4,
         fontFamily: "sans-serif",

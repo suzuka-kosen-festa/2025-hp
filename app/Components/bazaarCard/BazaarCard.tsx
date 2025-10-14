@@ -25,9 +25,9 @@ function BazaarCard(props: BazaarComponentProps): ReactNode {
     e.currentTarget.src = "/images/not-found.png";
   };
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345, height: "stretch" }}>
       <Box sx={{
-        height: "350px",
+        height: "fit-content",
         display: "flex",
         flexDirection: "column",
         alignItems: "stretch",
@@ -42,8 +42,11 @@ function BazaarCard(props: BazaarComponentProps): ReactNode {
           onError={handleImageError}
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            {ja.bazaarCard.name(bazaarName, teamName)}
+          <Typography gutterBottom variant="h5" component="div" mb={0}>
+            {bazaarName}
+          </Typography>
+          <Typography gutterBottom variant="h6" component="div" fontSize="1rem">
+            {teamName}
           </Typography>
           <Typography variant="body2" sx={{ color: "text.secondary" }}>
             {description}

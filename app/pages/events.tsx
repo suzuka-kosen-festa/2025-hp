@@ -1,6 +1,7 @@
 import type { FC } from "react";
 import { Box, Chip, Container, keyframes, styled, Typography } from "@mui/material";
 import { useEffect } from "react";
+import { Link } from "react-router";
 import Footer from "@/Components/Footer";
 import StageEventCard from "@/Components/StageEventCard";
 import { type EventData, eventsData, eventTypes } from "@/data/events";
@@ -113,11 +114,9 @@ const Events: FC = () => {
       <Stars />
       {/* Hero Section */}
       <HeroSection>
-        { /*
-        <Box sx={{ display: "flex",width: "80%", justifyContent: "flex-start", p: 5, zIndex: 1000 }}>
+        <Box sx={{ display: "flex", width: "80%", justifyContent: "flex-start", p: 5, zIndex: 1000 }}>
           <Link to="/" style={{ color: "white", fontSize: 20 }}>&lt;&lt; 戻る</Link>
         </Box>
-        */ }
         <Typography
           variant="h1"
           component="h1"

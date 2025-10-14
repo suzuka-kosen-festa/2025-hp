@@ -16,7 +16,6 @@ export const ja = {
     bazaarName: "バザー名",
     description: "説明",
     imageAlt: (bazaarName: string) => `${bazaarName}のイメージ`,
-    name: (bazaarName: string, teamName: string) => `${bazaarName}-${teamName}`,
   },
   eventCard: {
     eventName: "イベント名",

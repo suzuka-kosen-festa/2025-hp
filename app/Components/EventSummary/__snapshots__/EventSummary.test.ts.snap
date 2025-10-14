@@ -3,7 +3,7 @@
 exports[`should render the event summary correctly 1`] = `
 <div>
   <div
-    class="MuiBox-root css-1tb5sz8"
+    class="MuiBox-root css-1tgrre4"
   >
     <h1
       class="MuiTypography-root MuiTypography-h2 css-127kv7s-MuiTypography-root"
