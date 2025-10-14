@@ -399,7 +399,7 @@ const Home: FC = () => {
           協賛企業
         </SectionTitle>
         <ContentSectionSponsor>
-          {sponsorCardsData.length === 0 && sponsorsData.filter(sponsor => sponsor.name && sponsor.name.trim() !== "").length === 0
+          {sponsorCardsData.length === 0 && (sponsorsData as any[]).filter(sponsor => sponsor?.name && sponsor.name.trim() !== "").length === 0
             ? (
                 <Box sx={{ p: 4, textAlign: "center" }}>
                   <Typography
