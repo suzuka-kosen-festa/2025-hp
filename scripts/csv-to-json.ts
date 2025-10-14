@@ -1,5 +1,5 @@
 // Note: Papa is not used; keep import removed for cleanliness
-import type { BazaarData } from "@/data/bazaarData";
+import type { BazaarData } from "@/data/types";
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import process from "node:process";

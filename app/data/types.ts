@@ -15,3 +15,13 @@ export interface EventTypeConfig {
   color: string
   anchor: string
 }
+
+// バザーデータの型定義
+export interface BazaarData {
+  id: string
+  teamNumber: number
+  teamName: string
+  bazaarName: string
+  description: string
+  image: string
+}
