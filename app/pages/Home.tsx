@@ -1,6 +1,7 @@
 import type { FC } from "react";
 import { Box, Container, keyframes, styled, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
+import sponsorsData from "@/../contents/sponsor.json";
 import EventCard from "@/Components/eventCard/EventCard";
 import EventSummary from "@/Components/EventSummary";
 import Footer from "@/Components/Footer";
@@ -13,7 +14,6 @@ import Sponsor from "@/Components/Sponsor/Sponsor";
 import SponsorCard from "@/Components/sponsorCard";
 import { sitemapData } from "@/data/sitemap";
 import { sponsorCardsData } from "@/data/sponsorCards";
-import { sponsorsData } from "@/data/sponsors";
 
 // 宇宙的なアニメーション
 const float = keyframes`
@@ -178,6 +178,8 @@ const Home: FC = () => {
             }}
           >
             <i>60th Suzuka Kosen Festa 2025</i>
+            <br />
+            <i>11/1・11/2</i>
           </Typography>
         </Box>
         {/*
@@ -251,24 +253,36 @@ const Home: FC = () => {
             >
               アクセス
             </SectionTitle>
-            <Box sx={{ border: "2px solid #0B3D91", borderRadius: "10px", overflow: "hidden", p: 3 }}>
+            <Box sx={{ border: "2px solid #0B3D91", borderRadius: "10px", overflow: "hidden", p: 3, mb: 5 }}>
+              <Typography
+                variant="h6"
+                sx={{
+                  color: "white",
+                  mt: 3,
+                  mb: 3,
+                }}
+              >
+                〒510-0294 三重県鈴鹿市白子町 鈴鹿工業高等専門学校
+              </Typography>
               <GoogleMap
                 address="鈴鹿工業高等専門学校"
                 height={400}
               />
+              <Typography
+                variant="h6"
+                sx={{
+                  color: "white",
+                  mt: 3,
+                  mb: 3,
+                }}
+              >
+                近鉄名古屋線白子駅下車、
+                <br />
+                三重交通バス白子駅西口から平田町駅行又は鈴鹿サーキット行に乗車約10分、
+                <br />
+                東旭が丘3丁目で下車徒歩約7分。
+              </Typography>
             </Box>
-            <Typography
-              variant="h6"
-              sx={{
-                color: "white",
-                mt: 3,
-                mb: 2,
-              }}
-            >
-              バス停:東旭が丘3丁目から徒歩5分
-              <br />
-              駅:白子駅から徒歩25分
-            </Typography>
             <Box sx={{ width: "100%" }}>
               <Box sx={{ borderBottom: "1px solid orange", width: "fit-content", mb: 3 }}>
                 <Typography variant="h5" sx={{ color: "white", p: 1, pb: 0 }}>ご来場にあたっての注意事項</Typography>
@@ -293,7 +307,7 @@ const Home: FC = () => {
               バザー・学科展示
             </SectionTitle>
           </Box>
-          <Box sx={{ display: "flex", gap: 3, alignItems: "center", mb: 4 }}>
+          <Box sx={{ display: "flex", gap: 4, alignItems: "center", mb: 4, justifyContent: "center" }}>
             <EventCard
               eventName="バザー"
               description="部活やクラスが行うバザー"
@@ -301,6 +315,7 @@ const Home: FC = () => {
               href="/bazaar#bazaar"
               color="#FFFFFF"
             />
+            {/* <img src="/images/Dragon.png" alt="satellite" style={{ width: "10%", height: "auto" }} /> */}
             <EventCard
               eventName="学科展示"
               description="各学科の展示内容"
@@ -321,7 +336,7 @@ const Home: FC = () => {
               当日のイベント
             </SectionTitle>
           </Box>
-          <Box sx={{ display: "flex", gap: 3, alignItems: "center", mb: 4 }}>
+          <Box sx={{ display: "flex", gap: 3, alignItems: "center", mb: 4, justifyContent: "center" }}>
             <EventCard
               eventName="ステージイベント"
               description="屋外のメインステージで開催されるイベント"
@@ -365,7 +380,7 @@ const Home: FC = () => {
             </Box>
           ))}
           <Box sx={{ p: 4, backdropFilter: "blur(10px)" }}>
-            <Sponsor sponsors={sponsorsData} />
+            <Sponsor sponsors={sponsorsData as Array<{ name: string, image: string, size: "large" | "medium" | "small" }>} />
           </Box>
         </ContentSectionSponsor>
 

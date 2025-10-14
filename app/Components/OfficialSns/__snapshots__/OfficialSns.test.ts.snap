@@ -8,7 +8,7 @@ exports[`officialSns snapshot 1`] = `
     <a
       aria-label="X"
       class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-j7dfm5-MuiButtonBase-root-MuiIconButton-root"
-      href="https://x.com/"
+      href="https://x.com/KOSENFESTA"
       rel="noopener noreferrer"
       tabindex="0"
       target="_blank"
@@ -28,7 +28,7 @@ exports[`officialSns snapshot 1`] = `
     <a
       aria-label="Instagram"
       class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-j7dfm5-MuiButtonBase-root-MuiIconButton-root"
-      href="https://instagram.com/"
+      href="https://www.instagram.com/kosenfesta/"
       rel="noopener noreferrer"
       tabindex="0"
       target="_blank"
@@ -48,7 +48,7 @@ exports[`officialSns snapshot 1`] = `
     <a
       aria-label="Facebook"
       class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-j7dfm5-MuiButtonBase-root-MuiIconButton-root"
-      href="https://facebook.com/"
+      href="https://www.facebook.com/profile.php?id=61556514660247"
       rel="noopener noreferrer"
       tabindex="0"
       target="_blank"

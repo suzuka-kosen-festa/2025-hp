@@ -4,11 +4,13 @@ import {
   Box,
   Card,
   CardContent,
+  CardMedia,
   Chip,
   Typography,
 } from "@mui/material";
 
 interface StageEventCardProps {
+  image?: string
   title: string
   datetime: string
   stage: string
@@ -17,13 +19,14 @@ interface StageEventCardProps {
 }
 
 function StageEventCard({
+  image,
   title,
   datetime,
   stage,
   description,
   color,
 }: StageEventCardProps): ReactNode {
-  const bgColor = `${color}FF`;
+  const bgColor = `${color}33`;
   return (
     <Card
       sx={{
@@ -34,8 +37,22 @@ function StageEventCard({
         "border": `1px solid ${color}`,
         "color": color,
         "backgroundColor": bgColor,
+        "height": "stretch",
       }}
     >
+      {image && (
+        <CardMedia
+          component="img"
+          image={image}
+          alt={title}
+          sx={{
+            aspectRatio: "16/9",
+            objectFit: "cover",
+            borderTopLeftRadius: "16px",
+            borderTopRightRadius: "16px",
+          }}
+        />
+      )}
       <CardContent sx={{ "p": 2, "&:last-child": { pb: 2 } }}>
         <Typography variant="h5" component="div" gutterBottom sx={{ color: "white", fontWeight: "bold" }}>
           {title}

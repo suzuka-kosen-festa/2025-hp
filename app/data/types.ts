@@ -6,6 +6,7 @@ export interface EventData {
   stage: string
   description: string
   type: "stage" | "live" | "mystery"
+  image?: string
 }
 
 // イベントタイプの設定

@@ -1,14 +1,21 @@
 import type { FC } from "react";
 import { Box, Chip, Container, keyframes, styled, Typography } from "@mui/material";
 import { useEffect } from "react";
+import Footer from "@/Components/Footer";
 import StageEventCard from "@/Components/StageEventCard";
 import { type EventData, eventsData, eventTypes } from "@/data/events";
+import { sitemapData } from "@/data/sitemap";
 import { SpaceBackground, Stars } from "./Home";
 
 // 宇宙的なアニメーション
 const float = keyframes`
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-20px); }
+`;
+
+const rotate = keyframes`
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 `;
 
 // スタイル付きコンポーネント
@@ -22,13 +29,29 @@ const HeroSection = styled(Box)({
 });
 
 const ContentSection = styled(Box)<{ borderColor?: string }>(({ borderColor = "#FD3D21" }) => ({
-  background: "rgba(255, 255, 255, 0.9)",
-  backdropFilter: "blur(10px)",
-  borderRadius: "20px",
-  margin: "2rem 0",
-  padding: "2rem",
-  overflow: "hidden",
-  border: `3px solid ${borderColor}`,
+  "background": "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #2d2d2d 100%)",
+  "borderRadius": "20px 20px 20px 20px",
+  "margin": "0 0 1rem 0",
+  "padding": "2rem",
+  "position": "relative",
+  "overflow": "hidden",
+  "border": `3px solid ${borderColor}`,
+  "boxShadow": "0 0 20px rgba(74, 144, 226, 0.3)",
+  "&::before": {
+    content: "\"\"",
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    background: `linear-gradient(90deg, 
+      transparent 0%, 
+      rgba(74, 144, 226, 0.1) 25%, 
+      transparent 50%, 
+      rgba(74, 144, 226, 0.1) 75%, 
+      transparent 100%)`,
+    animation: `${rotate} 20s linear infinite`,
+  },
 }));
 
 const EventSection = styled(Box)({
@@ -88,9 +111,13 @@ const Events: FC = () => {
   return (
     <SpaceBackground>
       <Stars />
-
       {/* Hero Section */}
       <HeroSection>
+        { /*
+        <Box sx={{ display: "flex",width: "80%", justifyContent: "flex-start", p: 5, zIndex: 1000 }}>
+          <Link to="/" style={{ color: "white", fontSize: 20 }}>&lt;&lt; 戻る</Link>
+        </Box>
+        */ }
         <Typography
           variant="h1"
           component="h1"
@@ -129,7 +156,7 @@ const Events: FC = () => {
           const events = eventsByType[typeKey] || [];
 
           return (
-            <EventSection key={typeKey}>
+            <EventSection key={typeKey} sx={{ mb: 25 }}>
               <ContentSection borderColor={typeConfig.color}>
                 <SectionHeader id={typeConfig.anchor}>
                   <EventTypeChip
@@ -155,6 +182,7 @@ const Events: FC = () => {
                       }}
                     >
                       <StageEventCard
+                        image={event.image || undefined}
                         title={event.title}
                         datetime={event.datetime}
                         stage={event.stage}
@@ -168,36 +196,8 @@ const Events: FC = () => {
             </EventSection>
           );
         })}
-
-        {/* 全体の案内 */}
-        <ContentSection borderColor="#FD3D21">
-          <Box sx={{ textAlign: "center", py: 4 }}>
-            <Typography
-              variant="h5"
-              sx={{
-                color: "white",
-                mb: 2,
-                fontWeight: "bold",
-              }}
-            >
-              イベント参加について
-            </Typography>
-            <Typography
-              variant="body1"
-              sx={{
-                color: "rgba(255, 255, 255, 0.8)",
-                lineHeight: 1.8,
-                maxWidth: "600px",
-                mx: "auto",
-              }}
-            >
-              すべてのイベントは参加無料です。当日は混雑が予想されますので、
-              お早めにお越しください。詳細な時間や場所については、
-              当日配布されるプログラムをご確認ください。
-            </Typography>
-          </Box>
-        </ContentSection>
       </Container>
+      <Footer siteMap={sitemapData} />
     </SpaceBackground>
   );
 };

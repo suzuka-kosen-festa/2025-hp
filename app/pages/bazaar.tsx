@@ -1,11 +1,11 @@
 import type { FC } from "react";
 import { Box, Chip, Container, keyframes, styled, Typography } from "@mui/material";
 import { useEffect } from "react";
+import bazaarData from "@/../contents/bazaar/bazaar.json";
+import departmentExhibitionsData from "@/../contents/department_exhibition.json";
 import BazaarCard from "@/Components/bazaarCard";
 import DepartmentExhibitionCard from "@/Components/DepartmentExhibitionCard";
 import Footer from "@/Components/Footer";
-import { bazaarData } from "@/data/bazaarData";
-import { type DepartmentExhibitionData, departmentExhibitionsData } from "@/data/departmentExhibitions";
 import { sitemapData } from "@/data/sitemap";
 import { SpaceBackground, Stars } from "./Home";
 
@@ -31,11 +31,11 @@ const HeroSection = styled(Box)({
 });
 
 // 人工衛星の本体
-const SatelliteBody = styled(Box)({
+export const SatelliteBody = styled(Box)<{ width: number }>(({ width }) => ({
   "background": "radial-gradient(circle, #ffd700 0%, #ffed4e 50%, #ffd700 100%)",
   "borderRadius": "10px",
-  "width": "200px",
-  "height": "200px",
+  "width": `${width}px`,
+  "height": `${width}px`,
   "position": "relative",
   "display": "flex",
   "alignItems": "center",
@@ -65,12 +65,12 @@ const SatelliteBody = styled(Box)({
     borderRadius: "50%",
     boxShadow: "0 0 15px rgba(255, 215, 0, 0.6)",
   },
-});
+}));
 
 // ソーラーパネル（羽）
 const SolarPanel = styled(Box)<{ $panelPosition?: "top" | "bottom" }>(({ $panelPosition = "top" }) => ({
   "background": "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #2d2d2d 100%)",
-  "borderRadius": $panelPosition === "top" ? "0 0 20px 20px" : "20px 20px 0 0",
+  "borderRadius": "20px 20px 20px 20px",
   "margin": $panelPosition === "top" ? "0 0 1rem 0" : "1rem 0 0 0",
   "padding": "2rem",
   "position": "relative",
@@ -95,9 +95,9 @@ const SolarPanel = styled(Box)<{ $panelPosition?: "top" | "bottom" }>(({ $panelP
 }));
 
 // 台形コンポーネント
-const Trapezoid = styled(Box)<{ $variant?: "top" | "bottom" }>(({ $variant = "top" }) => ({
-  width: "30px",
-  height: "60px",
+export const Trapezoid = styled(Box)<{ $variant?: "top" | "bottom", width: number }>(({ $variant = "top", width }) => ({
+  width: `${width * 15 / 100}px`,
+  height: `${width * 30 / 100}px`,
   background: $variant === "top"
     ? "linear-gradient(135deg, #ffd700 0%, #ffed4e 100%)"
     : "linear-gradient(135deg, #ffd700 0%, #ffed4e 100%)",
@@ -133,6 +133,18 @@ const SectionTypeChip = styled(Chip)({
   },
 });
 
+export function Satellite({ width, gapsize }: { width: number, gapsize: number }) {
+  return (
+    <Box sx={{ display: "flex", alignItems: "center", flexDirection: "row", width: "fit-content", justifyContent: "center" }}>
+      <Box sx={{ display: "flex", flexDirection: "column", gap: gapsize }}>
+        <Trapezoid $variant="bottom" width={width} />
+        <Trapezoid $variant="bottom" width={width} />
+      </Box>
+      <SatelliteBody width={width} />
+    </Box>
+  );
+}
+
 const Bazar: FC = () => {
   useEffect(() => {
     // ハッシュリンクの処理
@@ -164,7 +176,7 @@ const Bazar: FC = () => {
     }
     acc[exhibition.department].push(exhibition);
     return acc;
-  }, {} as Record<string, DepartmentExhibitionData[]>);
+  }, {} as Record<string, typeof departmentExhibitionsData[number][]>);
 
   return (
     <SpaceBackground>
@@ -237,17 +249,8 @@ const Bazar: FC = () => {
             ))}
           </Box>
         </SolarPanel>
-
-        {/* 人工衛星の本体 */}
-        <Box sx={{ display: "flex", alignItems: "center", flexDirection: "row", width: "100%", justifyContent: "center" }}>
-          <Box sx={{ display: "flex", flexDirection: "column", gap: 4 }}>
-            <Trapezoid $variant="bottom" />
-            <Trapezoid $variant="bottom" />
-          </Box>
-          <SatelliteBody />
-        </Box>
         {/* 下部ソーラーパネル - 学科展示セクション */}
-        <SolarPanel $panelPosition="bottom" id="exhibitions" style={{ marginBottom: "5rem" }}>
+        <SolarPanel $panelPosition="bottom" id="exhibitions" sx={{ mb: 25 }}>
           <SectionHeader>
             <SectionTypeChip
               label="学科展示"
@@ -296,8 +299,8 @@ const Bazar: FC = () => {
             ))}
           </Box>
         </SolarPanel>
-        <Footer siteMap={sitemapData} />
       </Container>
+      <Footer siteMap={sitemapData} />
     </SpaceBackground>
   );
 };

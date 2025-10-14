@@ -72,7 +72,7 @@ function Footer({ siteMap }: FooterComponentProps): ReactNode {
       component="footer"
       sx={{
         display: "flex",
-        backgroundImage: "url(/public/images/nasa_lunar.jpeg)",
+        backgroundImage: "url(/images/nasa_lunar.jpeg)",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
