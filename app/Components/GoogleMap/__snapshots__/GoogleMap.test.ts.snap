@@ -3,7 +3,7 @@
 exports[`googlemap snapshot: CustomWidth 1`] = `
 <div>
   <div
-    style="width: 600px; height: 360px;"
+    class="MuiBox-root css-b0f8qs"
   >
     <iframe
       allowfullscreen=""
@@ -22,7 +22,7 @@ exports[`googlemap snapshot: CustomWidth 1`] = `
 exports[`googlemap snapshot: Default 1`] = `
 <div>
   <div
-    style="width: 100%; height: 360px;"
+    class="MuiBox-root css-1vu43ej"
   >
     <iframe
       allowfullscreen=""
@@ -41,7 +41,7 @@ exports[`googlemap snapshot: Default 1`] = `
 exports[`googlemap snapshot: Tall 1`] = `
 <div>
   <div
-    style="width: 100%; height: 560px;"
+    class="MuiBox-root css-13y2zt1"
   >
     <iframe
       allowfullscreen=""

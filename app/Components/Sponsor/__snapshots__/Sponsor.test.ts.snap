@@ -3,13 +3,13 @@
 exports[`sponsor snapshot 1`] = `
 <div>
   <div
-    class="MuiBox-root css-ib9iq6"
+    class="MuiBox-root css-k6crtq"
   >
     <div
-      class="MuiBox-root css-1hfnxps"
+      class="MuiBox-root css-1gxow2c"
     >
       <div
-        class="MuiBox-root css-441yeq"
+        class="MuiBox-root css-1p23rmk"
       >
         <div
           class="MuiBox-root css-3ib8bu"
@@ -23,16 +23,16 @@ exports[`sponsor snapshot 1`] = `
       </div>
     </div>
     <div
-      class="MuiBox-root css-1hfnxps"
+      class="MuiBox-root css-1gxow2c"
     >
       <div
-        class="MuiBox-root css-wdiapt"
+        class="MuiBox-root css-ohpthu"
       >
         <div
           class="MuiBox-root css-1vsv8c1"
         >
           <div
-            class="MuiTypography-root MuiTypography-h5 css-1e6w265-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 css-lt6gor-MuiTypography-root"
           >
             テストスポンサー中
           </div>
@@ -40,16 +40,16 @@ exports[`sponsor snapshot 1`] = `
       </div>
     </div>
     <div
-      class="MuiBox-root css-1hfnxps"
+      class="MuiBox-root css-1gxow2c"
     >
       <div
-        class="MuiBox-root css-wdiapt"
+        class="MuiBox-root css-ohpthu"
       >
         <div
           class="MuiBox-root css-1rzgnc4"
         >
           <div
-            class="MuiTypography-root MuiTypography-h6 css-q91ion-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h6 css-14qmtq9-MuiTypography-root"
           >
             テストスポンサー小
           </div>
