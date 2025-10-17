@@ -35,12 +35,14 @@ function SponsorCard(props: SponsorCardComponentProps): ReactNode {
       sx={{
         mx: "auto",
         maxWidth: { xs: 360, sm: 560, lg: 980 },
-        borderRadius: 3,
+        borderRadius: { xs: 2, sm: 3 },
+        px: { xs: 1, sm: 0 },
+        py: { xs: 1, sm: 0 },
       }}
     >
       <Stack
         direction={{ xs: "column", lg: "row" }}
-        sx={{ alignItems: "stretch" }}
+        sx={{ alignItems: "stretch", gap: { xs: 1, sm: 0 } }}
       >
         <Box
           sx={{
@@ -68,14 +70,14 @@ function SponsorCard(props: SponsorCardComponentProps): ReactNode {
           <Typography
             variant={isLgUp ? "h5" : "h6"}
             component="h2"
-            sx={{ fontWeight: 700, textAlign: { xs: "center", lg: "left" } }}
+            sx={{ fontWeight: 700, textAlign: { xs: "center", lg: "left" }, fontSize: { xs: "1.1rem", sm: "1.25rem", lg: "inherit" } }}
           >
             {ja.sponsorCard.name(sponsorName)}
           </Typography>
 
           <Typography
             variant="body1"
-            sx={{ color: "text.secondary", whiteSpace: "pre-line" }}
+            sx={{ color: "text.secondary", whiteSpace: "pre-line", fontSize: { xs: "0.9rem", sm: "1rem" }, lineHeight: { xs: 1.5, sm: 1.7 } }}
           >
             {description}
           </Typography>
@@ -86,7 +88,7 @@ function SponsorCard(props: SponsorCardComponentProps): ReactNode {
                 variant="body1"
                 component="a"
                 href={`tel:${phone.replace(/-/g, "")}`}
-                sx={{ textDecoration: "none", color: "inherit" }}
+                sx={{ textDecoration: "none", color: "inherit", fontSize: { xs: "0.95rem", sm: "1rem" } }}
               >
                 {phone}
               </Typography>

@@ -131,6 +131,11 @@ function SponsorCard({ name, image, size }: SponsorItem): ReactNode {
                 fontWeight: "bold",
                 lineHeight: 1.2,
                 color: "black",
+                fontSize: {
+                  xs: size === "large" ? "1.5rem" : size === "medium" ? "1.25rem" : "1.1rem",
+                  sm: size === "large" ? "1.75rem" : size === "medium" ? "1.35rem" : "1.15rem",
+                  md: size === "large" ? "2rem" : size === "medium" ? "1.5rem" : "1.25rem",
+                },
               }}
             >
               {name}
@@ -148,7 +153,7 @@ function SponsorSection({ sponsors, size }: SponsorSectionProps): ReactNode {
   const config = SPONSOR_CONFIG[size];
 
   return (
-    <Box sx={{ mb: 20 }}>
+    <Box sx={{ mb: { xs: 10, sm: 15, md: 20 } }}>
       <Box
         sx={{
           display: "flex",
@@ -156,9 +161,9 @@ function SponsorSection({ sponsors, size }: SponsorSectionProps): ReactNode {
           flexWrap: config.layout.flexWrap,
           justifyContent: config.layout.justifyContent,
           alignItems: config.layout.alignItems,
-          width: "80%",
+          width: { xs: "95%", sm: "90%", md: "80%" },
           margin: "0 auto",
-          gap: 0,
+          gap: { xs: 1, sm: 2, md: 0 },
         }}
       >
         {sponsors.map(sponsor => (
@@ -179,7 +184,7 @@ function Sponsor(props: SponsorComponentProps): ReactNode {
   const smallSponsors = sortByJapaneseName(sponsors.filter(s => s.size === "small"));
 
   return (
-    <Box sx={{ mt: 10 }}>
+    <Box sx={{ mt: { xs: 5, sm: 8, md: 10 }, px: { xs: 1, sm: 2, md: 0 } }}>
       <SponsorSection sponsors={largeSponsors} size="large" />
       <SponsorSection sponsors={mediumSponsors} size="medium" />
       <SponsorSection sponsors={smallSponsors} size="small" />

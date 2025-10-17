@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { Box } from "@mui/material";
 
 interface GoogleMapProps {
   address: string
@@ -10,8 +11,20 @@ function GoogleMap({ address, width = "100%", height = 360 }: GoogleMapProps): R
   const query = encodeURIComponent(address);
   const src = `https://www.google.com/maps?q=${query}&output=embed`;
 
+  // レスポンシブな高さを設定
+  const responsiveHeight = typeof height === "number"
+    ? { xs: Math.min(height * 0.7, 250), sm: Math.min(height * 0.85, 320), md: height }
+    : height;
+
   return (
-    <div style={{ width, height }}>
+    <Box sx={{
+      width,
+      height: responsiveHeight,
+      borderRadius: { xs: "8px", sm: "12px" },
+      overflow: "hidden",
+      boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
+    }}
+    >
       <iframe
         title="Google Map"
         src={src}
@@ -22,7 +35,7 @@ function GoogleMap({ address, width = "100%", height = 360 }: GoogleMapProps): R
         referrerPolicy="no-referrer-when-downgrade"
         allowFullScreen
       />
-    </div>
+    </Box>
   );
 }
 
