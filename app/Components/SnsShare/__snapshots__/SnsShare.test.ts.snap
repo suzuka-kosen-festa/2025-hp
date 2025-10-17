@@ -5,7 +5,7 @@ exports[`snsShare snapshot 1`] = `
   <div>
     <a
       aria-label="Share on X"
-      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-53g0n7-MuiButtonBase-root-MuiIconButton-root"
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-j7dfm5-MuiButtonBase-root-MuiIconButton-root"
       href="https://twitter.com/intent/tweet?url=https://kosenfes-2025.trap.show&text=高専祭2025 #高専祭2025"
       rel="noopener noreferrer"
       tabindex="0"
@@ -25,7 +25,7 @@ exports[`snsShare snapshot 1`] = `
     </a>
     <a
       aria-label="Share on Facebook"
-      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-53g0n7-MuiButtonBase-root-MuiIconButton-root"
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-j7dfm5-MuiButtonBase-root-MuiIconButton-root"
       href="https://www.facebook.com/sharer/sharer.php?u=https://kosenfes-2025.trap.show"
       rel="noopener noreferrer"
       tabindex="0"
@@ -45,7 +45,7 @@ exports[`snsShare snapshot 1`] = `
     </a>
     <a
       aria-label="Share on LINE"
-      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-53g0n7-MuiButtonBase-root-MuiIconButton-root"
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-j7dfm5-MuiButtonBase-root-MuiIconButton-root"
       href="https://line.me/R/msg/text/?高専祭2025 #高専祭2025%0Ahttps://kosenfes-2025.trap.show"
       rel="noopener noreferrer"
       tabindex="0"
@@ -65,7 +65,7 @@ exports[`snsShare snapshot 1`] = `
     </a>
     <a
       aria-label="Share on Instagram"
-      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-53g0n7-MuiButtonBase-root-MuiIconButton-root"
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-j7dfm5-MuiButtonBase-root-MuiIconButton-root"
       href="https://www.instagram.com/"
       rel="noopener noreferrer"
       tabindex="0"
@@ -85,7 +85,7 @@ exports[`snsShare snapshot 1`] = `
     </a>
     <button
       aria-label="Copy URL"
-      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-53g0n7-MuiButtonBase-root-MuiIconButton-root"
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-j7dfm5-MuiButtonBase-root-MuiIconButton-root"
       tabindex="0"
       type="button"
     >

@@ -27,6 +27,7 @@ export const SnsShare: FC = () => {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Share on X"
+        sx={{ color: "white" }}
       >
         <XIcon />
       </IconButton>
@@ -35,6 +36,7 @@ export const SnsShare: FC = () => {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Share on Facebook"
+        sx={{ color: "white" }}
       >
         <FacebookIcon />
       </IconButton>
@@ -43,6 +45,7 @@ export const SnsShare: FC = () => {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Share on LINE"
+        sx={{ color: "white" }}
       >
         <ChatIcon />
       </IconButton>
@@ -51,10 +54,11 @@ export const SnsShare: FC = () => {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Share on Instagram"
+        sx={{ color: "white" }}
       >
         <InstagramIcon />
       </IconButton>
-      <IconButton onClick={handleCopy} aria-label="Copy URL">
+      <IconButton onClick={handleCopy} aria-label="Copy URL" sx={{ color: "white" }}>
         {copied ? <CheckIcon /> : <ContentCopyIcon />}
       </IconButton>
     </div>

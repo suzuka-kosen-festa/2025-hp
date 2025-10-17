@@ -11,9 +11,9 @@ interface OfficialSnsProps {
 }
 
 function OfficialSns({
-  xUrl = "https://x.com/",
-  instagramUrl = "https://instagram.com/",
-  facebookUrl = "https://facebook.com/",
+  xUrl = "https://x.com/KOSENFESTA",
+  instagramUrl = "https://www.instagram.com/kosenfesta/",
+  facebookUrl = "https://www.facebook.com/profile.php?id=61556514660247",
 }: OfficialSnsProps): ReactNode {
   return (
     <Stack direction="row" spacing={1}>
@@ -22,6 +22,7 @@ function OfficialSns({
         href={xUrl}
         target="_blank"
         rel="noopener noreferrer"
+        sx={{ color: "white" }}
       >
         <XIcon />
       </IconButton>
@@ -30,6 +31,7 @@ function OfficialSns({
         href={instagramUrl}
         target="_blank"
         rel="noopener noreferrer"
+        sx={{ color: "white" }}
       >
         <InstagramIcon />
       </IconButton>
@@ -38,6 +40,7 @@ function OfficialSns({
         href={facebookUrl}
         target="_blank"
         rel="noopener noreferrer"
+        sx={{ color: "white" }}
       >
         <FacebookIcon />
       </IconButton>

@@ -3,23 +3,23 @@
 exports[`should render a snapshot 1`] = `
 <div>
   <div
-    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-f1oqvv-MuiPaper-root-MuiCard-root"
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-uo3090-MuiPaper-root-MuiCard-root"
     style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
   >
     <div
       class="MuiCardContent-root css-1vfyqek-MuiCardContent-root"
     >
       <div
-        class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-1f9xtph-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-124w7q-MuiTypography-root"
       >
         ステージイベント
       </div>
       <div
-        class="MuiBox-root css-1giuvzv"
+        class="MuiBox-root css-12liutp"
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-bdtf6l-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-ay5ruu-MuiSvgIcon-root"
           data-testid="AccessTimeIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -32,7 +32,7 @@ exports[`should render a snapshot 1`] = `
           />
         </svg>
         <p
-          class="MuiTypography-root MuiTypography-body2 css-7ctihp-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body2 css-zsmq4j-MuiTypography-root"
         >
           2025年11月2日(土) 10:00 - 11:00
         </p>
@@ -42,7 +42,7 @@ exports[`should render a snapshot 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-4xd1ef-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-ay5ruu-MuiSvgIcon-root"
           data-testid="PlaceIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -52,7 +52,7 @@ exports[`should render a snapshot 1`] = `
           />
         </svg>
         <div
-          class="MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-outlinedPrimary css-19gasz3-MuiChip-root"
+          class="MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorDefault MuiChip-outlinedDefault css-1f8vrkm-MuiChip-root"
         >
           <span
             class="MuiChip-label MuiChip-labelSmall css-19m61dl-MuiChip-label"
@@ -62,7 +62,7 @@ exports[`should render a snapshot 1`] = `
         </div>
       </div>
       <p
-        class="MuiTypography-root MuiTypography-body2 css-1wle3ir-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-zsmq4j-MuiTypography-root"
       >
         ステージイベントについての情報。
       </p>

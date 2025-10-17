@@ -6,7 +6,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import Typography from "@mui/material/Typography";
-import { Link } from "@remix-run/react";
+import { Link } from "react-router";
 import { ja } from "@/locales/ja";
 
 // サイトマップの型定義
@@ -70,14 +70,22 @@ function Footer({ siteMap }: FooterComponentProps): ReactNode {
   return (
     <Box
       component="footer"
-      bgcolor="black"
       sx={{
         display: "flex",
+        backgroundImage: "url(/images/nasa_lunar.jpeg)",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
         width: "100%",
-        padding: "40px 20px 20px",
+        padding: "100px 20px 20px",
+        borderRadius: "50% 50% 0 0",
+        transform: "scaleX(1.5)",
+        transformOrigin: "center top",
+        position: "relative",
+        zIndex: 1,
       }}
     >
       {siteMap.length > 0 && (
@@ -90,6 +98,8 @@ function Footer({ siteMap }: FooterComponentProps): ReactNode {
             "flexWrap": "wrap",
             "width": "100%",
             "maxWidth": "1200px",
+            "transform": "scaleX(0.67)", // 1/1.5 = 0.67で逆変換
+            "transformOrigin": "center center",
             "@media (max-width: 768px)": {
               gap: "30px",
               flexDirection: "column",
@@ -164,6 +174,8 @@ function Footer({ siteMap }: FooterComponentProps): ReactNode {
           padding: "20px 0",
           marginTop: "30px",
           color: "white",
+          transform: "scaleX(0.67)", // 1/1.5 = 0.67で逆変換
+          transformOrigin: "center center",
         }}
       >
         {ja.footer.copyright}
