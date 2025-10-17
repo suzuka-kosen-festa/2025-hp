@@ -3,7 +3,7 @@
 exports[`bazaarCard snapshot 1`] = `
 <div>
   <div
-    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-d86bga-MuiPaper-root-MuiCard-root"
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-1qhvsjh-MuiPaper-root-MuiCard-root"
     style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
   >
     <div
@@ -11,25 +11,25 @@ exports[`bazaarCard snapshot 1`] = `
     >
       <img
         alt="バザー名のイメージ"
-        class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-1kuwa16-MuiCardMedia-root"
+        class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-1t8jxyn-MuiCardMedia-root"
         height="auto"
         src="/images/not-found.png"
       />
       <div
-        class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
+        class="MuiCardContent-root css-xg3z28-MuiCardContent-root"
       >
         <div
-          class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-5mzbkf-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-r485ul-MuiTypography-root"
         >
           バザー名
         </div>
         <div
-          class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom css-1snv9lp-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom css-aohef5-MuiTypography-root"
         >
           チーム名
         </div>
         <p
-          class="MuiTypography-root MuiTypography-body2 css-1wle3ir-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body2 css-1iakkmd-MuiTypography-root"
         >
           説明文
         </p>

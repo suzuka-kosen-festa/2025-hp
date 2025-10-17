@@ -106,7 +106,7 @@ const _OrbitingElement = styled(Box)({
   animation: `${orbit} 20s linear infinite`,
 });
 
-const HeroSection = styled(Box)({
+const HeroSection = styled(Box)(({ theme }) => ({
   minHeight: "100vh",
   display: "flex",
   flexDirection: "column",
@@ -114,18 +114,33 @@ const HeroSection = styled(Box)({
   justifyContent: "center",
   position: "relative",
   padding: "2rem",
-});
+  [theme.breakpoints.down("sm")]: {
+    padding: "1rem",
+    minHeight: "100vh",
+  },
+  [theme.breakpoints.down("xs")]: {
+    padding: "0.5rem",
+  },
+}));
 
-const ContentSection = styled(Box)<{ color?: string }>(({ color = "#e9e9e9" }) => ({
+const ContentSection = styled(Box)<{ color?: string }>(({ color = "#e9e9e9", theme }) => ({
   background: `${color}33`,
   border: `1px solid ${color}`,
   backdropFilter: "blur(7px)",
   borderRadius: "20px",
   margin: "2rem 0",
   overflow: "hidden",
+  [theme.breakpoints.down("sm")]: {
+    margin: "1rem 0",
+    borderRadius: "15px",
+  },
+  [theme.breakpoints.down("xs")]: {
+    margin: "0.5rem 0",
+    borderRadius: "10px",
+  },
 }));
 
-const ContentSectionSponsor = styled(Box)({
+const ContentSectionSponsor = styled(Box)(({ theme }) => ({
   background: "rgba(255, 255, 255, 0.7)",
   backdropFilter: "blur(5px)",
   borderRadius: "20px",
@@ -133,9 +148,17 @@ const ContentSectionSponsor = styled(Box)({
   overflow: "hidden",
   width: "100%",
   justifyContent: "center",
-});
+  [theme.breakpoints.down("sm")]: {
+    margin: "1rem 0",
+    borderRadius: "15px",
+  },
+  [theme.breakpoints.down("xs")]: {
+    margin: "0.5rem 0",
+    borderRadius: "10px",
+  },
+}));
 
-const SectionTitle = styled(Typography)({
+const SectionTitle = styled(Typography)(({ theme }) => ({
   color: "white",
   textAlign: "center",
   fontWeight: "bold",
@@ -144,7 +167,15 @@ const SectionTitle = styled(Typography)({
   WebkitBackgroundClip: "text",
   WebkitTextFillColor: "transparent",
   mb: 3,
-});
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "1.5rem",
+    mb: 2,
+  },
+  [theme.breakpoints.down("xs")]: {
+    fontSize: "1.25rem",
+    mb: 1,
+  },
+}));
 
 const Home: FC = () => {
   const [isScrollVisible, setIsScrollVisible] = useState(true);
@@ -180,11 +211,22 @@ const Home: FC = () => {
         <OrbitingElement sx={{ top: "20%", left: "20%" }} />
         <OrbitingElement sx={{ top: "60%", right: "15%", animationDelay: "-10s" }} />
         */}
-        <FloatingLogo sx={{ width: "50%", justifyContent: "center", bgcolor: "#0E131BCC", alignItems: "center", textAlign: "center", my: 12, boxShadow: "100px 100px 100px 100px #0E131B", backdropFilter: "blur(3px)", borderRadius: "20px" }}>
-          <img src="/public/images/logo.svg" alt="Logo" style={{ width: "100%" }} />
+        <FloatingLogo sx={{
+          width: { xs: "90%", sm: "70%", md: "50%" },
+          justifyContent: "center",
+          bgcolor: "#0E131BCC",
+          alignItems: "center",
+          textAlign: "center",
+          my: { xs: 4, sm: 8, md: 12 },
+          boxShadow: "100px 100px 100px 100px #0E131B",
+          backdropFilter: "blur(3px)",
+          borderRadius: { xs: "15px", sm: "18px", md: "20px" },
+        }}
+        >
+          <img src="/images/logo.svg" alt="Logo" style={{ width: "100%" }} />
         </FloatingLogo>
 
-        <Box sx={{ mb: 2, pt: 0, pb: 8, px: 5, zIndex: 100 }}>
+        <Box sx={{ mb: 2, pt: 0, pb: { xs: 5, sm: 6, md: 8 }, px: { xs: 2, sm: 3, md: 5 }, zIndex: 100 }}>
           <Typography
             variant="h2"
             component="h1"
@@ -194,6 +236,8 @@ const Home: FC = () => {
               fontWeight: "bold",
               fontFamily: "Noto Serif",
               pr: 1,
+              fontSize: { xs: "1.5rem", sm: "2rem", md: "2.5rem" },
+              lineHeight: { xs: 1.2, sm: 1.3, md: 1.4 },
               // background: "linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1)",
               /*
               backgroundClip: "text",
@@ -227,17 +271,20 @@ const Home: FC = () => {
         <Typography
           variant="h6"
           sx={{
-            color: "rgba(255, 255, 255, 0.7)",
+            color: "rgba(255, 255, 255, 0.8)",
             textAlign: "center",
-            maxWidth: "600px",
+            maxWidth: { xs: "90%", sm: "80%", md: "600px" },
             lineHeight: 1.6,
             mb: 4,
+            fontSize: { xs: "0.9rem", sm: "1rem", md: "1.25rem" },
+            px: { xs: 2, sm: 3, md: 0 },
+            zIndex: 105,
           }}
         >
           60周年の軌跡と、新たな可能性を描く2日間。
         </Typography>
 
-        <Box sx={{ display: "flex", gap: 3, alignItems: "center", mb: 4 }}>
+        <Box sx={{ display: "flex", gap: { xs: 2, sm: 3 }, alignItems: "center", mb: 4, flexWrap: "wrap", justifyContent: "center" }}>
           <OfficialSns />
         </Box>
       </HeroSection>
@@ -246,8 +293,8 @@ const Home: FC = () => {
       <Box
         sx={{
           position: "fixed",
-          bottom: "40px",
-          right: "40px",
+          bottom: { xs: "20px", sm: "30px", md: "40px" },
+          right: { xs: "20px", sm: "30px", md: "40px" },
           zIndex: 1000,
           opacity: isScrollVisible ? 1 : 0,
           transition: "opacity 300ms ease",
@@ -259,7 +306,7 @@ const Home: FC = () => {
       </Box>
 
       {/* Event Details Section */}
-      <Container maxWidth="lg" data-content-section>
+      <Container maxWidth="lg" data-content-section sx={{ px: { xs: 2, sm: 3, md: 4 } }}>
         <ContentSection>
           <SectionTitle variant="h4" mt={4} mb={2}>
             開催概要
@@ -268,14 +315,14 @@ const Home: FC = () => {
             // mainTitle="高専祭2025"
             // description="テーマ「Orbit」のもと、学生たちが創り上げる2日間の文化祭。研究発表、模擬店、ステージイベントなど、多彩なプログラムをお楽しみください。"
             dateLabel="開催日程"
-            date="2025年11月1日（土）・11月2日（日）"
+            date="2025年11月1日(土)・11月2日(日)"
             locationLabel="開催場所"
             location="鈴鹿工業高等専門学校"
           />
         </ContentSection>
 
         <ContentSection>
-          <Box sx={{ p: 4, textAlign: "center" }}>
+          <Box sx={{ p: { xs: 2, sm: 3, md: 4 }, textAlign: "center" }}>
             <SectionTitle
               variant="h4"
               mb={3}
@@ -283,13 +330,14 @@ const Home: FC = () => {
             >
               アクセス
             </SectionTitle>
-            <Box sx={{ overflow: "hidden", p: 3, mb: 5 }}>
+            <Box sx={{ overflow: "hidden", p: { xs: 2, sm: 3 }, mb: { xs: 3, sm: 4, md: 5 } }}>
               <Typography
                 variant="h6"
                 sx={{
                   color: "white",
-                  mt: 3,
-                  mb: 3,
+                  mt: { xs: 2, sm: 3 },
+                  mb: { xs: 2, sm: 3 },
+                  fontSize: { xs: "1rem", sm: "1.25rem" },
                 }}
               >
                 〒510-0294 三重県鈴鹿市白子町 鈴鹿工業高等専門学校
@@ -302,8 +350,10 @@ const Home: FC = () => {
                 variant="h6"
                 sx={{
                   color: "white",
-                  mt: 3,
-                  mb: 3,
+                  mt: { xs: 2, sm: 3 },
+                  mb: { xs: 2, sm: 3 },
+                  fontSize: { xs: "0.9rem", sm: "1rem" },
+                  lineHeight: { xs: 1.4, sm: 1.6 },
                 }}
               >
                 近鉄名古屋線白子駅下車、
@@ -314,11 +364,29 @@ const Home: FC = () => {
               </Typography>
             </Box>
             <Box sx={{ width: "100%" }}>
-              <Box sx={{ borderBottom: "1px solid orange", width: "fit-content", mb: 3 }}>
-                <Typography variant="h5" sx={{ color: "white", p: 1, pb: 0 }}>ご来場にあたっての注意事項</Typography>
+              <Box sx={{ borderBottom: "1px solid orange", width: "fit-content", mb: { xs: 2, sm: 3 } }}>
+                <Typography
+                  variant="h5"
+                  sx={{
+                    color: "white",
+                    p: 1,
+                    pb: 0,
+                    fontSize: { xs: "1.1rem", sm: "1.25rem", md: "1.5rem" },
+                  }}
+                >
+                  ご来場にあたっての注意事項
+                </Typography>
               </Box>
               <Box>
-                <Typography variant="h6" sx={{ color: "white", p: 1 }}>
+                <Typography
+                  variant="h6"
+                  sx={{
+                    color: "white",
+                    p: 1,
+                    fontSize: { xs: "0.9rem", sm: "1rem" },
+                    lineHeight: { xs: 1.4, sm: 1.6 },
+                  }}
+                >
                   駐車スペースに限りがございますので、公共交通機関でのご来場にご協力ください
                 </Typography>
               </Box>
@@ -328,7 +396,7 @@ const Home: FC = () => {
         </ContentSection>
 
         <ContentSection>
-          <Box sx={{ p: 4, textAlign: "center" }}>
+          <Box sx={{ p: { xs: 2, sm: 3, md: 4 }, textAlign: "center" }}>
             <SectionTitle
               variant="h4"
               mb={3}
@@ -337,7 +405,16 @@ const Home: FC = () => {
               バザー・学科展示
             </SectionTitle>
           </Box>
-          <Box sx={{ display: "flex", gap: 4, alignItems: "center", mb: 4, justifyContent: "center" }}>
+          <Box sx={{
+            display: "flex",
+            gap: { xs: 2, sm: 3, md: 4 },
+            alignItems: "center",
+            mb: 4,
+            justifyContent: "center",
+            flexDirection: { xs: "column", sm: "row" },
+            px: { xs: 2, sm: 3, md: 4 },
+          }}
+          >
             <EventCard
               eventName="バザー"
               description="部活やクラスが行うバザー"
@@ -356,8 +433,8 @@ const Home: FC = () => {
           </Box>
         </ContentSection>
 
-        <ContentSection sx={{ mt: 6 }}>
-          <Box sx={{ p: 4, textAlign: "center" }}>
+        <ContentSection>
+          <Box sx={{ p: { xs: 2, sm: 3, md: 4 }, textAlign: "center" }}>
             <SectionTitle
               variant="h4"
               mb={3}
@@ -366,7 +443,17 @@ const Home: FC = () => {
               当日のイベント
             </SectionTitle>
           </Box>
-          <Box sx={{ display: "flex", gap: 3, alignItems: "center", mb: 4, justifyContent: "center" }}>
+          <Box sx={{
+            display: "flex",
+            gap: { xs: 2, sm: 3, md: 4 },
+            alignItems: "center",
+            mb: 4,
+            justifyContent: "center",
+            flexDirection: { xs: "column", sm: "row" },
+            // flexWrap: "wrap",
+            px: { xs: 2, sm: 3, md: 4 },
+          }}
+          >
             <EventCard
               eventName="ステージイベント"
               description="屋外のメインステージで開催されるイベント"
@@ -432,12 +519,13 @@ const Home: FC = () => {
               )}
         </ContentSectionSponsor>
 
-        <Box sx={{ py: 4, textAlign: "center" }}>
+        <Box sx={{ py: { xs: 2, sm: 3, md: 4 }, textAlign: "center", px: { xs: 2, sm: 3, md: 4 } }}>
           <Typography
             variant="body1"
             sx={{
               color: "white",
               mb: 2,
+              fontSize: { xs: "0.9rem", sm: "1rem" },
             }}
           >
             高専祭2025の最新情報をシェアしよう！

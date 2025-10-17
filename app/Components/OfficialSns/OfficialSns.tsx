@@ -16,13 +16,18 @@ function OfficialSns({
   facebookUrl = "https://www.facebook.com/profile.php?id=61556514660247",
 }: OfficialSnsProps): ReactNode {
   return (
-    <Stack direction="row" spacing={1}>
+    <Stack direction="row" spacing={{ xs: 1, sm: 1.5, md: 2 }}>
       <IconButton
         aria-label="X"
         href={xUrl}
         target="_blank"
         rel="noopener noreferrer"
-        sx={{ color: "white" }}
+        sx={{
+          "color": "white",
+          "fontSize": { xs: "1.5rem", sm: "2rem", md: "2.5rem" },
+          "&:hover": { transform: "scale(1.1)" },
+          "transition": "transform 0.2s ease",
+        }}
       >
         <XIcon />
       </IconButton>
@@ -31,7 +36,12 @@ function OfficialSns({
         href={instagramUrl}
         target="_blank"
         rel="noopener noreferrer"
-        sx={{ color: "white" }}
+        sx={{
+          "color": "white",
+          "fontSize": { xs: "1.5rem", sm: "2rem", md: "2.5rem" },
+          "&:hover": { transform: "scale(1.1)" },
+          "transition": "transform 0.2s ease",
+        }}
       >
         <InstagramIcon />
       </IconButton>
@@ -40,7 +50,12 @@ function OfficialSns({
         href={facebookUrl}
         target="_blank"
         rel="noopener noreferrer"
-        sx={{ color: "white" }}
+        sx={{
+          "color": "white",
+          "fontSize": { xs: "1.5rem", sm: "2rem", md: "2.5rem" },
+          "&:hover": { transform: "scale(1.1)" },
+          "transition": "transform 0.2s ease",
+        }}
       >
         <FacebookIcon />
       </IconButton>

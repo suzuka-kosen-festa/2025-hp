@@ -3,32 +3,32 @@
 exports[`should render the event summary correctly 1`] = `
 <div>
   <div
-    class="MuiBox-root css-1tgrre4"
+    class="MuiBox-root css-pw9c1n"
   >
     <h1
-      class="MuiTypography-root MuiTypography-h2 css-127kv7s-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-h2 css-f7v187-MuiTypography-root"
     >
       Orbit
     </h1>
     <p
-      class="MuiTypography-root MuiTypography-body1 css-1ygij95-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-body1 css-f5dy3o-MuiTypography-root"
     >
       テーマの説明ウンタラカンタラ
     </p>
     <div
-      class="MuiBox-root css-1yjvs5a"
+      class="MuiBox-root css-9i8z7t"
     >
       <div
         class="MuiBox-root css-jvpn1k"
       >
         <h2
-          class="MuiTypography-root MuiTypography-h5 css-16xl4zq-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h5 css-1oddxoz-MuiTypography-root"
         >
           開催日時
         </h2>
       </div>
       <h4
-        class="MuiTypography-root MuiTypography-h4 css-1qv4sbo-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-h4 css-s8m2ku-MuiTypography-root"
       >
         2024年11月2日(土)～11月3日(日)
       </h4>
@@ -40,13 +40,13 @@ exports[`should render the event summary correctly 1`] = `
         class="MuiBox-root css-jvpn1k"
       >
         <h2
-          class="MuiTypography-root MuiTypography-h5 css-16xl4zq-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h5 css-1oddxoz-MuiTypography-root"
         >
           開催場所
         </h2>
       </div>
       <h4
-        class="MuiTypography-root MuiTypography-h4 css-1qv4sbo-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-h4 css-s8m2ku-MuiTypography-root"
       >
         鈴鹿工業高等専門学校
       </h4>

@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { Box } from "@mui/material";
 
 interface LogoProps {
   length?: string | number
@@ -15,14 +16,20 @@ function Logo({
 }: LogoProps): ReactNode {
   const logoSrc = simpleLogo ? "/simple-logo.svg" : "/logo.svg";
 
+  // レスポンシブなサイズを計算
+  const responsiveLength = typeof length === "number"
+    ? { xs: Math.min(length * 0.6, 300), sm: Math.min(length * 0.8, 400), md: length }
+    : length;
+
   return (
-    <div
-      style={{
+    <Box
+      sx={{
         position: "relative",
         display: "inline-block",
-        width: length,
-        height: length,
+        width: responsiveLength,
+        height: responsiveLength,
         backgroundColor: withBlackBackground ? "#000000" : "transparent",
+        borderRadius: "8px",
       }}
     >
       <img
@@ -51,7 +58,7 @@ function Logo({
           }}
         />
       )}
-    </div>
+    </Box>
   );
 }
 

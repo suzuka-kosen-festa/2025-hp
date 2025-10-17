@@ -20,7 +20,16 @@ function EventCard(props: EventCardComponentProps): ReactNode {
   const { eventName, description, linkName, href, color } = props;
   const bgColor = `${color}33`;
   return (
-    <Card sx={{ width: "320px", borderRadius: "16px", p: 1, border: `1px solid ${color}`, color, backgroundColor: bgColor }}>
+    <Card sx={{
+      width: { xs: "100%", sm: "300px", md: "320px" },
+      maxWidth: "320px",
+      borderRadius: { xs: "12px", sm: "16px" },
+      p: { xs: 0.5, sm: 1 },
+      border: `1px solid ${color}`,
+      color,
+      backgroundColor: bgColor,
+    }}
+    >
       <Box sx={{
         display: "flex",
         flexDirection: "column",
@@ -28,15 +37,39 @@ function EventCard(props: EventCardComponentProps): ReactNode {
         justifyContent: "flex-start",
       }}
       >
-        <CardContent>
-          <Typography gutterBottom variant="h6" component="div" sx={{ fontWeight: "bold", color: "white" }}>
+        <CardContent sx={{ p: { xs: 1.5, sm: 2 } }}>
+          <Typography
+            gutterBottom
+            variant="h6"
+            component="div"
+            sx={{
+              fontWeight: "bold",
+              color: "white",
+              fontSize: { xs: "1rem", sm: "1.25rem" },
+            }}
+          >
             {ja.eventCard.name(eventName)}
           </Typography>
-          <Typography variant="body2" sx={{ mb: 6, color: "white" }}>
+          <Typography
+            variant="body2"
+            sx={{
+              mb: { xs: 4, sm: 6 },
+              color: "white",
+              fontSize: { xs: "0.8rem", sm: "0.875rem" },
+              lineHeight: { xs: 1.4, sm: 1.6 },
+            }}
+          >
             {description}
           </Typography>
           <Box sx={{ display: "flex", width: "stretch", justifyContent: "flex-end" }}>
-            <Link to={href} style={{ textDecoration: "none", color: "white" }}>
+            <Link
+              to={href}
+              style={{
+                textDecoration: "none",
+                color: "white",
+                fontSize: "0.9rem",
+              }}
+            >
               {" "}
               {`${linkName} >>`}
             </Link>

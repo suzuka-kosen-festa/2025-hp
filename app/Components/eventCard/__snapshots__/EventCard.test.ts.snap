@@ -3,22 +3,22 @@
 exports[`eventCard snapshot 1`] = `
 <div>
   <div
-    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-3prlg1-MuiPaper-root-MuiCard-root"
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-1nvbjlv-MuiPaper-root-MuiCard-root"
     style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
   >
     <div
       class="MuiBox-root css-1daefj0"
     >
       <div
-        class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
+        class="MuiCardContent-root css-xg3z28-MuiCardContent-root"
       >
         <div
-          class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom css-3qk9ln-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom css-vu1eli-MuiTypography-root"
         >
           イベント名
         </div>
         <p
-          class="MuiTypography-root MuiTypography-body2 css-pob4cg-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body2 css-v1xe35-MuiTypography-root"
         >
           説明文
         </p>
@@ -27,7 +27,7 @@ exports[`eventCard snapshot 1`] = `
         >
           <a
             href="https://www.google.com"
-            style="text-decoration: none; color: white;"
+            style="text-decoration: none; color: white; font-size: 0.9rem;"
           >
              
             リンク名 &gt;&gt;
