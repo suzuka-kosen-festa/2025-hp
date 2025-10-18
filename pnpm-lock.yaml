@@ -49,8 +49,8 @@ importers:
         specifier: 4.1.1
         version: 4.1.1(storybook@8.6.14(prettier@3.6.2))
       '@cloudflare/vite-plugin':
-        specifier: 1.13.12
-        version: 1.13.12(vite@7.1.9(@types/node@24.7.2)(jiti@2.6.1)(tsx@4.20.6)(yaml@2.8.0))(workerd@1.20250803.0)(wrangler@4.28.0(@cloudflare/workers-types@4.20251011.0))
+        specifier: 1.13.13
+        version: 1.13.13(vite@7.1.9(@types/node@24.7.2)(jiti@2.6.1)(tsx@4.20.6)(yaml@2.8.0))(workerd@1.20250803.0)(wrangler@4.28.0(@cloudflare/workers-types@4.20251011.0))
       '@cloudflare/workers-types':
         specifier: 4.20251011.0
         version: 4.20251011.0
@@ -565,11 +565,11 @@ packages:
       workerd:
         optional: true
 
-  '@cloudflare/vite-plugin@1.13.12':
-    resolution: {integrity: sha512-JEcrUF1uXxMQfp+RcGw7ov5K8uOGX0arFYdyO3QfHrjWspHnsw0zOYL+4083itEInRVnZjS5LunpsNpxSVbCEw==}
+  '@cloudflare/vite-plugin@1.13.13':
+    resolution: {integrity: sha512-RgyoPy0fzqEETVmhzb2yhr2Jqz2N8dxwhL9+1bDiO0Bajdfb8cCURgBgppcRfmcYKlBTXYl9xvus+nnH5KRmRQ==}
     peerDependencies:
       vite: ^6.1.0 || ^7.0.0
-      wrangler: ^4.42.2
+      wrangler: ^4.43.0
 
   '@cloudflare/workerd-darwin-64@1.20250803.0':
     resolution: {integrity: sha512-6QciMnJp1p3F1qUiN0LaLfmw7SuZA/gfUBOe8Ft81pw16JYZ3CyiqIKPJvc1SV8jgDx8r+gz/PRi1NwOMt329A==}
@@ -6999,7 +6999,7 @@ snapshots:
     optionalDependencies:
       workerd: 1.20250803.0
 
-  '@cloudflare/vite-plugin@1.13.12(vite@7.1.9(@types/node@24.7.2)(jiti@2.6.1)(tsx@4.20.6)(yaml@2.8.0))(workerd@1.20250803.0)(wrangler@4.28.0(@cloudflare/workers-types@4.20251011.0))':
+  '@cloudflare/vite-plugin@1.13.13(vite@7.1.9(@types/node@24.7.2)(jiti@2.6.1)(tsx@4.20.6)(yaml@2.8.0))(workerd@1.20250803.0)(wrangler@4.28.0(@cloudflare/workers-types@4.20251011.0))':
     dependencies:
       '@cloudflare/unenv-preset': 2.7.7(unenv@2.0.0-rc.21)(workerd@1.20250803.0)
       '@remix-run/node-fetch-server': 0.8.1
@@ -8868,7 +8868,7 @@ snapshots:
       fast-glob: 3.3.3
       is-glob: 4.0.3
       minimatch: 9.0.5
-      semver: 7.7.2
+      semver: 7.7.3
       ts-api-utils: 2.1.0(typescript@5.9.3)
       typescript: 5.9.3
     transitivePeerDependencies:
@@ -9987,12 +9987,12 @@ snapshots:
   eslint-compat-utils@0.5.1(eslint@9.37.0(jiti@2.6.1)):
     dependencies:
       eslint: 9.37.0(jiti@2.6.1)
-      semver: 7.7.2
+      semver: 7.7.3
 
   eslint-compat-utils@0.6.5(eslint@9.37.0(jiti@2.6.1)):
     dependencies:
       eslint: 9.37.0(jiti@2.6.1)
-      semver: 7.7.2
+      semver: 7.7.3
 
   eslint-config-flat-gitignore@1.0.1(eslint@9.37.0(jiti@2.6.1)):
     dependencies:
@@ -11755,7 +11755,7 @@ snapshots:
     dependencies:
       hosted-git-info: 4.1.0
       is-core-module: 2.16.1
-      semver: 7.7.2
+      semver: 7.7.3
       validate-npm-package-license: 3.0.4
 
   nth-check@2.1.1:
@@ -12481,7 +12481,7 @@ snapshots:
     dependencies:
       color: 4.2.3
       detect-libc: 2.0.4
-      semver: 7.7.2
+      semver: 7.7.3
     optionalDependencies:
       '@img/sharp-darwin-arm64': 0.33.5
       '@img/sharp-darwin-x64': 0.33.5
