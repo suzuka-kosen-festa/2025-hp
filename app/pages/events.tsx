@@ -6,7 +6,7 @@ import Footer from "@/Components/Footer";
 import StageEventCard from "@/Components/StageEventCard";
 import { type EventData, eventsData, eventTypes } from "@/data/events";
 import { sitemapData } from "@/data/sitemap";
-import { SpaceBackground, Stars } from "./Home";
+import { Bg, SpaceBackground, Stars } from "./Home";
 
 const rotate = keyframes`
   0% { transform: rotate(0deg); }
@@ -65,12 +65,12 @@ const ContentSection = styled(Box)<{ borderColor?: string }>(({ borderColor = "#
 }));
 
 const EventSection = styled(Box)(({ theme }) => ({
-  margin: "3rem 0",
+  margin: "1rem 0",
   [theme.breakpoints.down("sm")]: {
-    margin: "2rem 0",
+    margin: "0.5rem 0",
   },
   [theme.breakpoints.down("xs")]: {
-    margin: "1rem 0",
+    margin: "0.25rem 0",
   },
 }));
 
@@ -144,99 +144,102 @@ const Events: FC = () => {
 
   return (
     <SpaceBackground>
-      <Stars />
-      {/* Hero Section */}
-      <HeroSection>
-        <Box sx={{ display: "flex", width: { xs: "95%", sm: "90%", md: "80%" }, justifyContent: "flex-start", p: { xs: 2, sm: 3, md: 5 }, zIndex: 1000 }}>
-          <Link to="/" style={{ color: "white", fontSize: "1rem" }}>&lt;&lt; 戻る</Link>
-        </Box>
-        <Typography
-          variant="h1"
-          component="h1"
-          sx={{
-            color: "white",
-            textAlign: "center",
-            fontWeight: "bold",
-            background: "linear-gradient(45deg, #4ecdc4, #45b7d1)",
-            backgroundClip: "text",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-            mt: { xs: 1, sm: 2 },
-            mb: { xs: 1, sm: 2 },
-            fontSize: { xs: "2rem", sm: "3rem", md: "4rem" },
-          }}
-        >
-          Events
-        </Typography>
-        <Typography
-          variant="h5"
-          sx={{
-            color: "rgba(255, 255, 255, 0.8)",
-            textAlign: "center",
-            lineHeight: 1.6,
-            mb: { xs: 2, sm: 3, md: 4 },
-            fontSize: { xs: "1rem", sm: "1.25rem", md: "1.5rem" },
-            px: { xs: 2, sm: 3, md: 0 },
-          }}
-        >
-          高専祭2025で開催される様々なイベントをご紹介します
-        </Typography>
-      </HeroSection>
+      <Bg>
+        <Stars />
+        {/* Hero Section */}
+        <HeroSection>
+          <Box sx={{ display: "flex", width: { xs: "95%", sm: "90%", md: "80%" }, justifyContent: "flex-start", p: { xs: 2, sm: 3, md: 5 }, zIndex: 1000 }}>
+            <Link to="/" style={{ color: "white", fontSize: "1rem" }}>&lt;&lt; 戻る</Link>
+          </Box>
+          <Typography
+            variant="h1"
+            component="h1"
+            sx={{
+              color: "white",
+              textAlign: "center",
+              fontWeight: "bold",
+              background: "linear-gradient(45deg, #4ecdc4, #45b7d1)",
+              backgroundClip: "text",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              mt: { xs: 1, sm: 2 },
+              mb: { xs: 1, sm: 2 },
+              fontSize: { xs: "2rem", sm: "3rem", md: "4rem" },
+            }}
+          >
+            Events
+          </Typography>
+          <Typography
+            variant="h5"
+            sx={{
+              color: "rgba(255, 255, 255, 0.8)",
+              textAlign: "center",
+              lineHeight: 1.6,
+              mb: { xs: 2, sm: 3, md: 4 },
+              fontSize: { xs: "1rem", sm: "1.25rem", md: "1.5rem" },
+              px: { xs: 2, sm: 3, md: 0 },
+            }}
+          >
+            高専祭2025で開催される様々なイベントをご紹介します
+          </Typography>
+        </HeroSection>
 
-      {/* Events Content */}
-      <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 3, md: 4 } }}>
-        {Object.entries(eventTypes).map(([typeKey, typeConfig]) => {
-          const events = eventsByType[typeKey] || [];
+        {/* Events Content */}
+        <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 3, md: 4 } }}>
+          {Object.entries(eventTypes).map(([typeKey, typeConfig], index) => {
+            const events = eventsByType[typeKey] || [];
+            const isLastSection = index === Object.entries(eventTypes).length - 1;
 
-          return (
-            <EventSection key={typeKey} sx={{ mb: { xs: 15, sm: 20, md: 25 } }}>
-              <ContentSection borderColor={typeConfig.color}>
-                <SectionHeader id={typeConfig.anchor}>
-                  <EventTypeChip
-                    label={typeConfig.label}
-                    sx={{
-                      backgroundColor: typeConfig.color,
-                      color: "white",
-                      mr: 2,
-                    }}
-                  />
-                </SectionHeader>
-
-                {/* <Divider sx={{ borderColor: 'rgba(255, 255, 255, 0.3)', mb: 3 }} /> */}
-
-                <Box sx={{
-                  display: "flex",
-                  flexWrap: "wrap",
-                  gap: { xs: 2, sm: 3 },
-                  justifyContent: "center",
-                }}
-                >
-                  {events.map(event => (
-                    <Box
-                      key={event.id}
+            return (
+              <EventSection key={typeKey} sx={{ mb: isLastSection ? { xs: 15, sm: 20, md: 25 } : { xs: 5, sm: 10, md: 15 } }}>
+                <ContentSection borderColor={typeConfig.color}>
+                  <SectionHeader id={typeConfig.anchor}>
+                    <EventTypeChip
+                      label={typeConfig.label}
                       sx={{
-                        flex: "1 1 300px",
-                        minWidth: { xs: "280px", sm: "300px" },
-                        maxWidth: { xs: "100%", sm: "calc(50% - 8px)", md: "calc(50% - 12px)", lg: "calc(33.333% - 16px)" },
+                        backgroundColor: typeConfig.color,
+                        color: "white",
+                        mr: 2,
                       }}
-                    >
-                      <StageEventCard
-                        image={event.image || undefined}
-                        title={event.title}
-                        datetime={event.datetime}
-                        stage={event.stage}
-                        description={event.description}
-                        color={typeConfig.color}
-                      />
-                    </Box>
-                  ))}
-                </Box>
-              </ContentSection>
-            </EventSection>
-          );
-        })}
-      </Container>
-      <Footer siteMap={sitemapData} />
+                    />
+                  </SectionHeader>
+
+                  {/* <Divider sx={{ borderColor: 'rgba(255, 255, 255, 0.3)', mb: 3 }} /> */}
+
+                  <Box sx={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    gap: { xs: 2, sm: 3 },
+                    justifyContent: "center",
+                  }}
+                  >
+                    {events.map(event => (
+                      <Box
+                        key={event.id}
+                        sx={{
+                          flex: "1 1 300px",
+                          minWidth: { xs: "280px", sm: "300px" },
+                          maxWidth: { xs: "100%", sm: "calc(50% - 8px)", md: "calc(50% - 12px)", lg: "calc(33.333% - 16px)" },
+                        }}
+                      >
+                        <StageEventCard
+                          image={event.image || undefined}
+                          title={event.title}
+                          datetime={event.datetime}
+                          stage={event.stage}
+                          description={event.description}
+                          color={typeConfig.color}
+                        />
+                      </Box>
+                    ))}
+                  </Box>
+                </ContentSection>
+              </EventSection>
+            );
+          })}
+        </Container>
+        <Footer siteMap={sitemapData} />
+      </Bg>
     </SpaceBackground>
   );
 };
