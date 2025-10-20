@@ -8,7 +8,7 @@ import BazaarCard from "@/Components/bazaarCard";
 import DepartmentExhibitionCard from "@/Components/DepartmentExhibitionCard";
 import Footer from "@/Components/Footer";
 import { sitemapData } from "@/data/sitemap";
-import { SpaceBackground, Stars } from "./Home";
+import { Bg, SpaceBackground, Stars } from "./Home";
 
 // 学科別テーマカラーの定義
 const departmentColors: Record<string, string> = {
@@ -83,7 +83,7 @@ const SolarPanel = styled(Box)<{ $panelPosition?: "top" | "bottom" }>(({ $panelP
   "background": "rgba(255, 255, 255, 0.5)",
   "backdropFilter": "blur(10px)",
   "borderRadius": "20px 20px 20px 20px",
-  "margin": $panelPosition === "top" ? "0 0 1rem 0" : "1rem 0 0 0",
+  "margin": $panelPosition === "top" ? "0 0 3.5rem 0" : "3.5rem 0 0 0",
   "padding": "2rem",
   "position": "relative",
   "overflow": "hidden",
@@ -92,12 +92,12 @@ const SolarPanel = styled(Box)<{ $panelPosition?: "top" | "bottom" }>(({ $panelP
   [theme.breakpoints.down("sm")]: {
     padding: "1rem",
     borderRadius: "15px",
-    margin: $panelPosition === "top" ? "0 0 0.5rem 0" : "0.5rem 0 0 0",
+    margin: $panelPosition === "top" ? "0 0 2.5rem 0" : "2.5rem 0 0 0",
   },
   [theme.breakpoints.down("xs")]: {
     padding: "0.5rem",
     borderRadius: "10px",
-    margin: $panelPosition === "top" ? "0 0 0.25rem 0" : "0.25rem 0 0 0",
+    margin: $panelPosition === "top" ? "0 0 1.5rem 0" : "1.5rem 0 0 0",
   },
   "&::before": {
     content: "\"\"",
@@ -220,154 +220,156 @@ const Bazar: FC = () => {
 
   return (
     <SpaceBackground>
-      <Stars />
+      <Bg>
+        <Stars />
 
-      {/* Hero Section */}
-      <HeroSection>
-        <Box sx={{ display: "flex", width: { xs: "95%", sm: "90%", md: "80%" }, justifyContent: "flex-start", p: { xs: 2, sm: 3, md: 5 }, zIndex: 1000 }}>
-          <Link to="/" style={{ color: "white", fontSize: "1rem" }}>&lt;&lt; 戻る</Link>
-        </Box>
-        <Typography
-          variant="h1"
-          component="h1"
-          sx={{
-            color: "white",
-            textAlign: "center",
-            fontWeight: "bold",
-            background: "linear-gradient(45deg, #4ecdc4, #45b7d1)",
-            backgroundClip: "text",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-            mt: { xs: 1, sm: 2 },
-            mb: { xs: 1, sm: 2 },
-            fontSize: { xs: "1.5rem", sm: "2.5rem", md: "3.5rem" },
-          }}
-        >
-          Bazaar & Exhibitions
-        </Typography>
-        <Typography
-          variant="h5"
-          sx={{
-            color: "rgba(255, 255, 255, 0.8)",
-            textAlign: "center",
-            lineHeight: 1.6,
-            mb: { xs: 2, sm: 3, md: 4 },
-            fontSize: { xs: "0.9rem", sm: "1.25rem", md: "1.5rem" },
-            px: { xs: 2, sm: 3, md: 0 },
-          }}
-        >
-          高専祭2025のバザーと学科展示をご紹介します
-        </Typography>
-      </HeroSection>
-
-      {/* Content */}
-      <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 3, md: 4 } }}>
-        {/* 上部ソーラーパネル - バザーセクション */}
-        <SolarPanel $panelPosition="top" id="bazaar">
-          <SectionHeader>
-            <SectionTypeChip
-              label="バザー"
-              sx={{
-                mr: 2,
-              }}
-            />
-          </SectionHeader>
-
-          <Box sx={{
-            display: "flex",
-            flexWrap: "wrap",
-            gap: { xs: 2, sm: 3 },
-            position: "relative",
-            zIndex: 1,
-            justifyContent: "center",
-          }}
+        {/* Hero Section */}
+        <HeroSection>
+          <Box sx={{ display: "flex", width: { xs: "95%", sm: "90%", md: "80%" }, justifyContent: "flex-start", p: { xs: 2, sm: 3, md: 5 }, zIndex: 1000 }}>
+            <Link to="/" style={{ color: "white", fontSize: "1rem" }}>&lt;&lt; 戻る</Link>
+          </Box>
+          <Typography
+            variant="h1"
+            component="h1"
+            sx={{
+              color: "white",
+              textAlign: "center",
+              fontWeight: "bold",
+              background: "linear-gradient(45deg, #4ecdc4, #45b7d1)",
+              backgroundClip: "text",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              mt: { xs: 1, sm: 2 },
+              mb: { xs: 1, sm: 2 },
+              fontSize: { xs: "1.5rem", sm: "2.5rem", md: "3.5rem" },
+            }}
           >
-            {bazaarData.map(bazaar => (
-              <Box
-                key={bazaar.id}
+            Bazaar & Exhibitions
+          </Typography>
+          <Typography
+            variant="h5"
+            sx={{
+              color: "rgba(255, 255, 255, 0.8)",
+              textAlign: "center",
+              lineHeight: 1.6,
+              mb: { xs: 2, sm: 3, md: 4 },
+              fontSize: { xs: "0.9rem", sm: "1.25rem", md: "1.5rem" },
+              px: { xs: 2, sm: 3, md: 0 },
+            }}
+          >
+            高専祭2025のバザーと学科展示をご紹介します
+          </Typography>
+        </HeroSection>
+
+        {/* Content */}
+        <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 3, md: 4 } }}>
+          {/* 上部ソーラーパネル - バザーセクション */}
+          <SolarPanel $panelPosition="top" id="bazaar">
+            <SectionHeader>
+              <SectionTypeChip
+                label="バザー"
                 sx={{
-                  flex: "1 1 300px",
-                  minWidth: { xs: "280px", sm: "300px" },
-                  maxWidth: { xs: "100%", sm: "calc(50% - 8px)", md: "calc(50% - 12px)", lg: "calc(33.333% - 16px)" },
+                  mr: 2,
                 }}
-              >
-                <BazaarCard
-                  image={bazaar.image}
-                  teamName={bazaar.teamName}
-                  bazaarName={bazaar.bazaarName}
-                  description={bazaar.description}
-                />
-              </Box>
-            ))}
-          </Box>
-        </SolarPanel>
-        {/* 下部ソーラーパネル - 学科展示セクション */}
-        <SolarPanel $panelPosition="bottom" id="exhibitions" sx={{ mb: { xs: 15, sm: 20, md: 25 } }}>
-          <SectionHeader>
-            <SectionTypeChip
-              label="学科展示"
-              sx={{
-                mr: 2,
-              }}
-            />
-          </SectionHeader>
+              />
+            </SectionHeader>
 
-          <Box sx={{ position: "relative", zIndex: 1 }}>
-            {Object.entries(exhibitionsByDepartment).map(([department, exhibitions]) => {
-              const themeColor = departmentColors[department] || "#4a90e2"; // デフォルトカラー
-              return (
-                <Box key={department} sx={{ mb: 4 }}>
-                  <Typography
-                    variant="h4"
-                    sx={{
-                      color: themeColor,
-                      width: "100%",
-                      mb: 2,
-                      textAlign: "center",
-                      background: "white",
-                      borderRadius: "10px",
-                      fontWeight: "bold",
-                      border: `2px solid ${themeColor}`,
-                      py: { xs: 2, sm: 3 },
-                      textShadow: `0 0 10px ${themeColor}50`,
-                      fontSize: { xs: "1.25rem", sm: "1.5rem", md: "2rem" },
-                    }}
-                  >
-                    {department}
-                  </Typography>
-
-                  <Box sx={{
-                    display: "flex",
-                    flexWrap: "wrap",
-                    gap: { xs: 2, sm: 3 },
-                    mb: { xs: 2, sm: 3 },
-                    justifyContent: "center",
+            <Box sx={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: { xs: 2, sm: 3 },
+              position: "relative",
+              zIndex: 1,
+              justifyContent: "center",
+            }}
+            >
+              {bazaarData.map(bazaar => (
+                <Box
+                  key={bazaar.id}
+                  sx={{
+                    flex: "1 1 300px",
+                    minWidth: { xs: "280px", sm: "300px" },
+                    maxWidth: { xs: "100%", sm: "calc(50% - 8px)", md: "calc(50% - 12px)", lg: "calc(33.333% - 16px)" },
                   }}
-                  >
-                    {exhibitions.map(exhibition => (
-                      <Box
-                        key={exhibition.id}
-                        sx={{
-                          flex: "1 1 300px",
-                          minWidth: { xs: "280px", sm: "300px" },
-                          maxWidth: { xs: "100%", sm: "calc(50% - 8px)", md: "calc(50% - 12px)", lg: "calc(33.333% - 16px)" },
-                        }}
-                      >
-                        <DepartmentExhibitionCard
-                          department={exhibition.department}
-                          title={exhibition.title}
-                          description={exhibition.description}
-                        />
-                      </Box>
-                    ))}
-                  </Box>
+                >
+                  <BazaarCard
+                    image={bazaar.image}
+                    teamName={bazaar.teamName}
+                    bazaarName={bazaar.bazaarName}
+                    description={bazaar.description}
+                  />
                 </Box>
-              );
-            })}
-          </Box>
-        </SolarPanel>
-      </Container>
-      <Footer siteMap={sitemapData} />
+              ))}
+            </Box>
+          </SolarPanel>
+          {/* 下部ソーラーパネル - 学科展示セクション */}
+          <SolarPanel $panelPosition="bottom" id="exhibitions" sx={{ mb: { xs: 15, sm: 20, md: 25 } }}>
+            <SectionHeader>
+              <SectionTypeChip
+                label="学科展示"
+                sx={{
+                  mr: 2,
+                }}
+              />
+            </SectionHeader>
+
+            <Box sx={{ position: "relative", zIndex: 1 }}>
+              {Object.entries(exhibitionsByDepartment).map(([department, exhibitions]) => {
+                const themeColor = departmentColors[department] || "#4a90e2"; // デフォルトカラー
+                return (
+                  <Box key={department} sx={{ mb: 4 }}>
+                    <Typography
+                      variant="h4"
+                      sx={{
+                        color: themeColor,
+                        width: "100%",
+                        mb: 2,
+                        textAlign: "center",
+                        background: "white",
+                        borderRadius: "10px",
+                        fontWeight: "bold",
+                        border: `2px solid ${themeColor}`,
+                        py: { xs: 2, sm: 3 },
+                        textShadow: `0 0 10px ${themeColor}50`,
+                        fontSize: { xs: "1.25rem", sm: "1.5rem", md: "2rem" },
+                      }}
+                    >
+                      {department}
+                    </Typography>
+
+                    <Box sx={{
+                      display: "flex",
+                      flexWrap: "wrap",
+                      gap: { xs: 2, sm: 3 },
+                      mb: { xs: 2, sm: 3 },
+                      justifyContent: "center",
+                    }}
+                    >
+                      {exhibitions.map(exhibition => (
+                        <Box
+                          key={exhibition.id}
+                          sx={{
+                            flex: "1 1 300px",
+                            minWidth: { xs: "280px", sm: "300px" },
+                            maxWidth: { xs: "100%", sm: "calc(50% - 8px)", md: "calc(50% - 12px)", lg: "calc(33.333% - 16px)" },
+                          }}
+                        >
+                          <DepartmentExhibitionCard
+                            department={exhibition.department}
+                            title={exhibition.title}
+                            description={exhibition.description}
+                          />
+                        </Box>
+                      ))}
+                    </Box>
+                  </Box>
+                );
+              })}
+            </Box>
+          </SolarPanel>
+        </Container>
+        <Footer siteMap={sitemapData} />
+      </Bg>
     </SpaceBackground>
   );
 };

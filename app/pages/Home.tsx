@@ -1,6 +1,7 @@
 import type { FC } from "react";
 import { Box, Container, keyframes, styled, Typography } from "@mui/material";
 import { useEffect, useMemo, useState } from "react";
+import { Link } from "react-router";
 import sponsorsData from "@/../contents/sponsor.json";
 import EventCard from "@/Components/eventCard/EventCard";
 import EventSummary from "@/Components/EventSummary";
@@ -35,7 +36,15 @@ export const SpaceBackground = styled(Box)({
   overflow: "hidden",
 });
 
-const STAR_COUNT = 800;
+export const Bg = styled(Box)({
+  width: "100%",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+});
+
+const STAR_COUNT = 50;
 
 export const Stars: FC = () => {
   const stars = useMemo(() => {
@@ -61,7 +70,7 @@ export const Stars: FC = () => {
   return (
     <Box
       aria-hidden="true"
-      sx={{ position: "absolute", inset: 0, width: "100%", height: "100%" }}
+      sx={{ position: "fixed", inset: 0, width: "100%", height: "100%" }}
     >
       {stars.map(star => (
         <Box
@@ -107,6 +116,7 @@ const _OrbitingElement = styled(Box)({
 });
 
 const HeroSection = styled(Box)(({ theme }) => ({
+  width: "stretch",
   minHeight: "100vh",
   display: "flex",
   flexDirection: "column",
@@ -206,39 +216,39 @@ const Home: FC = () => {
       <Stars />
 
       {/* Hero Section */}
-      <HeroSection data-hero-section>
-        {/*
+      <Bg>
+        <HeroSection data-hero-section>
+          {/*
         <OrbitingElement sx={{ top: "20%", left: "20%" }} />
         <OrbitingElement sx={{ top: "60%", right: "15%", animationDelay: "-10s" }} />
         */}
-        <FloatingLogo sx={{
-          width: { xs: "90%", sm: "70%", md: "50%" },
-          justifyContent: "center",
-          bgcolor: "#0E131BCC",
-          alignItems: "center",
-          textAlign: "center",
-          my: { xs: 4, sm: 8, md: 12 },
-          boxShadow: "100px 100px 100px 100px #0E131B",
-          backdropFilter: "blur(3px)",
-          borderRadius: { xs: "15px", sm: "18px", md: "20px" },
-        }}
-        >
-          <img src="/images/logo.svg" alt="Logo" style={{ width: "100%" }} />
-        </FloatingLogo>
+          <FloatingLogo sx={{
+            width: { xs: "90%", sm: "70%", md: "50%" },
+            justifyContent: "center",
+            bgcolor: "#0E131BCC",
+            alignItems: "center",
+            textAlign: "center",
+            my: { xs: 4, sm: 8, md: 12 },
+            // boxShadow: "100px 100px 100px 100px #0E131B",
+            borderRadius: { xs: "15px", sm: "18px", md: "20px" },
+          }}
+          >
+            <img src="/images/logo.svg" alt="Logo" style={{ width: "100%" }} />
+          </FloatingLogo>
 
-        <Box sx={{ mb: 2, pt: 0, pb: { xs: 5, sm: 6, md: 8 }, px: { xs: 2, sm: 3, md: 5 }, zIndex: 100 }}>
-          <Typography
-            variant="h2"
-            component="h1"
-            sx={{
-              color: "#6b75ffff",
-              textAlign: "center",
-              fontWeight: "bold",
-              fontFamily: "Noto Serif",
-              pr: 1,
-              fontSize: { xs: "1.5rem", sm: "2rem", md: "2.5rem" },
-              lineHeight: { xs: 1.2, sm: 1.3, md: 1.4 },
-              // background: "linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1)",
+          <Box sx={{ mb: 2, pt: 0, pb: { xs: 5, sm: 6, md: 8 }, px: { xs: 2, sm: 3, md: 5 }, zIndex: 100 }}>
+            <Typography
+              variant="h2"
+              component="h1"
+              sx={{
+                color: "#6b75ffff",
+                textAlign: "center",
+                fontWeight: "bold",
+                fontFamily: "Noto Serif",
+                pr: 1,
+                fontSize: { xs: "1.5rem", sm: "2rem", md: "2.5rem" },
+                lineHeight: { xs: 1.2, sm: 1.3, md: 1.4 },
+                // background: "linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1)",
               /*
               backgroundClip: "text",
               WebkitBackgroundClip: "text",
@@ -246,14 +256,14 @@ const Home: FC = () => {
               zIndex: 1000,
               backdropFilter: "blur(10px)",
               */
-            }}
-          >
-            <i>60th Suzuka Kosen Festa 2025</i>
-            <br />
-            <i>11/1・11/2</i>
-          </Typography>
-        </Box>
-        {/*
+              }}
+            >
+              <i>60th Suzuka Kosen Festa 2025</i>
+              <br />
+              <i>11/1・11/2</i>
+            </Typography>
+          </Box>
+          {/*
         <Typography
           variant="h4"
           sx={{
@@ -268,272 +278,278 @@ const Home: FC = () => {
         </Typography>
         */}
 
-        <Typography
-          variant="h6"
+          <Typography
+            variant="h6"
+            sx={{
+              color: "rgba(255, 255, 255, 0.8)",
+              textAlign: "center",
+              maxWidth: { xs: "90%", sm: "80%", md: "600px" },
+              lineHeight: 1.6,
+              mb: 4,
+              fontSize: { xs: "0.9rem", sm: "1rem", md: "1.25rem" },
+              px: { xs: 2, sm: 3, md: 0 },
+              zIndex: 105,
+            }}
+          >
+            60周年の軌跡と、新たな可能性を描く2日間。
+          </Typography>
+
+          <Box sx={{ display: "flex", gap: { xs: 2, sm: 3 }, alignItems: "center", mb: 4, flexWrap: "wrap", justifyContent: "center" }}>
+            <OfficialSns />
+          </Box>
+        </HeroSection>
+
+        {/* Fixed Scroll indicator - フェードイン/アウト */}
+        <Box
           sx={{
-            color: "rgba(255, 255, 255, 0.8)",
-            textAlign: "center",
-            maxWidth: { xs: "90%", sm: "80%", md: "600px" },
-            lineHeight: 1.6,
-            mb: 4,
-            fontSize: { xs: "0.9rem", sm: "1rem", md: "1.25rem" },
-            px: { xs: 2, sm: 3, md: 0 },
-            zIndex: 105,
+            position: "fixed",
+            bottom: { xs: "20px", sm: "30px", md: "40px" },
+            right: { xs: "20px", sm: "30px", md: "40px" },
+            zIndex: 1000,
+            opacity: isScrollVisible ? 1 : 0,
+            transition: "opacity 300ms ease",
+            pointerEvents: isScrollVisible ? "auto" : "none",
           }}
+          aria-hidden={!isScrollVisible}
         >
-          60周年の軌跡と、新たな可能性を描く2日間。
-        </Typography>
-
-        <Box sx={{ display: "flex", gap: { xs: 2, sm: 3 }, alignItems: "center", mb: 4, flexWrap: "wrap", justifyContent: "center" }}>
-          <OfficialSns />
+          <Scroll />
         </Box>
-      </HeroSection>
 
-      {/* Fixed Scroll indicator - フェードイン/アウト */}
-      <Box
-        sx={{
-          position: "fixed",
-          bottom: { xs: "20px", sm: "30px", md: "40px" },
-          right: { xs: "20px", sm: "30px", md: "40px" },
-          zIndex: 1000,
-          opacity: isScrollVisible ? 1 : 0,
-          transition: "opacity 300ms ease",
-          pointerEvents: isScrollVisible ? "auto" : "none",
-        }}
-        aria-hidden={!isScrollVisible}
-      >
-        <Scroll />
-      </Box>
-
-      {/* Event Details Section */}
-      <Container maxWidth="lg" data-content-section sx={{ px: { xs: 2, sm: 3, md: 4 } }}>
-        <ContentSection>
-          <SectionTitle variant="h4" mt={4} mb={2}>
-            開催概要
-          </SectionTitle>
-          <EventSummary
-            // mainTitle="高専祭2025"
-            // description="テーマ「Orbit」のもと、学生たちが創り上げる2日間の文化祭。研究発表、模擬店、ステージイベントなど、多彩なプログラムをお楽しみください。"
-            dateLabel="開催日程"
-            date="2025年11月1日(土)・11月2日(日)"
-            locationLabel="開催場所"
-            location="鈴鹿工業高等専門学校"
-          />
-        </ContentSection>
-
-        <ContentSection>
-          <Box sx={{ p: { xs: 2, sm: 3, md: 4 }, textAlign: "center" }}>
-            <SectionTitle
-              variant="h4"
-              mb={3}
-              // component="h2"
-            >
-              アクセス
-            </SectionTitle>
-            <Box sx={{ overflow: "hidden", p: { xs: 2, sm: 3 }, mb: { xs: 3, sm: 4, md: 5 } }}>
-              <Typography
-                variant="h6"
-                sx={{
-                  color: "white",
-                  mt: { xs: 2, sm: 3 },
-                  mb: { xs: 2, sm: 3 },
-                  fontSize: { xs: "1rem", sm: "1.25rem" },
-                }}
-              >
-                〒510-0294 三重県鈴鹿市白子町 鈴鹿工業高等専門学校
-              </Typography>
-              <GoogleMap
-                address="鈴鹿工業高等専門学校"
-                height={400}
+        {/* Event Details Section */}
+        <Container maxWidth="lg" data-content-section sx={{ px: { xs: 2, sm: 3, md: 4 } }}>
+          <ContentSection>
+            <Box sx={{ p: { xs: 2, sm: 3, md: 4 } }}>
+              <SectionTitle variant="h4" mb={3}>
+                開催概要
+              </SectionTitle>
+              <EventSummary
+              // mainTitle="高専祭2025"
+              // description="テーマ「Orbit」のもと、学生たちが創り上げる2日間の文化祭。研究発表、模擬店、ステージイベントなど、多彩なプログラムをお楽しみください。"
+                dateLabel="開催日程"
+                date="2025年11月1日(土)・11月2日(日)"
+                locationLabel="開催場所"
+                location="鈴鹿工業高等専門学校"
               />
-              <Typography
-                variant="h6"
-                sx={{
-                  color: "white",
-                  mt: { xs: 2, sm: 3 },
-                  mb: { xs: 2, sm: 3 },
-                  fontSize: { xs: "0.9rem", sm: "1rem" },
-                  lineHeight: { xs: 1.4, sm: 1.6 },
-                }}
-              >
-                近鉄名古屋線白子駅下車、
-                <br />
-                三重交通バス白子駅西口から平田町駅行又は鈴鹿サーキット行に乗車約10分、
-                <br />
-                東旭が丘3丁目で下車徒歩約7分。
-              </Typography>
             </Box>
-            <Box sx={{ width: "100%" }}>
-              <Box sx={{ borderBottom: "1px solid orange", width: "fit-content", mb: { xs: 2, sm: 3 } }}>
-                <Typography
-                  variant="h5"
-                  sx={{
-                    color: "white",
-                    p: 1,
-                    pb: 0,
-                    fontSize: { xs: "1.1rem", sm: "1.25rem", md: "1.5rem" },
-                  }}
-                >
-                  ご来場にあたっての注意事項
-                </Typography>
-              </Box>
-              <Box>
+          </ContentSection>
+
+          <ContentSection>
+            <Box sx={{ p: { xs: 2, sm: 3, md: 4 }, textAlign: "center" }}>
+              <SectionTitle
+                variant="h4"
+                mb={3}
+              // component="h2"
+              >
+                アクセス
+              </SectionTitle>
+              <Box sx={{ overflow: "hidden", p: { xs: 2, sm: 3 }, mb: { xs: 3, sm: 4, md: 5 } }}>
                 <Typography
                   variant="h6"
                   sx={{
                     color: "white",
-                    p: 1,
+                    mb: { xs: 2, sm: 3 },
+                    fontSize: { xs: "1rem", sm: "1.25rem" },
+                  }}
+                >
+                  〒510-0294 三重県鈴鹿市白子町 鈴鹿工業高等専門学校
+                </Typography>
+                <GoogleMap
+                  address="鈴鹿工業高等専門学校"
+                  height={400}
+                />
+                <Typography
+                  variant="h6"
+                  sx={{
+                    color: "white",
+                    mt: { xs: 2, sm: 3 },
+                    mb: { xs: 2, sm: 3 },
                     fontSize: { xs: "0.9rem", sm: "1rem" },
                     lineHeight: { xs: 1.4, sm: 1.6 },
                   }}
                 >
-                  駐車スペースに限りがございますので、公共交通機関でのご来場にご協力ください
+                  近鉄名古屋線白子駅下車、
+                  <br />
+                  三重交通バス白子駅西口から平田町駅行又は鈴鹿サーキット行に乗車約10分、
+                  <br />
+                  東旭が丘3丁目で下車徒歩約7分。
                 </Typography>
               </Box>
-            </Box>
-            {/* アクセスの部分をもっと住所とか出す、経路埋め込むとか、バス停から何分か書くとか */}
-          </Box>
-        </ContentSection>
-
-        <ContentSection>
-          <Box sx={{ p: { xs: 2, sm: 3, md: 4 }, textAlign: "center" }}>
-            <SectionTitle
-              variant="h4"
-              mb={3}
-              // component="h2"
-            >
-              バザー・学科展示
-            </SectionTitle>
-          </Box>
-          <Box sx={{
-            display: "flex",
-            gap: { xs: 2, sm: 3, md: 4 },
-            alignItems: "center",
-            mb: 4,
-            justifyContent: "center",
-            flexDirection: { xs: "column", sm: "row" },
-            px: { xs: 2, sm: 3, md: 4 },
-          }}
-          >
-            <EventCard
-              eventName="バザー"
-              description="部活やクラスが行うバザー"
-              linkName="バザーについて"
-              href="/bazaar#bazaar"
-              color="#FFFFFF"
-            />
-            {/* <img src="/images/Dragon.png" alt="satellite" style={{ width: "10%", height: "auto" }} /> */}
-            <EventCard
-              eventName="学科展示"
-              description="各学科の展示内容"
-              linkName="学科展示について"
-              href="/bazaar#exhibitions"
-              color="#FFFFFF"
-            />
-          </Box>
-        </ContentSection>
-
-        <ContentSection>
-          <Box sx={{ p: { xs: 2, sm: 3, md: 4 }, textAlign: "center" }}>
-            <SectionTitle
-              variant="h4"
-              mb={3}
-              // component="h2"
-            >
-              当日のイベント
-            </SectionTitle>
-          </Box>
-          <Box sx={{
-            display: "flex",
-            gap: { xs: 2, sm: 3, md: 4 },
-            alignItems: "center",
-            mb: 4,
-            justifyContent: "center",
-            flexDirection: { xs: "column", sm: "row" },
-            // flexWrap: "wrap",
-            px: { xs: 2, sm: 3, md: 4 },
-          }}
-          >
-            <EventCard
-              eventName="ステージイベント"
-              description="屋外のメインステージで開催されるイベント"
-              linkName="ステージイベントについて"
-              href="/events#stage"
-              color="#FD3D21"
-            />
-            <EventCard
-              eventName="ライブステージ"
-              description="屋内のライブステージで開催されるイベント"
-              linkName="ライブステージについて"
-              href="/events#live"
-              color="#3498db"
-            />
-            <EventCard
-              eventName="謎解き"
-              description="高専内で開催される謎解きイベント"
-              linkName="謎解きについて"
-              href="/events#mystery"
-              color="#FFA500"
-            />
-          </Box>
-        </ContentSection>
-
-        <SectionTitle
-          variant="h4"
-          mb={3}
-          // component="h2"
-        >
-          協賛企業
-        </SectionTitle>
-        <ContentSectionSponsor>
-          {sponsorCardsData.length === 0 && (sponsorsData as any[]).filter(sponsor => sponsor?.name && sponsor.name.trim() !== "").length === 0
-            ? (
-                <Box sx={{ p: 4, textAlign: "center" }}>
+              <Box sx={{ width: "100%" }}>
+                <Box sx={{ borderBottom: "1px solid orange", width: "fit-content", mb: { xs: 2, sm: 3 } }}>
+                  <Typography
+                    variant="h5"
+                    sx={{
+                      color: "white",
+                      p: 1,
+                      pb: 0,
+                      fontSize: { xs: "1.1rem", sm: "1.25rem", md: "1.5rem" },
+                    }}
+                  >
+                    ご来場にあたっての注意事項
+                  </Typography>
+                </Box>
+                <Box>
                   <Typography
                     variant="h6"
                     sx={{
-                      color: "rgba(0, 0, 0, 1)",
-                      fontWeight: "normal",
+                      color: "white",
+                      p: 1,
+                      fontSize: { xs: "0.9rem", sm: "1rem" },
+                      lineHeight: { xs: 1.4, sm: 1.6 },
                     }}
                   >
-                    掲載準備中です。準備が出来次第掲載させていただきます。
+                    駐車スペースに限りがございますので、公共交通機関でのご来場にご協力ください
                   </Typography>
                 </Box>
-              )
-            : (
-                <>
-                  {sponsorCardsData.map(sponsorCard => (
-                    <Box key={sponsorCard.sponsorName} sx={{ p: 2, backdropFilter: "blur(10px)" }}>
-                      <SponsorCard
-                        image={sponsorCard.image}
-                        sponsorName={sponsorCard.sponsorName}
-                        description={sponsorCard.description}
-                        phone={sponsorCard.phone}
-                      />
-                    </Box>
-                  ))}
-                  <Box sx={{ p: 4, backdropFilter: "blur(10px)" }}>
-                    <Sponsor sponsors={sponsorsData as Array<{ name: string, image: string, size: "large" | "medium" | "small" }>} />
-                  </Box>
-                </>
-              )}
-        </ContentSectionSponsor>
+              </Box>
+            </Box>
+          </ContentSection>
 
-        <Box sx={{ py: { xs: 2, sm: 3, md: 4 }, textAlign: "center", px: { xs: 2, sm: 3, md: 4 } }}>
-          <Typography
-            variant="body1"
-            sx={{
-              color: "white",
-              mb: 2,
-              fontSize: { xs: "0.9rem", sm: "1rem" },
+          <ContentSection>
+            <Box sx={{ p: { xs: 2, sm: 3, md: 4 }, textAlign: "center" }}>
+              <SectionTitle
+                variant="h4"
+                mb={3}
+              // component="h2"
+              >
+                バザー・学科展示
+              </SectionTitle>
+            </Box>
+            <Box sx={{
+              display: "flex",
+              gap: { xs: 2, sm: 3, md: 4 },
+              alignItems: "center",
+              mb: 4,
+              justifyContent: "center",
+              flexDirection: { xs: "column", sm: "row" },
+              px: { xs: 2, sm: 3, md: 4 },
             }}
+            >
+              <Link to="/bazaar#bazaar" style={{ textDecoration: "none" }}>
+                <EventCard
+                  eventName="バザー"
+                  description="部活やクラスが行うバザー"
+                  linkName="バザーについて"
+                  color="#FFFFFF"
+                />
+              </Link>
+              {/* <img src="/images/Dragon.png" alt="satellite" style={{ width: "10%", height: "auto" }} /> */}
+              <Link to="/bazaar#exhibitions" style={{ textDecoration: "none" }}>
+                <EventCard
+                  eventName="学科展示"
+                  description="各学科の展示内容"
+                  linkName="学科展示について"
+                  color="#FFFFFF"
+                />
+              </Link>
+            </Box>
+          </ContentSection>
+
+          <ContentSection>
+            <Box sx={{ p: { xs: 2, sm: 3, md: 4 }, textAlign: "center" }}>
+              <SectionTitle
+                variant="h4"
+                mb={3}
+              // component="h2"
+              >
+                当日のイベント
+              </SectionTitle>
+            </Box>
+            <Box sx={{
+              display: "flex",
+              gap: { xs: 2, sm: 3, md: 4 },
+              alignItems: "center",
+              mb: 4,
+              justifyContent: "center",
+              flexDirection: { xs: "column", sm: "row" },
+              // flexWrap: "wrap",
+              px: { xs: 2, sm: 3, md: 4 },
+            }}
+            >
+              <Link to="/events#stage" style={{ textDecoration: "none" }}>
+                <EventCard
+                  eventName="ステージイベント"
+                  description="屋外のメインステージで開催されるイベント"
+                  linkName="ステージイベントについて"
+                  color="#FD3D21"
+                />
+              </Link>
+              <Link to="/events#live" style={{ textDecoration: "none" }}>
+                <EventCard
+                  eventName="ライブステージ"
+                  description="屋内のライブステージで開催されるイベント"
+                  linkName="ライブステージについて"
+                  color="#3498db"
+                />
+              </Link>
+              <Link to="/events#mystery" style={{ textDecoration: "none" }}>
+                <EventCard
+                  eventName="謎解き"
+                  description="高専内で開催される謎解きイベント"
+                  linkName="謎解きについて"
+                  color="#FFA500"
+                />
+              </Link>
+            </Box>
+          </ContentSection>
+
+          <SectionTitle
+            variant="h4"
+            mb={3}
+          // component="h2"
           >
-            高専祭2025の最新情報をシェアしよう！
-          </Typography>
-          <SnsShare />
-        </Box>
-      </Container>
-      <Footer siteMap={sitemapData} />
+            協賛企業
+          </SectionTitle>
+          <ContentSectionSponsor>
+            {sponsorCardsData.length === 0 && (sponsorsData as any[]).filter(sponsor => sponsor?.name && sponsor.name.trim() !== "").length === 0
+              ? (
+                  <Box sx={{ p: 4, textAlign: "center" }}>
+                    <Typography
+                      variant="h6"
+                      sx={{
+                        color: "rgba(0, 0, 0, 1)",
+                        fontWeight: "normal",
+                      }}
+                    >
+                      掲載準備中です。準備が出来次第掲載させていただきます。
+                    </Typography>
+                  </Box>
+                )
+              : (
+                  <>
+                    {sponsorCardsData.map(sponsorCard => (
+                      <Box key={sponsorCard.sponsorName} sx={{ p: 2, backdropFilter: "blur(10px)" }}>
+                        <SponsorCard
+                          image={sponsorCard.image}
+                          sponsorName={sponsorCard.sponsorName}
+                          description={sponsorCard.description}
+                          phone={sponsorCard.phone}
+                        />
+                      </Box>
+                    ))}
+                    <Box sx={{ p: 4, backdropFilter: "blur(10px)" }}>
+                      <Sponsor sponsors={sponsorsData as Array<{ name: string, image: string, size: "large" | "medium" | "small" }>} />
+                    </Box>
+                  </>
+                )}
+          </ContentSectionSponsor>
+
+          <Box sx={{ py: { xs: 2, sm: 3, md: 4 }, textAlign: "center", px: { xs: 2, sm: 3, md: 4 } }}>
+            <Typography
+              variant="body1"
+              sx={{
+                color: "white",
+                mb: 2,
+                fontSize: { xs: "0.9rem", sm: "1rem" },
+              }}
+            >
+              高専祭2025の最新情報をシェアしよう！
+            </Typography>
+            <SnsShare />
+          </Box>
+        </Container>
+        <Footer siteMap={sitemapData} />
+      </Bg>
     </SpaceBackground>
   );
 };

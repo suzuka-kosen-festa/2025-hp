@@ -79,5 +79,17 @@
     "vite": "7.1.10",
     "vite-tsconfig-paths": "5.1.4",
     "vitest": "3.2.4"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

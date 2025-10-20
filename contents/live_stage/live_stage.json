@@ -2,7 +2,7 @@
   {
     "id": "live-1",
     "title": "ハラダクション",
-    "image": "/contents/live_stage/images/ハラダクション.jpg",
+    "image": "/images/live_stage/ハラダクション.webp",
     "datetime": "時間未定",
     "stage": "ライブステージ",
     "description": "未熟者5人、ただし最強",
@@ -11,7 +11,7 @@
   {
     "id": "live-2",
     "title": "炭酸うーろん",
-    "image": "/contents/live_stage/images/炭酸うーろん.jpg",
+    "image": "/images/live_stage/炭酸うーろん.webp",
     "datetime": "時間未定",
     "stage": "ライブステージ",
     "description": "「炭酸と烏龍茶、割って飲んでください。」",
@@ -20,7 +20,7 @@
   {
     "id": "live-3",
     "title": "it's up",
-    "image": "/contents/live_stage/images/it_s up.jpg",
+    "image": "/images/live_stage/it_s up.webp",
     "datetime": "時間未定",
     "stage": "ライブステージ",
     "description": "全力の演奏をぶつけます！",
@@ -29,7 +29,7 @@
   {
     "id": "live-4",
     "title": "tttg",
-    "image": "/contents/live_stage/images/tttg.jpg",
+    "image": "/images/live_stage/tttg.webp",
     "datetime": "時間未定",
     "stage": "ライブステージ",
     "description": "俺達と学園少年少女の身勝手的BABY革命",
@@ -38,7 +38,7 @@
   {
     "id": "live-5",
     "title": "アーチャンズ",
-    "image": "/contents/live_stage/images/アーチャンズ.JPG",
+    "image": "/images/live_stage/アーチャンズ.webp",
     "datetime": "時間未定",
     "stage": "ライブステージ",
     "description": "1年1人、2年3人でやってます！最高のライブにします！是非見に来てください！！",
@@ -47,7 +47,7 @@
   {
     "id": "live-6",
     "title": "ヤバTのコピバン",
-    "image": "/contents/live_stage/images/ヤバTのコピバン.png",
+    "image": "/images/live_stage/ヤバTのコピバン.webp",
     "datetime": "時間未定",
     "stage": "ライブステージ",
     "description": "ヤバイTシャツ屋さんのコピーバンドだよー!ステージで暴れ回るから見に来てねー!ヤバT以外も演奏するかもよー!ワクワク!!",
@@ -56,7 +56,7 @@
   {
     "id": "live-7",
     "title": "CHOKKIN出禁",
-    "image": "/contents/live_stage/images/CHOKKIN出禁.jpg",
+    "image": "/images/live_stage/CHOKKIN出禁.webp",
     "datetime": "時間未定",
     "stage": "ライブステージ",
     "description": "WANIMA、ハルカミライ、サンボマスター！青春ぶつけます！！ぜひ見に来てください！",
@@ -65,7 +65,7 @@
   {
     "id": "live-8",
     "title": "MIKASA",
-    "image": "/contents/live_stage/images/MIKASA.jpg",
+    "image": "/images/live_stage/MIKASA.webp",
     "datetime": "時間未定",
     "stage": "ライブステージ",
     "description": "去年も高専祭をテンションで埋め尽くしたので、今年もぜひ僕たちMIKASAの演奏を楽しみにしといてな。一緒に高専祭の炎を灯そうー！",
@@ -74,7 +74,7 @@
   {
     "id": "live-9",
     "title": "e/m",
-    "image": "/contents/live_stage/images/em.jpg",
+    "image": "/images/live_stage/em.webp",
     "datetime": "時間未定",
     "stage": "ライブステージ",
     "description": "e/m(イーパーエム)です！1番熱いライブします見に来てください",
@@ -83,7 +83,7 @@
   {
     "id": "live-10",
     "title": "Shy boy",
-    "image": "/contents/live_stage/images/Shy boy.jpg",
+    "image": "/images/live_stage/Shy boy.webp",
     "datetime": "時間未定",
     "stage": "ライブステージ",
     "description": "sumika,back number,FOMAREなどの曲やります！ぜひ見にきてください！",
@@ -92,7 +92,7 @@
   {
     "id": "live-11",
     "title": "ばばばんど",
-    "image": "/contents/live_stage/images/ばばばんど.jpg",
+    "image": "/images/live_stage/ばばばんど.webp",
     "datetime": "時間未定",
     "stage": "ライブステージ",
     "description": "「全員5Eのバンド、ばばばんど。」",
@@ -101,7 +101,7 @@
   {
     "id": "live-12",
     "title": "まるとさんかく",
-    "image": "/contents/live_stage/images/まるとさんかく.jpg",
+    "image": "/images/live_stage/まるとさんかく.webp",
     "datetime": "時間未定",
     "stage": "ライブステージ",
     "description": "ばつだと思うこともさんかくに変えれば大丈夫まるな自分もさんかくな自分もそのままで悩んだり笑ったりしながら音にして等身大の私たちで文化祭を全力で盛り上げます！",
@@ -110,7 +110,7 @@
   {
     "id": "live-13",
     "title": "アタック‼️",
-    "image": "/contents/live_stage/images/アタック.jpg",
+    "image": "/images/live_stage/アタック.webp",
     "datetime": "時間未定",
     "stage": "ライブステージ",
     "description": "専攻科1年生バンド！音楽と笑顔で高専祭にアタック‼️誰よりもアツいステージ届けます！！",
@@ -119,7 +119,7 @@
   {
     "id": "live-14",
     "title": "羅武♡永遠深夜",
-    "image": "/contents/live_stage/images/羅武♡永遠深夜.jpg",
+    "image": "/images/live_stage/羅武♡永遠深夜.webp",
     "datetime": "時間未定",
     "stage": "ライブステージ",
     "description": "「今回はゲストも加えて頑張るのでぜひ見に来てください！」",
@@ -128,7 +128,7 @@
   {
     "id": "live-15",
     "title": "r04 Not Found",
-    "image": "/contents/live_stage/images/r04 Not Found.jpg",
+    "image": "/images/live_stage/r04 Not Found.webp",
     "datetime": "時間未定",
     "stage": "ライブステージ",
     "description": "2年連続の中夜祭！！誰よりも情熱のこもった最高のライブにします！",
@@ -137,7 +137,7 @@
   {
     "id": "live-16",
     "title": "LUSH",
-    "image": "/contents/live_stage/images/LUSH.jpg",
+    "image": "/images/live_stage/LUSH.webp",
     "datetime": "時間未定",
     "stage": "ライブステージ",
     "description": "「僕の好きなLUSH製品は現実頭皮です（Dr.来田）」",

@@ -30,9 +30,9 @@ const meta: Meta<T> = {
       control: "text",
       description: "バザーの説明（10-50文字）",
     },
-    href: {
-      control: "text",
-      description: "リンクURL",
+    color: {
+      control: "color",
+      description: "カラー",
     },
   },
 } satisfies Meta<T>;
@@ -44,7 +44,7 @@ export const Default: Story = {
     eventName: "イベント名",
     description: "説明文",
     linkName: "リンク名",
-    href: "https://www.google.com",
+    color: "#FF6B6B",
   },
 };
 

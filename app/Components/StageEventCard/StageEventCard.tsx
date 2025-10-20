@@ -39,7 +39,9 @@ function StageEventCard({
         "border": `1px solid ${color}`,
         "color": color,
         "backgroundColor": bgColor,
-        "height": "stretch",
+        "height": "100%",
+        "display": "flex",
+        "flexDirection": "column",
       }}
     >
       {image && (
@@ -58,6 +60,9 @@ function StageEventCard({
       <CardContent sx={{
         "p": { xs: 1.5, sm: 2 },
         "&:last-child": { pb: { xs: 1.5, sm: 2 } },
+        "display": "flex",
+        "flexDirection": "column",
+        "flexGrow": 1,
       }}
       >
         <Typography
