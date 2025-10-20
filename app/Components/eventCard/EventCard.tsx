@@ -5,19 +5,17 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
-import { Link } from "react-router";
 import { ja } from "../../locales/ja";
 
 export interface EventCardComponentProps {
   eventName: string
   description: string
   linkName: string
-  href: string
   color: string
 }
 
 function EventCard(props: EventCardComponentProps): ReactNode {
-  const { eventName, description, linkName, href, color } = props;
+  const { eventName, description, linkName, color } = props;
   const bgColor = `${color}33`;
   return (
     <Card sx={{
@@ -61,18 +59,9 @@ function EventCard(props: EventCardComponentProps): ReactNode {
           >
             {description}
           </Typography>
-          <Box sx={{ display: "flex", width: "stretch", justifyContent: "flex-end" }}>
-            <Link
-              to={href}
-              style={{
-                textDecoration: "none",
-                color: "white",
-                fontSize: "0.9rem",
-              }}
-            >
-              {" "}
-              {`${linkName} >>`}
-            </Link>
+          <Box sx={{ display: "flex", width: "stretch", justifyContent: "flex-end", color: "white", fontSize: "0.9rem" }}>
+            {" "}
+            {`${linkName} >>`}
           </Box>
         </CardContent>
       </Box>

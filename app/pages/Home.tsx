@@ -1,6 +1,7 @@
 import type { FC } from "react";
 import { Box, Container, keyframes, styled, Typography } from "@mui/material";
 import { useEffect, useMemo, useState } from "react";
+import { Link } from "react-router";
 import sponsorsData from "@/../contents/sponsor.json";
 import EventCard from "@/Components/eventCard/EventCard";
 import EventSummary from "@/Components/EventSummary";
@@ -424,21 +425,23 @@ const Home: FC = () => {
               px: { xs: 2, sm: 3, md: 4 },
             }}
             >
-              <EventCard
-                eventName="バザー"
-                description="部活やクラスが行うバザー"
-                linkName="バザーについて"
-                href="/bazaar#bazaar"
-                color="#FFFFFF"
-              />
+              <Link to="/bazaar#bazaar" style={{ textDecoration: "none" }}>
+                <EventCard
+                  eventName="バザー"
+                  description="部活やクラスが行うバザー"
+                  linkName="バザーについて"
+                  color="#FFFFFF"
+                />
+              </Link>
               {/* <img src="/images/Dragon.png" alt="satellite" style={{ width: "10%", height: "auto" }} /> */}
-              <EventCard
-                eventName="学科展示"
-                description="各学科の展示内容"
-                linkName="学科展示について"
-                href="/bazaar#exhibitions"
-                color="#FFFFFF"
-              />
+              <Link to="/bazaar#exhibitions" style={{ textDecoration: "none" }}>
+                <EventCard
+                  eventName="学科展示"
+                  description="各学科の展示内容"
+                  linkName="学科展示について"
+                  color="#FFFFFF"
+                />
+              </Link>
             </Box>
           </ContentSection>
 
@@ -463,27 +466,30 @@ const Home: FC = () => {
               px: { xs: 2, sm: 3, md: 4 },
             }}
             >
-              <EventCard
-                eventName="ステージイベント"
-                description="屋外のメインステージで開催されるイベント"
-                linkName="ステージイベントについて"
-                href="/events#stage"
-                color="#FD3D21"
-              />
-              <EventCard
-                eventName="ライブステージ"
-                description="屋内のライブステージで開催されるイベント"
-                linkName="ライブステージについて"
-                href="/events#live"
-                color="#3498db"
-              />
-              <EventCard
-                eventName="謎解き"
-                description="高専内で開催される謎解きイベント"
-                linkName="謎解きについて"
-                href="/events#mystery"
-                color="#FFA500"
-              />
+              <Link to="/events#stage" style={{ textDecoration: "none" }}>
+                <EventCard
+                  eventName="ステージイベント"
+                  description="屋外のメインステージで開催されるイベント"
+                  linkName="ステージイベントについて"
+                  color="#FD3D21"
+                />
+              </Link>
+              <Link to="/events#live" style={{ textDecoration: "none" }}>
+                <EventCard
+                  eventName="ライブステージ"
+                  description="屋内のライブステージで開催されるイベント"
+                  linkName="ライブステージについて"
+                  color="#3498db"
+                />
+              </Link>
+              <Link to="/events#mystery" style={{ textDecoration: "none" }}>
+                <EventCard
+                  eventName="謎解き"
+                  description="高専内で開催される謎解きイベント"
+                  linkName="謎解きについて"
+                  color="#FFA500"
+                />
+              </Link>
             </Box>
           </ContentSection>
 
