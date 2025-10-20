@@ -28,7 +28,9 @@ function BazaarCard(props: BazaarComponentProps): ReactNode {
     <Card sx={{
       maxWidth: { xs: "100%", sm: 345 },
       width: "100%",
-      height: "stretch",
+      height: "100%",
+      display: "flex",
+      flexDirection: "column",
       borderRadius: { xs: "12px", sm: "16px" },
     }}
     >
@@ -38,20 +40,23 @@ function BazaarCard(props: BazaarComponentProps): ReactNode {
         flexDirection: "column",
         alignItems: "stretch",
         justifyContent: "flex-start",
+        flexGrow: 1,
       }}
       >
         <CardMedia
           component="img"
-          height="auto"
+          // height="auto"
           image={image}
           alt={ja.bazaarCard.imageAlt(bazaarName)}
           onError={handleImageError}
           sx={{
+            width: "100%",
+            display: "block",
             aspectRatio: "16/9",
             objectFit: "cover",
           }}
         />
-        <CardContent sx={{ p: { xs: 1.5, sm: 2 } }}>
+        <CardContent sx={{ p: { xs: 1.5, sm: 2 }, display: "flex", flexDirection: "column", flexGrow: 1 }}>
           <Typography
             gutterBottom
             variant="h5"

@@ -1,3 +1,4 @@
+import { CssBaseline } from "@mui/material";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router";
@@ -53,7 +54,9 @@ export function mountApp(rootElement: HTMLElement) {
   root.render(
     <StrictMode>
       <OrbitThemeProvider>
-        <RouterProvider router={router} />
+        <CssBaseline>
+          <RouterProvider router={router} />
+        </CssBaseline>
       </OrbitThemeProvider>
     </StrictMode>,
   );

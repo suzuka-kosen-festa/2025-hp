@@ -3,14 +3,14 @@
 exports[`departmentExhibitionCard snapshot 1`] = `
 <div>
   <div
-    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-3k1org-MuiPaper-root-MuiCard-root"
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-r3zqfs-MuiPaper-root-MuiCard-root"
     style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
   >
     <div
-      class="MuiBox-root css-109c7bk"
+      class="MuiBox-root css-1stc809"
     >
       <div
-        class="MuiCardContent-root css-xg3z28-MuiCardContent-root"
+        class="MuiCardContent-root css-bzl2yv-MuiCardContent-root"
       >
         <div
           class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-filledDefault css-1pec5pr-MuiChip-root"

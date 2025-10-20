@@ -26,7 +26,9 @@ export default function DepartmentExhibitionCard(props: DepartmentExhibitionCard
     <Card sx={{
       "width": { xs: "100%", sm: "320px", md: "350px" },
       "maxWidth": "350px",
-      "height": "stretch",
+      "height": "100%",
+      "display": "flex",
+      "flexDirection": "column",
       "border": `2px solid ${themeColor}`,
       "boxShadow": `0 0 15px ${themeColor}40`,
       "borderRadius": { xs: "12px", sm: "16px" },
@@ -44,9 +46,10 @@ export default function DepartmentExhibitionCard(props: DepartmentExhibitionCard
           flexDirection: "column",
           alignItems: "stretch",
           justifyContent: "flex-start",
+          flexGrow: 1,
         }}
       >
-        <CardContent sx={{ p: { xs: 1.5, sm: 2 } }}>
+        <CardContent sx={{ p: { xs: 1.5, sm: 2 }, display: "flex", flexDirection: "column", flexGrow: 1 }}>
           <Chip
             label={department}
             size="small"
