@@ -62,7 +62,7 @@ jobs:
             ${{ needs.preview-deploy.outputs.url }}
           uploadArtifacts: true
           temporaryPublicStorage: true
-      - uses: actions/github-script@v7
+      - uses: actions/github-script@v8
         id: github_script
         with:
           script: |
