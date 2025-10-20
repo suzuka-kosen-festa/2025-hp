@@ -43,36 +43,36 @@ jobs:
             |<span aria-hidden="true">🔨</span> Latest commit | ${{ github.sha }} |
             |<span aria-hidden="true">😎</span> Deploy Preview Url | [${{ steps.page.outputs.deployment-url }}](${{ steps.page.outputs.deployment-url }}) |
             ---
-  # lighthouse:
-  #   runs-on: ubuntu-latest
-  #   timeout-minutes: 10
-  #   needs: preview-deploy
-  #   steps:
-  #     - uses: actions/checkout@v5
-  #     - name: Audit URLs using Lighthouse
-  #       uses: treosh/lighthouse-ci-action@fcd65974f7c4c2bf0ee9d09b84d2489183c29726 # v12
-  #       id: lighthouse_audit
-  #       with:
-  #         urls: |
-  #           ${{ needs.preview-deploy.outputs.url }}
-  #         uploadArtifacts: true
-  #         temporaryPublicStorage: true
-  #     - uses: actions/github-script@v7
-  #       id: github_script
-  #       with:
-  #         script: |
-  #           const script = (await import(`${process.env.GITHUB_WORKSPACE}/.github/scripts/lighthouse.js`)).default;
-  #           const manifest = ${{ steps.lighthouse_audit.outputs.manifest }};
-  #           return script(manifest);
-  #         result-encoding: string
-  #     - name: Comment
-  #       uses: mshick/add-pr-comment@b8f338c590a895d50bcbfa6c5859251edc8952fc # v2.8.2
-  #       with:
-  #         message-id: lightouse-audit
-  #         message: |
-  #           ### Lightouse Audit
+  lighthouse:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    needs: preview-deploy
+    steps:
+      - uses: actions/checkout@v5
+      - name: Audit URLs using Lighthouse
+        uses: treosh/lighthouse-ci-action@fcd65974f7c4c2bf0ee9d09b84d2489183c29726 # v12
+        id: lighthouse_audit
+        with:
+          urls: |
+            ${{ needs.preview-deploy.outputs.url }}
+          uploadArtifacts: true
+          temporaryPublicStorage: true
+      - uses: actions/github-script@v7
+        id: github_script
+        with:
+          script: |
+            const script = (await import(`${process.env.GITHUB_WORKSPACE}/.github/scripts/lighthouse.js`)).default;
+            const manifest = ${{ steps.lighthouse_audit.outputs.manifest }};
+            return script(manifest);
+          result-encoding: string
+      - name: Comment
+        uses: mshick/add-pr-comment@b8f338c590a895d50bcbfa6c5859251edc8952fc # v2.8.2
+        with:
+          message-id: lightouse-audit
+          message: |
+            ### Lightouse Audit
 
-  #           ${{ steps.github_script.outputs.result }}
+            ${{ steps.github_script.outputs.result }}
   preview-storybook-deploy:
     runs-on: ubuntu-latest
     timeout-minutes: 10
