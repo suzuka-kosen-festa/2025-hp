@@ -1,9 +1,7 @@
 import type { FC } from "react";
-import ChatIcon from "@mui/icons-material/Chat"; // Using Chat as a placeholder for LINE
 import CheckIcon from "@mui/icons-material/Check";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import FacebookIcon from "@mui/icons-material/Facebook";
-import InstagramIcon from "@mui/icons-material/Instagram";
 import XIcon from "@mui/icons-material/X";
 import { Box, IconButton } from "@mui/material";
 import { useState } from "react";
@@ -55,34 +53,6 @@ export const SnsShare: FC = () => {
         }}
       >
         <FacebookIcon />
-      </IconButton>
-      <IconButton
-        href={`https://social-plugins.line.me/lineit/share?url=${url}&text=${text}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Share on LINE"
-        sx={{
-          "color": "white",
-          "fontSize": { xs: "1.5rem", sm: "2rem" },
-          "&:hover": { transform: "scale(1.1)" },
-          "transition": "transform 0.2s ease",
-        }}
-      >
-        <ChatIcon />
-      </IconButton>
-      <IconButton
-        href="https://www.instagram.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Share on Instagram"
-        sx={{
-          "color": "white",
-          "fontSize": { xs: "1.5rem", sm: "2rem" },
-          "&:hover": { transform: "scale(1.1)" },
-          "transition": "transform 0.2s ease",
-        }}
-      >
-        <InstagramIcon />
       </IconButton>
       <IconButton
         onClick={handleCopy}
