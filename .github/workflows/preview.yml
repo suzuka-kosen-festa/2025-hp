@@ -4,6 +4,9 @@ on:
   pull_request:
     branches:
       - main
+  push:
+    branches:
+      - main
 
 permissions:
   contents: write
@@ -33,6 +36,7 @@ jobs:
           command: pages deploy ./dist --project-name=snct-2025-hp
       - name: Comment
         uses: mshick/add-pr-comment@b8f338c590a895d50bcbfa6c5859251edc8952fc # v2.8.2
+        if: github.event_name == 'pull_request'
         with:
           message-id: cloudflare-deploy
           message: |
@@ -47,6 +51,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     needs: preview-deploy
+    if: github.event_name == 'pull_request'
     steps:
       - uses: actions/checkout@v5
       - name: Audit URLs using Lighthouse
@@ -77,6 +82,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     environment: preview
+    if: github.event_name == 'pull_request'
     outputs:
       url: ${{ steps.page.outputs.deployment-url }}
     steps:
