@@ -25,7 +25,13 @@ function BazaarCard(props: BazaarComponentProps): ReactNode {
     e.currentTarget.src = "/images/not-found.png";
   };
   return (
-    <Card sx={{ maxWidth: 345, height: "stretch" }}>
+    <Card sx={{
+      maxWidth: { xs: "100%", sm: 345 },
+      width: "100%",
+      height: "stretch",
+      borderRadius: { xs: "12px", sm: "16px" },
+    }}
+    >
       <Box sx={{
         height: "fit-content",
         display: "flex",
@@ -40,15 +46,41 @@ function BazaarCard(props: BazaarComponentProps): ReactNode {
           image={image}
           alt={ja.bazaarCard.imageAlt(bazaarName)}
           onError={handleImageError}
+          sx={{
+            aspectRatio: "16/9",
+            objectFit: "cover",
+          }}
         />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div" mb={0}>
+        <CardContent sx={{ p: { xs: 1.5, sm: 2 } }}>
+          <Typography
+            gutterBottom
+            variant="h5"
+            component="div"
+            mb={0}
+            sx={{
+              fontSize: { xs: "1.25rem", sm: "1.5rem" },
+            }}
+          >
             {bazaarName}
           </Typography>
-          <Typography gutterBottom variant="h6" component="div" fontSize="1rem">
+          <Typography
+            gutterBottom
+            variant="h6"
+            component="div"
+            sx={{
+              fontSize: { xs: "0.9rem", sm: "1rem" },
+            }}
+          >
             {teamName}
           </Typography>
-          <Typography variant="body2" sx={{ color: "text.secondary" }}>
+          <Typography
+            variant="body2"
+            sx={{
+              color: "text.secondary",
+              fontSize: { xs: "0.8rem", sm: "0.875rem" },
+              lineHeight: { xs: 1.4, sm: 1.6 },
+            }}
+          >
             {description}
           </Typography>
         </CardContent>

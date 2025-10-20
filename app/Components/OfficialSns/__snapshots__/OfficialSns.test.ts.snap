@@ -3,11 +3,11 @@
 exports[`officialSns snapshot 1`] = `
 <div>
   <div
-    class="MuiStack-root css-niqf4j-MuiStack-root"
+    class="MuiStack-root css-iac1fr-MuiStack-root"
   >
     <a
       aria-label="X"
-      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-j7dfm5-MuiButtonBase-root-MuiIconButton-root"
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-7x60pz-MuiButtonBase-root-MuiIconButton-root"
       href="https://x.com/KOSENFESTA"
       rel="noopener noreferrer"
       tabindex="0"
@@ -27,7 +27,7 @@ exports[`officialSns snapshot 1`] = `
     </a>
     <a
       aria-label="Instagram"
-      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-j7dfm5-MuiButtonBase-root-MuiIconButton-root"
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-7x60pz-MuiButtonBase-root-MuiIconButton-root"
       href="https://www.instagram.com/kosenfesta/"
       rel="noopener noreferrer"
       tabindex="0"
@@ -47,7 +47,7 @@ exports[`officialSns snapshot 1`] = `
     </a>
     <a
       aria-label="Facebook"
-      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-j7dfm5-MuiButtonBase-root-MuiIconButton-root"
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-7x60pz-MuiButtonBase-root-MuiIconButton-root"
       href="https://www.facebook.com/profile.php?id=61556514660247"
       rel="noopener noreferrer"
       tabindex="0"

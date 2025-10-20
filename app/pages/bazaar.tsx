@@ -1,6 +1,7 @@
 import type { FC } from "react";
 import { Box, Chip, Container, keyframes, styled, Typography } from "@mui/material";
 import { useEffect } from "react";
+import { Link } from "react-router";
 import bazaarData from "@/../contents/bazaar/bazaar.json";
 import departmentExhibitionsData from "@/../contents/department_exhibition.json";
 import BazaarCard from "@/Components/bazaarCard";
@@ -18,26 +19,26 @@ const departmentColors: Record<string, string> = {
   材料工学科: "#002670",
 };
 
-// 宇宙的なアニメーション
-const float = keyframes`
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
-`;
-
 const rotate = keyframes`
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 `;
 
 // スタイル付きコンポーネント
-const HeroSection = styled(Box)({
+const HeroSection = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "center",
   position: "relative",
   padding: "2rem",
-});
+  [theme.breakpoints.down("sm")]: {
+    padding: "1rem",
+  },
+  [theme.breakpoints.down("xs")]: {
+    padding: "0.5rem",
+  },
+}));
 
 // 人工衛星の本体
 export const SatelliteBody = styled(Box)<{ width: number }>(({ width }) => ({
@@ -77,7 +78,7 @@ export const SatelliteBody = styled(Box)<{ width: number }>(({ width }) => ({
 }));
 
 // ソーラーパネル（羽）
-const SolarPanel = styled(Box)<{ $panelPosition?: "top" | "bottom" }>(({ $panelPosition = "top" }) => ({
+const SolarPanel = styled(Box)<{ $panelPosition?: "top" | "bottom" }>(({ $panelPosition = "top", theme }) => ({
   // "background": "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #2d2d2d 100%)",
   "background": "rgba(255, 255, 255, 0.5)",
   "backdropFilter": "blur(10px)",
@@ -88,6 +89,16 @@ const SolarPanel = styled(Box)<{ $panelPosition?: "top" | "bottom" }>(({ $panelP
   "overflow": "hidden",
   "border": "3px solid white",
   "boxShadow": "0 0 20px rgba(74, 144, 226, 0.3)",
+  [theme.breakpoints.down("sm")]: {
+    padding: "1rem",
+    borderRadius: "15px",
+    margin: $panelPosition === "top" ? "0 0 0.5rem 0" : "0.5rem 0 0 0",
+  },
+  [theme.breakpoints.down("xs")]: {
+    padding: "0.5rem",
+    borderRadius: "10px",
+    margin: $panelPosition === "top" ? "0 0 0.25rem 0" : "0.25rem 0 0 0",
+  },
   "&::before": {
     content: "\"\"",
     position: "absolute",
@@ -120,16 +131,20 @@ export const Trapezoid = styled(Box)<{ $variant?: "top" | "bottom", width: numbe
   position: "relative",
 }));
 
-const SectionHeader = styled(Box)({
+const SectionHeader = styled(Box)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   marginBottom: "2rem",
   padding: "1rem 0",
   position: "relative",
   zIndex: 1,
-});
+  [theme.breakpoints.down("sm")]: {
+    marginBottom: "1rem",
+    padding: "0.5rem 0",
+  },
+}));
 
-const SectionTypeChip = styled(Chip)({
+const SectionTypeChip = styled(Chip)(({ theme }) => ({
   "fontWeight": "bold",
   "fontSize": "1.2rem",
   "padding": "0.5rem 1rem",
@@ -138,11 +153,25 @@ const SectionTypeChip = styled(Chip)({
   "color": "white",
   "border": "2px solid #1a1a1a",
   "boxShadow": "0 0 15px rgba(74, 144, 226, 0.4)",
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "1rem",
+    padding: "0.4rem 0.8rem",
+  },
+  [theme.breakpoints.down("xs")]: {
+    fontSize: "0.9rem",
+    padding: "0.3rem 0.6rem",
+  },
   "& .MuiChip-label": {
     padding: "0.5rem 1rem",
     textShadow: "0 0 5px rgba(255, 255, 255, 0.3)",
+    [theme.breakpoints.down("sm")]: {
+      padding: "0.4rem 0.8rem",
+    },
+    [theme.breakpoints.down("xs")]: {
+      padding: "0.3rem 0.6rem",
+    },
   },
-});
+}));
 
 export function Satellite({ width, gapsize }: { width: number, gapsize: number }) {
   return (
@@ -195,6 +224,9 @@ const Bazar: FC = () => {
 
       {/* Hero Section */}
       <HeroSection>
+        <Box sx={{ display: "flex", width: { xs: "95%", sm: "90%", md: "80%" }, justifyContent: "flex-start", p: { xs: 2, sm: 3, md: 5 }, zIndex: 1000 }}>
+          <Link to="/" style={{ color: "white", fontSize: "1rem" }}>&lt;&lt; 戻る</Link>
+        </Box>
         <Typography
           variant="h1"
           component="h1"
@@ -202,14 +234,13 @@ const Bazar: FC = () => {
             color: "white",
             textAlign: "center",
             fontWeight: "bold",
-            textShadow: "0 0 20px rgba(255, 255, 255, 0.5)",
-            background: "linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1)",
+            background: "linear-gradient(45deg, #4ecdc4, #45b7d1)",
             backgroundClip: "text",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
-            mt: 2,
-            mb: 2,
-            animation: `${float} 6s ease-in-out infinite`,
+            mt: { xs: 1, sm: 2 },
+            mb: { xs: 1, sm: 2 },
+            fontSize: { xs: "1.5rem", sm: "2.5rem", md: "3.5rem" },
           }}
         >
           Bazaar & Exhibitions
@@ -220,7 +251,9 @@ const Bazar: FC = () => {
             color: "rgba(255, 255, 255, 0.8)",
             textAlign: "center",
             lineHeight: 1.6,
-            mb: 4,
+            mb: { xs: 2, sm: 3, md: 4 },
+            fontSize: { xs: "0.9rem", sm: "1.25rem", md: "1.5rem" },
+            px: { xs: 2, sm: 3, md: 0 },
           }}
         >
           高専祭2025のバザーと学科展示をご紹介します
@@ -228,7 +261,7 @@ const Bazar: FC = () => {
       </HeroSection>
 
       {/* Content */}
-      <Container maxWidth="lg">
+      <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 3, md: 4 } }}>
         {/* 上部ソーラーパネル - バザーセクション */}
         <SolarPanel $panelPosition="top" id="bazaar">
           <SectionHeader>
@@ -240,14 +273,22 @@ const Bazar: FC = () => {
             />
           </SectionHeader>
 
-          <Box sx={{ display: "flex", flexWrap: "wrap", gap: 3, position: "relative", zIndex: 1 }}>
+          <Box sx={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: { xs: 2, sm: 3 },
+            position: "relative",
+            zIndex: 1,
+            justifyContent: "center",
+          }}
+          >
             {bazaarData.map(bazaar => (
               <Box
                 key={bazaar.id}
                 sx={{
                   flex: "1 1 300px",
-                  minWidth: "300px",
-                  maxWidth: { xs: "100%", md: "calc(50% - 12px)", lg: "calc(33.333% - 16px)" },
+                  minWidth: { xs: "280px", sm: "300px" },
+                  maxWidth: { xs: "100%", sm: "calc(50% - 8px)", md: "calc(50% - 12px)", lg: "calc(33.333% - 16px)" },
                 }}
               >
                 <BazaarCard
@@ -261,7 +302,7 @@ const Bazar: FC = () => {
           </Box>
         </SolarPanel>
         {/* 下部ソーラーパネル - 学科展示セクション */}
-        <SolarPanel $panelPosition="bottom" id="exhibitions" sx={{ mb: 25 }}>
+        <SolarPanel $panelPosition="bottom" id="exhibitions" sx={{ mb: { xs: 15, sm: 20, md: 25 } }}>
           <SectionHeader>
             <SectionTypeChip
               label="学科展示"
@@ -287,21 +328,29 @@ const Bazar: FC = () => {
                       borderRadius: "10px",
                       fontWeight: "bold",
                       border: `2px solid ${themeColor}`,
-                      py: 3,
+                      py: { xs: 2, sm: 3 },
                       textShadow: `0 0 10px ${themeColor}50`,
+                      fontSize: { xs: "1.25rem", sm: "1.5rem", md: "2rem" },
                     }}
                   >
                     {department}
                   </Typography>
 
-                  <Box sx={{ display: "flex", flexWrap: "wrap", gap: 3, mb: 3 }}>
+                  <Box sx={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    gap: { xs: 2, sm: 3 },
+                    mb: { xs: 2, sm: 3 },
+                    justifyContent: "center",
+                  }}
+                  >
                     {exhibitions.map(exhibition => (
                       <Box
                         key={exhibition.id}
                         sx={{
                           flex: "1 1 300px",
-                          minWidth: "300px",
-                          maxWidth: { xs: "100%", md: "calc(50% - 12px)", lg: "calc(33.333% - 16px)" },
+                          minWidth: { xs: "280px", sm: "300px" },
+                          maxWidth: { xs: "100%", sm: "calc(50% - 8px)", md: "calc(50% - 12px)", lg: "calc(33.333% - 16px)" },
                         }}
                       >
                         <DepartmentExhibitionCard

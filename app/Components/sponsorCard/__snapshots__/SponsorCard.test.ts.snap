@@ -3,11 +3,11 @@
 exports[`sponsor card snapshot 1`] = `
 <div>
   <div
-    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation4 MuiCard-root css-1rpa8bx-MuiPaper-root-MuiCard-root"
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation4 MuiCard-root css-1ap6q16-MuiPaper-root-MuiCard-root"
     style="--Paper-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);"
   >
     <div
-      class="MuiStack-root css-zs2mjy-MuiStack-root"
+      class="MuiStack-root css-dbf65s-MuiStack-root"
     >
       <div
         class="MuiBox-root css-19o3cmm"
@@ -22,12 +22,12 @@ exports[`sponsor card snapshot 1`] = `
         class="MuiCardContent-root css-4p6oay-MuiCardContent-root"
       >
         <h2
-          class="MuiTypography-root MuiTypography-h6 css-fvf604-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h6 css-fopk86-MuiTypography-root"
         >
           テストスポンサー
         </h2>
         <p
-          class="MuiTypography-root MuiTypography-body1 css-1rwwn4c-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-1eguefy-MuiTypography-root"
         >
           スポンサーの説明がここに入ります。スポンサーの説明がここに入ります。スポンサーの説明がここに入ります。スポンサーの説明がここに入ります。
         </p>
@@ -35,7 +35,7 @@ exports[`sponsor card snapshot 1`] = `
           class="MuiBox-root css-1mpg011"
         >
           <a
-            class="MuiTypography-root MuiTypography-body1 css-411ob9-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 css-1w9te4a-MuiTypography-root"
             href="tel:xxxxxxxxxxx"
           >
             xxx-xxxx-xxxx

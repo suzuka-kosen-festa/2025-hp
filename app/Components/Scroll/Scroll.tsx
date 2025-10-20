@@ -10,7 +10,7 @@ const scrolldown = keyframes`
   }
 `;
 
-const Scrolltext = styled("span")(({
+const Scrolltext = styled("span")(({ theme }) => ({
   position: "absolute",
   bottom: "10px",
   left: "-40px",
@@ -19,6 +19,14 @@ const Scrolltext = styled("span")(({
   letterSpacing: "0.1em",
   textTransform: "uppercase",
   writingMode: "vertical-rl",
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "1rem",
+    left: "-35px",
+  },
+  [theme.breakpoints.down("xs")]: {
+    fontSize: "0.9rem",
+    left: "-30px",
+  },
 }));
 
 const ScrollDown = styled("div")({
@@ -54,8 +62,8 @@ function Scroll(): ReactNode {
     <Box
       sx={{
         position: "absolute",
-        bottom: "20px",
-        right: "20px",
+        bottom: { xs: "15px", sm: "20px" },
+        right: { xs: "15px", sm: "20px" },
       }}
     >
       <Scrolltext>Scroll</Scrolltext>

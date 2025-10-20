@@ -1,15 +1,13 @@
 import type { FC } from "react";
-import ChatIcon from "@mui/icons-material/Chat"; // Using Chat as a placeholder for LINE
 import CheckIcon from "@mui/icons-material/Check";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import FacebookIcon from "@mui/icons-material/Facebook";
-import InstagramIcon from "@mui/icons-material/Instagram";
 import XIcon from "@mui/icons-material/X";
-import { IconButton } from "@mui/material";
+import { Box, IconButton } from "@mui/material";
 import { useState } from "react";
 
 export const SnsShare: FC = () => {
-  const url = "https://kosenfes-2025.trap.show";
+  const url = "https://snct-fes.info";
   const text = "高専祭2025 #高専祭2025";
   const [copied, setCopied] = useState(false);
 
@@ -21,13 +19,24 @@ export const SnsShare: FC = () => {
   };
 
   return (
-    <div>
+    <Box sx={{
+      display: "flex",
+      gap: { xs: 1, sm: 2 },
+      flexWrap: "wrap",
+      justifyContent: "center",
+    }}
+    >
       <IconButton
         href={`https://twitter.com/intent/tweet?url=${url}&text=${text}`}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Share on X"
-        sx={{ color: "white" }}
+        sx={{
+          "color": "white",
+          "fontSize": { xs: "1.5rem", sm: "2rem" },
+          "&:hover": { transform: "scale(1.1)" },
+          "transition": "transform 0.2s ease",
+        }}
       >
         <XIcon />
       </IconButton>
@@ -36,31 +45,27 @@ export const SnsShare: FC = () => {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Share on Facebook"
-        sx={{ color: "white" }}
+        sx={{
+          "color": "white",
+          "fontSize": { xs: "1.5rem", sm: "2rem" },
+          "&:hover": { transform: "scale(1.1)" },
+          "transition": "transform 0.2s ease",
+        }}
       >
         <FacebookIcon />
       </IconButton>
       <IconButton
-        href={`https://line.me/R/msg/text/?${text}%0A${url}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Share on LINE"
-        sx={{ color: "white" }}
+        onClick={handleCopy}
+        aria-label="Copy URL"
+        sx={{
+          "color": "white",
+          "fontSize": { xs: "1.5rem", sm: "2rem" },
+          "&:hover": { transform: "scale(1.1)" },
+          "transition": "transform 0.2s ease",
+        }}
       >
-        <ChatIcon />
-      </IconButton>
-      <IconButton
-        href="https://www.instagram.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Share on Instagram"
-        sx={{ color: "white" }}
-      >
-        <InstagramIcon />
-      </IconButton>
-      <IconButton onClick={handleCopy} aria-label="Copy URL" sx={{ color: "white" }}>
         {copied ? <CheckIcon /> : <ContentCopyIcon />}
       </IconButton>
-    </div>
+    </Box>
   );
 };

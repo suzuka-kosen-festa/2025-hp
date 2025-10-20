@@ -24,10 +24,12 @@ export default function DepartmentExhibitionCard(props: DepartmentExhibitionCard
   const themeColor = departmentColors[department] || "#4a90e2"; // デフォルトカラー
   return (
     <Card sx={{
-      "width": "350px",
+      "width": { xs: "100%", sm: "320px", md: "350px" },
+      "maxWidth": "350px",
       "height": "stretch",
       "border": `2px solid ${themeColor}`,
       "boxShadow": `0 0 15px ${themeColor}40`,
+      "borderRadius": { xs: "12px", sm: "16px" },
       "&:hover": {
         boxShadow: `0 0 25px ${themeColor}60`,
         transform: "translateY(-2px)",
@@ -44,7 +46,7 @@ export default function DepartmentExhibitionCard(props: DepartmentExhibitionCard
           justifyContent: "flex-start",
         }}
       >
-        <CardContent>
+        <CardContent sx={{ p: { xs: 1.5, sm: 2 } }}>
           <Chip
             label={department}
             size="small"
@@ -53,15 +55,30 @@ export default function DepartmentExhibitionCard(props: DepartmentExhibitionCard
               "backgroundColor": themeColor,
               "color": "white",
               "fontWeight": "bold",
+              "fontSize": { xs: "0.7rem", sm: "0.75rem" },
               "& .MuiChip-label": {
                 textShadow: "0 0 5px rgba(255, 255, 255, 0.3)",
               },
             }}
           />
-          <Typography variant="h6" fontWeight="bold" gutterBottom>
+          <Typography
+            variant="h6"
+            fontWeight="bold"
+            gutterBottom
+            sx={{
+              fontSize: { xs: "1.1rem", sm: "1.25rem" },
+            }}
+          >
             {title}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
+          <Typography
+            variant="body2"
+            color="text.secondary"
+            sx={{
+              fontSize: { xs: "0.8rem", sm: "0.875rem" },
+              lineHeight: { xs: 1.4, sm: 1.6 },
+            }}
+          >
             {description}
           </Typography>
         </CardContent>

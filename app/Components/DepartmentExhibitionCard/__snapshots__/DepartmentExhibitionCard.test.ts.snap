@@ -3,17 +3,17 @@
 exports[`departmentExhibitionCard snapshot 1`] = `
 <div>
   <div
-    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-9p42t2-MuiPaper-root-MuiCard-root"
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-3k1org-MuiPaper-root-MuiCard-root"
     style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
   >
     <div
       class="MuiBox-root css-109c7bk"
     >
       <div
-        class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
+        class="MuiCardContent-root css-xg3z28-MuiCardContent-root"
       >
         <div
-          class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-filledDefault css-1esex50-MuiChip-root"
+          class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-filledDefault css-1pec5pr-MuiChip-root"
         >
           <span
             class="MuiChip-label MuiChip-labelSmall css-eccknh-MuiChip-label"
@@ -22,12 +22,12 @@ exports[`departmentExhibitionCard snapshot 1`] = `
           </span>
         </div>
         <h6
-          class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom css-1jrq8e9-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom css-195xuc6-MuiTypography-root"
         >
           タイトル
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body2 css-1wle3ir-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body2 css-1iakkmd-MuiTypography-root"
         >
           説明文
         </p>
