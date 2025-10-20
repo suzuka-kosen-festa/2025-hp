@@ -8,7 +8,7 @@ exports[`snsShare snapshot 1`] = `
     <a
       aria-label="Share on X"
       class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-rmzq1n-MuiButtonBase-root-MuiIconButton-root"
-      href="https://twitter.com/intent/tweet?url=https://snct-fes.info&text=高専祭2025 #高専祭2025"
+      href="https://twitter.com/intent/tweet?text=@KOSENFESTA%0A高専祭は11月1日、2日！！%0Ahttps://snct-fes.info%0A%23%E9%88%B4%E9%B9%BF%E9%AB%98%E5%B0%82%20%23%E9%AB%98%E5%B0%82%E7%A5%AD%20%23KOSENFESTA%20%23ORBIT"
       rel="noopener noreferrer"
       tabindex="0"
       target="_blank"
