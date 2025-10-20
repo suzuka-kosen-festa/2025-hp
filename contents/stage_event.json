@@ -9,24 +9,8 @@
   },
   {
     "id": "stage-2",
-    "title": "ダンスバトル①",
-    "datetime": "11月1日 10:30-10:50",
-    "stage": "メインステージ",
-    "description": "毎年大盛り上がりのダンスが今年も登場！！J-POP、K-POP、HIPHOP、アニソンなんでもありのDANCE THE NIGHT♪",
-    "type": "stage"
-  },
-  {
-    "id": "stage-3",
-    "title": "ダンスバトル②",
-    "datetime": "11月1日 11:00-11:20",
-    "stage": "メインステージ",
-    "description": "毎年大盛り上がりのダンスが今年も登場！！J-POP、K-POP、HIPHOP、アニソンなんでもありのDANCE THE NIGHT♪",
-    "type": "stage"
-  },
-  {
-    "id": "stage-4",
-    "title": "ダンスバトル③",
-    "datetime": "11月1日 11:30-11:50",
+    "title": "ダンスバトル",
+    "datetime": "11月1日 10:30-10:50, 11:00-11:20, 11:30-11:50",
     "stage": "メインステージ",
     "description": "毎年大盛り上がりのダンスが今年も登場！！J-POP、K-POP、HIPHOP、アニソンなんでもありのDANCE THE NIGHT♪",
     "type": "stage"
@@ -41,16 +25,8 @@
   },
   {
     "id": "stage-7",
-    "title": "VOCAL 1グランプリ①",
-    "datetime": "11月1日 13:20-13:50",
-    "stage": "メインステージ",
-    "description": "響かせろ、秘めた想い、歌にのせて。",
-    "type": "stage"
-  },
-  {
-    "id": "stage-8",
-    "title": "VOCAL 1グランプリ②",
-    "datetime": "11月1日 14:00-14:30",
+    "title": "VOCAL 1グランプリ",
+    "datetime": "11月1日 13:20-14:30",
     "stage": "メインステージ",
     "description": "響かせろ、秘めた想い、歌にのせて。",
     "type": "stage"
@@ -68,7 +44,7 @@
     "title": "アタック25",
     "datetime": "11月2日 9:50-10:20",
     "stage": "メインステージ",
-    "description": "有名なあの番組が鈴鹿高専に？アタックチャンスで運命(パネル)を変えろ!!",
+    "description": "有名なあの番組が鈴鹿高専に？アタックチャンスで運命(パネル)を変えろ！！",
     "type": "stage"
   },
   {

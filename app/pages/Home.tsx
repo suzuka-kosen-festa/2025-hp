@@ -43,7 +43,7 @@ export const Bg = styled(Box)({
   justifyContent: "center",
 });
 
-const STAR_COUNT = 800;
+const STAR_COUNT = 50;
 
 export const Stars: FC = () => {
   const stars = useMemo(() => {
@@ -69,7 +69,7 @@ export const Stars: FC = () => {
   return (
     <Box
       aria-hidden="true"
-      sx={{ position: "absolute", inset: 0, width: "100%", height: "100%" }}
+      sx={{ position: "fixed", inset: 0, width: "100%", height: "100%" }}
     >
       {stars.map(star => (
         <Box
@@ -228,8 +228,7 @@ const Home: FC = () => {
             alignItems: "center",
             textAlign: "center",
             my: { xs: 4, sm: 8, md: 12 },
-            boxShadow: "100px 100px 100px 100px #0E131B",
-            backdropFilter: "blur(3px)",
+            // boxShadow: "100px 100px 100px 100px #0E131B",
             borderRadius: { xs: "15px", sm: "18px", md: "20px" },
           }}
           >
