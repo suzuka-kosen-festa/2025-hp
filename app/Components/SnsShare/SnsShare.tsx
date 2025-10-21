@@ -9,6 +9,8 @@ import { useState } from "react";
 export const SnsShare: FC = () => {
   const url = "https://snct-fes.info";
   const hashtag = "%23%E9%88%B4%E9%B9%BF%E9%AB%98%E5%B0%82%20%23%E9%AB%98%E5%B0%82%E7%A5%AD%20%23KOSENFESTA%20%23ORBIT";
+  const xUrl = `https://twitter.com/intent/tweet?text=@KOSENFESTA%0A高専祭は11月1日、2日！！%0A${url}%0A${hashtag}`;
+  const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
@@ -27,7 +29,7 @@ export const SnsShare: FC = () => {
     }}
     >
       <IconButton
-        href={`https://twitter.com/intent/tweet?text=@KOSENFESTA%0A高専祭は11月1日、2日！！%0A${url}%0A${hashtag}`}
+        href={`${xUrl}`}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Share on X"
@@ -41,7 +43,7 @@ export const SnsShare: FC = () => {
         <XIcon />
       </IconButton>
       <IconButton
-        href={`https://www.facebook.com/sharer/sharer.php?u=${url}`}
+        href={`${facebookUrl}`}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Share on Facebook"
