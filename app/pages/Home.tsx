@@ -246,7 +246,7 @@ const Home: FC = () => {
                 fontWeight: "bold",
                 fontFamily: "Noto Serif",
                 pr: 1,
-                fontSize: { xs: "1.5rem", sm: "2rem", md: "2.5rem" },
+                fontSize: { xs: "1.5rem", sm: "2.5rem", md: "3rem" },
                 lineHeight: { xs: 1.2, sm: 1.3, md: 1.4 },
                 // background: "linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1)",
               /*
@@ -417,31 +417,46 @@ const Home: FC = () => {
             </Box>
             <Box sx={{
               display: "flex",
+              flexWrap: "wrap",
               gap: { xs: 2, sm: 3, md: 4 },
-              alignItems: "center",
+              alignItems: "stretch",
               mb: 4,
               justifyContent: "center",
-              flexDirection: { xs: "column", sm: "row" },
               px: { xs: 2, sm: 3, md: 4 },
             }}
             >
-              <Link to="/bazaar#bazaar" style={{ textDecoration: "none" }}>
-                <EventCard
-                  eventName="バザー"
-                  description="部活やクラスが行うバザー"
-                  linkName="バザーについて"
-                  color="#FFFFFF"
-                />
-              </Link>
-              {/* <img src="/images/Dragon.png" alt="satellite" style={{ width: "10%", height: "auto" }} /> */}
-              <Link to="/bazaar#exhibitions" style={{ textDecoration: "none" }}>
-                <EventCard
-                  eventName="学科展示"
-                  description="各学科の展示内容"
-                  linkName="学科展示について"
-                  color="#FFFFFF"
-                />
-              </Link>
+              <Box sx={{
+                flex: "1 1 300px",
+                minWidth: { xs: "280px", sm: "300px" },
+                maxWidth: { xs: "100%", sm: "calc(50% - 8px)", md: "calc(50% - 12px)", lg: "calc(33.333% - 16px)" },
+              }}
+              >
+                <Link to="/bazaar#bazaar" style={{ textDecoration: "none" }}>
+                  <EventCard
+                    eventName="バザー"
+                    description="部活やクラスが行うバザー"
+                    linkName="バザーについて"
+                    color="#FFFFFF"
+                  />
+                </Link>
+              </Box>
+              <Box sx={{
+                flex: "1 1 300px",
+                justifyContent: "center",
+                alignItems: "center",
+                minWidth: { xs: "280px", sm: "300px" },
+                maxWidth: { xs: "100%", sm: "calc(50% - 8px)", md: "calc(50% - 12px)", lg: "calc(33.333% - 16px)" },
+              }}
+              >
+                <Link to="/bazaar#exhibitions" style={{ textDecoration: "none" }}>
+                  <EventCard
+                    eventName="学科展示"
+                    description="各学科の展示内容"
+                    linkName="学科展示について"
+                    color="#FFFFFF"
+                  />
+                </Link>
+              </Box>
             </Box>
           </ContentSection>
 
@@ -457,39 +472,59 @@ const Home: FC = () => {
             </Box>
             <Box sx={{
               display: "flex",
+              flexWrap: "wrap",
               gap: { xs: 2, sm: 3, md: 4 },
-              alignItems: "center",
+              alignItems: "stretch",
               mb: 4,
               justifyContent: "center",
-              flexDirection: { xs: "column", sm: "row" },
-              // flexWrap: "wrap",
               px: { xs: 2, sm: 3, md: 4 },
             }}
             >
-              <Link to="/events#stage" style={{ textDecoration: "none" }}>
-                <EventCard
-                  eventName="ステージイベント"
-                  description="屋外のメインステージで開催されるイベント"
-                  linkName="ステージイベントについて"
-                  color="#FD3D21"
-                />
-              </Link>
-              <Link to="/events#live" style={{ textDecoration: "none" }}>
-                <EventCard
-                  eventName="ライブステージ"
-                  description="屋内のライブステージで開催されるイベント"
-                  linkName="ライブステージについて"
-                  color="#3498db"
-                />
-              </Link>
-              <Link to="/events#mystery" style={{ textDecoration: "none" }}>
-                <EventCard
-                  eventName="謎解き"
-                  description="高専内で開催される謎解きイベント"
-                  linkName="謎解きについて"
-                  color="#FFA500"
-                />
-              </Link>
+              <Box sx={{
+                flex: "1 1 300px",
+                minWidth: { xs: "280px", sm: "300px" },
+                maxWidth: { xs: "100%", sm: "calc(50% - 8px)", md: "calc(50% - 12px)", lg: "calc(33.333% - 16px)" },
+              }}
+              >
+                <Link to="/events#stage" style={{ textDecoration: "none" }}>
+                  <EventCard
+                    eventName="ステージイベント"
+                    description="屋外のメインステージで開催されるイベント"
+                    linkName="ステージイベントについて"
+                    color="#FD3D21"
+                  />
+                </Link>
+              </Box>
+              <Box sx={{
+                flex: "1 1 300px",
+                minWidth: { xs: "280px", sm: "300px" },
+                maxWidth: { xs: "100%", sm: "calc(50% - 8px)", md: "calc(50% - 12px)", lg: "calc(33.333% - 16px)" },
+              }}
+              >
+                <Link to="/events#live" style={{ textDecoration: "none" }}>
+                  <EventCard
+                    eventName="ライブステージ"
+                    description="屋内のライブステージで開催されるイベント"
+                    linkName="ライブステージについて"
+                    color="#3498db"
+                  />
+                </Link>
+              </Box>
+              <Box sx={{
+                flex: "1 1 300px",
+                minWidth: { xs: "280px", sm: "300px" },
+                maxWidth: { xs: "100%", sm: "calc(50% - 8px)", md: "calc(50% - 12px)", lg: "calc(33.333% - 16px)" },
+              }}
+              >
+                <Link to="/events#mystery" style={{ textDecoration: "none" }}>
+                  <EventCard
+                    eventName="謎解き"
+                    description="高専内で開催される謎解きイベント"
+                    linkName="謎解きについて"
+                    color="#FFA500"
+                  />
+                </Link>
+              </Box>
             </Box>
           </ContentSection>
 
@@ -511,7 +546,7 @@ const Home: FC = () => {
                         fontWeight: "normal",
                       }}
                     >
-                      掲載準備中です。準備が出来次第掲載させていただきます。
+                      掲載準備中です。準備が出来次第随時掲載させていただきます。
                     </Typography>
                   </Box>
                 )
