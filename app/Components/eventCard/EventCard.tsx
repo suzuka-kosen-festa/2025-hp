@@ -19,8 +19,8 @@ function EventCard(props: EventCardComponentProps): ReactNode {
   const bgColor = `${color}33`;
   return (
     <Card sx={{
-      width: { xs: "100%", sm: "300px", md: "320px" },
-      maxWidth: "320px",
+      width: { xs: "100%", sm: "100%", md: "100%" },
+      // maxWidth: "320px",
       borderRadius: { xs: "12px", sm: "16px" },
       p: { xs: 0.5, sm: 1 },
       border: `1px solid ${color}`,

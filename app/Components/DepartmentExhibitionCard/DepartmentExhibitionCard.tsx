@@ -24,19 +24,14 @@ export default function DepartmentExhibitionCard(props: DepartmentExhibitionCard
   const themeColor = departmentColors[department] || "#4a90e2"; // デフォルトカラー
   return (
     <Card sx={{
-      "width": { xs: "100%", sm: "320px", md: "350px" },
-      "maxWidth": "350px",
-      "height": "100%",
-      "display": "flex",
-      "flexDirection": "column",
-      "border": `2px solid ${themeColor}`,
-      "boxShadow": `0 0 15px ${themeColor}40`,
-      "borderRadius": { xs: "12px", sm: "16px" },
-      "&:hover": {
-        boxShadow: `0 0 25px ${themeColor}60`,
-        transform: "translateY(-2px)",
-        transition: "all 0.3s ease-in-out",
-      },
+      width: { xs: "100%", sm: "320px", md: "350px" },
+      maxWidth: "350px",
+      height: "100%",
+      display: "flex",
+      flexDirection: "column",
+      border: `2px solid ${themeColor}`,
+      boxShadow: `0 0 15px ${themeColor}40`,
+      borderRadius: { xs: "12px", sm: "16px" },
     }}
     >
       <Box

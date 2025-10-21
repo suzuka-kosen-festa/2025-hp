@@ -25,7 +25,7 @@ function EventSummary({
         // backdropFilter: "blur(5px)",
         color: "white",
         p: { xs: 2, sm: 3, md: 4 },
-        fontFamily: "sans-serif",
+        fontFamily: "'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
       }}
     >
       {mainTitle && (
