@@ -3,6 +3,7 @@ import { Box, Container, Typography, styled } from "@mui/material";
 import Footer from "@/Components/Footer";
 import { sitemapData } from "@/data/sitemap";
 import { ja } from "@/locales/ja";
+import { Stars } from "./Home";
 
 export const SpaceBackground = styled(Box)({
   background: `
@@ -12,6 +13,8 @@ export const SpaceBackground = styled(Box)({
   minHeight: "100vh",
   position: "relative",
   overflow: "hidden",
+  display: "flex",
+  flexDirection: "column",
 });
 
 const ContentSection = styled(Box)<{ color?: string }>(({ color = "#e9e9e9", theme }) => ({
@@ -53,24 +56,27 @@ const SectionTitle = styled(Typography)(({ theme }) => ({
 const Privacy: FC = () => {
   return (
     <SpaceBackground>
-      <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 3, md: 4 }, py: { xs: 8, sm: 10, md: 12 } }}>
-        <ContentSection>
-          <Box sx={{ p: { xs: 2, sm: 3, md: 4 } }}>
-            <SectionTitle variant="h4" mb={3}>
-              {ja.privacy.title}
-            </SectionTitle>
-            <Typography variant="body1" sx={{ color: "white", mb: 2 }}>
-              {ja.privacy.gaDescription}
-            </Typography>
-            <Typography variant="body1" sx={{ color: "white", mb: 2 }}>
-              {ja.privacy.gaLinkDescription}
-              <a href="https://marketingplatform.google.com/about/analytics/terms/jp/" target="_blank" rel="noopener noreferrer" style={{ color: "#6b75ffff" }}>
-                Google Analytics 利用規約
-              </a>
-            </Typography>
-          </Box>
-        </ContentSection>
-      </Container>
+      <Stars />
+      <Box sx={{ flex: 1 }}>
+        <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 3, md: 4 }, py: { xs: 8, sm: 10, md: 12 } }}>
+          <ContentSection>
+            <Box sx={{ p: { xs: 2, sm: 3, md: 4 } }}>
+              <SectionTitle variant="h4" mb={3}>
+                {ja.privacy.title}
+              </SectionTitle>
+              <Typography variant="body1" sx={{ color: "white", mb: 2 }}>
+                {ja.privacy.gaDescription}
+              </Typography>
+              <Typography variant="body1" sx={{ color: "white", mb: 2 }}>
+                {ja.privacy.gaLinkDescription}
+                <a href="https://marketingplatform.google.com/about/analytics/terms/jp/" target="_blank" rel="noopener noreferrer" style={{ color: "#6b75ffff" }}>
+                  Google Analytics 利用規約
+                </a>
+              </Typography>
+            </Box>
+          </ContentSection>
+        </Container>
+      </Box>
       <Footer siteMap={sitemapData} />
     </SpaceBackground>
   );
