@@ -218,6 +218,13 @@ const Bazar: FC = () => {
     return acc;
   }, {} as Record<string, typeof departmentExhibitionsData[number][]>);
 
+  // バザー表示順: teamNumber の百の位が 2 のものを先頭に
+  const sortedBazaarData = [...bazaarData].sort((a, b) => {
+    const aIs2xx = Math.floor(a.teamNumber / 100) === 2 ? 1 : 0;
+    const bIs2xx = Math.floor(b.teamNumber / 100) === 2 ? 1 : 0;
+    return bIs2xx - aIs2xx;
+  });
+
   return (
     <SpaceBackground>
       <Bg>
@@ -283,7 +290,7 @@ const Bazar: FC = () => {
               justifyContent: "center",
             }}
             >
-              {bazaarData.map(bazaar => (
+              {sortedBazaarData.map(bazaar => (
                 <Box
                   key={bazaar.id}
                   sx={{
