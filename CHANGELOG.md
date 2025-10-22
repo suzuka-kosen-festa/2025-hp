@@ -1,5 +1,33 @@
 # Changelog
 
+## [2.0.0](https://github.com/suzuka-kosen-festa/2025-hp/compare/v1.0.1...v2.0.0) (2025-10-22)
+
+
+### Features
+
+* Add 404 Not Found page  ([#317](https://github.com/suzuka-kosen-festa/2025-hp/issues/317)) ([bb90b2f](https://github.com/suzuka-kosen-festa/2025-hp/commit/bb90b2f163a3fcaa881ffc77a74d039dc4d7b75c))
+* add privacy policy page ([#315](https://github.com/suzuka-kosen-festa/2025-hp/issues/315)) ([306deb9](https://github.com/suzuka-kosen-festa/2025-hp/commit/306deb99c5d189a64c1b6221c2410b2972143288))
+* add robots.txt file ([#316](https://github.com/suzuka-kosen-festa/2025-hp/issues/316)) ([62f6889](https://github.com/suzuka-kosen-festa/2025-hp/commit/62f6889dc491e966e24eb06296f38d739924828f))
+* **components:** bazaarCard ([#35](https://github.com/suzuka-kosen-festa/2025-hp/issues/35)) ([ad35a88](https://github.com/suzuka-kosen-festa/2025-hp/commit/ad35a88b7bc83da12fba72f0c422685c7901df59))
+* DepartmentExhibitionCard ([#220](https://github.com/suzuka-kosen-festa/2025-hp/issues/220)) ([6c6ede6](https://github.com/suzuka-kosen-festa/2025-hp/commit/6c6ede619e2123c4903405675516c81ee6ea82ce))
+* enhance GoogleMap component with lazy loading and visibility ha… ([#314](https://github.com/suzuka-kosen-festa/2025-hp/issues/314)) ([766cb73](https://github.com/suzuka-kosen-festa/2025-hp/commit/766cb73a911cecc3b628222122388709730e4124))
+* footer ([#31](https://github.com/suzuka-kosen-festa/2025-hp/issues/31)) ([eed4aff](https://github.com/suzuka-kosen-festa/2025-hp/commit/eed4affefc6779209c1400624a484d8086a6c2f8))
+* google Analytics ([#307](https://github.com/suzuka-kosen-festa/2025-hp/issues/307)) ([c484881](https://github.com/suzuka-kosen-festa/2025-hp/commit/c4848816f3164724883e4cc2ff07dbbbd9b51163))
+* responsive design ([#293](https://github.com/suzuka-kosen-festa/2025-hp/issues/293)) ([678ddff](https://github.com/suzuka-kosen-festa/2025-hp/commit/678ddff6fd7c2fb53980acb1653030f1a2147f89))
+* sponsor card ([#199](https://github.com/suzuka-kosen-festa/2025-hp/issues/199)) ([3b9cf58](https://github.com/suzuka-kosen-festa/2025-hp/commit/3b9cf58f4b1695cca448301581f78a1486dcfa8d))
+* StageEventCard ([#236](https://github.com/suzuka-kosen-festa/2025-hp/issues/236)) ([458358e](https://github.com/suzuka-kosen-festa/2025-hp/commit/458358e7d54ee0d4ccb1951c08bd6e401583acef))
+
+
+### Bug Fixes
+
+* **deps:** update dependency react-router to ^7.9.4 ([#283](https://github.com/suzuka-kosen-festa/2025-hp/issues/283)) ([42f8f6e](https://github.com/suzuka-kosen-festa/2025-hp/commit/42f8f6ed0ab9cb4a81295d11c4792e7db65f6c9f))
+* footer sx scale ([#318](https://github.com/suzuka-kosen-festa/2025-hp/issues/318)) ([03b82d7](https://github.com/suzuka-kosen-festa/2025-hp/commit/03b82d7bcf2ecf52879fcdcac11518ed7a2da5fa))
+
+
+### Miscellaneous Chores
+
+* release 2.0.0 ([2a9333c](https://github.com/suzuka-kosen-festa/2025-hp/commit/2a9333cc3d288c331227cee9de22d0f5a5f1fb34))
+
 ## [1.0.1](https://github.com/suzuka-kosen-festa/2025-hp/compare/v1.0.0...v1.0.1) (2025-10-07)
 
 
