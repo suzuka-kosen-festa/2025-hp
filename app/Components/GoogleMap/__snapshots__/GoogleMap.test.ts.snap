@@ -3,18 +3,13 @@
 exports[`googlemap snapshot: CustomWidth 1`] = `
 <div>
   <div
-    class="MuiBox-root css-b0f8qs"
+    class="MuiBox-root css-1ll6y2t"
   >
-    <iframe
-      allowfullscreen=""
-      height="100%"
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-      src="https://www.google.com/maps?q=%E4%BA%AC%E9%83%BD%E9%A7%85&output=embed"
-      style="border: 0px;"
-      title="Google Map"
-      width="100%"
-    />
+    <div
+      class="MuiBox-root css-155j88v"
+    >
+      地図を読み込み中...
+    </div>
   </div>
 </div>
 `;
@@ -22,18 +17,13 @@ exports[`googlemap snapshot: CustomWidth 1`] = `
 exports[`googlemap snapshot: Default 1`] = `
 <div>
   <div
-    class="MuiBox-root css-1vu43ej"
+    class="MuiBox-root css-ov73e1"
   >
-    <iframe
-      allowfullscreen=""
-      height="100%"
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-      src="https://www.google.com/maps?q=%E4%B8%89%E9%87%8D%E7%9C%8C%E9%88%B4%E9%B9%BF%E5%B8%82%E7%99%BD%E5%AD%90%E7%94%BA%E9%AB%98%E5%B0%821-1%20%E9%88%B4%E9%B9%BF%E5%B7%A5%E6%A5%AD%E9%AB%98%E7%AD%89%E5%B0%82%E9%96%80%E5%AD%A6%E6%A0%A1&output=embed"
-      style="border: 0px;"
-      title="Google Map"
-      width="100%"
-    />
+    <div
+      class="MuiBox-root css-155j88v"
+    >
+      地図を読み込み中...
+    </div>
   </div>
 </div>
 `;
@@ -41,18 +31,13 @@ exports[`googlemap snapshot: Default 1`] = `
 exports[`googlemap snapshot: Tall 1`] = `
 <div>
   <div
-    class="MuiBox-root css-13y2zt1"
+    class="MuiBox-root css-hk0lfs"
   >
-    <iframe
-      allowfullscreen=""
-      height="100%"
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-      src="https://www.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%A7%85&output=embed"
-      style="border: 0px;"
-      title="Google Map"
-      width="100%"
-    />
+    <div
+      class="MuiBox-root css-155j88v"
+    >
+      地図を読み込み中...
+    </div>
   </div>
 </div>
 `;
