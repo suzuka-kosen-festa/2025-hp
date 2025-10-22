@@ -23,6 +23,12 @@ const router = createBrowserRouter([
       Component: (await import("./pages/bazaar"))?.default,
     }),
   },
+  {
+    path: "/privacy",
+    lazy: async () => ({
+      Component: (await import("./pages/privacy"))?.default,
+    }),
+  },
 ]);
 
 export function mountApp(rootElement: HTMLElement) {
