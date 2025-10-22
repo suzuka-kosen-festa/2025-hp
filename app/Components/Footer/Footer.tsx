@@ -82,7 +82,7 @@ function Footer({ siteMap }: FooterComponentProps): ReactNode {
         width: "100%",
         padding: { xs: "60px 15px 15px", sm: "80px 20px 20px", md: "100px 20px 20px" },
         borderRadius: "50% 50% 0 0",
-        transform: { xs: "scaleX(1.2)", sm: "scaleX(1.3)", md: "scaleX(1.5)" },
+        transform: { xs: "scaleX(2.5)", sm: "scaleX(1.3)", md: "scaleX(1.5)" },
         transformOrigin: "center top",
         position: "relative",
         zIndex: 1,
@@ -98,7 +98,7 @@ function Footer({ siteMap }: FooterComponentProps): ReactNode {
             "flexWrap": "wrap",
             "width": "100%",
             "maxWidth": "1200px",
-            "transform": { xs: "scaleX(0.83)", sm: "scaleX(0.77)", md: "scaleX(0.67)" }, // 逆変換
+            "transform": { xs: "scaleX(0.4)", sm: "scaleX(0.77)", md: "scaleX(0.67)" }, // 逆変換
             "transformOrigin": "center center",
             "@media (max-width: 768px)": {
               flexDirection: "column",
@@ -173,7 +173,7 @@ function Footer({ siteMap }: FooterComponentProps): ReactNode {
           padding: { xs: "15px 0", sm: "20px 0" },
           marginTop: { xs: "20px", sm: "25px", md: "30px" },
           color: "white",
-          transform: { xs: "scaleX(0.83)", sm: "scaleX(0.77)", md: "scaleX(0.67)" }, // 逆変換
+          transform: { xs: "scaleX(0.4)", sm: "scaleX(0.77)", md: "scaleX(0.67)" }, // 逆変換
           transformOrigin: "center center",
           fontSize: { xs: "0.8rem", sm: "0.9rem", md: "1rem" },
         }}
