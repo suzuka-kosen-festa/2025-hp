@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.1](https://github.com/suzuka-kosen-festa/2025-hp/compare/v2.0.0...v2.0.1) (2025-10-22)
+
+
+### Bug Fixes
+
+* opg image and delete pdf ([#320](https://github.com/suzuka-kosen-festa/2025-hp/issues/320)) ([a388632](https://github.com/suzuka-kosen-festa/2025-hp/commit/a38863251a1c3da828d509f874fc801070ad8240))
+
 ## [2.0.0](https://github.com/suzuka-kosen-festa/2025-hp/compare/v1.0.1...v2.0.0) (2025-10-22)
 
 
