@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.2](https://github.com/suzuka-kosen-festa/2025-hp/compare/v2.0.1...v2.0.2) (2025-10-22)
+
+
+### Bug Fixes
+
+* change Hero logo ([#322](https://github.com/suzuka-kosen-festa/2025-hp/issues/322)) ([3b39721](https://github.com/suzuka-kosen-festa/2025-hp/commit/3b397214ec8f0561feb559ebad5fbb26e86639c7))
+
 ## [2.0.1](https://github.com/suzuka-kosen-festa/2025-hp/compare/v2.0.0...v2.0.1) (2025-10-22)
 
 
