@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { Box } from "@mui/material";
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface GoogleMapProps {
   address: string
@@ -31,8 +31,8 @@ function GoogleMap({ address, width = "100%", height = 360 }: GoogleMapProps): R
       },
       {
         threshold: 0.1,
-        rootMargin: "50px"
-      }
+        rootMargin: "50px",
+      },
     );
 
     if (mapRef.current) {
@@ -47,7 +47,7 @@ function GoogleMap({ address, width = "100%", height = 360 }: GoogleMapProps): R
   };
 
   return (
-    <Box 
+    <Box
       ref={mapRef}
       sx={{
         width,
@@ -82,17 +82,18 @@ function GoogleMap({ address, width = "100%", height = 360 }: GoogleMapProps): R
           地図を読み込み中...
         </Box>
       )}
-      
+
       {isVisible && (
+        // eslint-disable-next-line react-dom/no-missing-iframe-sandbox
         <iframe
           title="Google Map"
           src={src}
           width="100%"
           height="100%"
-          style={{ 
+          style={{
             border: 0,
             opacity: isLoaded ? 1 : 0,
-            transition: "opacity 0.3s ease-in-out"
+            transition: "opacity 0.3s ease-in-out",
           }}
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
