@@ -52,7 +52,7 @@ globalThis.IntersectionObserverEntry = class IntersectionObserverEntry {
 
   isIntersecting: boolean = false;
   rootBounds: DOMRectReadOnly | null = null;
-  target: Element = document.createElement('div');
+  target: Element = document.createElement("div");
   time: number = 0;
 
   constructor() {
