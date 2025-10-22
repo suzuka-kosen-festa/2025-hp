@@ -572,6 +572,13 @@ exports[`footer snapshot 1`] = `
       class="MuiBox-root css-1hvc3xp"
     >
       ©2025 鈴鹿工業高等専門学校 高専祭実行委員会
+      <a
+        data-discover="true"
+        href="/privacy"
+        style="color: white; margin-left: 16px; text-decoration: underline;"
+      >
+        プライバシーポリシー
+      </a>
     </div>
   </footer>
 </div>
