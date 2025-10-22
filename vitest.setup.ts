@@ -1,5 +1,5 @@
 // IntersectionObserverのモック
-global.IntersectionObserver = class IntersectionObserver {
+globalThis.IntersectionObserver = class IntersectionObserver {
   constructor() {}
   observe() {}
   unobserve() {}
@@ -7,6 +7,6 @@ global.IntersectionObserver = class IntersectionObserver {
 };
 
 // IntersectionObserverEntryのモック
-global.IntersectionObserverEntry = class IntersectionObserverEntry {
+globalThis.IntersectionObserverEntry = class IntersectionObserverEntry {
   constructor() {}
 };
