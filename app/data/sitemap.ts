@@ -9,11 +9,11 @@ export const sitemapData: SiteMapSection[] = [
         href: "/",
       },
       {
-        title: "イベント",
+        title: "イベントステージ",
         href: "/events",
       },
       {
-        title: "バザー",
+        title: "バザー、学科展示",
         href: "/bazaar",
       },
     ],

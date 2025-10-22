@@ -1,14 +1,9 @@
 User-agent: *
 
-# ホームページの優先度を高く設定
-Sitemap: https://snct-fes.info/sitemap.xml
-
-# 特定のページをクロール許可（優先度高）
 Allow: /
 Allow: /events
 Allow: /bazaar
 
-# 不要なファイルやディレクトリのクロール禁止
 Disallow: /build/
 Disallow: /dist/
 Disallow: /node_modules/
@@ -17,13 +12,3 @@ Disallow: /.storybook/
 Disallow: /storybook-static/
 Disallow: /scripts/
 Disallow: /samples/
-
-# 検索エンジン向けの追加設定
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-# クロール頻度の推奨（秒単位）
-Crawl-delay: 1
