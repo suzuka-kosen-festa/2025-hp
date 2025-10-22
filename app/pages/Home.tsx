@@ -233,7 +233,7 @@ const Home: FC = () => {
             borderRadius: { xs: "15px", sm: "18px", md: "20px" },
           }}
           >
-            <img src="/images/logo.svg" alt="Logo" style={{ width: "100%" }} />
+            <img src="/logo.svg" alt="Logo" style={{ width: "100%" }} />
           </FloatingLogo>
 
           <Box sx={{ mb: 2, pt: 0, pb: { xs: 5, sm: 6, md: 8 }, px: { xs: 2, sm: 3, md: 5 }, zIndex: 100 }}>
