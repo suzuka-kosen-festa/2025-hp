@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import { Box, Container, Typography, styled } from "@mui/material";
+import { Box, Container, styled, Typography } from "@mui/material";
 import Footer from "@/Components/Footer";
 import { sitemapData } from "@/data/sitemap";
 import { ja } from "@/locales/ja";
