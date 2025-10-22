@@ -69,8 +69,8 @@ const Privacy: FC = () => {
               </Typography>
               <Typography variant="body1" sx={{ color: "white", mb: 2 }}>
                 {ja.privacy.gaLinkDescription}
-                <a href="https://marketingplatform.google.com/about/analytics/terms/jp/" target="_blank" rel="noopener noreferrer" style={{ color: "#6b75ffff" }}>
-                  Google Analytics 利用規約
+                <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer" style={{ color: "#6b75ffff" }}>
+                  {ja.privacy.gaLinkText}
                 </a>
               </Typography>
             </Box>
