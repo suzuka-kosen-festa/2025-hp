@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.3](https://github.com/suzuka-kosen-festa/2025-hp/compare/v2.0.2...v2.0.3) (2025-10-22)
+
+
+### Bug Fixes
+
+* robots text ([#324](https://github.com/suzuka-kosen-festa/2025-hp/issues/324)) ([8122643](https://github.com/suzuka-kosen-festa/2025-hp/commit/812264373b08bfc1e3b2d2579be70ec3a752c7ef))
+
 ## [2.0.2](https://github.com/suzuka-kosen-festa/2025-hp/compare/v2.0.1...v2.0.2) (2025-10-22)
 
 
