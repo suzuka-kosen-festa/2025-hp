@@ -22,7 +22,6 @@ const HeroSection = styled(Box)(({ theme }) => ({
   },
 }));
 
-
 const NotFound: FC = () => {
   return (
     <SpaceBackground>
@@ -33,7 +32,7 @@ const NotFound: FC = () => {
           <Box sx={{ display: "flex", width: { xs: "95%", sm: "90%", md: "80%" }, justifyContent: "flex-start", p: { xs: 2, sm: 3, md: 5 }, zIndex: 1000 }}>
             <Link to="/" style={{ color: "white", fontSize: "1rem" }}>&lt;&lt; ホームに戻る</Link>
           </Box>
-          
+
           <Typography
             variant="h1"
             component="h1"
@@ -52,7 +51,7 @@ const NotFound: FC = () => {
           >
             404
           </Typography>
-          
+
           <Typography
             variant="h4"
             sx={{
@@ -65,7 +64,7 @@ const NotFound: FC = () => {
           >
             Page Not Found
           </Typography>
-          
+
           <Typography
             variant="h6"
             sx={{
@@ -84,7 +83,6 @@ const NotFound: FC = () => {
           </Typography>
         </HeroSection>
 
-        
         <Footer siteMap={sitemapData} />
       </Bg>
     </SpaceBackground>
