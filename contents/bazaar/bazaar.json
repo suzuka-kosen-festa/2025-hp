@@ -24,14 +24,6 @@
     "image": "/images/bazaar/230.webp"
   },
   {
-    "id": "bazaar-4",
-    "teamNumber": 233,
-    "teamName": "バドミントン部",
-    "bazaarName": "浅漬けきゅうり",
-    "description": "美味しいきゅうりです",
-    "image": "/images/bazaar/233.webp"
-  },
-  {
     "id": "bazaar-5",
     "teamNumber": 332,
     "teamName": "生物同好会",
