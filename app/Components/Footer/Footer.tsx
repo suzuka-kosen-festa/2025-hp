@@ -179,9 +179,6 @@ function Footer({ siteMap }: FooterComponentProps): ReactNode {
         }}
       >
         {ja.footer.copyright}
-        <Link to="/privacy" style={{ color: "white", marginLeft: "16px", textDecoration: "underline" }}>
-          {ja.privacy.title}
-        </Link>
       </Box>
     </Box>
   );
