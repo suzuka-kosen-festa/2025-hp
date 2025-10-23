@@ -26,6 +26,11 @@ export interface FooterComponentProps {
 
 // 個別のリンクコンポーネント
 function FooterLink({ title, href }: SiteMapLink): ReactNode {
+  const handleClick = () => {
+    // ページのトップにスクロール
+    window.scrollTo({ top: 0, behavior: "instant" });
+  };
+
   return (
     <ListItemButton sx={{
       paddingTop: "4px",
@@ -59,6 +64,7 @@ function FooterLink({ title, href }: SiteMapLink): ReactNode {
           e.currentTarget.style.textDecoration = "none";
           e.currentTarget.style.color = "white";
         }}
+        onClick={handleClick}
       >
         {title}
       </Link>

@@ -238,5 +238,13 @@
     "bazaarName": "アイスクリーム",
     "description": "空手部が本気で届ける冷たく熱い一品！渾身のアイス、ぜひご賞味あれ！",
     "image": "/images/bazaar/223.webp"
+  },
+  {
+    "id": "bazaar-34",
+    "teamNumber": 224,
+    "teamName": "5C",
+    "bazaarName": "牛串",
+    "description": "食欲そそる香ばしさ！ジューシーな牛串で心もお腹も大満足！",
+    "image": "/images/bazaar/224.webp"
   }
 ]
