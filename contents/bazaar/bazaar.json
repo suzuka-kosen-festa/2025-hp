@@ -36,7 +36,7 @@
     "teamNumber": 204,
     "teamName": "音楽部",
     "bazaarName": "たい焼き",
-    "description": "今年も高専祭でたい焼き出店します！ぜひ来てください！",
+    "description": "今年も高専祭でたい焼きを出展します！あんことカスタードを出展します！値段は300円です！",
     "image": "/images/bazaar/204.webp"
   },
   {
@@ -245,6 +245,14 @@
     "teamName": "5C",
     "bazaarName": "牛串",
     "description": "食欲そそる香ばしさ！ジューシーな牛串で心もお腹も大満足！",
-    "image": "/images/bazaar/224.webp"
+    "image": "/images/bazaar/224.webp",
+  },
+  {
+    "id": "bazaar-35",
+    "teamNumber": 327,
+    "teamName": "課題研究",
+    "bazaarName": "「小学生向け胸骨圧迫教材開発」の紹介",
+    "description": "「小学生向け胸骨圧迫教材開発」の紹介展示&実演(土13:30-14:30,日11:30-12:30)",
+    "image": "/images/bazaar/327.webp"
   }
 ]
