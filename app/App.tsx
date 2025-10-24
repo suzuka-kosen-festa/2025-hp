@@ -1,39 +1,54 @@
 import { CssBaseline } from "@mui/material";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router";
+import {
+  createBrowserRouter,
+  Outlet,
+  RouterProvider,
+  ScrollRestoration,
+} from "react-router";
 import OrbitThemeProvider from "./Components/OrbitThemeProvider";
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    lazy: async () => ({
-      Component: (await import("./pages/Home"))?.default,
-    }),
-  },
-  {
-    path: "/events",
-    lazy: async () => ({
-      Component: (await import("./pages/events"))?.default,
-    }),
-  },
-  {
-    path: "/bazaar",
-    lazy: async () => ({
-      Component: (await import("./pages/bazaar"))?.default,
-    }),
-  },
-  {
-    path: "/privacy",
-    lazy: async () => ({
-      Component: (await import("./pages/privacy"))?.default,
-    }),
-  },
-  {
-    path: "*",
-    lazy: async () => ({
-      Component: (await import("./pages/NotFound"))?.default,
-    }),
+    Component: () => (
+      <>
+        <ScrollRestoration />
+        <Outlet />
+      </>
+    ),
+    children: [
+      {
+        path: "/",
+        lazy: async () => ({
+          Component: (await import("./pages/Home"))?.default,
+        }),
+      },
+      {
+        path: "/events",
+        lazy: async () => ({
+          Component: (await import("./pages/events"))?.default,
+        }),
+      },
+      {
+        path: "/bazaar",
+        lazy: async () => ({
+          Component: (await import("./pages/bazaar"))?.default,
+        }),
+      },
+      {
+        path: "/privacy",
+        lazy: async () => ({
+          Component: (await import("./pages/privacy"))?.default,
+        }),
+      },
+      {
+        path: "*",
+        lazy: async () => ({
+          Component: (await import("./pages/NotFound"))?.default,
+        }),
+      },
+    ],
   },
 ]);
 
@@ -45,7 +60,8 @@ export function mountApp(rootElement: HTMLElement) {
   if (!document.querySelector("meta[name=\"viewport\"]")) {
     const viewport = document.createElement("meta");
     viewport.name = "viewport";
-    viewport.content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no";
+    viewport.content
+      = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no";
     document.head.appendChild(viewport);
   }
 
