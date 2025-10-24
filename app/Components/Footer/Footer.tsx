@@ -11,25 +11,25 @@ import { ja } from "@/locales/ja";
 
 // サイトマップの型定義
 export interface SiteMapLink {
-  title: string;
-  href: string;
+  title: string
+  href: string
 }
 
 export interface SiteMapSection {
-  sectionTitle: string;
-  links: SiteMapLink[];
+  sectionTitle: string
+  links: SiteMapLink[]
 }
 
 export interface FooterComponentProps {
-  siteMap: SiteMapSection[];
+  siteMap: SiteMapSection[]
 }
 
 // MUIのstyledを使ってスタイリングされたLink
 const StyledLink = styled(Link)({
-  width: "100%",
-  lineHeight: "1.4",
-  textDecoration: "none",
-  color: "white",
+  "width": "100%",
+  "lineHeight": "1.4",
+  "textDecoration": "none",
+  "color": "white",
   "&:hover": {
     textDecoration: "underline",
     color: grey[400],
@@ -92,26 +92,26 @@ function Footer({ siteMap }: FooterComponentProps): ReactNode {
       {siteMap.length > 0 && (
         <Box
           sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "flex-start",
-            gap: { xs: "20px", sm: "30px", md: "40px" },
-            flexWrap: "wrap",
-            width: "100%",
-            maxWidth: "1200px",
-            transform: {
+            "display": "flex",
+            "justifyContent": "center",
+            "alignItems": "flex-start",
+            "gap": { xs: "20px", sm: "30px", md: "40px" },
+            "flexWrap": "wrap",
+            "width": "100%",
+            "maxWidth": "1200px",
+            "transform": {
               xs: "scaleX(0.4)",
               sm: "scaleX(0.77)",
               md: "scaleX(0.67)",
             }, // 逆変換
-            transformOrigin: "center center",
+            "transformOrigin": "center center",
             "@media (max-width: 768px)": {
               flexDirection: "column",
               alignItems: "center",
             },
           }}
         >
-          {siteMap.map((section) => (
+          {siteMap.map(section => (
             <Box
               key={`${section.sectionTitle}`}
               sx={{
@@ -153,7 +153,7 @@ function Footer({ siteMap }: FooterComponentProps): ReactNode {
                   padding: "0",
                 }}
               >
-                {section.links.map((link) => (
+                {section.links.map(link => (
                   <ListItem
                     key={`${link.title}`}
                     disablePadding
