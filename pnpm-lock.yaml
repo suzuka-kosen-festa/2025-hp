@@ -97,8 +97,8 @@ importers:
         specifier: 8.6.14
         version: 8.6.14(storybook@8.6.14(prettier@3.6.2))
       '@storybook/addon-vitest':
-        specifier: 9.1.12
-        version: 9.1.12(@vitest/browser@3.2.4)(@vitest/runner@3.2.4)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(storybook@8.6.14(prettier@3.6.2))(vitest@3.2.4)
+        specifier: 9.1.13
+        version: 9.1.13(@vitest/browser@3.2.4)(@vitest/runner@3.2.4)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(storybook@8.6.14(prettier@3.6.2))(vitest@3.2.4)
       '@storybook/react':
         specifier: 8.6.14
         version: 8.6.14(@storybook/test@8.6.14(storybook@8.6.14(prettier@3.6.2)))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(storybook@8.6.14(prettier@3.6.2))(typescript@5.9.3)
@@ -1985,12 +1985,12 @@ packages:
     peerDependencies:
       storybook: ^8.6.14
 
-  '@storybook/addon-vitest@9.1.12':
-    resolution: {integrity: sha512-FB82Z/lfxsfKK3laIj0UVoXMiIqLd35mF+V5jBIerBmRnR391sbjDis1AGbEgqlkpvPxl0E/mufqstqGdPCA1Q==}
+  '@storybook/addon-vitest@9.1.13':
+    resolution: {integrity: sha512-g/wkQ8i1GGlsoHEe6bjWic+ESokWhuMBxAa9FDLW9KDf0L1DMyQqFFJFnGoo99zCNRVJcSXgzZTFp6SCt3FKog==}
     peerDependencies:
       '@vitest/browser': ^3.0.0
       '@vitest/runner': ^3.0.0
-      storybook: ^9.1.12
+      storybook: ^9.1.13
       vitest: ^3.0.0
     peerDependenciesMeta:
       '@vitest/browser':
@@ -8465,7 +8465,7 @@ snapshots:
       memoizerific: 1.11.3
       storybook: 8.6.14(prettier@3.6.2)
 
-  '@storybook/addon-vitest@9.1.12(@vitest/browser@3.2.4)(@vitest/runner@3.2.4)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(storybook@8.6.14(prettier@3.6.2))(vitest@3.2.4)':
+  '@storybook/addon-vitest@9.1.13(@vitest/browser@3.2.4)(@vitest/runner@3.2.4)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(storybook@8.6.14(prettier@3.6.2))(vitest@3.2.4)':
     dependencies:
       '@storybook/global': 5.0.0
       '@storybook/icons': 1.4.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
