@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.1](https://github.com/suzuka-kosen-festa/2025-hp/compare/v2.1.0...v2.1.1) (2025-10-24)
+
+
+### Bug Fixes
+
+* add new bazaar ([#336](https://github.com/suzuka-kosen-festa/2025-hp/issues/336)) ([d717c09](https://github.com/suzuka-kosen-festa/2025-hp/commit/d717c090b18bbbfb8fb99708278c2ac7056b17f8))
+
 ## [2.1.0](https://github.com/suzuka-kosen-festa/2025-hp/compare/v2.0.3...v2.1.0) (2025-10-23)
 
 
