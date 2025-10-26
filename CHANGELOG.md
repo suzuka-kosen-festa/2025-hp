@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.1.1](https://github.com/suzuka-kosen-festa/2025-hp/compare/v2.1.0...v2.1.1) (2025-10-24)
+
+
+### Bug Fixes
+
+* add new bazaar ([#336](https://github.com/suzuka-kosen-festa/2025-hp/issues/336)) ([d717c09](https://github.com/suzuka-kosen-festa/2025-hp/commit/d717c090b18bbbfb8fb99708278c2ac7056b17f8))
+
+## [2.1.0](https://github.com/suzuka-kosen-festa/2025-hp/compare/v2.0.3...v2.1.0) (2025-10-23)
+
+
+### Features
+
+* band time sort ([#330](https://github.com/suzuka-kosen-festa/2025-hp/issues/330)) ([9ea34a9](https://github.com/suzuka-kosen-festa/2025-hp/commit/9ea34a9a4303676ade912e98a5f4c0d8a762df6b))
+
 ## [2.0.3](https://github.com/suzuka-kosen-festa/2025-hp/compare/v2.0.2...v2.0.3) (2025-10-22)
 
 
