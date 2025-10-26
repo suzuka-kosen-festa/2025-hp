@@ -333,8 +333,6 @@ const Home: FC = () => {
                 開催概要
               </SectionTitle>
               <EventSummary
-                mainTitle="高専祭2025"
-                description="テーマ「Orbit」のもと、学生たちが創り上げる2日間の文化祭。研究発表、模擬店、ステージイベントなど、多彩なプログラムをお楽しみください。"
                 dateLabel="開催日程"
                 date="2025年11月1日(土)・11月2日(日)"
                 locationLabel="開催場所"
