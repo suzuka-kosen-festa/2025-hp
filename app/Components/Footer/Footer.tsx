@@ -38,11 +38,6 @@ const StyledLink = styled(Link)({
 
 // 個別のリンクコンポーネント
 function FooterLink({ title, href }: SiteMapLink): ReactNode {
-  const handleClick = () => {
-    // ページのトップにスクロール
-    window.scrollTo({ top: 0, behavior: "instant" });
-  };
-
   return (
     <ListItem
       sx={{
