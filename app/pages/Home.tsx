@@ -151,7 +151,7 @@ const ContentSection = styled(Box)<{ color?: string }>(({ color = "#e9e9e9", the
 }));
 
 const ContentSectionSponsor = styled(Box)(({ theme }) => ({
-  background: "rgba(255, 255, 255, 0.7)",
+  background: "rgba(255, 255, 255)",
   backdropFilter: "blur(5px)",
   borderRadius: "20px",
   margin: "2rem 0",
