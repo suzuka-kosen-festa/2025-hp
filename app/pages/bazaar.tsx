@@ -1,13 +1,12 @@
 import type { FC } from "react";
 import { Box, Chip, Container, keyframes, styled, Typography } from "@mui/material";
-import { useEffect } from "react";
 import { Link } from "react-router";
-import bazaarData from "@/../contents/bazaar/bazaar.json";
-import departmentExhibitionsData from "@/../contents/department_exhibition.json";
 import BazaarCard from "@/Components/bazaarCard";
 import DepartmentExhibitionCard from "@/Components/DepartmentExhibitionCard";
 import Footer from "@/Components/Footer";
 import { sitemapData } from "@/data/sitemap";
+import sortedBazaarData from "@/lib/constants/bazaar";
+import exhibitionsByDepartment from "@/lib/constants/departmentExhibitions";
 import { Bg, SpaceBackground, Stars } from "./Home";
 
 // 学科別テーマカラーの定義
@@ -186,45 +185,6 @@ export function Satellite({ width, gapsize }: { width: number, gapsize: number }
 }
 
 const Bazar: FC = () => {
-  useEffect(() => {
-    // ハッシュリンクの処理
-    const handleHashChange = () => {
-      const hash = window.location.hash.slice(1); // #を除去
-      if (hash && ["bazaar", "exhibitions"].includes(hash)) {
-        const element = document.getElementById(hash);
-        if (element) {
-          element.scrollIntoView({ behavior: "instant" });
-        }
-      }
-    };
-
-    // 初回読み込み時の処理
-    handleHashChange();
-
-    // ハッシュ変更の監視
-    window.addEventListener("hashchange", handleHashChange);
-
-    return () => {
-      window.removeEventListener("hashchange", handleHashChange);
-    };
-  }, []);
-
-  // 学科別に展示をグループ化
-  const exhibitionsByDepartment = departmentExhibitionsData.reduce((acc, exhibition) => {
-    if (!acc[exhibition.department]) {
-      acc[exhibition.department] = [];
-    }
-    acc[exhibition.department].push(exhibition);
-    return acc;
-  }, {} as Record<string, typeof departmentExhibitionsData[number][]>);
-
-  // バザー表示順: teamNumber の百の位が 2 のものを先頭に
-  const sortedBazaarData = [...bazaarData].sort((a, b) => {
-    const aIs2xx = Math.floor(a.teamNumber / 100) === 2 ? 1 : 0;
-    const bIs2xx = Math.floor(b.teamNumber / 100) === 2 ? 1 : 0;
-    return bIs2xx - aIs2xx;
-  });
-
   return (
     <SpaceBackground>
       <Bg>
