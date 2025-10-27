@@ -6,12 +6,12 @@ export default defineConfig({
   plugins: [react(), tsconfigPaths()],
   build: {
     // パフォーマンス最適化の設定
-    minify: 'esbuild',
+    minify: "esbuild",
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router'],
+          vendor: ["react", "react-dom"],
+          router: ["react-router"],
         },
       },
     },

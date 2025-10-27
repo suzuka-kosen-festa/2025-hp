@@ -1,10 +1,17 @@
 import type { FC } from "react";
 import { ArrowForward } from "@mui/icons-material";
 import { Box, Container, keyframes, Link, styled, Typography } from "@mui/material";
-import { Fragment, useEffect, useMemo, useState, lazy, Suspense } from "react";
+import { Fragment, lazy, Suspense, useEffect, useMemo, useState } from "react";
 import { Link as RouterLink } from "react-router";
 import personalSponsorsData from "@/../contents/personal_sponsor.json";
 import sponsorsData from "@/../contents/sponsor.json";
+
+import { eventTypes } from "@/data/events";
+import { sitemapData } from "@/data/sitemap";
+import { sponsorCardsData } from "@/data/sponsorCards";
+import sortedBazaarData from "@/lib/constants/bazaar";
+import exhibitionsByDepartment from "@/lib/constants/departmentExhibitions";
+import eventsByType from "@/lib/constants/events";
 
 // 遅延読み込みコンポーネント
 const BazaarCard = lazy(() => import("@/Components/bazaarCard"));
@@ -28,13 +35,6 @@ const Sponsor = lazy(() => import("@/Components/Sponsor/Sponsor"));
 const SponsorCard = lazy(() => import("@/Components/sponsorCard"));
 const SponsorDonation = lazy(() => import("@/Components/SponsorDonation"));
 const StageEventCard = lazy(() => import("@/Components/StageEventCard"));
-
-import { eventTypes } from "@/data/events";
-import { sitemapData } from "@/data/sitemap";
-import { sponsorCardsData } from "@/data/sponsorCards";
-import sortedBazaarData from "@/lib/constants/bazaar";
-import exhibitionsByDepartment from "@/lib/constants/departmentExhibitions";
-import eventsByType from "@/lib/constants/events";
 
 const twinkle = keyframes`
   0%, 100% { opacity: 0.3; }

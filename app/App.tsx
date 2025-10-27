@@ -79,14 +79,14 @@ export function mountApp(rootElement: HTMLElement) {
   };
 
   setResponsiveVariables();
-  
+
   // リサイズイベントをthrottleして最適化
   let resizeTimeout: number;
   const throttledResize = () => {
     clearTimeout(resizeTimeout);
     resizeTimeout = window.setTimeout(setResponsiveVariables, 16); // ~60fps
   };
-  
+
   window.addEventListener("resize", throttledResize);
 
   root.render(
