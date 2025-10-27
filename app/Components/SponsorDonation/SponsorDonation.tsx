@@ -4,20 +4,20 @@ import { styled } from "@mui/material/styles";
 import { ja } from "@/locales/ja";
 
 const DonationButton = styled(Button)(({ theme }) => ({
-  background: "linear-gradient(45deg, #FF6B6B 30%, #FF8E53 90%)",
-  color: "white",
-  fontWeight: "bold",
-  padding: theme.spacing(1.5, 4),
-  borderRadius: "25px",
-  fontSize: "1.1rem",
-  textTransform: "none",
-  boxShadow: "0 4px 15px rgba(255, 107, 107, 0.3)",
+  "background": "linear-gradient(45deg, #FF6B6B 30%, #FF8E53 90%)",
+  "color": "white",
+  "fontWeight": "bold",
+  "padding": theme.spacing(1.5, 4),
+  "borderRadius": "25px",
+  "fontSize": "1.1rem",
+  "textTransform": "none",
+  "boxShadow": "0 4px 15px rgba(255, 107, 107, 0.3)",
   "&:hover": {
     background: "linear-gradient(45deg, #FF5252 30%, #FF7043 90%)",
     boxShadow: "0 6px 20px rgba(255, 107, 107, 0.4)",
     transform: "translateY(-2px)",
   },
-  transition: "all 0.3s ease",
+  "transition": "all 0.3s ease",
 }));
 
 const SponsorDonation: FC = () => {
@@ -36,7 +36,7 @@ const SponsorDonation: FC = () => {
       >
         {ja.sponsorDonation.title}
       </Typography>
-      
+
       <Typography
         variant="body1"
         sx={{
