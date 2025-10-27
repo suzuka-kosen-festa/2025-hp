@@ -50,7 +50,7 @@ jobs:
                     },
                     {
                       "title": "コミット",
-                      "value": "<${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}|${{ github.event.head_commit.message }}>",
+                      "value": "<${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}|${{ split(github.event.head_commit.message, '\n')[0] }}>",
                       "short": true
                     },
                     {
@@ -112,7 +112,7 @@ jobs:
                     },
                     {
                       "title": "コミット",
-                      "value": "<${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}|${{ github.event.head_commit.message }}>",
+                      "value": "<${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}|${{ split(github.event.head_commit.message, '\n')[0] }}>",
                       "short": true
                     }
                   ]
