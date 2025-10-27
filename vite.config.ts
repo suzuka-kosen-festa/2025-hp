@@ -6,18 +6,12 @@ export default defineConfig({
   plugins: [react(), tsconfigPaths()],
   build: {
     // パフォーマンス最適化の設定
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-      },
-    },
+    minify: 'esbuild',
     rollupOptions: {
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
-          router: ['react-router-dom'],
+          router: ['react-router'],
         },
       },
     },
