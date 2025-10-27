@@ -4,6 +4,7 @@
       "numberOfRuns": 3,
       "settings": {
         "chromeFlags": "--no-sandbox --disable-dev-shm-usage --disable-gpu --disable-web-security --disable-features=VizDisplayCompositor",
+        "formFactor": "desktop",
         "throttling": {
           "rttMs": 40,
           "throughputKbps": 10240,
