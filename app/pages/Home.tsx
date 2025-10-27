@@ -17,6 +17,7 @@ import { SectionTypeChip } from "@/Components/SectionTypeChip/SectionTypeChip";
 import { SnsShare } from "@/Components/SnsShare";
 import Sponsor from "@/Components/Sponsor/Sponsor";
 import SponsorCard from "@/Components/sponsorCard";
+import SponsorDonation from "@/Components/SponsorDonation";
 import StageEventCard from "@/Components/StageEventCard";
 import { eventTypes } from "@/data/events";
 import { sitemapData } from "@/data/sitemap";
@@ -339,6 +340,10 @@ const Home: FC = () => {
                 location="鈴鹿工業高等専門学校"
               />
             </Box>
+          </ContentSection>
+
+          <ContentSection>
+            <SponsorDonation />
           </ContentSection>
 
           <ContentSection>
