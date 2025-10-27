@@ -2,8 +2,6 @@ import type { ReactNode } from "react";
 import Box from "@mui/material/Box";
 import { grey } from "@mui/material/colors";
 import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemText from "@mui/material/ListItemText";
 import { styled } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 import { Link } from "react-router";
@@ -39,27 +37,9 @@ const StyledLink = styled(Link)({
 // 個別のリンクコンポーネント
 function FooterLink({ title, href }: SiteMapLink): ReactNode {
   return (
-    <ListItem
-      sx={{
-        paddingTop: "4px",
-        paddingBottom: "4px",
-        height: "fit-content",
-        alignSelf: "flex-start",
-        minHeight: "32px",
-        width: "stretch",
-      }}
-    >
-      <ListItemText
-        primary="・"
-        sx={{
-          minWidth: "auto",
-          marginRight: "4px",
-        }}
-      />
-      <StyledLink to={href} prefetch="viewport">
-        {title}
-      </StyledLink>
-    </ListItem>
+    <StyledLink to={href} prefetch="viewport">
+      {title}
+    </StyledLink>
   );
 }
 
@@ -154,15 +134,30 @@ function Footer({ siteMap }: FooterComponentProps): ReactNode {
                 }}
               >
                 {section.links.map(link => (
-                  <ListItem
+                  <Box
                     key={`${link.title}`}
-                    disablePadding
                     sx={{
+                      paddingTop: "4px",
+                      paddingBottom: "4px",
+                      height: "fit-content",
+                      alignSelf: "flex-start",
+                      minHeight: "32px",
                       width: "stretch",
+                      display: "flex",
+                      alignItems: "center",
                     }}
                   >
+                    <Typography
+                      sx={{
+                        minWidth: "auto",
+                        marginRight: "4px",
+                        fontSize: { xs: "0.8rem", sm: "0.9rem", md: "1rem" },
+                      }}
+                    >
+                      ・
+                    </Typography>
                     <FooterLink title={link.title} href={link.href} />
-                  </ListItem>
+                  </Box>
                 ))}
               </List>
             </Box>
