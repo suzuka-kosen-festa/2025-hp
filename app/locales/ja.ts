@@ -27,8 +27,9 @@ export const ja = {
   },
   privacy: {
     title: "プライバシーポリシー",
-    gaDescription: "当サイトでは、Googleによるアクセス解析ツール「Googleアナリティクス」を使用しています。このGoogleアナリティクスはデータの収集のためにCookieを使用しています。このデータは匿名で収集されており、個人を特定するものではありません。",
-    gaLinkDescription: "この機能はCookieを無効にすることで収集を拒否することが出来ますので、お使いのブラウザの設定をご確認ください。この規約に関しての詳細は下記をご覧ください。",
+    gaDescription: "当サイトでは、Googleが提供するサービス（Googleアナリティクスを含む）を利用しています。これにより、お客様が当サイトを閲覧する際に、お使いのブラウザからGoogleに対して特定の情報（閲覧したページのURLやIPアドレスなど）が自動的に送信されます。",
+    gaLinkDescription: "Googleによるデータの収集および処理の仕組みについての詳細は、以下のリンクからご確認いただけます。",
+    gaLinkText: "Google のプライバシーポリシーと規約",
   },
   dummy: "hoge fuga piyo ダミー",
 };
