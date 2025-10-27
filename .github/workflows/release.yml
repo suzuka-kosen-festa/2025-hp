@@ -38,7 +38,14 @@ jobs:
         uses: actions/github-script@v8
         with:
           script: |
-            const message = context.payload.head_commit.message;
+            let message = '';
+            if (context.payload.head_commit && context.payload.head_commit.message) {
+              message = context.payload.head_commit.message;
+            } else if (context.payload.commits && context.payload.commits.length > 0) {
+              message = context.payload.commits[0].message;
+            } else {
+              message = 'No commit message available';
+            }
             const firstLine = message.split('\n')[0];
             core.setOutput('firstLine', firstLine);
       - name: Notify Slack - Pre Release
@@ -98,7 +105,14 @@ jobs:
         uses: actions/github-script@v8
         with:
           script: |
-            const message = context.payload.head_commit.message;
+            let message = '';
+            if (context.payload.head_commit && context.payload.head_commit.message) {
+              message = context.payload.head_commit.message;
+            } else if (context.payload.commits && context.payload.commits.length > 0) {
+              message = context.payload.commits[0].message;
+            } else {
+              message = 'No commit message available';
+            }
             const firstLine = message.split('\n')[0];
             core.setOutput('firstLine', firstLine);
       - name: Notify Slack - Post Release
