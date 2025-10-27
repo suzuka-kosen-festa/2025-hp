@@ -133,8 +133,8 @@ function SponsorCard({ name, image, size }: SponsorItem): ReactNode {
                 color: "black",
                 fontSize: {
                   xs: size === "large" ? "1.5rem" : size === "medium" ? "1.25rem" : "1.1rem",
-                  sm: size === "large" ? "1.75rem" : size === "medium" ? "1.35rem" : "1.15rem",
-                  md: size === "large" ? "2rem" : size === "medium" ? "1.5rem" : "1.25rem",
+                  sm: size === "large" ? "1.75rem" : size === "medium" ? "1.35rem" : "1.75rem",
+                  md: size === "large" ? "4rem" : size === "medium" ? "3rem" : "2rem",
                 },
               }}
             >

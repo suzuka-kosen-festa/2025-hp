@@ -32,7 +32,7 @@ exports[`sponsor snapshot 1`] = `
           class="MuiBox-root css-15x05ou"
         >
           <div
-            class="MuiTypography-root MuiTypography-h5 css-lt6gor-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 css-3g0i5c-MuiTypography-root"
           >
             テストスポンサー中
           </div>
@@ -49,7 +49,7 @@ exports[`sponsor snapshot 1`] = `
           class="MuiBox-root css-1cs71i4"
         >
           <div
-            class="MuiTypography-root MuiTypography-h6 css-14qmtq9-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h6 css-z4qn4g-MuiTypography-root"
           >
             テストスポンサー小
           </div>
