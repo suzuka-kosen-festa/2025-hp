@@ -34,6 +34,21 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy ./dist --project-name=snct-2025-hp
+      - name: Get first line of commit message
+        id: commit-message
+        uses: actions/github-script@v8
+        with:
+          script: |
+            let message = '';
+            if (context.payload.head_commit && context.payload.head_commit.message) {
+              message = context.payload.head_commit.message;
+            } else if (context.payload.commits && context.payload.commits.length > 0) {
+              message = context.payload.commits[0].message;
+            } else {
+              message = 'No commit message available';
+            }
+            const firstLine = message.split('\n')[0];
+            core.setOutput('firstLine', firstLine);
       - name: Notify Slack - Preview Deploy
         uses: slackapi/slack-github-action@v2.1.1
         if: github.event_name == 'push'
@@ -68,7 +83,7 @@ jobs:
                     },
                     {
                       "title": "コミット",
-                      "value": "<${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}|${{ split(github.event.head_commit.message, '\n')[0] }}>",
+                      "value": "<${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}|${{ steps.commit-message.outputs.firstLine }}>",
                       "short": true
                     },
                     {

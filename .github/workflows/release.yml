@@ -32,6 +32,22 @@ jobs:
     needs: release-please
     if: ${{ needs.release-please.outputs.release-created }}
     steps:
+      - uses: actions/checkout@v5
+      - name: Get first line of commit message
+        id: commit-message
+        uses: actions/github-script@v8
+        with:
+          script: |
+            let message = '';
+            if (context.payload.head_commit && context.payload.head_commit.message) {
+              message = context.payload.head_commit.message;
+            } else if (context.payload.commits && context.payload.commits.length > 0) {
+              message = context.payload.commits[0].message;
+            } else {
+              message = 'No commit message available';
+            }
+            const firstLine = message.split('\n')[0];
+            core.setOutput('firstLine', firstLine);
       - name: Notify Slack - Pre Release
         uses: slackapi/slack-github-action@v2.1.1
         with:
@@ -50,7 +66,7 @@ jobs:
                     },
                     {
                       "title": "コミット",
-                      "value": "<${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}|${{ split(github.event.head_commit.message, '\n')[0] }}>",
+                      "value": "<${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}|${{ steps.commit-message.outputs.firstLine }}>",
                       "short": true
                     },
                     {
@@ -84,6 +100,21 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy ./dist --project-name=snct-2025-hp-prod
+      - name: Get first line of commit message
+        id: commit-message
+        uses: actions/github-script@v8
+        with:
+          script: |
+            let message = '';
+            if (context.payload.head_commit && context.payload.head_commit.message) {
+              message = context.payload.head_commit.message;
+            } else if (context.payload.commits && context.payload.commits.length > 0) {
+              message = context.payload.commits[0].message;
+            } else {
+              message = 'No commit message available';
+            }
+            const firstLine = message.split('\n')[0];
+            core.setOutput('firstLine', firstLine);
       - name: Notify Slack - Post Release
         uses: slackapi/slack-github-action@v2.1.1
         with:
@@ -112,7 +143,7 @@ jobs:
                     },
                     {
                       "title": "コミット",
-                      "value": "<${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}|${{ split(github.event.head_commit.message, '\n')[0] }}>",
+                      "value": "<${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}|${{ steps.commit-message.outputs.firstLine }}>",
                       "short": true
                     }
                   ]
