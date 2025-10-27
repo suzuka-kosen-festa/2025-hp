@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.2.1](https://github.com/suzuka-kosen-festa/2025-hp/compare/v2.2.0...v2.2.1) (2025-10-27)
+
+
+### Bug Fixes
+
+* change personal Sponsor font size ([#355](https://github.com/suzuka-kosen-festa/2025-hp/issues/355)) ([0b9fa16](https://github.com/suzuka-kosen-festa/2025-hp/commit/0b9fa166c9bb07973647d04731601d00a4032af4))
+* for lighthouse ([#354](https://github.com/suzuka-kosen-festa/2025-hp/issues/354)) ([f448d10](https://github.com/suzuka-kosen-festa/2025-hp/commit/f448d103b56e8b0c2ab68f37c62c66b75cb2d0db))
+
 ## [2.2.0](https://github.com/suzuka-kosen-festa/2025-hp/compare/v2.1.3...v2.2.0) (2025-10-27)
 
 
