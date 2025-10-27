@@ -479,7 +479,7 @@ const Home: FC = () => {
                     width: "fit-content",
                   }}
                 />
-                <Link component={RouterLink} to="/bazaar#department" sx={{ display: "flex", alignItems: "center", textDecoration: "none", color: "white", gap: 1, fontWeight: "600" }}>
+                <Link component={RouterLink} to="/bazaar#exhibitions" sx={{ display: "flex", alignItems: "center", textDecoration: "none", color: "white", gap: 1, fontWeight: "600" }}>
                   一覧で見る
                   <ArrowForward />
                 </Link>
