@@ -31,5 +31,13 @@ export const ja = {
     gaLinkDescription: "Googleによるデータの収集および処理の仕組みについての詳細は、以下のリンクからご確認いただけます。",
     gaLinkText: "Google のプライバシーポリシーと規約",
   },
+  sponsorDonation: {
+    title: "個人協賛のお願い",
+    description: "第60回鈴鹿高専祭では、個人の皆様からの協賛金を募集しております。",
+    benefit: "ご支援いただいた方には御礼として公式サイトおよび会場内へ名前を掲載させていただきます。",
+    note: "※企業・団体様は、お手数ですが下記リンク先に記載のメールアドレスまでご連絡ください。",
+    buttonText: "協賛金フォームへ",
+    linkDescription: "詳しくは上記リンクよりご確認ください",
+  },
   dummy: "hoge fuga piyo ダミー",
 };
