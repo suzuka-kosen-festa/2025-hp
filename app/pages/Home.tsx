@@ -440,6 +440,7 @@ const Home: FC = () => {
                 <Carousel
                   opts={{
                     align: "start",
+                    loop: true,
                   }}
                   autoPlay
                 >
@@ -489,7 +490,9 @@ const Home: FC = () => {
                   <Carousel
                     opts={{
                       align: "start",
+                      loop: true,
                     }}
+                    autoPlay
                   >
                     <CarouselContent>
                       {exhibitions.map(exhibition => (
@@ -552,7 +555,9 @@ const Home: FC = () => {
                       <Carousel
                         opts={{
                           align: "start",
+                          loop: true,
                         }}
+                        autoPlay
                       >
                         <CarouselContent>
                           {events.map(event => (
@@ -593,7 +598,7 @@ const Home: FC = () => {
             variant="h4"
             mb={3}
           >
-            協賛企業様
+            協賛企業様 (順不同)
           </SectionTitle>
           <ContentSectionSponsor>
             {sponsorCardsData.length === 0 && (sponsorsData as any[]).filter(sponsor => sponsor?.name && sponsor.name.trim() !== "").length === 0
