@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.2](https://github.com/suzuka-kosen-festa/2025-hp/compare/v2.1.1...v2.1.2) (2025-10-27)
+
+
+### Bug Fixes
+
+* improve link navigation with ScrollRestoration and prefetch ([#335](https://github.com/suzuka-kosen-festa/2025-hp/issues/335)) ([5f1a2ec](https://github.com/suzuka-kosen-festa/2025-hp/commit/5f1a2ec78a6b3d369e017f48fc42050df12019b0))
+
 ## [2.1.1](https://github.com/suzuka-kosen-festa/2025-hp/compare/v2.1.0...v2.1.1) (2025-10-24)
 
 
