@@ -123,6 +123,7 @@ jobs:
         with:
           urls: |
             ${{ needs.preview-deploy.outputs.url }}
+          configPath: ./lighthouserc.json
           uploadArtifacts: true
           temporaryPublicStorage: true
       - uses: actions/github-script@v8

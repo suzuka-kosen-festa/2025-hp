@@ -1,25 +1,36 @@
 <!doctype html>
-<html lang="ja_JP" style="background-color: black">
+<html lang="ja" style="background-color: black">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SE3KV9K318"></script>
+    <!-- Google tag (gtag.js) - Optimized for performance -->
     <script>
       window.dataLayer = window.dataLayer || []
       function gtag() {
         dataLayer.push(arguments)
       }
       gtag('js', new Date())
-
       gtag('config', 'G-SE3KV9K318')
     </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SE3KV9K318"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>第60回 鈴鹿高専祭 ORBIT 公式サイト</title>
+
+    <!-- パフォーマンス最適化 -->
+    <meta name="theme-color" content="#1B2735" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="//www.googletagmanager.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet" />
     <link rel="icon" type="image/svg+xml" href="/simple-logo.svg" />
+
+    <!-- 重要な画像のpreload -->
+    <link rel="preload" as="image" href="/images/ogp.png" />
+    <link rel="preload" as="image" href="/simple-logo.svg" />
+
     <meta name="description" content="第60回 鈴鹿高専祭 ORBIT 11月1日、2日開催" />
     <link rel="canonical" href="https://snct-fes.info/" />
 
@@ -45,5 +56,21 @@
   <body style="margin: 0; padding: 0">
     <div id="root"></div>
     <script type="module" src="/app/main.tsx"></script>
+
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker
+            .register('/sw.js')
+            .then((registration) => {
+              console.log('SW registered: ', registration)
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError)
+            })
+        })
+      }
+    </script>
   </body>
 </html>

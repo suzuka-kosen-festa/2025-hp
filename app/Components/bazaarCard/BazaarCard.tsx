@@ -49,6 +49,7 @@ function BazaarCard(props: BazaarComponentProps): ReactNode {
           image={image}
           alt={ja.bazaarCard.imageAlt(bazaarName)}
           onError={handleImageError}
+          loading="lazy"
           sx={{
             width: "100%",
             display: "block",

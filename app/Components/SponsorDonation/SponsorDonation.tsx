@@ -55,7 +55,7 @@ const SponsorDonation: FC = () => {
       <Typography
         variant="body2"
         sx={{
-          color: "rgba(255, 255, 255, 0.8)",
+          color: "rgba(255, 255, 255, 0.95)",
           mb: 4,
           fontSize: { xs: "0.9rem", sm: "1rem" },
         }}

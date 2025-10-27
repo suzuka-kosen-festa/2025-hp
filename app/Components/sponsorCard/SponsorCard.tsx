@@ -56,6 +56,7 @@ function SponsorCard(props: SponsorCardComponentProps): ReactNode {
             image={image}
             alt={ja.sponsorCard.imageAlt(sponsorName)}
             onError={handleImageError}
+            loading="lazy"
           />
         </Box>
         <CardContent

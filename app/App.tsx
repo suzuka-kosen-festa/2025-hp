@@ -65,19 +65,29 @@ export function mountApp(rootElement: HTMLElement) {
     document.head.appendChild(viewport);
   }
 
-  // レスポンシブ対応のためのCSS変数を設定
+  // レスポンシブ対応のためのCSS変数を設定（最適化版）
   const setResponsiveVariables = () => {
     const vw = window.innerWidth;
     const vh = window.innerHeight;
 
-    document.documentElement.style.setProperty("--vw", `${vw}px`);
-    document.documentElement.style.setProperty("--vh", `${vh}px`);
-    document.documentElement.style.setProperty("--vw-unit", `${vw / 100}px`);
-    document.documentElement.style.setProperty("--vh-unit", `${vh / 100}px`);
+    // バッチでCSS変数を設定
+    const root = document.documentElement;
+    root.style.setProperty("--vw", `${vw}px`);
+    root.style.setProperty("--vh", `${vh}px`);
+    root.style.setProperty("--vw-unit", `${vw / 100}px`);
+    root.style.setProperty("--vh-unit", `${vh / 100}px`);
   };
 
   setResponsiveVariables();
-  window.addEventListener("resize", setResponsiveVariables);
+
+  // リサイズイベントをthrottleして最適化
+  let resizeTimeout: number;
+  const throttledResize = () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = window.setTimeout(setResponsiveVariables, 16); // ~60fps
+  };
+
+  window.addEventListener("resize", throttledResize);
 
   root.render(
     <StrictMode>
