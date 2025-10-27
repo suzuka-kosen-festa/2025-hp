@@ -34,6 +34,53 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy ./dist --project-name=snct-2025-hp
+      - name: Notify Slack - Preview Deploy
+        uses: slackapi/slack-github-action@v2.1.1
+        if: github.event_name == 'push'
+        with:
+          payload: |
+            {
+              "text": "🔍 高専祭2025HP プレビュー環境デプロイ完了",
+              "attachments": [
+                {
+                  "color": "warning",
+                  "fields": [
+                    {
+                      "title": "プレビューURL",
+                      "value": "<${{ steps.page.outputs.deployment-url }}|${{ steps.page.outputs.deployment-url }}>",
+                      "short": false
+                    },
+                    {
+                      "title": "デプロイ先",
+                      "value": "Cloudflare Pages (Preview)",
+                      "short": true
+                    },
+                    {
+                      "title": "プロジェクト名",
+                      "value": "snct-2025-hp",
+                      "short": true
+                    },
+                    {
+                      "title": "ブランチ",
+                      "value": "${{ github.ref_name }}",
+                      "short": true
+                    },
+                    {
+                      "title": "コミット",
+                      "value": "<${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}|${{ github.sha }}>",
+                      "short": true
+                    },
+                    {
+                      "title": "実行者",
+                      "value": "${{ github.actor }}",
+                      "short": true
+                    }
+                  ]
+                }
+              ]
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
       - name: Comment
         uses: mshick/add-pr-comment@b8f338c590a895d50bcbfa6c5859251edc8952fc # v2.8.2
         if: github.event_name == 'pull_request'
