@@ -3,6 +3,7 @@ import { ArrowForward } from "@mui/icons-material";
 import { Box, Container, keyframes, Link, styled, Typography } from "@mui/material";
 import { Fragment, useEffect, useMemo, useState } from "react";
 import { Link as RouterLink } from "react-router";
+import personalSponsorsData from "@/../contents/personal_sponsor.json";
 import sponsorsData from "@/../contents/sponsor.json";
 import BazaarCard from "@/Components/bazaarCard";
 import { Carousel, CarouselContent, CarouselFooter, CarouselItem, CarouselNext, CarouselPrevious } from "@/Components/Carousel/Carousel";
@@ -12,11 +13,13 @@ import { EventTypeChip } from "@/Components/EventTypeChip/EventTypeChip";
 import Footer from "@/Components/Footer";
 import GoogleMap from "@/Components/GoogleMap";
 import OfficialSns from "@/Components/OfficialSns";
+import PersonalSponsor from "@/Components/PersonalSponsor/PersonalSponsor";
 import Scroll from "@/Components/Scroll";
 import { SectionTypeChip } from "@/Components/SectionTypeChip/SectionTypeChip";
 import { SnsShare } from "@/Components/SnsShare";
 import Sponsor from "@/Components/Sponsor/Sponsor";
 import SponsorCard from "@/Components/sponsorCard";
+import SponsorDonation from "@/Components/SponsorDonation";
 import StageEventCard from "@/Components/StageEventCard";
 import { eventTypes } from "@/data/events";
 import { sitemapData } from "@/data/sitemap";
@@ -342,6 +345,10 @@ const Home: FC = () => {
           </ContentSection>
 
           <ContentSection>
+            <SponsorDonation />
+          </ContentSection>
+
+          <ContentSection>
             <Box sx={{ p: { xs: 2, sm: 3, md: 4 }, textAlign: "center" }}>
               <SectionTitle
                 variant="h4"
@@ -601,7 +608,7 @@ const Home: FC = () => {
             協賛企業様 (順不同)
           </SectionTitle>
           <ContentSectionSponsor>
-            {sponsorCardsData.length === 0 && (sponsorsData as any[]).filter(sponsor => sponsor?.name && sponsor.name.trim() !== "").length === 0
+            {sponsorCardsData.length === 0 && (sponsorsData as Array<{ name: string, image: string, size: "large" | "medium" | "small" }>).filter(sponsor => sponsor?.name && sponsor.name.trim() !== "").length === 0
               ? (
                   <Box sx={{ p: 4, textAlign: "center" }}>
                     <Typography
@@ -632,6 +639,18 @@ const Home: FC = () => {
                     </Box>
                   </>
                 )}
+          </ContentSectionSponsor>
+
+          <SectionTitle
+            variant="h4"
+            mb={3}
+          >
+            個人協賛者様 (順不同)
+          </SectionTitle>
+          <ContentSectionSponsor>
+            <Box sx={{ p: 4, backdropFilter: "blur(10px)" }}>
+              <PersonalSponsor sponsors={personalSponsorsData as Array<{ name: string }>} />
+            </Box>
           </ContentSectionSponsor>
 
           <Box sx={{ py: { xs: 2, sm: 3, md: 4 }, textAlign: "center", px: { xs: 2, sm: 3, md: 4 } }}>
