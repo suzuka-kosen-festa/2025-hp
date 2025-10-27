@@ -20,6 +20,18 @@ jobs:
       - uses: actions/checkout@v5
         with:
           fetch-depth: 0
+      - name: Release please
+        uses: googleapis/release-please-action@c2a5a2bd6a758a0937f1ddb1e8950609867ed15c # v4
+        id: release
+        with:
+          release-type: simple
+
+  notify-release-start:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    needs: release-please
+    if: ${{ needs.release-please.outputs.release-created }}
+    steps:
       - name: Notify Slack - Pre Release
         uses: slackapi/slack-github-action@v2.1.1
         with:
@@ -38,7 +50,7 @@ jobs:
                     },
                     {
                       "title": "コミット",
-                      "value": "<${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}|${{ github.sha }}>",
+                      "value": "<${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}|${{ github.event.head_commit.message }}>",
                       "short": true
                     },
                     {
@@ -52,11 +64,6 @@ jobs:
             }
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-      - name: Release please
-        uses: googleapis/release-please-action@c2a5a2bd6a758a0937f1ddb1e8950609867ed15c # v4
-        id: release
-        with:
-          release-type: simple
 
   deploy:
     runs-on: ubuntu-latest
@@ -105,7 +112,7 @@ jobs:
                     },
                     {
                       "title": "コミット",
-                      "value": "<${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}|${{ github.sha }}>",
+                      "value": "<${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}|${{ github.event.head_commit.message }}>",
                       "short": true
                     }
                   ]
