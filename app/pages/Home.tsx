@@ -593,7 +593,7 @@ const Home: FC = () => {
             variant="h4"
             mb={3}
           >
-            協賛企業
+            協賛企業様
           </SectionTitle>
           <ContentSectionSponsor>
             {sponsorCardsData.length === 0 && (sponsorsData as any[]).filter(sponsor => sponsor?.name && sponsor.name.trim() !== "").length === 0
