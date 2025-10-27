@@ -68,7 +68,7 @@ jobs:
                     },
                     {
                       "title": "コミット",
-                      "value": "<${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}|${{ github.sha }}>",
+                      "value": "<${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}|${{ github.event.head_commit.message }}>",
                       "short": true
                     },
                     {
