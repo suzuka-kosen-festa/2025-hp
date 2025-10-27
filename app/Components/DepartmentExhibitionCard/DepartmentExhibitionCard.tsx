@@ -24,8 +24,8 @@ export default function DepartmentExhibitionCard(props: DepartmentExhibitionCard
   const themeColor = departmentColors[department] || "#4a90e2"; // デフォルトカラー
   return (
     <Card sx={{
-      width: { xs: "100%", sm: "320px", md: "350px" },
-      maxWidth: "350px",
+      width: "100%",
+      maxWidth: "100%",
       height: "100%",
       display: "flex",
       flexDirection: "column",
