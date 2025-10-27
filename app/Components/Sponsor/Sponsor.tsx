@@ -43,7 +43,7 @@ const SPONSOR_CONFIG = {
     maxHeight: "150px",
     // レイアウト設定
     layout: {
-      flexDirection: "row" as const,
+      flexDirection: "column" as const,
       flexWrap: "wrap" as const,
       justifyContent: "center" as const,
       alignItems: "center" as const,
