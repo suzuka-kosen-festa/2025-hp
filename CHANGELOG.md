@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.3](https://github.com/suzuka-kosen-festa/2025-hp/compare/v2.1.2...v2.1.3) (2025-10-27)
+
+
+### Bug Fixes
+
+* sponsor margin size ([#341](https://github.com/suzuka-kosen-festa/2025-hp/issues/341)) ([c04a191](https://github.com/suzuka-kosen-festa/2025-hp/commit/c04a1912a78c2c1f6b846aa962358d5f63708e5a))
+
 ## [2.1.2](https://github.com/suzuka-kosen-festa/2025-hp/compare/v2.1.1...v2.1.2) (2025-10-27)
 
 

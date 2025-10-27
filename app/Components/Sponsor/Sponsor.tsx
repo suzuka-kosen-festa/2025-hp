@@ -24,7 +24,7 @@ const SPONSOR_CONFIG = {
   large: {
     variant: "h4" as const,
     maxWidth: "100%",
-    margin: 1,
+    margin: 3,
     padding: 2,
     maxHeight: "200px",
     // レイアウト設定
@@ -38,7 +38,7 @@ const SPONSOR_CONFIG = {
   medium: {
     variant: "h5" as const,
     maxWidth: "100%",
-    margin: 1,
+    margin: 2,
     padding: 1.5,
     maxHeight: "150px",
     // レイアウト設定
@@ -52,7 +52,7 @@ const SPONSOR_CONFIG = {
   small: {
     variant: "h6" as const,
     maxWidth: "100%",
-    margin: 0.5,
+    margin: 3,
     padding: 1,
     maxHeight: "100px",
     // レイアウト設定
