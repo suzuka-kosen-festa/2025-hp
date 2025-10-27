@@ -1,5 +1,25 @@
 # Changelog
 
+## [2.2.0](https://github.com/suzuka-kosen-festa/2025-hp/compare/v2.1.3...v2.2.0) (2025-10-27)
+
+
+### Features
+
+* add personal sponsors section to Home page ([#351](https://github.com/suzuka-kosen-festa/2025-hp/issues/351)) ([b23a681](https://github.com/suzuka-kosen-festa/2025-hp/commit/b23a681425e441ee05eb33600d8362bd4f2fca2d))
+* add Slack notifications for preview and release workflows ([#342](https://github.com/suzuka-kosen-festa/2025-hp/issues/342)) ([3962a0e](https://github.com/suzuka-kosen-festa/2025-hp/commit/3962a0e7f230bd6e0ec1fec871c2a872ec320ad7))
+* add sponsor donation section ([#350](https://github.com/suzuka-kosen-festa/2025-hp/issues/350)) ([f6cb780](https://github.com/suzuka-kosen-festa/2025-hp/commit/f6cb7804646cbba8428ca68b6a219b6b34505e43))
+* enhance commit message handling in workflows ([#348](https://github.com/suzuka-kosen-festa/2025-hp/issues/348)) ([778183d](https://github.com/suzuka-kosen-festa/2025-hp/commit/778183d97ddd1a18dd1df2edafc599ed88322ebb))
+
+
+### Bug Fixes
+
+* Carousel exhibition width ([#353](https://github.com/suzuka-kosen-festa/2025-hp/issues/353)) ([b299c1d](https://github.com/suzuka-kosen-festa/2025-hp/commit/b299c1d0e51e04b5c10fcd283d79686b39bcde95))
+* exhibition Link ([#344](https://github.com/suzuka-kosen-festa/2025-hp/issues/344)) ([70eb7a3](https://github.com/suzuka-kosen-festa/2025-hp/commit/70eb7a3aa29f51bba4670f24b6dbd893139cda8a))
+* slack ([#346](https://github.com/suzuka-kosen-festa/2025-hp/issues/346)) ([af7f051](https://github.com/suzuka-kosen-festa/2025-hp/commit/af7f051b560ded540cae53a78646e420c9f66c0d))
+* sponsor font size ([#349](https://github.com/suzuka-kosen-festa/2025-hp/issues/349)) ([9d1bd75](https://github.com/suzuka-kosen-festa/2025-hp/commit/9d1bd751a7afc067919a49fefe5610fc8e6b715d))
+* update commit message display in workflows ([#347](https://github.com/suzuka-kosen-festa/2025-hp/issues/347)) ([ce11e78](https://github.com/suzuka-kosen-festa/2025-hp/commit/ce11e78724168a3b51a576a23b57f2dfc8280fdf))
+* update logo image source on Home page ([#352](https://github.com/suzuka-kosen-festa/2025-hp/issues/352)) ([04f3122](https://github.com/suzuka-kosen-festa/2025-hp/commit/04f31221d8b3e34e4353021c447688705cd3f60b))
+
 ## [2.1.3](https://github.com/suzuka-kosen-festa/2025-hp/compare/v2.1.2...v2.1.3) (2025-10-27)
 
 
