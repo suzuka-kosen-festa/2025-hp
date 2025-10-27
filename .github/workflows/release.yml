@@ -23,6 +23,7 @@ jobs:
       - name: Notify Slack - Pre Release
         uses: slackapi/slack-github-action@v2.1.1
         with:
+          webhook-type: incoming-webhook
           payload: |
             {
               "text": "🚀 高専祭2025HP リリース開始",
@@ -79,6 +80,7 @@ jobs:
       - name: Notify Slack - Post Release
         uses: slackapi/slack-github-action@v2.1.1
         with:
+          webhook-type: incoming-webhook
           payload: |
             {
               "text": "✅ 高専祭2025HP リリース完了",
