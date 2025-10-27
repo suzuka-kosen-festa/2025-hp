@@ -36,9 +36,9 @@ function PersonalSponsorCard({ name }: PersonalSponsorItem): ReactNode {
         color: "black",
         textAlign: "center",
         fontSize: {
-          xs: "1rem",
-          sm: "1.1rem",
-          md: "1.25rem",
+          xs: "1.1rem",
+          sm: "1.75rem",
+          md: "2rem",
         },
       }}
     >
