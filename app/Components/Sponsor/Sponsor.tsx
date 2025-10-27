@@ -23,7 +23,7 @@ interface SponsorSectionProps {
 const SPONSOR_CONFIG = {
   large: {
     variant: "h4" as const,
-    maxWidth: "70%",
+    maxWidth: "100%",
     margin: 1,
     padding: 2,
     maxHeight: "200px",
@@ -37,7 +37,7 @@ const SPONSOR_CONFIG = {
   },
   medium: {
     variant: "h5" as const,
-    maxWidth: "40%",
+    maxWidth: "100%",
     margin: 1,
     padding: 1.5,
     maxHeight: "150px",
@@ -51,7 +51,7 @@ const SPONSOR_CONFIG = {
   },
   small: {
     variant: "h6" as const,
-    maxWidth: "30%",
+    maxWidth: "100%",
     margin: 0.5,
     padding: 1,
     maxHeight: "100px",
@@ -157,7 +157,10 @@ function SponsorSection({ sponsors, size }: SponsorSectionProps): ReactNode {
       <Box
         sx={{
           display: "flex",
-          flexDirection: config.layout.flexDirection,
+          flexDirection: {
+            xs: "column",
+            sm: config.layout.flexDirection,
+          },
           flexWrap: config.layout.flexWrap,
           justifyContent: config.layout.justifyContent,
           alignItems: config.layout.alignItems,

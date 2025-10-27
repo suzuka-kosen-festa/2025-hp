@@ -161,7 +161,7 @@ const ContentSection = styled(Box)<{ color?: string }>(({ color = "#e9e9e9", the
 }));
 
 const ContentSectionSponsor = styled(Box)(({ theme }) => ({
-  background: "rgba(255, 255, 255, 0.7)",
+  background: "rgba(255, 255, 255)",
   backdropFilter: "blur(5px)",
   borderRadius: "20px",
   margin: "2rem 0",
@@ -593,7 +593,7 @@ const Home: FC = () => {
             variant="h4"
             mb={3}
           >
-            協賛企業
+            協賛企業様
           </SectionTitle>
           <ContentSectionSponsor>
             {sponsorCardsData.length === 0 && (sponsorsData as any[]).filter(sponsor => sponsor?.name && sponsor.name.trim() !== "").length === 0
