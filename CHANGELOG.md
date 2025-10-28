@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.2](https://github.com/suzuka-kosen-festa/2025-hp/compare/v2.2.1...v2.2.2) (2025-10-28)
+
+
+### Bug Fixes
+
+* update stage name in stage_event.json ([#357](https://github.com/suzuka-kosen-festa/2025-hp/issues/357)) ([6a6f7e3](https://github.com/suzuka-kosen-festa/2025-hp/commit/6a6f7e35199af9e469e083762cc1996637edab23))
+
 ## [2.2.1](https://github.com/suzuka-kosen-festa/2025-hp/compare/v2.2.0...v2.2.1) (2025-10-27)
 
 
