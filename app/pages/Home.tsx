@@ -207,7 +207,7 @@ const Home: FC = () => {
 
   useEffect(() => {
     const now = new Date(new Date().toLocaleString("en-US", { timeZone: "Asia/Tokyo" }));
-    const start = new Date("2025-10-02T15:00:00+09:00");
+    const start = new Date("2025-11-02T15:00:00+09:00");
     const end = new Date("2025-11-02T16:00:00+09:00");
 
     if (!isbot(navigator.userAgent) && window.history.length <= 1 && now >= start && now <= end) {
