@@ -15,7 +15,6 @@ exports[`sponsor card snapshot 1`] = `
         <img
           alt="テストスポンサーのイメージ"
           class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-1kuwa16-MuiCardMedia-root"
-          loading="lazy"
           src="https://placehold.jp/800x400.png"
         />
       </div>

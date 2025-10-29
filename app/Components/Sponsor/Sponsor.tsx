@@ -115,7 +115,6 @@ function SponsorCard({ name, image, size }: SponsorItem): ReactNode {
             <img
               src={image}
               alt={name}
-              loading="lazy"
               style={{
                 maxWidth: "100%",
                 maxHeight: config.maxHeight,

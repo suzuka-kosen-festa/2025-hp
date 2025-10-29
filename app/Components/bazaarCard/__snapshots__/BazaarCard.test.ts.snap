@@ -12,7 +12,6 @@ exports[`bazaarCard snapshot 1`] = `
       <img
         alt="バザー名のイメージ"
         class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-b3t5ee-MuiCardMedia-root"
-        loading="lazy"
         src="/images/not-found.png"
       />
       <div
