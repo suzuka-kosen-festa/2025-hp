@@ -1,8 +1,10 @@
 import type { FC } from "react";
 import { ArrowForward } from "@mui/icons-material";
 import { Box, Container, keyframes, Link, styled, Typography } from "@mui/material";
+import { isbot } from "isbot";
 import { Fragment, useEffect, useMemo, useState } from "react";
 import { Link as RouterLink } from "react-router";
+
 import personalSponsorsData from "@/../contents/personal_sponsor.json";
 import sponsorsData from "@/../contents/sponsor.json";
 import BazaarCard from "@/Components/bazaarCard";
@@ -204,6 +206,15 @@ const Home: FC = () => {
   const [isScrollVisible, setIsScrollVisible] = useState(true);
 
   useEffect(() => {
+    const now = new Date(new Date().toLocaleString("en-US", { timeZone: "Asia/Tokyo" }));
+    const start = new Date("2025-10-02T15:00:00+09:00");
+    const end = new Date("2025-11-02T16:00:00+09:00");
+
+    if (!isbot(navigator.userAgent) && window.history.length <= 1 && now >= start && now <= end) {
+      (window as any).gtag("event", "redirect", { event_category: "navigation", event_label: "youtube_live" });
+      window.location.replace("https://youtube.com/live/YcGiY-46p6A");
+    }
+
     const handleScroll = () => {
       const heroSection = document.querySelector("[data-hero-section]");
       if (!heroSection) {
