@@ -211,6 +211,7 @@ const Home: FC = () => {
     const end = new Date("2025-11-02T16:00:00+09:00");
 
     if (!isbot(navigator.userAgent) && window.history.length <= 1 && now >= start && now <= end) {
+      (window as any).gtag("event", "redirect", { event_category: "navigation", event_label: "youtube_live" });
       window.location.replace("https://youtube.com/live/YcGiY-46p6A");
     }
 
