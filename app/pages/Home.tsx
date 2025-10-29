@@ -2,7 +2,7 @@ import type { FC } from "react";
 import { ArrowForward } from "@mui/icons-material";
 import { Box, Container, keyframes, Link, styled, Typography } from "@mui/material";
 import { isbot } from "isbot";
-import { Fragment, useEffect, useMemo, useState } from "react";
+import { Fragment, Suspense, useEffect, useMemo, useState } from "react";
 import { Link as RouterLink } from "react-router";
 
 import personalSponsorsData from "@/../contents/personal_sponsor.json";
@@ -23,6 +23,7 @@ import Sponsor from "@/Components/Sponsor/Sponsor";
 import SponsorCard from "@/Components/sponsorCard";
 import SponsorDonation from "@/Components/SponsorDonation";
 import StageEventCard from "@/Components/StageEventCard";
+import Timeline from "@/Components/Timeline";
 import { eventTypes } from "@/data/events";
 import { sitemapData } from "@/data/sitemap";
 import { sponsorCardsData } from "@/data/sponsorCards";
@@ -430,6 +431,55 @@ const Home: FC = () => {
               </Box>
             </Box>
           </ContentSection>
+
+          <ContentSection>
+            <Suspense fallback={<div>Loading...</div>}>
+              <Timeline title="タイムテーブル" imageUrl="/images/TimeTable.webp" />
+            </Suspense>
+          </ContentSection>
+
+          <ContentSection>
+            <Suspense fallback={<div>Loading...</div>}>
+              <Timeline title="校内マップ" imageUrl="/images/map.webp" />
+            </Suspense>
+          </ContentSection>
+
+          <Box sx={{ display: "flex", width: "100%", justifyContent: "center", alignItems: "center" }}>
+            <Link
+              href="/images/brochure.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{
+                "display": "inline-flex",
+                "alignItems": "center",
+                "justifyContent": "center",
+                "gap": 1,
+                "p": 2,
+                "textDecoration": "none",
+                "color": "white",
+                "border": "2px solid white",
+                "borderRadius": "8px",
+                "zIndex": 100,
+                "transition": "all 0.3s ease",
+                "&:hover": {
+                  backgroundColor: "rgba(255, 255, 255, 0.1)",
+                  transform: "translateY(-2px)",
+                  boxShadow: "0 4px 12px rgba(255, 255, 255, 0.2)",
+                },
+              }}
+            >
+              <Typography
+                variant="h6"
+                sx={{
+                  fontWeight: "600",
+                  fontSize: { xs: "1rem", sm: "1.25rem" },
+                }}
+              >
+                今年配布のパンフレットはこちら
+              </Typography>
+              <ArrowForward />
+            </Link>
+          </Box>
 
           <ContentSection>
             <Box sx={{ p: { xs: 2, sm: 3, md: 4 }, display: "flex", flexDirection: "column", gap: 2 }}>
