@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import { ArrowForward } from "@mui/icons-material";
 import { Box, Container, keyframes, Link, styled, Typography } from "@mui/material";
-import { Fragment, useEffect, useMemo, useState } from "react";
+import { Fragment, Suspense, useEffect, useMemo, useState } from "react";
 import { Link as RouterLink } from "react-router";
 import personalSponsorsData from "@/../contents/personal_sponsor.json";
 import sponsorsData from "@/../contents/sponsor.json";
@@ -21,6 +21,7 @@ import Sponsor from "@/Components/Sponsor/Sponsor";
 import SponsorCard from "@/Components/sponsorCard";
 import SponsorDonation from "@/Components/SponsorDonation";
 import StageEventCard from "@/Components/StageEventCard";
+import Timeline from "@/Components/Timeline";
 import { eventTypes } from "@/data/events";
 import { sitemapData } from "@/data/sitemap";
 import { sponsorCardsData } from "@/data/sponsorCards";
