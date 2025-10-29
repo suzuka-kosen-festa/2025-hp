@@ -1,41 +1,32 @@
 import type { FC } from "react";
 import { ArrowForward } from "@mui/icons-material";
 import { Box, Container, keyframes, Link, styled, Typography } from "@mui/material";
-import { Fragment, lazy, Suspense, useEffect, useMemo, useState } from "react";
+import { Fragment, useEffect, useMemo, useState } from "react";
 import { Link as RouterLink } from "react-router";
 import personalSponsorsData from "@/../contents/personal_sponsor.json";
 import sponsorsData from "@/../contents/sponsor.json";
-
+import BazaarCard from "@/Components/bazaarCard";
+import { Carousel, CarouselContent, CarouselFooter, CarouselItem, CarouselNext, CarouselPrevious } from "@/Components/Carousel/Carousel";
+import DepartmentExhibitionCard from "@/Components/DepartmentExhibitionCard";
+import EventSummary from "@/Components/EventSummary";
+import { EventTypeChip } from "@/Components/EventTypeChip/EventTypeChip";
+import Footer from "@/Components/Footer";
+import GoogleMap from "@/Components/GoogleMap";
+import OfficialSns from "@/Components/OfficialSns";
+import PersonalSponsor from "@/Components/PersonalSponsor/PersonalSponsor";
+import Scroll from "@/Components/Scroll";
+import { SectionTypeChip } from "@/Components/SectionTypeChip/SectionTypeChip";
+import { SnsShare } from "@/Components/SnsShare";
+import Sponsor from "@/Components/Sponsor/Sponsor";
+import SponsorCard from "@/Components/sponsorCard";
+import SponsorDonation from "@/Components/SponsorDonation";
+import StageEventCard from "@/Components/StageEventCard";
 import { eventTypes } from "@/data/events";
 import { sitemapData } from "@/data/sitemap";
 import { sponsorCardsData } from "@/data/sponsorCards";
 import sortedBazaarData from "@/lib/constants/bazaar";
 import exhibitionsByDepartment from "@/lib/constants/departmentExhibitions";
 import eventsByType from "@/lib/constants/events";
-
-// 遅延読み込みコンポーネント
-const BazaarCard = lazy(() => import("@/Components/bazaarCard"));
-const Carousel = lazy(() => import("@/Components/Carousel/Carousel").then(module => ({ default: module.Carousel })));
-const CarouselContent = lazy(() => import("@/Components/Carousel/Carousel").then(module => ({ default: module.CarouselContent })));
-const CarouselFooter = lazy(() => import("@/Components/Carousel/Carousel").then(module => ({ default: module.CarouselFooter })));
-const CarouselItem = lazy(() => import("@/Components/Carousel/Carousel").then(module => ({ default: module.CarouselItem })));
-const CarouselNext = lazy(() => import("@/Components/Carousel/Carousel").then(module => ({ default: module.CarouselNext })));
-const CarouselPrevious = lazy(() => import("@/Components/Carousel/Carousel").then(module => ({ default: module.CarouselPrevious })));
-const DepartmentExhibitionCard = lazy(() => import("@/Components/DepartmentExhibitionCard"));
-const EventSummary = lazy(() => import("@/Components/EventSummary"));
-const EventTypeChip = lazy(() => import("@/Components/EventTypeChip/EventTypeChip").then(module => ({ default: module.EventTypeChip })));
-const Footer = lazy(() => import("@/Components/Footer"));
-const GoogleMap = lazy(() => import("@/Components/GoogleMap"));
-const OfficialSns = lazy(() => import("@/Components/OfficialSns"));
-const PersonalSponsor = lazy(() => import("@/Components/PersonalSponsor/PersonalSponsor"));
-const Scroll = lazy(() => import("@/Components/Scroll"));
-const SectionTypeChip = lazy(() => import("@/Components/SectionTypeChip/SectionTypeChip").then(module => ({ default: module.SectionTypeChip })));
-const SnsShare = lazy(() => import("@/Components/SnsShare").then(module => ({ default: module.SnsShare })));
-const Sponsor = lazy(() => import("@/Components/Sponsor/Sponsor"));
-const SponsorCard = lazy(() => import("@/Components/sponsorCard"));
-const SponsorDonation = lazy(() => import("@/Components/SponsorDonation"));
-const StageEventCard = lazy(() => import("@/Components/StageEventCard"));
-const Timeline = lazy(() => import("@/Components/Timeline"));
 
 const twinkle = keyframes`
   0%, 100% { opacity: 0.3; }
@@ -341,7 +332,7 @@ const Home: FC = () => {
         <Container maxWidth="lg" data-content-section sx={{ px: { xs: 2, sm: 3, md: 4 } }}>
           <ContentSection>
             <Box sx={{ p: { xs: 2, sm: 3, md: 4 } }}>
-              <SectionTitle variant="h3" mb={3}>
+              <SectionTitle variant="h4" mb={3}>
                 開催概要
               </SectionTitle>
               <EventSummary
@@ -590,7 +581,7 @@ const Home: FC = () => {
             <Box sx={{ p: { xs: 2, sm: 3, md: 4 }, display: "flex", flexDirection: "column", gap: 2 }}>
 
               <SectionTitle
-                variant="h3"
+                variant="h4"
                 mb={3}
               // component="h2"
               >
@@ -660,7 +651,7 @@ const Home: FC = () => {
           </ContentSection>
 
           <SectionTitle
-            variant="h3"
+            variant="h4"
             mb={3}
           >
             協賛企業様 (順不同)
@@ -700,7 +691,7 @@ const Home: FC = () => {
           </ContentSectionSponsor>
 
           <SectionTitle
-            variant="h3"
+            variant="h4"
             mb={3}
           >
             個人協賛者様 (順不同)
@@ -722,14 +713,10 @@ const Home: FC = () => {
             >
               高専祭2025の最新情報をシェアしよう！
             </Typography>
-            <Suspense fallback={<div>Loading...</div>}>
-              <SnsShare />
-            </Suspense>
+            <SnsShare />
           </Box>
         </Container>
-        <Suspense fallback={<div>Loading...</div>}>
-          <Footer siteMap={sitemapData} />
-        </Suspense>
+        <Footer siteMap={sitemapData} />
       </Bg>
     </SpaceBackground>
   );

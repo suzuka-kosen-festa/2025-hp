@@ -16,7 +16,6 @@ exports[`sponsor snapshot 1`] = `
         >
           <img
             alt="テストスポンサー大"
-            loading="lazy"
             src="public/logo-dark.png"
             style="max-width: 100%; max-height: 200px; object-fit: contain;"
           />

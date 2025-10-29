@@ -19,70 +19,102 @@ exports[`footer snapshot 1`] = `
         <ul
           class="MuiList-root MuiList-padding css-oyuda3-MuiList-root"
         >
-          <div
-            class="MuiBox-root css-wiz012"
+          <li
+            class="MuiListItem-root MuiListItem-gutters css-1idlbdq-MuiListItem-root"
           >
-            <p
-              class="MuiTypography-root MuiTypography-body1 css-u1vw1y-MuiTypography-root"
+            <li
+              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-y8gev5-MuiListItem-root"
             >
-              ・
-            </p>
-            <a
-              class="css-tijne9"
-              data-discover="true"
-              href="/"
-            >
-              トップページ
-            </a>
-          </div>
-          <div
-            class="MuiBox-root css-wiz012"
+              <div
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
+                >
+                  ・
+                </span>
+              </div>
+              <a
+                class="css-tijne9"
+                data-discover="true"
+                href="/"
+              >
+                トップページ
+              </a>
+            </li>
+          </li>
+          <li
+            class="MuiListItem-root MuiListItem-gutters css-1idlbdq-MuiListItem-root"
           >
-            <p
-              class="MuiTypography-root MuiTypography-body1 css-u1vw1y-MuiTypography-root"
+            <li
+              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-y8gev5-MuiListItem-root"
             >
-              ・
-            </p>
-            <a
-              class="css-tijne9"
-              data-discover="true"
-              href="/news"
-            >
-              お知らせ
-            </a>
-          </div>
-          <div
-            class="MuiBox-root css-wiz012"
+              <div
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
+                >
+                  ・
+                </span>
+              </div>
+              <a
+                class="css-tijne9"
+                data-discover="true"
+                href="/news"
+              >
+                お知らせ
+              </a>
+            </li>
+          </li>
+          <li
+            class="MuiListItem-root MuiListItem-gutters css-1idlbdq-MuiListItem-root"
           >
-            <p
-              class="MuiTypography-root MuiTypography-body1 css-u1vw1y-MuiTypography-root"
+            <li
+              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-y8gev5-MuiListItem-root"
             >
-              ・
-            </p>
-            <a
-              class="css-tijne9"
-              data-discover="true"
-              href="/events"
-            >
-              イベント情報
-            </a>
-          </div>
-          <div
-            class="MuiBox-root css-wiz012"
+              <div
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
+                >
+                  ・
+                </span>
+              </div>
+              <a
+                class="css-tijne9"
+                data-discover="true"
+                href="/events"
+              >
+                イベント情報
+              </a>
+            </li>
+          </li>
+          <li
+            class="MuiListItem-root MuiListItem-gutters css-1idlbdq-MuiListItem-root"
           >
-            <p
-              class="MuiTypography-root MuiTypography-body1 css-u1vw1y-MuiTypography-root"
+            <li
+              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-y8gev5-MuiListItem-root"
             >
-              ・
-            </p>
-            <a
-              class="css-tijne9"
-              data-discover="true"
-              href="/access"
-            >
-              アクセス
-            </a>
-          </div>
+              <div
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
+                >
+                  ・
+                </span>
+              </div>
+              <a
+                class="css-tijne9"
+                data-discover="true"
+                href="/access"
+              >
+                アクセス
+              </a>
+            </li>
+          </li>
         </ul>
       </div>
       <div
@@ -96,70 +128,102 @@ exports[`footer snapshot 1`] = `
         <ul
           class="MuiList-root MuiList-padding css-oyuda3-MuiList-root"
         >
-          <div
-            class="MuiBox-root css-wiz012"
+          <li
+            class="MuiListItem-root MuiListItem-gutters css-1idlbdq-MuiListItem-root"
           >
-            <p
-              class="MuiTypography-root MuiTypography-body1 css-u1vw1y-MuiTypography-root"
+            <li
+              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-y8gev5-MuiListItem-root"
             >
-              ・
-            </p>
-            <a
-              class="css-tijne9"
-              data-discover="true"
-              href="/about"
-            >
-              高専祭とは
-            </a>
-          </div>
-          <div
-            class="MuiBox-root css-wiz012"
+              <div
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
+                >
+                  ・
+                </span>
+              </div>
+              <a
+                class="css-tijne9"
+                data-discover="true"
+                href="/about"
+              >
+                高専祭とは
+              </a>
+            </li>
+          </li>
+          <li
+            class="MuiListItem-root MuiListItem-gutters css-1idlbdq-MuiListItem-root"
           >
-            <p
-              class="MuiTypography-root MuiTypography-body1 css-u1vw1y-MuiTypography-root"
+            <li
+              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-y8gev5-MuiListItem-root"
             >
-              ・
-            </p>
-            <a
-              class="css-tijne9"
-              data-discover="true"
-              href="/committee"
-            >
-              実行委員会
-            </a>
-          </div>
-          <div
-            class="MuiBox-root css-wiz012"
+              <div
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
+                >
+                  ・
+                </span>
+              </div>
+              <a
+                class="css-tijne9"
+                data-discover="true"
+                href="/committee"
+              >
+                実行委員会
+              </a>
+            </li>
+          </li>
+          <li
+            class="MuiListItem-root MuiListItem-gutters css-1idlbdq-MuiListItem-root"
           >
-            <p
-              class="MuiTypography-root MuiTypography-body1 css-u1vw1y-MuiTypography-root"
+            <li
+              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-y8gev5-MuiListItem-root"
             >
-              ・
-            </p>
-            <a
-              class="css-tijne9"
-              data-discover="true"
-              href="/history"
-            >
-              歴史
-            </a>
-          </div>
-          <div
-            class="MuiBox-root css-wiz012"
+              <div
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
+                >
+                  ・
+                </span>
+              </div>
+              <a
+                class="css-tijne9"
+                data-discover="true"
+                href="/history"
+              >
+                歴史
+              </a>
+            </li>
+          </li>
+          <li
+            class="MuiListItem-root MuiListItem-gutters css-1idlbdq-MuiListItem-root"
           >
-            <p
-              class="MuiTypography-root MuiTypography-body1 css-u1vw1y-MuiTypography-root"
+            <li
+              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-y8gev5-MuiListItem-root"
             >
-              ・
-            </p>
-            <a
-              class="css-tijne9"
-              data-discover="true"
-              href="/philosophy"
-            >
-              理念・目標
-            </a>
-          </div>
+              <div
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
+                >
+                  ・
+                </span>
+              </div>
+              <a
+                class="css-tijne9"
+                data-discover="true"
+                href="/philosophy"
+              >
+                理念・目標
+              </a>
+            </li>
+          </li>
         </ul>
       </div>
       <div
@@ -173,86 +237,126 @@ exports[`footer snapshot 1`] = `
         <ul
           class="MuiList-root MuiList-padding css-oyuda3-MuiList-root"
         >
-          <div
-            class="MuiBox-root css-wiz012"
+          <li
+            class="MuiListItem-root MuiListItem-gutters css-1idlbdq-MuiListItem-root"
           >
-            <p
-              class="MuiTypography-root MuiTypography-body1 css-u1vw1y-MuiTypography-root"
+            <li
+              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-y8gev5-MuiListItem-root"
             >
-              ・
-            </p>
-            <a
-              class="css-tijne9"
-              data-discover="true"
-              href="/participation"
-            >
-              一般参加
-            </a>
-          </div>
-          <div
-            class="MuiBox-root css-wiz012"
+              <div
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
+                >
+                  ・
+                </span>
+              </div>
+              <a
+                class="css-tijne9"
+                data-discover="true"
+                href="/participation"
+              >
+                一般参加
+              </a>
+            </li>
+          </li>
+          <li
+            class="MuiListItem-root MuiListItem-gutters css-1idlbdq-MuiListItem-root"
           >
-            <p
-              class="MuiTypography-root MuiTypography-body1 css-u1vw1y-MuiTypography-root"
+            <li
+              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-y8gev5-MuiListItem-root"
             >
-              ・
-            </p>
-            <a
-              class="css-tijne9"
-              data-discover="true"
-              href="/exhibition"
-            >
-              出展申込
-            </a>
-          </div>
-          <div
-            class="MuiBox-root css-wiz012"
+              <div
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
+                >
+                  ・
+                </span>
+              </div>
+              <a
+                class="css-tijne9"
+                data-discover="true"
+                href="/exhibition"
+              >
+                出展申込
+              </a>
+            </li>
+          </li>
+          <li
+            class="MuiListItem-root MuiListItem-gutters css-1idlbdq-MuiListItem-root"
           >
-            <p
-              class="MuiTypography-root MuiTypography-body1 css-u1vw1y-MuiTypography-root"
+            <li
+              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-y8gev5-MuiListItem-root"
             >
-              ・
-            </p>
-            <a
-              class="css-tijne9"
-              data-discover="true"
-              href="/schedule"
-            >
-              スケジュール
-            </a>
-          </div>
-          <div
-            class="MuiBox-root css-wiz012"
+              <div
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
+                >
+                  ・
+                </span>
+              </div>
+              <a
+                class="css-tijne9"
+                data-discover="true"
+                href="/schedule"
+              >
+                スケジュール
+              </a>
+            </li>
+          </li>
+          <li
+            class="MuiListItem-root MuiListItem-gutters css-1idlbdq-MuiListItem-root"
           >
-            <p
-              class="MuiTypography-root MuiTypography-body1 css-u1vw1y-MuiTypography-root"
+            <li
+              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-y8gev5-MuiListItem-root"
             >
-              ・
-            </p>
-            <a
-              class="css-tijne9"
-              data-discover="true"
-              href="/map"
-            >
-              会場マップ
-            </a>
-          </div>
-          <div
-            class="MuiBox-root css-wiz012"
+              <div
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
+                >
+                  ・
+                </span>
+              </div>
+              <a
+                class="css-tijne9"
+                data-discover="true"
+                href="/map"
+              >
+                会場マップ
+              </a>
+            </li>
+          </li>
+          <li
+            class="MuiListItem-root MuiListItem-gutters css-1idlbdq-MuiListItem-root"
           >
-            <p
-              class="MuiTypography-root MuiTypography-body1 css-u1vw1y-MuiTypography-root"
+            <li
+              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-y8gev5-MuiListItem-root"
             >
-              ・
-            </p>
-            <a
-              class="css-tijne9"
-              data-discover="true"
-              href="/notes"
-            >
-              注意事項
-            </a>
-          </div>
+              <div
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
+                >
+                  ・
+                </span>
+              </div>
+              <a
+                class="css-tijne9"
+                data-discover="true"
+                href="/notes"
+              >
+                注意事項
+              </a>
+            </li>
+          </li>
         </ul>
       </div>
       <div
@@ -266,54 +370,78 @@ exports[`footer snapshot 1`] = `
         <ul
           class="MuiList-root MuiList-padding css-oyuda3-MuiList-root"
         >
-          <div
-            class="MuiBox-root css-wiz012"
+          <li
+            class="MuiListItem-root MuiListItem-gutters css-1idlbdq-MuiListItem-root"
           >
-            <p
-              class="MuiTypography-root MuiTypography-body1 css-u1vw1y-MuiTypography-root"
+            <li
+              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-y8gev5-MuiListItem-root"
             >
-              ・
-            </p>
-            <a
-              class="css-tijne9"
-              data-discover="true"
-              href="/faq"
-            >
-              よくある質問
-            </a>
-          </div>
-          <div
-            class="MuiBox-root css-wiz012"
+              <div
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
+                >
+                  ・
+                </span>
+              </div>
+              <a
+                class="css-tijne9"
+                data-discover="true"
+                href="/faq"
+              >
+                よくある質問
+              </a>
+            </li>
+          </li>
+          <li
+            class="MuiListItem-root MuiListItem-gutters css-1idlbdq-MuiListItem-root"
           >
-            <p
-              class="MuiTypography-root MuiTypography-body1 css-u1vw1y-MuiTypography-root"
+            <li
+              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-y8gev5-MuiListItem-root"
             >
-              ・
-            </p>
-            <a
-              class="css-tijne9"
-              data-discover="true"
-              href="/contact"
-            >
-              お問い合わせ
-            </a>
-          </div>
-          <div
-            class="MuiBox-root css-wiz012"
+              <div
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
+                >
+                  ・
+                </span>
+              </div>
+              <a
+                class="css-tijne9"
+                data-discover="true"
+                href="/contact"
+              >
+                お問い合わせ
+              </a>
+            </li>
+          </li>
+          <li
+            class="MuiListItem-root MuiListItem-gutters css-1idlbdq-MuiListItem-root"
           >
-            <p
-              class="MuiTypography-root MuiTypography-body1 css-u1vw1y-MuiTypography-root"
+            <li
+              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-y8gev5-MuiListItem-root"
             >
-              ・
-            </p>
-            <a
-              class="css-tijne9"
-              data-discover="true"
-              href="/privacy"
-            >
-              プライバシーポリシー
-            </a>
-          </div>
+              <div
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
+                >
+                  ・
+                </span>
+              </div>
+              <a
+                class="css-tijne9"
+                data-discover="true"
+                href="/privacy"
+              >
+                プライバシーポリシー
+              </a>
+            </li>
+          </li>
         </ul>
       </div>
       <div
@@ -327,54 +455,78 @@ exports[`footer snapshot 1`] = `
         <ul
           class="MuiList-root MuiList-padding css-oyuda3-MuiList-root"
         >
-          <div
-            class="MuiBox-root css-wiz012"
+          <li
+            class="MuiListItem-root MuiListItem-gutters css-1idlbdq-MuiListItem-root"
           >
-            <p
-              class="MuiTypography-root MuiTypography-body1 css-u1vw1y-MuiTypography-root"
+            <li
+              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-y8gev5-MuiListItem-root"
             >
-              ・
-            </p>
-            <a
-              class="css-tijne9"
-              data-discover="true"
-              href="/archive"
-            >
-              過去の高専祭
-            </a>
-          </div>
-          <div
-            class="MuiBox-root css-wiz012"
+              <div
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
+                >
+                  ・
+                </span>
+              </div>
+              <a
+                class="css-tijne9"
+                data-discover="true"
+                href="/archive"
+              >
+                過去の高専祭
+              </a>
+            </li>
+          </li>
+          <li
+            class="MuiListItem-root MuiListItem-gutters css-1idlbdq-MuiListItem-root"
           >
-            <p
-              class="MuiTypography-root MuiTypography-body1 css-u1vw1y-MuiTypography-root"
+            <li
+              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-y8gev5-MuiListItem-root"
             >
-              ・
-            </p>
-            <a
-              class="css-tijne9"
-              data-discover="true"
-              href="/gallery"
-            >
-              写真ギャラリー
-            </a>
-          </div>
-          <div
-            class="MuiBox-root css-wiz012"
+              <div
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
+                >
+                  ・
+                </span>
+              </div>
+              <a
+                class="css-tijne9"
+                data-discover="true"
+                href="/gallery"
+              >
+                写真ギャラリー
+              </a>
+            </li>
+          </li>
+          <li
+            class="MuiListItem-root MuiListItem-gutters css-1idlbdq-MuiListItem-root"
           >
-            <p
-              class="MuiTypography-root MuiTypography-body1 css-u1vw1y-MuiTypography-root"
+            <li
+              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-y8gev5-MuiListItem-root"
             >
-              ・
-            </p>
-            <a
-              class="css-tijne9"
-              data-discover="true"
-              href="/videos"
-            >
-              動画アーカイブ
-            </a>
-          </div>
+              <div
+                class="MuiListItemText-root css-1m2ifik-MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-rizt0-MuiTypography-root"
+                >
+                  ・
+                </span>
+              </div>
+              <a
+                class="css-tijne9"
+                data-discover="true"
+                href="/videos"
+              >
+                動画アーカイブ
+              </a>
+            </li>
+          </li>
         </ul>
       </div>
     </div>
