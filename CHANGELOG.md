@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.1](https://github.com/suzuka-kosen-festa/2025-hp/compare/v2.3.0...v2.3.1) (2025-10-30)
+
+
+### Bug Fixes
+
+* add new sponsor ([#365](https://github.com/suzuka-kosen-festa/2025-hp/issues/365)) ([ed96144](https://github.com/suzuka-kosen-festa/2025-hp/commit/ed9614438eec1ebd0aef490d678976dd97db557e))
+
 ## [2.3.0](https://github.com/suzuka-kosen-festa/2025-hp/compare/v2.2.2...v2.3.0) (2025-10-29)
 
 
