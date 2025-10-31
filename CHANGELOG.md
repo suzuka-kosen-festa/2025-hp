@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.2](https://github.com/suzuka-kosen-festa/2025-hp/compare/v2.3.1...v2.3.2) (2025-10-31)
+
+
+### Bug Fixes
+
+* Favicon path ([#326](https://github.com/suzuka-kosen-festa/2025-hp/issues/326)) ([74e1d59](https://github.com/suzuka-kosen-festa/2025-hp/commit/74e1d59c2c675b90565fcf5ef8f9f8299fb0a8fb))
+
 ## [2.3.1](https://github.com/suzuka-kosen-festa/2025-hp/compare/v2.3.0...v2.3.1) (2025-10-30)
 
 
