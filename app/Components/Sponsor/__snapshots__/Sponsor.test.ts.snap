@@ -9,10 +9,10 @@ exports[`sponsor snapshot 1`] = `
       class="MuiBox-root css-1gxow2c"
     >
       <div
-        class="MuiBox-root css-1p23rmk"
+        class="MuiBox-root css-aphtx4"
       >
         <div
-          class="MuiBox-root css-3ib8bu"
+          class="MuiBox-root css-794psr"
         >
           <img
             alt="テストスポンサー大"
@@ -26,13 +26,13 @@ exports[`sponsor snapshot 1`] = `
       class="MuiBox-root css-1gxow2c"
     >
       <div
-        class="MuiBox-root css-ohpthu"
+        class="MuiBox-root css-kt9syq"
       >
         <div
-          class="MuiBox-root css-1vsv8c1"
+          class="MuiBox-root css-15x05ou"
         >
           <div
-            class="MuiTypography-root MuiTypography-h5 css-lt6gor-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 css-3g0i5c-MuiTypography-root"
           >
             テストスポンサー中
           </div>
@@ -43,13 +43,13 @@ exports[`sponsor snapshot 1`] = `
       class="MuiBox-root css-1gxow2c"
     >
       <div
-        class="MuiBox-root css-ohpthu"
+        class="MuiBox-root css-15jxpwm"
       >
         <div
-          class="MuiBox-root css-1rzgnc4"
+          class="MuiBox-root css-1cs71i4"
         >
           <div
-            class="MuiTypography-root MuiTypography-h6 css-14qmtq9-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h6 css-z4qn4g-MuiTypography-root"
           >
             テストスポンサー小
           </div>

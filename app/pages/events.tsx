@@ -1,11 +1,12 @@
 import type { FC } from "react";
-import { Box, Chip, Container, keyframes, styled, Typography } from "@mui/material";
-import { useEffect } from "react";
+import { Box, Container, keyframes, styled, Typography } from "@mui/material";
 import { Link } from "react-router";
+import { EventTypeChip } from "@/Components/EventTypeChip/EventTypeChip";
 import Footer from "@/Components/Footer";
 import StageEventCard from "@/Components/StageEventCard";
-import { type EventData, eventsData, eventTypes } from "@/data/events";
+import { eventTypes } from "@/data/events";
 import { sitemapData } from "@/data/sitemap";
+import eventsByType from "@/lib/constants/events";
 import { Bg, SpaceBackground, Stars } from "./Home";
 
 const rotate = keyframes`
@@ -85,63 +86,7 @@ const SectionHeader = styled(Box)(({ theme }) => ({
   },
 }));
 
-const EventTypeChip = styled(Chip)(({ theme }) => ({
-  "fontWeight": "bold",
-  "fontSize": "1.2rem",
-  "padding": "0.5rem 1rem",
-  "height": "auto",
-  [theme.breakpoints.down("sm")]: {
-    fontSize: "1rem",
-    padding: "0.4rem 0.8rem",
-  },
-  [theme.breakpoints.down("xs")]: {
-    fontSize: "0.9rem",
-    padding: "0.3rem 0.6rem",
-  },
-  "& .MuiChip-label": {
-    padding: "0.5rem 1rem",
-    [theme.breakpoints.down("sm")]: {
-      padding: "0.4rem 0.8rem",
-    },
-    [theme.breakpoints.down("xs")]: {
-      padding: "0.3rem 0.6rem",
-    },
-  },
-}));
-
 const Events: FC = () => {
-  useEffect(() => {
-    // ハッシュリンクの処理
-    const handleHashChange = () => {
-      const hash = window.location.hash.slice(1); // #を除去
-      if (hash && ["stage", "live", "mystery"].includes(hash)) {
-        const element = document.getElementById(hash);
-        if (element) {
-          element.scrollIntoView({ behavior: "instant" });
-        }
-      }
-    };
-
-    // 初回読み込み時の処理
-    handleHashChange();
-
-    // ハッシュ変更の監視
-    window.addEventListener("hashchange", handleHashChange);
-
-    return () => {
-      window.removeEventListener("hashchange", handleHashChange);
-    };
-  }, []);
-
-  // イベントタイプ別にイベントをグループ化
-  const eventsByType = eventsData.reduce((acc, event) => {
-    if (!acc[event.type]) {
-      acc[event.type] = [];
-    }
-    acc[event.type].push(event);
-    return acc;
-  }, {} as Record<string, EventData[]>);
-
   return (
     <SpaceBackground>
       <Bg>

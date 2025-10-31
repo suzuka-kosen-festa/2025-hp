@@ -26,6 +26,61 @@ jobs:
         with:
           release-type: simple
 
+  notify-release-start:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    needs: release-please
+    if: ${{ needs.release-please.outputs.release-created }}
+    steps:
+      - uses: actions/checkout@v5
+      - name: Get first line of commit message
+        id: commit-message
+        uses: actions/github-script@v8
+        with:
+          script: |
+            let message = '';
+            if (context.payload.head_commit && context.payload.head_commit.message) {
+              message = context.payload.head_commit.message;
+            } else if (context.payload.commits && context.payload.commits.length > 0) {
+              message = context.payload.commits[0].message;
+            } else {
+              message = 'No commit message available';
+            }
+            const firstLine = message.split('\n')[0];
+            core.setOutput('firstLine', firstLine);
+      - name: Notify Slack - Pre Release
+        uses: slackapi/slack-github-action@v2.1.1
+        with:
+          webhook-type: incoming-webhook
+          payload: |
+            {
+              "text": "🚀 高専祭2025HP リリース開始",
+              "attachments": [
+                {
+                  "color": "good",
+                  "fields": [
+                    {
+                      "title": "ブランチ",
+                      "value": "${{ github.ref_name }}",
+                      "short": true
+                    },
+                    {
+                      "title": "コミット",
+                      "value": "<${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}|${{ steps.commit-message.outputs.firstLine }}>",
+                      "short": true
+                    },
+                    {
+                      "title": "実行者",
+                      "value": "${{ github.actor }}",
+                      "short": true
+                    }
+                  ]
+                }
+              ]
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
   deploy:
     runs-on: ubuntu-latest
     timeout-minutes: 10
@@ -45,3 +100,55 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy ./dist --project-name=snct-2025-hp-prod
+      - name: Get first line of commit message
+        id: commit-message
+        uses: actions/github-script@v8
+        with:
+          script: |
+            let message = '';
+            if (context.payload.head_commit && context.payload.head_commit.message) {
+              message = context.payload.head_commit.message;
+            } else if (context.payload.commits && context.payload.commits.length > 0) {
+              message = context.payload.commits[0].message;
+            } else {
+              message = 'No commit message available';
+            }
+            const firstLine = message.split('\n')[0];
+            core.setOutput('firstLine', firstLine);
+      - name: Notify Slack - Post Release
+        uses: slackapi/slack-github-action@v2.1.1
+        with:
+          webhook-type: incoming-webhook
+          payload: |
+            {
+              "text": "✅ 高専祭2025HP リリース完了",
+              "attachments": [
+                {
+                  "color": "good",
+                  "fields": [
+                    {
+                      "title": "デプロイ先",
+                      "value": "Cloudflare Pages (Production)",
+                      "short": true
+                    },
+                    {
+                      "title": "プロジェクト名",
+                      "value": "snct-2025-hp-prod",
+                      "short": true
+                    },
+                    {
+                      "title": "ブランチ",
+                      "value": "${{ github.ref_name }}",
+                      "short": true
+                    },
+                    {
+                      "title": "コミット",
+                      "value": "<${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}|${{ steps.commit-message.outputs.firstLine }}>",
+                      "short": true
+                    }
+                  ]
+                }
+              ]
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}

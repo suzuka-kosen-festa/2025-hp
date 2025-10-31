@@ -1,5 +1,89 @@
 # Changelog
 
+## [2.3.1](https://github.com/suzuka-kosen-festa/2025-hp/compare/v2.3.0...v2.3.1) (2025-10-30)
+
+
+### Bug Fixes
+
+* add new sponsor ([#365](https://github.com/suzuka-kosen-festa/2025-hp/issues/365)) ([ed96144](https://github.com/suzuka-kosen-festa/2025-hp/commit/ed9614438eec1ebd0aef490d678976dd97db557e))
+
+## [2.3.0](https://github.com/suzuka-kosen-festa/2025-hp/compare/v2.2.2...v2.3.0) (2025-10-29)
+
+
+### Features
+
+* add brochure, timetable and map ([#361](https://github.com/suzuka-kosen-festa/2025-hp/issues/361)) ([f950831](https://github.com/suzuka-kosen-festa/2025-hp/commit/f9508315ad93e6772f9d4236d4220f92818bf855))
+* add new sponsors to personal_sponsor.json ([#364](https://github.com/suzuka-kosen-festa/2025-hp/issues/364)) ([334d2ab](https://github.com/suzuka-kosen-festa/2025-hp/commit/334d2ab45ec3e69c2d78da6df295998a06fedc65))
+* **page:** Add redirection to the page ([#359](https://github.com/suzuka-kosen-festa/2025-hp/issues/359)) ([cbdc8d3](https://github.com/suzuka-kosen-festa/2025-hp/commit/cbdc8d34a6a409da1106200c80ff46dd5e7448df))
+
+
+### Bug Fixes
+
+* **page:** Correct the redirection date ([#363](https://github.com/suzuka-kosen-festa/2025-hp/issues/363)) ([a5e0492](https://github.com/suzuka-kosen-festa/2025-hp/commit/a5e0492cfc2b0ade9ab843d526f3e593c0587f1f))
+
+## [2.2.2](https://github.com/suzuka-kosen-festa/2025-hp/compare/v2.2.1...v2.2.2) (2025-10-28)
+
+
+### Bug Fixes
+
+* update stage name in stage_event.json ([#357](https://github.com/suzuka-kosen-festa/2025-hp/issues/357)) ([6a6f7e3](https://github.com/suzuka-kosen-festa/2025-hp/commit/6a6f7e35199af9e469e083762cc1996637edab23))
+
+## [2.2.1](https://github.com/suzuka-kosen-festa/2025-hp/compare/v2.2.0...v2.2.1) (2025-10-27)
+
+
+### Bug Fixes
+
+* change personal Sponsor font size ([#355](https://github.com/suzuka-kosen-festa/2025-hp/issues/355)) ([0b9fa16](https://github.com/suzuka-kosen-festa/2025-hp/commit/0b9fa166c9bb07973647d04731601d00a4032af4))
+* for lighthouse ([#354](https://github.com/suzuka-kosen-festa/2025-hp/issues/354)) ([f448d10](https://github.com/suzuka-kosen-festa/2025-hp/commit/f448d103b56e8b0c2ab68f37c62c66b75cb2d0db))
+
+## [2.2.0](https://github.com/suzuka-kosen-festa/2025-hp/compare/v2.1.3...v2.2.0) (2025-10-27)
+
+
+### Features
+
+* add personal sponsors section to Home page ([#351](https://github.com/suzuka-kosen-festa/2025-hp/issues/351)) ([b23a681](https://github.com/suzuka-kosen-festa/2025-hp/commit/b23a681425e441ee05eb33600d8362bd4f2fca2d))
+* add Slack notifications for preview and release workflows ([#342](https://github.com/suzuka-kosen-festa/2025-hp/issues/342)) ([3962a0e](https://github.com/suzuka-kosen-festa/2025-hp/commit/3962a0e7f230bd6e0ec1fec871c2a872ec320ad7))
+* add sponsor donation section ([#350](https://github.com/suzuka-kosen-festa/2025-hp/issues/350)) ([f6cb780](https://github.com/suzuka-kosen-festa/2025-hp/commit/f6cb7804646cbba8428ca68b6a219b6b34505e43))
+* enhance commit message handling in workflows ([#348](https://github.com/suzuka-kosen-festa/2025-hp/issues/348)) ([778183d](https://github.com/suzuka-kosen-festa/2025-hp/commit/778183d97ddd1a18dd1df2edafc599ed88322ebb))
+
+
+### Bug Fixes
+
+* Carousel exhibition width ([#353](https://github.com/suzuka-kosen-festa/2025-hp/issues/353)) ([b299c1d](https://github.com/suzuka-kosen-festa/2025-hp/commit/b299c1d0e51e04b5c10fcd283d79686b39bcde95))
+* exhibition Link ([#344](https://github.com/suzuka-kosen-festa/2025-hp/issues/344)) ([70eb7a3](https://github.com/suzuka-kosen-festa/2025-hp/commit/70eb7a3aa29f51bba4670f24b6dbd893139cda8a))
+* slack ([#346](https://github.com/suzuka-kosen-festa/2025-hp/issues/346)) ([af7f051](https://github.com/suzuka-kosen-festa/2025-hp/commit/af7f051b560ded540cae53a78646e420c9f66c0d))
+* sponsor font size ([#349](https://github.com/suzuka-kosen-festa/2025-hp/issues/349)) ([9d1bd75](https://github.com/suzuka-kosen-festa/2025-hp/commit/9d1bd751a7afc067919a49fefe5610fc8e6b715d))
+* update commit message display in workflows ([#347](https://github.com/suzuka-kosen-festa/2025-hp/issues/347)) ([ce11e78](https://github.com/suzuka-kosen-festa/2025-hp/commit/ce11e78724168a3b51a576a23b57f2dfc8280fdf))
+* update logo image source on Home page ([#352](https://github.com/suzuka-kosen-festa/2025-hp/issues/352)) ([04f3122](https://github.com/suzuka-kosen-festa/2025-hp/commit/04f31221d8b3e34e4353021c447688705cd3f60b))
+
+## [2.1.3](https://github.com/suzuka-kosen-festa/2025-hp/compare/v2.1.2...v2.1.3) (2025-10-27)
+
+
+### Bug Fixes
+
+* sponsor margin size ([#341](https://github.com/suzuka-kosen-festa/2025-hp/issues/341)) ([c04a191](https://github.com/suzuka-kosen-festa/2025-hp/commit/c04a1912a78c2c1f6b846aa962358d5f63708e5a))
+
+## [2.1.2](https://github.com/suzuka-kosen-festa/2025-hp/compare/v2.1.1...v2.1.2) (2025-10-27)
+
+
+### Bug Fixes
+
+* improve link navigation with ScrollRestoration and prefetch ([#335](https://github.com/suzuka-kosen-festa/2025-hp/issues/335)) ([5f1a2ec](https://github.com/suzuka-kosen-festa/2025-hp/commit/5f1a2ec78a6b3d369e017f48fc42050df12019b0))
+
+## [2.1.1](https://github.com/suzuka-kosen-festa/2025-hp/compare/v2.1.0...v2.1.1) (2025-10-24)
+
+
+### Bug Fixes
+
+* add new bazaar ([#336](https://github.com/suzuka-kosen-festa/2025-hp/issues/336)) ([d717c09](https://github.com/suzuka-kosen-festa/2025-hp/commit/d717c090b18bbbfb8fb99708278c2ac7056b17f8))
+
+## [2.1.0](https://github.com/suzuka-kosen-festa/2025-hp/compare/v2.0.3...v2.1.0) (2025-10-23)
+
+
+### Features
+
+* band time sort ([#330](https://github.com/suzuka-kosen-festa/2025-hp/issues/330)) ([9ea34a9](https://github.com/suzuka-kosen-festa/2025-hp/commit/9ea34a9a4303676ade912e98a5f4c0d8a762df6b))
+
 ## [2.0.3](https://github.com/suzuka-kosen-festa/2025-hp/compare/v2.0.2...v2.0.3) (2025-10-22)
 
 

@@ -1,3 +1,192 @@
 [
-
+  {
+    "name": "住友電装株式会社",
+    "image": "/images/sponsor/住友電装会社ロゴ.webp",
+    "size": "medium"
+  },
+  {
+    "name": "株式会社アレーゼ三重FIAT/ABARTH鈴鹿南",
+    "image": "/images/sponsor/アレーゼ三重.webp",
+    "size": "medium"
+  },
+  {
+    "name": "丸善石油化学株式会社 四日市工場",
+    "image": "",
+    "size": "small"
+  },
+  {
+    "name": "岡三証券株式会社 鈴鹿支店",
+    "image": "",
+    "size": "small"
+  },
+  {
+    "name": "第一工業製薬株式会社四日市工場",
+    "image": "/images/sponsor/第一工業製薬ロゴ.webp",
+    "size": "medium"
+  },
+  {
+    "name": "株式会社 第一電気工業",
+    "image": "",
+    "size": "small"
+  },
+  {
+    "name": "旭ダイヤモンド工業株式会社 三重工場",
+    "image": "/images/sponsor/旭ダイヤモンド.webp",
+    "size": "medium"
+  },
+  {
+    "name": "旭電気株式会社",
+    "image": "",
+    "size": "small"
+  },
+  {
+    "name": "株式会社SANKEI",
+    "image": "",
+    "size": "small"
+  },
+  {
+    "name": "太陽化学株式会社",
+    "image": "/images/sponsor/太陽化学株式会社.webp",
+    "size": "medium"
+  },
+  {
+    "name": "株式会社トヨタシステムズ",
+    "image": "",
+    "size": "small"
+  },
+  {
+    "name": "株式会社マキテック",
+    "image": "",
+    "size": "small"
+  },
+  {
+    "name": "ダイソウ工業株式会社",
+    "image": "/images/sponsor/ダイソウロゴ.webp",
+    "size": "medium"
+  },
+  {
+    "name": "鈴鹿商工会議所",
+    "image": "",
+    "size": "small"
+  },
+  {
+    "name": "(株)クラフトワークス",
+    "image": "/images/sponsor/クラフトワークス.webp",
+    "size": "medium"
+  },
+  {
+    "name": "(株)ケーブルネット鈴鹿",
+    "image": "",
+    "size": "small"
+  },
+  {
+    "name": "(株)プランドゥ",
+    "image": "",
+    "size": "small"
+  },
+  {
+    "name": "(株)ホンダプリモトリコ",
+    "image": "",
+    "size": "small"
+  },
+  {
+    "name": "(株)まるかつ",
+    "image": "",
+    "size": "small"
+  },
+  {
+    "name": "(株)第一不動産販売",
+    "image": "",
+    "size": "small"
+  },
+  {
+    "name": "(有)浜村工務店",
+    "image": "/images/sponsor/浜村工務店.webp",
+    "size": "medium"
+  },
+  {
+    "name": "須賀(株)",
+    "image": "/images/sponsor/須賀.webp",
+    "size": "medium"
+  },
+  {
+    "name": "大井歯科医院",
+    "image": "",
+    "size": "small"
+  },
+  {
+    "name": "中川建材",
+    "image": "",
+    "size": "small"
+  },
+  {
+    "name": "(株)河金",
+    "image": "",
+    "size": "small"
+  },
+  {
+    "name": "(有)西飯スポーツ",
+    "image": "",
+    "size": "small"
+  },
+  {
+    "name": "ガット張り専門店 kiitos",
+    "image": "",
+    "size": "small"
+  },
+  {
+    "name": "ごとうしんじ歯科室",
+    "image": "",
+    "size": "small"
+  },
+  {
+    "name": "ナガノスポーツ店",
+    "image": "",
+    "size": "small"
+  },
+  {
+    "name": "中勢自動車学校",
+    "image": "",
+    "size": "small"
+  },
+  {
+    "name": "八木医院",
+    "image": "",
+    "size": "small"
+  },
+  {
+    "name": "野町どい眼科",
+    "image": "",
+    "size": "small"
+  },
+  {
+    "name": "野町歯科医院",
+    "image": "",
+    "size": "small"
+  },
+  {
+    "name": "林歯科医院",
+    "image": "",
+    "size": "small"
+  },
+  {
+    "name": "家田クリニック",
+    "image": "",
+    "size": "small"
+  },
+  {
+    "name": "旭が丘ファミリークリニック",
+    "image": "",
+    "size": "small"
+  },
+  {
+    "name": "株式会社ダイム",
+    "image": "/images/sponsor/ダイムグループ.webp",
+    "size": "medium"
+  },
+  {
+    "name": "平田機工株式会社",
+    "image": "/images/sponsor/平田機工株式会社.webp",
+    "size": "medium"
+  }
 ]

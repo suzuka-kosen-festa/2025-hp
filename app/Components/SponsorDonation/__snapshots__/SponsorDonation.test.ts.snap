@@ -1,0 +1,46 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`sponsorDonation snapshot 1`] = `
+<div>
+  <div
+    class="MuiBox-root css-19by9mf"
+  >
+    <h2
+      class="MuiTypography-root MuiTypography-h4 css-puoz35-MuiTypography-root"
+    >
+      個人協賛のお願い
+    </h2>
+    <p
+      class="MuiTypography-root MuiTypography-body1 css-1cgly3f-MuiTypography-root"
+    >
+      第60回鈴鹿高専祭では、個人の皆様からの協賛金を募集しております。
+      <br />
+      ご支援いただいた方には御礼として公式サイトおよび会場内へ名前を掲載させていただきます。
+    </p>
+    <p
+      class="MuiTypography-root MuiTypography-body2 css-1j5rtsf-MuiTypography-root"
+    >
+      ※企業・団体様は、お手数ですが下記リンク先に記載のメールアドレスまでご連絡ください。
+    </p>
+    <a
+      class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1marwbi-MuiTypography-root-MuiLink-root"
+      href="https://forms.gle/4TyeBZ2iVsNY9oKb8"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary css-1ocd3b6-MuiButtonBase-root-MuiButton-root"
+        tabindex="0"
+        type="button"
+      >
+        協賛金フォームへ
+      </button>
+    </a>
+    <span
+      class="MuiTypography-root MuiTypography-caption css-1ptwzt3-MuiTypography-root"
+    >
+      詳しくは上記リンクよりご確認ください
+    </span>
+  </div>
+</div>
+`;

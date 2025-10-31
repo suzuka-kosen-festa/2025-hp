@@ -1,19 +1,35 @@
 import type { FC } from "react";
-import { Box, Container, keyframes, styled, Typography } from "@mui/material";
-import { useEffect, useMemo, useState } from "react";
-import { Link } from "react-router";
+import { ArrowForward } from "@mui/icons-material";
+import { Box, Container, keyframes, Link, styled, Typography } from "@mui/material";
+import { isbot } from "isbot";
+import { Fragment, Suspense, useEffect, useMemo, useState } from "react";
+import { Link as RouterLink } from "react-router";
+
+import personalSponsorsData from "@/../contents/personal_sponsor.json";
 import sponsorsData from "@/../contents/sponsor.json";
-import EventCard from "@/Components/eventCard/EventCard";
+import BazaarCard from "@/Components/bazaarCard";
+import { Carousel, CarouselContent, CarouselFooter, CarouselItem, CarouselNext, CarouselPrevious } from "@/Components/Carousel/Carousel";
+import DepartmentExhibitionCard from "@/Components/DepartmentExhibitionCard";
 import EventSummary from "@/Components/EventSummary";
+import { EventTypeChip } from "@/Components/EventTypeChip/EventTypeChip";
 import Footer from "@/Components/Footer";
 import GoogleMap from "@/Components/GoogleMap";
 import OfficialSns from "@/Components/OfficialSns";
+import PersonalSponsor from "@/Components/PersonalSponsor/PersonalSponsor";
 import Scroll from "@/Components/Scroll";
+import { SectionTypeChip } from "@/Components/SectionTypeChip/SectionTypeChip";
 import { SnsShare } from "@/Components/SnsShare";
 import Sponsor from "@/Components/Sponsor/Sponsor";
 import SponsorCard from "@/Components/sponsorCard";
+import SponsorDonation from "@/Components/SponsorDonation";
+import StageEventCard from "@/Components/StageEventCard";
+import Timeline from "@/Components/Timeline";
+import { eventTypes } from "@/data/events";
 import { sitemapData } from "@/data/sitemap";
 import { sponsorCardsData } from "@/data/sponsorCards";
+import sortedBazaarData from "@/lib/constants/bazaar";
+import exhibitionsByDepartment from "@/lib/constants/departmentExhibitions";
+import eventsByType from "@/lib/constants/events";
 
 const twinkle = keyframes`
   0%, 100% { opacity: 0.3; }
@@ -151,7 +167,7 @@ const ContentSection = styled(Box)<{ color?: string }>(({ color = "#e9e9e9", the
 }));
 
 const ContentSectionSponsor = styled(Box)(({ theme }) => ({
-  background: "rgba(255, 255, 255, 0.7)",
+  background: "rgba(255, 255, 255)",
   backdropFilter: "blur(5px)",
   borderRadius: "20px",
   margin: "2rem 0",
@@ -191,6 +207,15 @@ const Home: FC = () => {
   const [isScrollVisible, setIsScrollVisible] = useState(true);
 
   useEffect(() => {
+    const now = new Date(new Date().toLocaleString("en-US", { timeZone: "Asia/Tokyo" }));
+    const start = new Date("2025-11-02T15:00:00+09:00");
+    const end = new Date("2025-11-02T16:00:00+09:00");
+
+    if (!isbot(navigator.userAgent) && window.history.length <= 1 && now >= start && now <= end) {
+      (window as any).gtag("event", "redirect", { event_category: "navigation", event_label: "youtube_live" });
+      window.location.replace("https://youtube.com/live/YcGiY-46p6A");
+    }
+
     const handleScroll = () => {
       const heroSection = document.querySelector("[data-hero-section]");
       if (!heroSection) {
@@ -233,7 +258,7 @@ const Home: FC = () => {
             borderRadius: { xs: "15px", sm: "18px", md: "20px" },
           }}
           >
-            <img src="/logo.svg" alt="Logo" style={{ width: "100%" }} />
+            <img src="/images/logo-large.webp" alt="Logo" style={{ width: "100%" }} />
           </FloatingLogo>
 
           <Box sx={{ mb: 2, pt: 0, pb: { xs: 5, sm: 6, md: 8 }, px: { xs: 2, sm: 3, md: 5 }, zIndex: 100 }}>
@@ -249,13 +274,13 @@ const Home: FC = () => {
                 fontSize: { xs: "1.5rem", sm: "2.5rem", md: "3rem" },
                 lineHeight: { xs: 1.2, sm: 1.3, md: 1.4 },
                 // background: "linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1)",
-              /*
-              backgroundClip: "text",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              zIndex: 1000,
-              backdropFilter: "blur(10px)",
-              */
+                /*
+                backgroundClip: "text",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                zIndex: 1000,
+                backdropFilter: "blur(10px)",
+                */
               }}
             >
               <i>60th Suzuka Kosen Festa 2025</i>
@@ -323,14 +348,16 @@ const Home: FC = () => {
                 開催概要
               </SectionTitle>
               <EventSummary
-              // mainTitle="高専祭2025"
-              // description="テーマ「Orbit」のもと、学生たちが創り上げる2日間の文化祭。研究発表、模擬店、ステージイベントなど、多彩なプログラムをお楽しみください。"
                 dateLabel="開催日程"
                 date="2025年11月1日(土)・11月2日(日)"
                 locationLabel="開催場所"
                 location="鈴鹿工業高等専門学校"
               />
             </Box>
+          </ContentSection>
+
+          <ContentSection>
+            <SponsorDonation />
           </ContentSection>
 
           <ContentSection>
@@ -406,62 +433,165 @@ const Home: FC = () => {
           </ContentSection>
 
           <ContentSection>
-            <Box sx={{ p: { xs: 2, sm: 3, md: 4 }, textAlign: "center" }}>
+            <Suspense fallback={<div>Loading...</div>}>
+              <Timeline title="タイムテーブル" imageUrl="/images/TimeTable.webp" />
+            </Suspense>
+          </ContentSection>
+
+          <ContentSection>
+            <Suspense fallback={<div>Loading...</div>}>
+              <Timeline title="校内マップ" imageUrl="/images/map.webp" />
+            </Suspense>
+          </ContentSection>
+
+          <Box sx={{ display: "flex", width: "100%", justifyContent: "center", alignItems: "center" }}>
+            <Link
+              href="/images/brochure.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{
+                "display": "inline-flex",
+                "alignItems": "center",
+                "justifyContent": "center",
+                "gap": 1,
+                "p": 2,
+                "textDecoration": "none",
+                "color": "white",
+                "border": "2px solid white",
+                "borderRadius": "8px",
+                "zIndex": 100,
+                "transition": "all 0.3s ease",
+                "&:hover": {
+                  backgroundColor: "rgba(255, 255, 255, 0.1)",
+                  transform: "translateY(-2px)",
+                  boxShadow: "0 4px 12px rgba(255, 255, 255, 0.2)",
+                },
+              }}
+            >
+              <Typography
+                variant="h6"
+                sx={{
+                  fontWeight: "600",
+                  fontSize: { xs: "1rem", sm: "1.25rem" },
+                }}
+              >
+                今年配布のパンフレットはこちら
+              </Typography>
+              <ArrowForward />
+            </Link>
+          </Box>
+
+          <ContentSection>
+            <Box sx={{ p: { xs: 2, sm: 3, md: 4 }, display: "flex", flexDirection: "column", gap: 2 }}>
               <SectionTitle
                 variant="h4"
                 mb={3}
+                sx={{ textAlign: "center" }}
               // component="h2"
               >
                 バザー・学科展示
               </SectionTitle>
-            </Box>
-            <Box sx={{
-              display: "flex",
-              flexWrap: "wrap",
-              gap: { xs: 2, sm: 3, md: 4 },
-              alignItems: "stretch",
-              mb: 4,
-              justifyContent: "center",
-              px: { xs: 2, sm: 3, md: 4 },
-            }}
-            >
-              <Box sx={{
-                flex: "1 1 300px",
-                minWidth: { xs: "280px", sm: "300px" },
-                maxWidth: { xs: "100%", sm: "calc(50% - 8px)", md: "calc(50% - 12px)", lg: "calc(33.333% - 16px)" },
-              }}
-              >
-                <Link to="/bazaar#bazaar" style={{ textDecoration: "none" }}>
-                  <EventCard
-                    eventName="バザー"
-                    description="部活やクラスが行うバザー"
-                    linkName="バザーについて"
-                    color="#FFFFFF"
+              <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
+                <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                  <SectionTypeChip
+                    label="バザー"
+                    sx={{
+                      mr: 2,
+                      width: "fit-content",
+                    }}
                   />
+                  <Link component={RouterLink} to="/bazaar#bazaar" sx={{ display: "flex", alignItems: "center", textDecoration: "none", color: "white", gap: 1, fontWeight: "600" }}>
+                    一覧で見る
+                    <ArrowForward />
+                  </Link>
+                </Box>
+                <Carousel
+                  opts={{
+                    align: "start",
+                    loop: true,
+                  }}
+                  autoPlay
+                >
+                  <CarouselContent>
+                    {sortedBazaarData.map(bazaar => (
+                      <CarouselItem
+                        key={bazaar.id}
+                        sx={{
+                          flexBasis: {
+                            xs: "100%",
+                            sm: "50%",
+                            md: "33.333333%",
+                          },
+                        }}
+                      >
+                        <BazaarCard
+                          image={bazaar.image}
+                          teamName={bazaar.teamName}
+                          bazaarName={bazaar.bazaarName}
+                          description={bazaar.description}
+                        />
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselFooter>
+                    <CarouselPrevious sx={{ position: "static", transform: "none" }} />
+                    <CarouselNext sx={{ position: "static", transform: "none" }} />
+                  </CarouselFooter>
+                </Carousel>
+              </Box>
+              <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                <SectionTypeChip
+                  label="学科展示"
+                  sx={{
+                    mr: 2,
+                    width: "fit-content",
+                  }}
+                />
+                <Link component={RouterLink} to="/bazaar#exhibitions" sx={{ display: "flex", alignItems: "center", textDecoration: "none", color: "white", gap: 1, fontWeight: "600" }}>
+                  一覧で見る
+                  <ArrowForward />
                 </Link>
               </Box>
-              <Box sx={{
-                flex: "1 1 300px",
-                justifyContent: "center",
-                alignItems: "center",
-                minWidth: { xs: "280px", sm: "300px" },
-                maxWidth: { xs: "100%", sm: "calc(50% - 8px)", md: "calc(50% - 12px)", lg: "calc(33.333% - 16px)" },
-              }}
-              >
-                <Link to="/bazaar#exhibitions" style={{ textDecoration: "none" }}>
-                  <EventCard
-                    eventName="学科展示"
-                    description="各学科の展示内容"
-                    linkName="学科展示について"
-                    color="#FFFFFF"
-                  />
-                </Link>
-              </Box>
+
+              {Object.entries(exhibitionsByDepartment).map(([department, exhibitions]) => (
+                <Fragment key={department}>
+                  <Carousel
+                    opts={{
+                      align: "start",
+                      loop: true,
+                    }}
+                    autoPlay
+                  >
+                    <CarouselContent>
+                      {exhibitions.map(exhibition => (
+                        <CarouselItem
+                          key={exhibition.id}
+                          sx={{
+                            flexBasis: {
+                              xs: "100%",
+                              sm: "50%",
+                              md: "33.333333%",
+                            },
+                          }}
+                        >
+                          <DepartmentExhibitionCard department={exhibition.department} title={exhibition.title} description={exhibition.description} />
+                        </CarouselItem>
+                      ))}
+                    </CarouselContent>
+                    <CarouselFooter>
+                      <CarouselPrevious sx={{ position: "static", transform: "none" }} />
+                      <CarouselNext sx={{ position: "static", transform: "none" }} />
+                    </CarouselFooter>
+                  </Carousel>
+                </Fragment>
+              ))}
+
             </Box>
           </ContentSection>
 
           <ContentSection>
-            <Box sx={{ p: { xs: 2, sm: 3, md: 4 }, textAlign: "center" }}>
+            <Box sx={{ p: { xs: 2, sm: 3, md: 4 }, display: "flex", flexDirection: "column", gap: 2 }}>
+
               <SectionTitle
                 variant="h4"
                 mb={3}
@@ -469,74 +599,77 @@ const Home: FC = () => {
               >
                 当日のイベント
               </SectionTitle>
-            </Box>
-            <Box sx={{
-              display: "flex",
-              flexWrap: "wrap",
-              gap: { xs: 2, sm: 3, md: 4 },
-              alignItems: "stretch",
-              mb: 4,
-              justifyContent: "center",
-              px: { xs: 2, sm: 3, md: 4 },
-            }}
-            >
-              <Box sx={{
-                flex: "1 1 300px",
-                minWidth: { xs: "280px", sm: "300px" },
-                maxWidth: { xs: "100%", sm: "calc(50% - 8px)", md: "calc(50% - 12px)", lg: "calc(33.333% - 16px)" },
-              }}
-              >
-                <Link to="/events#stage" style={{ textDecoration: "none" }}>
-                  <EventCard
-                    eventName="ステージイベント"
-                    description="屋外のメインステージで開催されるイベント"
-                    linkName="ステージイベントについて"
-                    color="#FD3D21"
-                  />
-                </Link>
-              </Box>
-              <Box sx={{
-                flex: "1 1 300px",
-                minWidth: { xs: "280px", sm: "300px" },
-                maxWidth: { xs: "100%", sm: "calc(50% - 8px)", md: "calc(50% - 12px)", lg: "calc(33.333% - 16px)" },
-              }}
-              >
-                <Link to="/events#live" style={{ textDecoration: "none" }}>
-                  <EventCard
-                    eventName="ライブステージ"
-                    description="屋内のライブステージで開催されるイベント"
-                    linkName="ライブステージについて"
-                    color="#3498db"
-                  />
-                </Link>
-              </Box>
-              <Box sx={{
-                flex: "1 1 300px",
-                minWidth: { xs: "280px", sm: "300px" },
-                maxWidth: { xs: "100%", sm: "calc(50% - 8px)", md: "calc(50% - 12px)", lg: "calc(33.333% - 16px)" },
-              }}
-              >
-                <Link to="/events#mystery" style={{ textDecoration: "none" }}>
-                  <EventCard
-                    eventName="謎解き"
-                    description="高専内で開催される謎解きイベント"
-                    linkName="謎解きについて"
-                    color="#FFA500"
-                  />
-                </Link>
-              </Box>
+
+              {Object.entries(eventTypes).map(([typeKey, typeConfig]) => {
+                const events = eventsByType[typeKey] || [];
+
+                return (
+                  <Fragment key={typeKey}>
+                    <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                      <EventTypeChip
+                        label={typeConfig.label}
+                        sx={{
+                          backgroundColor: typeConfig.color,
+                          color: "white",
+                          width: "fit-content",
+                        }}
+                      />
+                      <Link component={RouterLink} to={`/events#${typeConfig.anchor}`} sx={{ display: "flex", alignItems: "center", textDecoration: "none", color: "white", gap: 1, fontWeight: "600" }}>
+                        一覧で見る
+                        <ArrowForward />
+                      </Link>
+                    </Box>
+                    <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
+                      <Carousel
+                        opts={{
+                          align: "start",
+                          loop: true,
+                        }}
+                        autoPlay
+                      >
+                        <CarouselContent>
+                          {events.map(event => (
+                            <CarouselItem
+                              key={event.id}
+                              sx={{
+                                flexBasis: {
+                                  xs: "100%",
+                                  sm: "50%",
+                                  md: "33.333333%",
+                                },
+                              }}
+                            >
+                              <StageEventCard
+                                image={event.image || undefined}
+                                title={event.title}
+                                datetime={event.datetime}
+                                stage={event.stage}
+                                description={event.description}
+                                color={typeConfig.color}
+                              />
+                            </CarouselItem>
+                          ))}
+                        </CarouselContent>
+                        <CarouselFooter>
+                          <CarouselPrevious sx={{ position: "static", transform: "none" }} />
+                          <CarouselNext sx={{ position: "static", transform: "none" }} />
+                        </CarouselFooter>
+                      </Carousel>
+                    </Box>
+                  </Fragment>
+                );
+              })}
             </Box>
           </ContentSection>
 
           <SectionTitle
             variant="h4"
             mb={3}
-          // component="h2"
           >
-            協賛企業
+            協賛企業様 (順不同)
           </SectionTitle>
           <ContentSectionSponsor>
-            {sponsorCardsData.length === 0 && (sponsorsData as any[]).filter(sponsor => sponsor?.name && sponsor.name.trim() !== "").length === 0
+            {sponsorCardsData.length === 0 && (sponsorsData as Array<{ name: string, image: string, size: "large" | "medium" | "small" }>).filter(sponsor => sponsor?.name && sponsor.name.trim() !== "").length === 0
               ? (
                   <Box sx={{ p: 4, textAlign: "center" }}>
                     <Typography
@@ -567,6 +700,18 @@ const Home: FC = () => {
                     </Box>
                   </>
                 )}
+          </ContentSectionSponsor>
+
+          <SectionTitle
+            variant="h4"
+            mb={3}
+          >
+            個人協賛者様 (順不同)
+          </SectionTitle>
+          <ContentSectionSponsor>
+            <Box sx={{ p: 4, backdropFilter: "blur(10px)" }}>
+              <PersonalSponsor sponsors={personalSponsorsData as Array<{ name: string }>} />
+            </Box>
           </ContentSectionSponsor>
 
           <Box sx={{ py: { xs: 2, sm: 3, md: 4 }, textAlign: "center", px: { xs: 2, sm: 3, md: 4 } }}>
