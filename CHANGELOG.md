@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.3](https://github.com/suzuka-kosen-festa/2025-hp/compare/v2.3.2...v2.3.3) (2025-10-31)
+
+
+### Bug Fixes
+
+* add new sponsor "野球部OB その1" to personal_sponsor.json ([#369](https://github.com/suzuka-kosen-festa/2025-hp/issues/369)) ([0b1c35e](https://github.com/suzuka-kosen-festa/2025-hp/commit/0b1c35ee51749334b791c43e572f33805152101f))
+
 ## [2.3.2](https://github.com/suzuka-kosen-festa/2025-hp/compare/v2.3.1...v2.3.2) (2025-10-31)
 
 
