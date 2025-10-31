@@ -1,5 +1,26 @@
 # Changelog
 
+## [2.3.1](https://github.com/suzuka-kosen-festa/2025-hp/compare/v2.3.0...v2.3.1) (2025-10-30)
+
+
+### Bug Fixes
+
+* add new sponsor ([#365](https://github.com/suzuka-kosen-festa/2025-hp/issues/365)) ([ed96144](https://github.com/suzuka-kosen-festa/2025-hp/commit/ed9614438eec1ebd0aef490d678976dd97db557e))
+
+## [2.3.0](https://github.com/suzuka-kosen-festa/2025-hp/compare/v2.2.2...v2.3.0) (2025-10-29)
+
+
+### Features
+
+* add brochure, timetable and map ([#361](https://github.com/suzuka-kosen-festa/2025-hp/issues/361)) ([f950831](https://github.com/suzuka-kosen-festa/2025-hp/commit/f9508315ad93e6772f9d4236d4220f92818bf855))
+* add new sponsors to personal_sponsor.json ([#364](https://github.com/suzuka-kosen-festa/2025-hp/issues/364)) ([334d2ab](https://github.com/suzuka-kosen-festa/2025-hp/commit/334d2ab45ec3e69c2d78da6df295998a06fedc65))
+* **page:** Add redirection to the page ([#359](https://github.com/suzuka-kosen-festa/2025-hp/issues/359)) ([cbdc8d3](https://github.com/suzuka-kosen-festa/2025-hp/commit/cbdc8d34a6a409da1106200c80ff46dd5e7448df))
+
+
+### Bug Fixes
+
+* **page:** Correct the redirection date ([#363](https://github.com/suzuka-kosen-festa/2025-hp/issues/363)) ([a5e0492](https://github.com/suzuka-kosen-festa/2025-hp/commit/a5e0492cfc2b0ade9ab843d526f3e593c0587f1f))
+
 ## [2.2.2](https://github.com/suzuka-kosen-festa/2025-hp/compare/v2.2.1...v2.2.2) (2025-10-28)
 
 
