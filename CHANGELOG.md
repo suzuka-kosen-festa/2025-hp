@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.0](https://github.com/suzuka-kosen-festa/2025-hp/compare/v2.3.3...v2.4.0) (2025-11-02)
+
+
+### Features
+
+* survey section ([#371](https://github.com/suzuka-kosen-festa/2025-hp/issues/371)) ([503311c](https://github.com/suzuka-kosen-festa/2025-hp/commit/503311cc8632fd783c25261b7d889ca2f5f26f04))
+
 ## [2.3.3](https://github.com/suzuka-kosen-festa/2025-hp/compare/v2.3.2...v2.3.3) (2025-10-31)
 
 
