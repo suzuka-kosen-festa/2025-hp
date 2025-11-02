@@ -357,6 +357,75 @@ const Home: FC = () => {
           </ContentSection>
 
           <ContentSection>
+            <Box sx={{ p: { xs: 2, sm: 3, md: 4 } }}>
+              <SectionTitle variant="h4" mb={3}>
+                アンケートへのご協力のお願い
+              </SectionTitle>
+              <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, alignItems: "center", gap: 4 }}>
+                <Box sx={{ flex: 1, textAlign: { xs: "center", md: "left" } }}>
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      color: "white",
+                      mb: { xs: 2, sm: 3 },
+                      fontSize: { xs: "1rem", sm: "1.25rem" },
+                      lineHeight: { xs: 1.4, sm: 1.6 },
+                    }}
+                  >
+                    ご来場いただき、ありがとうございます。
+                    <br />
+                    より良い文化祭にするため、アンケートへのご協力をお願いいたします。
+                  </Typography>
+                  <Link
+                    href="https://forms.gle/McTMuCnRUBTKPHuZ7"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    sx={{
+                      "display": "inline-flex",
+                      "alignItems": "center",
+                      "gap": 1,
+                      "mt": 2,
+                      "p": 2,
+                      "textDecoration": "none",
+                      "color": "white",
+                      "border": "2px solid white",
+                      "borderRadius": "8px",
+                      "transition": "all 0.3s ease",
+                      "&:hover": {
+                        backgroundColor: "rgba(255, 255, 255, 0.1)",
+                        transform: "translateY(-2px)",
+                        boxShadow: "0 4px 12px rgba(255, 255, 255, 0.2)",
+                      },
+                    }}
+                  >
+                    <Typography
+                      variant="h6"
+                      sx={{
+                        fontWeight: "600",
+                        fontSize: { xs: "1rem", sm: "1.25rem" },
+                      }}
+                    >
+                      アンケートに回答する
+                    </Typography>
+                    <ArrowForward />
+                  </Link>
+                </Box>
+                <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+                  <img
+                    src="/images/QR_Survey.webp"
+                    alt="アンケートQRコード"
+                    style={{
+                      width: "200px",
+                      height: "200px",
+                      maxWidth: "100%",
+                    }}
+                  />
+                </Box>
+              </Box>
+            </Box>
+          </ContentSection>
+
+          <ContentSection>
             <SponsorDonation />
           </ContentSection>
 
