@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.5.0](https://github.com/suzuka-kosen-festa/2025-hp/compare/v2.4.0...v2.5.0) (2025-11-05)
+
+
+### Features
+
+* 新しい個人スポンサーを追加 ([#373](https://github.com/suzuka-kosen-festa/2025-hp/issues/373)) ([2ca2d2e](https://github.com/suzuka-kosen-festa/2025-hp/commit/2ca2d2e69820635320e428b70a1aba5ce94d0a6c))
+
 ## [2.4.0](https://github.com/suzuka-kosen-festa/2025-hp/compare/v2.3.3...v2.4.0) (2025-11-02)
 
 
